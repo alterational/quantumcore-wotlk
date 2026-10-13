@@ -348,6 +348,7 @@
       }
     }
     if (item.armor) h.push('<div class="tt-line">' + num(item.armor) + (lang === 'ru' ? ' ед. брони' : ' Armor') + '</div>');
+    if (item.containerSlots) h.push('<div class="tt-line">' + num(item.containerSlots) + ' ' + t('container_slots') + '</div>');
     if (item.block) h.push('<div class="tt-line">' + num(item.block) + (lang === 'ru' ? ' ед. блокирования' : ' Block') + '</div>');
 
     var res = item.resist || {};

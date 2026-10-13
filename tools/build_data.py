@@ -516,6 +516,7 @@ def render_spell_text(text, ctx):
     text = re.sub(r'\$(\d+)?[cCeEwWzZ]', '', text)
     text = re.sub(r'\$\w*', '', text)
     text = text.replace('[', '').replace(']', '')
+    text = re.sub(r'(\d+[.,]\d+)\.\d+', r'\1', text)
     text = text.replace('..', '.').replace(' .', '.').replace(' ,', ',')
     text = re.sub(r'\s{2,}', ' ', text)
     return text.strip()
