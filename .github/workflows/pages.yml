@@ -69,4 +69,5 @@ jobs:
 
       - name: Итог
         if: steps.probe.outputs.enabled == 'true'
-        run: echo "Сайт опубликован: ${{ steps.deployment.outputs.page_url }}"
+        run: |
+          echo "Сайт опубликован -> ${{ steps.deployment.outputs.page_url }}"
