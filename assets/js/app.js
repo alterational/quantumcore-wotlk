@@ -7,6 +7,7 @@
 
   var I = window.ArmoryI18n;
   var DB = null;
+  var ITEMS_BY_ID = {};
   var ICON_BASE = 'https://wow.zamimg.com/images/wow/icons/large/';
   var SOCKET_CSS = { 1: 'meta', 2: 'red', 4: 'yellow', 8: 'blue' };
   var TRIGGERS = {
@@ -237,7 +238,7 @@
     if (!slotKey) return '';
     var equippedId = state.char.equipped[slotKey];
     if (!equippedId || equippedId === item.id) return '';
-    var prev = DB.items.filter(function (x) { return x.id === equippedId; })[0];
+    var prev = itemById(equippedId);
     if (!prev) return '';
     var rows = [];
     function deltaStat(src, dst, sid) {
@@ -281,7 +282,7 @@
   function setProgress() {
     var counters = {};
     Object.keys(state.char.equipped).forEach(function (key) {
-      var item = DB.items.filter(function (x) { return x.id === state.char.equipped[key]; })[0];
+      var item = itemById(state.char.equipped[key]);
       if (!item || !item.set) return;
       if (!counters[item.set]) counters[item.set] = 0;
       counters[item.set]++;
@@ -451,6 +452,8 @@
   function render() {
     var route = parseHash();
     state.view = route.view;
+    /* разметка ниже заменяется целиком — старая подсказка уже не актуальна */
+    hideTooltip();
     var main = document.getElementById('view');
     if (!DB) { main.innerHTML = '<div class="panel panel-body">' + t('loading') + '</div>'; return; }
 
@@ -652,7 +655,7 @@
   /* --------------------------- карточка предмета -------------------------- */
 
   function viewItem(id) {
-    var item = DB.items.filter(function (x) { return x.id === id; })[0];
+    var item = itemById(id);
     if (!item) return '<div class="panel panel-body">' + t('nothing_found') + '</div>';
     var lang = state.lang;
     var h = [];
@@ -805,7 +808,7 @@
         h.push('<p class="muted small">' + t('set_items') + ' (' + set.items.length + ')</p>');
         h.push('<div class="badge-row">');
         set.items.forEach(function (iid) {
-          var it = DB.items.filter(function (x) { return x.id === iid; })[0];
+          var it = itemById(iid);
           if (it) {
             h.push('<span class="badge ' + qClass(it.quality) + '" style="cursor:pointer" data-open="' + iid + '">' +
               esc(displayName(it)) + '</span>');
@@ -876,7 +879,7 @@
   }
 
   function equipItem(id, slotKey) {
-    var item = DB.items.filter(function (x) { return x.id === id; })[0];
+    var item = itemById(id);
     if (!item) return;
     if (item.inventoryType === 17) {
       /* двуручное оружие занимает и правую, и левую руку */
@@ -891,7 +894,7 @@
     if (target === 'offhand') {
       var mh = state.char.equipped.mainhand;
       if (mh) {
-        var mhItem = DB.items.filter(function (x) { return x.id === mh; })[0];
+        var mhItem = itemById(mh);
         if (mhItem && mhItem.inventoryType === 17) { toast(t('incompatible')); return; }
       }
     }
@@ -910,7 +913,7 @@
   function aggregate() {
     var sum = { stats: {}, armor: 0, resist: {}, ilvl: 0, count: 0, dps: 0 };
     Object.keys(state.char.equipped).forEach(function (key) {
-      var item = DB.items.filter(function (x) { return x.id === state.char.equipped[key]; })[0];
+      var item = itemById(state.char.equipped[key]);
       if (!item) return;
       sum.count++;
       sum.ilvl += item.ilvl;
@@ -936,7 +939,7 @@
     h.push('<div class="doll">');
     DOLL_LAYOUT.forEach(function (slot) {
       var itemId = state.char.equipped[slot.key];
-      var item = itemId ? DB.items.filter(function (x) { return x.id === itemId; })[0] : null;
+      var item = itemById(itemId);
       h.push('<div class="doll-slot' + (item ? ' filled' : '') + (item && !compatible(item) ? ' warn' : '') +
         '" data-slot="' + slot.key + '">');
       if (item) {
@@ -1041,7 +1044,7 @@
 
   function compareItems() {
     return state.compare.map(function (id) {
-      return DB.items.filter(function (x) { return x.id === id; })[0];
+      return itemById(id);
     }).filter(Boolean);
   }
 
@@ -1183,14 +1186,24 @@
 
   var tooltipEl = null;
   var pickerEl = null;
+  var tooltipKey = '';        /* что сейчас показано — чтобы не перерисовывать разметку зря */
+  var tooltipAnchor = null;   /* узел, под курсором которого всплыла подсказка */
+  var hoverMuted = null;      /* точка клика: после нажатия подсказка ждёт, пока курсор сдвинется */
 
-  function showTooltip(html, event) {
+  function itemById(id) {
+    return ITEMS_BY_ID[id] || null;
+  }
+
+  function showTooltip(html, event, key) {
     if (!tooltipEl) {
       tooltipEl = document.createElement('div');
       tooltipEl.className = 'hover-tooltip';
       document.body.appendChild(tooltipEl);
     }
-    tooltipEl.innerHTML = html;
+    if (key !== tooltipKey) {
+      tooltipEl.innerHTML = html;
+      tooltipKey = key;
+    }
     tooltipEl.classList.add('show');
     positionTooltip(event);
   }
@@ -1207,7 +1220,54 @@
     tooltipEl.style.top = Math.max(8, y) + 'px';
   }
 
-  function hideTooltip() { if (tooltipEl) tooltipEl.classList.remove('show'); }
+  function hideTooltip() {
+    tooltipKey = '';
+    tooltipAnchor = null;
+    if (tooltipEl) tooltipEl.classList.remove('show');
+  }
+
+  /* клик прячет подсказку и не даёт ей всплыть, пока курсор не сдвинется:
+     браузер после перерисовки DOM под курсором повторяет события наведения */
+  function muteHover(event) {
+    hoverMuted = { x: (event && event.clientX) || 0, y: (event && event.clientY) || 0 };
+    hideTooltip();
+  }
+
+  /* ближайший узел, для которого показывается подсказка, либо null */
+  function hoverTarget(node) {
+    if (!node || !node.closest) return null;
+    return node.closest('[data-open], .doll-slot');
+  }
+
+  function hoveredItem(node) {
+    if (node.classList.contains('doll-slot')) {
+      var key = node.getAttribute('data-slot');
+      return itemById(state.char.equipped[key]);
+    }
+    var raw = node.getAttribute('data-open');
+    return raw ? itemById(parseInt(raw, 10)) : null;
+  }
+
+  /* один обработчик наведения на весь документ: узлы перерисовываются,
+     слушатели на них навешивать нельзя — иначе превью «залипает» */
+  function handleHover(event) {
+    if (hoverMuted) {
+      var dx = event.clientX - hoverMuted.x;
+      var dy = event.clientY - hoverMuted.y;
+      if (dx * dx + dy * dy < 25) { hideTooltip(); return; }
+      hoverMuted = null;
+    }
+    var node = hoverTarget(event.target);
+    if (!node) { hideTooltip(); return; }
+    if (node === tooltipAnchor && tooltipEl && tooltipEl.classList.contains('show')) {
+      positionTooltip(event);
+      return;
+    }
+    var item = hoveredItem(node);
+    if (!item) { hideTooltip(); return; }
+    tooltipAnchor = node;
+    showTooltip(itemTooltip(item), event, 'item:' + item.id + ':' + state.lang);
+  }
 
   function toast(message) {
     var el = document.createElement('div');
@@ -1339,14 +1399,34 @@
     var more = view.querySelector('#more');
     if (more) more.addEventListener('click', function () { state.limit += 120; render(); });
 
-    /* вкладки предмета */
+    /* смена параметров персонажа */
+    ['char-class', 'char-race', 'char-level'].forEach(function (id) {
+      var el = view.querySelector('#' + id);
+      if (!el) return;
+      el.addEventListener('change', function () {
+        if (id === 'char-class') state.char.cls = parseInt(el.value, 10) || 0;
+        if (id === 'char-race') state.char.race = parseInt(el.value, 10) || 0;
+        if (id === 'char-level') state.char.level = parseInt(el.value, 10) || 80;
+        saveState();
+        render();
+      });
+    });
+  }
+
+  /* ------------------- постоянные обработчики (один раз) ------------------ */
+
+  function bindGlobalEvents() {
+    var view = document.getElementById('view');
+
+    /* вкладки предмета и кнопки внутри вида: слушатель живёт на #view,
+       который перерисовывается, поэтому навешивается ровно один раз */
     view.addEventListener('click', function (e) {
       var tab = e.target.closest('[data-tab]');
       if (tab) {
         state.itemTab = tab.getAttribute('data-tab');
         var item = parseHash();
         if (item.view === 'item') {
-          document.getElementById('tab-body').innerHTML = itemTabBody(DB.items.filter(function (x) { return x.id === item.id; })[0]);
+          document.getElementById('tab-body').innerHTML = itemTabBody(itemById(item.id));
           view.querySelectorAll('.tab').forEach(function (b) { b.classList.toggle('active', b === tab); });
         }
         return;
@@ -1373,38 +1453,6 @@
       if (cc) return;
     });
 
-    /* смена параметров персонажа */
-    ['char-class', 'char-race', 'char-level'].forEach(function (id) {
-      var el = view.querySelector('#' + id);
-      if (!el) return;
-      el.addEventListener('change', function () {
-        if (id === 'char-class') state.char.cls = parseInt(el.value, 10) || 0;
-        if (id === 'char-race') state.char.race = parseInt(el.value, 10) || 0;
-        if (id === 'char-level') state.char.level = parseInt(el.value, 10) || 80;
-        saveState();
-        render();
-      });
-    });
-
-    /* подсказки при наведении */
-    view.querySelectorAll('[data-open], [data-pick-owner]').forEach(function (node) {
-      node.addEventListener('mousemove', function (e) {
-        var id = parseInt(node.getAttribute('data-open'), 10);
-        var item = DB.items.filter(function (x) { return x.id === id; })[0];
-        if (item) showTooltip(itemTooltip(item), e);
-      });
-      node.addEventListener('mouseleave', hideTooltip);
-    });
-    view.querySelectorAll('.doll-slot').forEach(function (node) {
-      node.addEventListener('mousemove', function (e) {
-        var key = node.getAttribute('data-slot');
-        var id = state.char.equipped[key];
-        if (!id) return hideTooltip();
-        var item = DB.items.filter(function (x) { return x.id === id; })[0];
-        if (item) showTooltip(itemTooltip(item), e);
-      });
-      node.addEventListener('mouseleave', hideTooltip);
-    });
   }
 
   function debounce(fn, ms) {
@@ -1446,7 +1494,7 @@
   }
 
   function copyItemLink(id) {
-    var item = DB.items.filter(function (x) { return x.id === id; })[0];
+    var item = itemById(id);
     if (!item) return;
     var url = location.origin + location.pathname + '#/item/' + id;
     copyText('[' + displayName(item) + '] ' + url);
@@ -1511,6 +1559,8 @@
       btn.addEventListener('click', function () { navigate({ view: btn.getAttribute('data-view') }); });
     });
     window.addEventListener('hashchange', render);
+    bindGlobalEvents();
+
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') { hideTooltip(); closePicker(); }
       if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
@@ -1518,15 +1568,26 @@
         if (input) { e.preventDefault(); input.focus(); }
       }
     });
-    document.addEventListener('mousemove', function (e) {
-      if (tooltipEl && tooltipEl.classList.contains('show')) positionTooltip(e);
+
+    /* превью предмета: наведение и гашение подсказки — на уровне документа,
+       потому что разметку вида render() заменяет целиком */
+    document.addEventListener('mousemove', handleHover);
+    document.addEventListener('pointerdown', muteHover, true);
+    document.addEventListener('click', function () { hideTooltip(); });
+    document.addEventListener('mouseleave', hideTooltip);
+    document.addEventListener('mouseout', function (e) {
+      if (!e.relatedTarget) hideTooltip();   /* курсор ушёл за пределы окна */
     });
+    window.addEventListener('blur', hideTooltip);
+    window.addEventListener('scroll', hideTooltip, true);
 
     fetch('data/db.json').then(function (r) {
       if (!r.ok) throw new Error('http ' + r.status);
       return r.json();
     }).then(function (db) {
       DB = db;
+      ITEMS_BY_ID = {};
+      db.items.forEach(function (it) { ITEMS_BY_ID[it.id] = it; });
       paintStatic();
       render();
     }).catch(function (err) {
