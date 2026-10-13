@@ -1,0 +1,640 @@
+/* ==========================================================================
+   QuantumCore Armory — справочные таблицы и локализация (ruRU / enUS)
+   Данные соответствуют клиенту World of Warcraft 3.3.5a (build 12340).
+   ========================================================================== */
+(function (global) {
+  'use strict';
+
+  var L = {};
+
+  /* ----------------------------- интерфейс ------------------------------- */
+
+  var UI = {
+    ru: {
+      siteTitle: 'QuantumCore Armory',
+      siteSubtitle: 'World of Warcraft 3.3.5a',
+      nav_catalog: 'Каталог',
+      nav_doll: 'Кукла персонажа',
+      nav_compare: 'Сравнение',
+      nav_about: 'О базе',
+      search_placeholder: 'Поиск по названию, идентификатору, статам…',
+      filters: 'Фильтры',
+      filter_class: 'Тип',
+      filter_slot: 'Слот',
+      filter_quality: 'Качество',
+      filter_set: 'Комплект',
+      filter_ilvl_min: 'Ур. предмета от',
+      filter_ilvl_max: 'до',
+      filter_flags: 'Особенности',
+      flag_has_spells: 'Со спецэффектами',
+      flag_has_sockets: 'С гнёздами',
+      flag_has_set: 'В комплекте',
+      flag_equipable: 'Можно надеть',
+      flag_unique: 'Уникальные',
+      sort: 'Сортировка',
+      sort_ilvl: 'по уровню предмета',
+      sort_name: 'по названию',
+      sort_dps: 'по урону в секунду',
+      sort_armor: 'по броне',
+      sort_id: 'по идентификатору',
+      reset: 'Сбросить',
+      found: 'Найдено предметов:',
+      of: 'из',
+      col_item: 'Предмет',
+      col_ilvl: 'Ур.',
+      col_slot: 'Слот',
+      col_type: 'Тип',
+      col_stats: 'Основные характеристики',
+      col_actions: 'Действия',
+      action_open: 'Открыть',
+      action_equip: 'Надеть',
+      action_unequip: 'Снять',
+      action_compare: 'Сравнить',
+      action_remove: 'Убрать',
+      action_clear: 'Очистить',
+      all: 'Все',
+      any: 'Любой',
+      item_level: 'Уровень предмета',
+      requires_level: 'Требуется уровень',
+      durability: 'Прочность',
+      sell_price: 'Цена продажи',
+      buy_price: 'Цена покупки',
+      unique: 'Уникальный',
+      unique_equipped: 'Уникальный: можно надеть только один',
+      set_bonus: 'Бонус гнезда',
+      sockets: 'Гнёзда',
+      bindings: 'Привязка',
+      classes: 'Классы',
+      races: 'Расы',
+      spells_effects: 'Спецэффекты',
+      trigger_use: 'Использование',
+      trigger_equip: 'Если надет',
+      trigger_chance: 'Вероятность при попадании',
+      trigger_soulbound: 'Привязка',
+      trigger_learn: 'Изучение',
+      cooldown: 'Перезарядка',
+      charges: 'Заряды',
+      ppm: 'Срабатываний в минуту',
+      duration: 'Длительность',
+      proc_chance: 'Шанс срабатывания',
+      params_title: 'Параметры записи item_template',
+      params_hint: 'Показаны все заполненные поля записи предмета из базы сервера.',
+      param_col: 'Поле',
+      param_value: 'Значение',
+      param_meaning: 'Расшифровка',
+      filter_subclass: 'Подтип',
+      tab_summary: 'Сводка',
+      tab_spells: 'Спецэффекты',
+      tab_set: 'Комплект',
+      tab_params: 'Параметры базы',
+      tab_sim: 'Кукла',
+      names_title: 'Названия',
+      name_db: 'Название в базе сервера',
+      name_wowhead_ru: 'Название на Wowhead (RU)',
+      name_wowhead_en: 'Название на Wowhead (EN)',
+      name_custom: 'Собственный предмет сервера — в базе Wowhead отсутствует',
+      name_matched_id: 'Совпадение по номеру предмета',
+      name_matched_name: 'Найдено совпадение по названию',
+      wowhead_open: 'Открыть на Wowhead',
+      wowhead_search: 'Поиск на Wowhead',
+      copy_link: 'Скопировать ссылку',
+      link_copied: 'Ссылка скопирована',
+      doll_title: 'Кукла персонажа',
+      doll_hint: 'Нажимайте «Надеть» в каталоге или выбирайте предметы прямо в слотах.',
+      doll_empty: 'пусто',
+      doll_clear: 'Снять всё',
+      doll_save: 'Сохранить ссылку',
+      doll_slots: 'Слотов занято',
+      char_class: 'Класс',
+      char_race: 'Раса',
+      char_level: 'Уровень',
+      char_none: '— не указан —',
+      stat_total: 'Суммарные характеристики',
+      stat_item_level: 'Средний уровень предметов',
+      stat_armor: 'Броня',
+      stat_dps: 'Урон в секунду (правая рука)',
+      stat_stamina_hp: 'Здоровье от выносливости',
+      stat_resist: 'Сопротивления',
+      stat_ratings: 'Рейтинги',
+      stat_primary: 'Основные характеристики',
+      stat_no_items: 'На кукле пока нет предметов.',
+      incompatible: 'Нельзя надеть: не подходит по классу, расе или уровню',
+      compare_title: 'Сравнение предметов',
+      compare_hint: 'Добавьте до четырёх предметов из каталога кнопкой «Сравнить».',
+      compare_add: 'Добавить предмет',
+      compare_none: 'Список сравнения пуст',
+      compare_param: 'Параметр',
+      about_title: 'О базе',
+      footer_note: 'Данные: дамп item_template (YDBC/YTDB < 600) игрового мира Wonder WoW. Описания заклинаний и названия предметов — из клиента World of Warcraft 3.3.5a и Wowhead.',
+      loading: 'Загрузка данных…',
+      error_load: 'Не удалось загрузить файл данных data/db.json',
+      items_total: 'Предметов в базе',
+      spells_total: 'Заклинаний',
+      sets_total: 'Комплектов',
+      sources: 'Источники',
+      secondary_names: 'Вторичные названия',
+      language: 'Язык',
+      equip_warning: 'Часть предметов недоступна выбранному персонажу',
+      speed: 'Скорость',
+      damage: 'Урон',
+      dps: 'Урон в секунду',
+      armor_label: 'Броня',
+      block_label: 'Блок',
+      range: 'Дистанция',
+      stat_value: 'Значение',
+      reset_filters: 'Сбросить фильтры',
+      nothing_found: 'Ничего не найдено — измените условия поиска.',
+      item_id: 'Номер предмета',
+      display_id: 'Идентификатор модели',
+      set_items: 'Предметы комплекта',
+      set_bonuses: 'Бонусы комплекта',
+      set_progress: 'Надето предметов комплекта',
+      equip_in_slot: 'Надеть в слот',
+      no_slot: 'Этот предмет не надевается',
+      slot_hint: 'Слот',
+      added_to_compare: 'Предмет добавлен к сравнению',
+      in_compare: 'Уже в сравнении',
+      compare_full: 'В сравнении уже четыре предмета',
+      unknown: 'неизвестно'
+    },
+    en: {
+      siteTitle: 'QuantumCore Armory',
+      siteSubtitle: 'World of Warcraft 3.3.5a',
+      nav_catalog: 'Items',
+      nav_doll: 'Character',
+      nav_compare: 'Compare',
+      nav_about: 'About',
+      search_placeholder: 'Search by name, id, stats…',
+      filters: 'Filters',
+      filter_class: 'Type',
+      filter_slot: 'Slot',
+      filter_quality: 'Quality',
+      filter_set: 'Set',
+      filter_ilvl_min: 'Item level from',
+      filter_ilvl_max: 'to',
+      filter_flags: 'Options',
+      flag_has_spells: 'With effects',
+      flag_has_sockets: 'With sockets',
+      flag_has_set: 'In a set',
+      flag_equipable: 'Equippable',
+      flag_unique: 'Unique',
+      sort: 'Sort',
+      sort_ilvl: 'by item level',
+      sort_name: 'by name',
+      sort_dps: 'by damage per second',
+      sort_armor: 'by armor',
+      sort_id: 'by id',
+      reset: 'Reset',
+      found: 'Items found:',
+      of: 'of',
+      col_item: 'Item',
+      col_ilvl: 'iLvl',
+      col_slot: 'Slot',
+      col_type: 'Type',
+      col_stats: 'Main stats',
+      col_actions: 'Actions',
+      action_open: 'Open',
+      action_equip: 'Equip',
+      action_unequip: 'Unequip',
+      action_compare: 'Compare',
+      action_remove: 'Remove',
+      action_clear: 'Clear',
+      all: 'All',
+      any: 'Any',
+      item_level: 'Item Level',
+      requires_level: 'Requires Level',
+      durability: 'Durability',
+      sell_price: 'Sell Price',
+      buy_price: 'Buy Price',
+      unique: 'Unique',
+      unique_equipped: 'Unique-Equipped',
+      set_bonus: 'Socket Bonus',
+      sockets: 'Sockets',
+      bindings: 'Binding',
+      classes: 'Classes',
+      races: 'Races',
+      spells_effects: 'Effects',
+      trigger_use: 'Use',
+      trigger_equip: 'Equip',
+      trigger_chance: 'Chance on hit',
+      trigger_soulbound: 'Soulbound',
+      trigger_learn: 'Learn',
+      cooldown: 'Cooldown',
+      charges: 'Charges',
+      ppm: 'Procs per minute',
+      duration: 'Duration',
+      proc_chance: 'Proc chance',
+      params_title: 'item_template record',
+      params_hint: 'Every non-empty column of the item record in the server database.',
+      param_col: 'Column',
+      param_value: 'Value',
+      param_meaning: 'Meaning',
+      filter_subclass: 'Subtype',
+      tab_summary: 'Summary',
+      tab_spells: 'Effects',
+      tab_set: 'Set',
+      tab_params: 'DB record',
+      tab_sim: 'Doll',
+      names_title: 'Names',
+      name_db: 'Name in the server database',
+      name_wowhead_ru: 'Wowhead name (RU)',
+      name_wowhead_en: 'Wowhead name (EN)',
+      name_custom: 'Custom server item — not present in the Wowhead database',
+      name_matched_id: 'Matched by item id',
+      name_matched_name: 'Matched by name',
+      wowhead_open: 'Open on Wowhead',
+      wowhead_search: 'Search on Wowhead',
+      copy_link: 'Copy link',
+      link_copied: 'Link copied',
+      doll_title: 'Character doll',
+      doll_hint: 'Use “Equip” in the catalogue or pick items directly in the slots.',
+      doll_empty: 'empty',
+      doll_clear: 'Remove all',
+      doll_save: 'Save link',
+      doll_slots: 'Slots filled',
+      char_class: 'Class',
+      char_race: 'Race',
+      char_level: 'Level',
+      char_none: '— not set —',
+      stat_total: 'Total stats',
+      stat_item_level: 'Average item level',
+      stat_armor: 'Armor',
+      stat_dps: 'Damage per second (main hand)',
+      stat_stamina_hp: 'Health from stamina',
+      stat_resist: 'Resistances',
+      stat_ratings: 'Ratings',
+      stat_primary: 'Primary stats',
+      stat_no_items: 'No items equipped yet.',
+      incompatible: 'Cannot equip: class, race or level requirement',
+      compare_title: 'Item comparison',
+      compare_hint: 'Add up to four items from the catalogue with the “Compare” button.',
+      compare_add: 'Add item',
+      compare_none: 'Comparison list is empty',
+      compare_param: 'Parameter',
+      about_title: 'About',
+      footer_note: 'Data: item_template dump (YDBC/YTDB < 600) of the Wonder WoW realm. Spell descriptions and item names come from the World of Warcraft 3.3.5a client and Wowhead.',
+      loading: 'Loading data…',
+      error_load: 'Could not load data/db.json',
+      items_total: 'Items in database',
+      spells_total: 'Spells',
+      sets_total: 'Item sets',
+      sources: 'Sources',
+      secondary_names: 'Secondary names',
+      language: 'Language',
+      equip_warning: 'Some items cannot be used by the selected character',
+      speed: 'Speed',
+      damage: 'Damage',
+      dps: 'Damage per second',
+      armor_label: 'Armor',
+      block_label: 'Block',
+      range: 'Range',
+      stat_value: 'Value',
+      reset_filters: 'Reset filters',
+      nothing_found: 'Nothing found — change the search conditions.',
+      item_id: 'Item id',
+      display_id: 'Display id',
+      set_items: 'Set items',
+      set_bonuses: 'Set bonuses',
+      set_progress: 'Set items equipped',
+      equip_in_slot: 'Equip in slot',
+      no_slot: 'This item is not equippable',
+      slot_hint: 'Slot',
+      added_to_compare: 'Item added to comparison',
+      in_compare: 'Already in comparison',
+      compare_full: 'Comparison already has four items',
+      unknown: 'unknown'
+    }
+  };
+
+  /* ----------------------------- качества --------------------------------- */
+
+  var QUALITY = {
+    ru: ['Убогое', 'Обычное', 'Необычное', 'Редкое', 'Эпическое', 'Легендарное', 'Артефакт', 'Наследуемое'],
+    en: ['Poor', 'Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Artifact', 'Heirloom']
+  };
+
+  /* ------------------------------- классы --------------------------------- */
+
+  var CLASS = {
+    ru: {
+      0: 'Расходуемый', 1: 'Контейнер', 2: 'Оружие', 3: 'Самоцвет', 4: 'Броня', 5: 'Реагент',
+      6: 'Боеприпас', 7: 'Хозяйственные товары', 9: 'Рецепт', 11: 'Колчан', 12: 'Задание',
+      13: 'Ключ', 15: 'Разное', 16: 'Символ', 17: 'Питомец'
+    },
+    en: {
+      0: 'Consumable', 1: 'Container', 2: 'Weapon', 3: 'Gem', 4: 'Armor', 5: 'Reagent',
+      6: 'Projectile', 7: 'Trade Goods', 9: 'Recipe', 11: 'Quiver', 12: 'Quest', 13: 'Key',
+      15: 'Miscellaneous', 16: 'Glyph', 17: 'Battle Pet'
+    }
+  };
+
+  var SUBCLASS = {
+    ru: {
+      '2:0': 'Топор (одноручное)', '2:1': 'Топор (двуручное)', '2:2': 'Лук', '2:3': 'Ружьё',
+      '2:4': 'Дробящее (одноручное)', '2:5': 'Дробящее (двуручное)', '2:6': 'Древковое оружие',
+      '2:7': 'Меч (одноручный)', '2:8': 'Меч (двуручный)', '2:10': 'Посох', '2:13': 'Кистевое оружие',
+      '2:14': 'Разное', '2:15': 'Кинжал', '2:16': 'Метательное оружие', '2:18': 'Арбалет',
+      '2:19': 'Жезл', '2:20': 'Удочка',
+      '4:0': 'Разное', '4:1': 'Ткань', '4:2': 'Кожа', '4:3': 'Кольчуга', '4:4': 'Латы',
+      '4:5': 'Баклер', '4:6': 'Щит', '4:7': 'Манускрипт', '4:8': 'Идол', '4:9': 'Тотем', '4:10': 'Печать',
+      '6:2': 'Стрела', '6:3': 'Пуля', '1:0': 'Сумка', '0:0': 'Расходуемый',
+      '15:0': 'Разное', '15:2': 'Предмет задания', '15:4': 'Разное'
+    },
+    en: {
+      '2:0': 'One-Handed Axe', '2:1': 'Two-Handed Axe', '2:2': 'Bow', '2:3': 'Gun',
+      '2:4': 'One-Handed Mace', '2:5': 'Two-Handed Mace', '2:6': 'Polearm', '2:7': 'One-Handed Sword',
+      '2:8': 'Two-Handed Sword', '2:10': 'Staff', '2:13': 'Fist Weapon', '2:14': 'Miscellaneous',
+      '2:15': 'Dagger', '2:16': 'Thrown', '2:18': 'Crossbow', '2:19': 'Wand', '2:20': 'Fishing Pole',
+      '4:0': 'Miscellaneous', '4:1': 'Cloth', '4:2': 'Leather', '4:3': 'Mail', '4:4': 'Plate',
+      '4:5': 'Buckler', '4:6': 'Shield', '4:7': 'Libram', '4:8': 'Idol', '4:9': 'Totem', '4:10': 'Sigil',
+      '6:2': 'Arrow', '6:3': 'Bullet', '1:0': 'Bag', '0:0': 'Consumable',
+      '15:0': 'Junk', '15:2': 'Quest', '15:4': 'Miscellaneous'
+    }
+  };
+
+  /* --------------------------------- слоты -------------------------------- */
+
+  var SLOT = {
+    ru: {
+      0: 'Не надевается', 1: 'Голова', 2: 'Шея', 3: 'Плечи', 4: 'Рубашка', 5: 'Грудь',
+      6: 'Пояс', 7: 'Ноги', 8: 'Ступни', 9: 'Запястья', 10: 'Кисти рук', 11: 'Палец',
+      12: 'Аксессуар', 13: 'Одноручное', 14: 'Щит', 15: 'Дальний бой', 16: 'Спина',
+      17: 'Двуручное', 18: 'Сумка', 19: 'Гербовая накидка', 20: 'Одеяние', 21: 'Правая рука',
+      22: 'Левая рука', 23: 'Левая рука (держать)', 24: 'Боеприпас', 25: 'Метательное',
+      26: 'Дальний бой (правая рука)', 28: 'Реликвия'
+    },
+    en: {
+      0: 'Non-equippable', 1: 'Head', 2: 'Neck', 3: 'Shoulder', 4: 'Shirt', 5: 'Chest', 6: 'Waist',
+      7: 'Legs', 8: 'Feet', 9: 'Wrist', 10: 'Hands', 11: 'Finger', 12: 'Trinket', 13: 'One-Hand',
+      14: 'Shield', 15: 'Ranged', 16: 'Back', 17: 'Two-Hand', 18: 'Bag', 19: 'Tabard', 20: 'Robe',
+      21: 'Main Hand', 22: 'Off Hand', 23: 'Held In Off-hand', 24: 'Ammo', 25: 'Thrown',
+      26: 'Ranged (main hand)', 28: 'Relic'
+    }
+  };
+
+  /* ---------------------------- характеристики ---------------------------- */
+
+  var STAT = {
+    3: { ru: 'Ловкость', en: 'Agility', kind: 'primary' },
+    4: { ru: 'Сила', en: 'Strength', kind: 'primary' },
+    5: { ru: 'Интеллект', en: 'Intellect', kind: 'primary' },
+    6: { ru: 'Дух', en: 'Spirit', kind: 'primary' },
+    7: { ru: 'Выносливость', en: 'Stamina', kind: 'primary' },
+    12: { ru: 'Рейтинг защиты', en: 'Defense Rating', kind: 'rating' },
+    13: { ru: 'Рейтинг уклонения', en: 'Dodge Rating', kind: 'rating' },
+    14: { ru: 'Рейтинг парирования', en: 'Parry Rating', kind: 'rating' },
+    15: { ru: 'Рейтинг блокирования', en: 'Block Rating', kind: 'rating' },
+    16: { ru: 'Рейтинг меткости (ближний бой)', en: 'Melee Hit Rating', kind: 'hit' },
+    17: { ru: 'Рейтинг меткости (дальний бой)', en: 'Ranged Hit Rating', kind: 'hit' },
+    18: { ru: 'Рейтинг меткости (заклинания)', en: 'Spell Hit Rating', kind: 'hit' },
+    19: { ru: 'Рейтинг крит. удара (ближний бой)', en: 'Melee Crit Rating', kind: 'crit' },
+    20: { ru: 'Рейтинг крит. удара (дальний бой)', en: 'Ranged Crit Rating', kind: 'crit' },
+    21: { ru: 'Рейтинг крит. удара (заклинания)', en: 'Spell Crit Rating', kind: 'crit' },
+    22: { ru: 'Рейтинг меткости по вам (ближний бой)', en: 'Melee Hit Taken Rating', kind: 'other' },
+    23: { ru: 'Рейтинг меткости по вам (дальний бой)', en: 'Ranged Hit Taken Rating', kind: 'other' },
+    24: { ru: 'Рейтинг меткости по вам (заклинания)', en: 'Spell Hit Taken Rating', kind: 'other' },
+    25: { ru: 'Рейтинг крит. удара по вам (ближний бой)', en: 'Melee Crit Taken Rating', kind: 'other' },
+    26: { ru: 'Рейтинг крит. удара по вам (дальний бой)', en: 'Ranged Crit Taken Rating', kind: 'other' },
+    27: { ru: 'Рейтинг крит. удара по вам (заклинания)', en: 'Spell Crit Taken Rating', kind: 'other' },
+    28: { ru: 'Рейтинг скорости (ближний бой)', en: 'Melee Haste Rating', kind: 'haste' },
+    29: { ru: 'Рейтинг скорости (дальний бой)', en: 'Ranged Haste Rating', kind: 'haste' },
+    30: { ru: 'Рейтинг скорости (заклинания)', en: 'Spell Haste Rating', kind: 'haste' },
+    31: { ru: 'Рейтинг меткости', en: 'Hit Rating', kind: 'hit' },
+    32: { ru: 'Рейтинг критического удара', en: 'Crit Rating', kind: 'crit' },
+    35: { ru: 'Рейтинг устойчивости', en: 'Resilience Rating', kind: 'other' },
+    36: { ru: 'Рейтинг скорости', en: 'Haste Rating', kind: 'haste' },
+    37: { ru: 'Рейтинг мастерства', en: 'Expertise Rating', kind: 'other' },
+    38: { ru: 'Сила атаки', en: 'Attack Power', kind: 'power' },
+    39: { ru: 'Сила атаки (дальний бой)', en: 'Ranged Attack Power', kind: 'power' },
+    41: { ru: 'Эффект исцеления', en: 'Spell Healing Done', kind: 'power' },
+    42: { ru: 'Эффект урона заклинаний', en: 'Spell Damage Done', kind: 'power' },
+    43: { ru: 'Восполнение маны за 5 сек.', en: 'Mana Regeneration', kind: 'regen' },
+    44: { ru: 'Рейтинг пробивания брони', en: 'Armor Penetration Rating', kind: 'other' },
+    45: { ru: 'Сила заклинаний', en: 'Spell Power', kind: 'power' },
+    46: { ru: 'Восстановление здоровья', en: 'Health Regeneration', kind: 'regen' },
+    47: { ru: 'Проникающая способность заклинаний', en: 'Spell Penetration', kind: 'other' },
+    48: { ru: 'Показатель блокирования', en: 'Block Value', kind: 'other' }
+  };
+
+  /* форма отображения характеристики: «+50 к выносливости» / «+50 Stamina» */
+  var STAT_PHRASE = {
+    3: ['к ловкости', 'Agility'], 4: ['к силе', 'Strength'], 5: ['к интеллекту', 'Intellect'],
+    6: ['к духу', 'Spirit'], 7: ['к выносливости', 'Stamina'],
+    12: ['к рейтингу защиты', 'Defense Rating'], 13: ['к рейтингу уклонения', 'Dodge Rating'],
+    14: ['к рейтингу парирования', 'Parry Rating'], 15: ['к рейтингу блокирования', 'Block Rating'],
+    16: ['к рейтингу меткости', 'Hit Rating'], 17: ['к рейтингу меткости', 'Hit Rating'],
+    18: ['к рейтингу меткости', 'Hit Rating'], 19: ['к рейтингу критического удара', 'Crit Rating'],
+    20: ['к рейтингу критического удара', 'Crit Rating'], 21: ['к рейтингу критического удара', 'Crit Rating'],
+    22: ['к рейтингу меткости (получаемой)', 'Hit Taken Rating'], 23: ['к рейтингу меткости (получаемой)', 'Hit Taken Rating'],
+    24: ['к рейтингу меткости (получаемой)', 'Hit Taken Rating'],
+    25: ['к рейтингу критического удара (получаемого)', 'Crit Taken Rating'],
+    26: ['к рейтингу критического удара (получаемого)', 'Crit Taken Rating'],
+    27: ['к рейтингу критического удара (получаемого)', 'Crit Taken Rating'],
+    28: ['к рейтингу скорости', 'Haste Rating'], 29: ['к рейтингу скорости', 'Haste Rating'],
+    30: ['к рейтингу скорости', 'Haste Rating'], 31: ['к рейтингу меткости', 'Hit Rating'],
+    32: ['к рейтингу критического удара', 'Crit Rating'], 35: ['к рейтингу устойчивости', 'Resilience Rating'],
+    36: ['к рейтингу скорости', 'Haste Rating'], 37: ['к рейтингу мастерства', 'Expertise Rating'],
+    38: ['к силе атаки', 'Attack Power'], 39: ['к силе атаки (дальний бой)', 'Ranged Attack Power'],
+    41: ['к эффекту исцеления', 'Healing Power'], 42: ['к эффекту урона заклинаний', 'Spell Damage'],
+    43: ['к восполнению маны за 5 сек.', 'Mana per 5 sec'], 44: ['к рейтингу пробивания брони', 'Armor Penetration'],
+    45: ['к силе заклинаний', 'Spell Power'], 46: ['к восстановлению здоровья за 5 сек.', 'Health per 5 sec'],
+    47: ['к проникающей способности заклинаний', 'Spell Penetration'], 48: ['к показателю блокирования', 'Block Value']
+  };
+
+  var DAMAGE_TYPE = {
+    ru: ['Физический', 'Свет', 'Огонь', 'Природа', 'Лёд', 'Тьма', 'Тайная магия'],
+    en: ['Physical', 'Holy', 'Fire', 'Nature', 'Frost', 'Shadow', 'Arcane']
+  };
+
+  var SOCKET = {
+    1: { ru: 'Особое', en: 'Meta', css: 'meta' },
+    2: { ru: 'Красное', en: 'Red', css: 'red' },
+    4: { ru: 'Жёлтое', en: 'Yellow', css: 'yellow' },
+    8: { ru: 'Синее', en: 'Blue', css: 'blue' }
+  };
+
+  var BONDING = {
+    ru: { 0: 'Без привязки', 1: 'Привязка при получении', 2: 'Привязка при надевании', 3: 'Привязка при использовании', 4: 'Предмет задания' },
+    en: { 0: 'No binding', 1: 'Binds when picked up', 2: 'Binds when equipped', 3: 'Binds when used', 4: 'Quest item' }
+  };
+
+  var RESIST = {
+    ru: { holy: 'Свет', fire: 'Огонь', nature: 'Природа', frost: 'Лёд', shadow: 'Тьма', arcane: 'Тайная магия' },
+    en: { holy: 'Holy', fire: 'Fire', nature: 'Nature', frost: 'Frost', shadow: 'Shadow', arcane: 'Arcane' }
+  };
+
+  /* ----------------------------- флаги предмета --------------------------- */
+
+  var FLAGS = [
+    [0x00000002, 'Созданный предмет', 'Conjured'],
+    [0x00000004, 'Можно открыть', 'Openable'],
+    [0x00000008, 'Пометка «Героический»', 'Heroic tooltip'],
+    [0x00000010, 'Устаревший', 'Deprecated'],
+    [0x00000020, 'Нельзя уничтожить', 'No user destroy'],
+    [0x00000040, 'Применяется игроком', 'Player cast'],
+    [0x00000080, 'Без задержки при надевании', 'No equip cooldown'],
+    [0x00000200, 'Упаковка', 'Wrapper'],
+    [0x00000800, 'Не исчезает при добыче', 'Multi drop'],
+    [0x00001000, 'Возврат торговцу', 'Purchase record'],
+    [0x00002000, 'Устав / грамота', 'Petition'],
+    [0x00004000, 'Есть текст', 'Has text'],
+    [0x00008000, 'Нельзя разобрать', 'No disenchant'],
+    [0x00080000, 'Уникальный: можно надеть только один', 'Unique-Equipped'],
+    [0x00100000, 'Игнорируется аурами', 'Ignore for auras'],
+    [0x00200000, 'Разрешён на арене', 'Arena allowed'],
+    [0x00400000, 'Без потери прочности', 'No durability loss'],
+    [0x00800000, 'Работает в формах зверя', 'Use when shapeshifted'],
+    [0x04000000, 'Запрещён на арене', 'Not usable in arena'],
+    [0x08000000, 'Привязка к учётной записи', 'Bound to account'],
+    [0x10000000, 'Без реагентов', 'No reagent cost']
+  ];
+
+  var FLAGS_EXTRA = [
+    [0x00000001, 'Только Орда', 'Horde only'],
+    [0x00000002, 'Только Альянс', 'Alliance only'],
+    [0x00000004, 'Всегда требует золото', 'Never ignore buy price'],
+    [0x00000008, 'Классифицируется как заклинатель', 'Classify as caster'],
+    [0x00000010, 'Классифицируется как боец', 'Classify as physical']
+  ];
+
+  /* ------------------------------ классы/расы ----------------------------- */
+
+  var CLASS_MASK = ['Воин', 'Паладин', 'Охотник', 'Разбойник', 'Жрец', 'Рыцарь смерти', 'Шаман', 'Маг', 'Чернокнижник', 'Друид'];
+  var CLASS_MASK_EN = ['Warrior', 'Paladin', 'Hunter', 'Rogue', 'Priest', 'Death Knight', 'Shaman', 'Mage', 'Warlock', 'Druid'];
+  var CLASS_BITS = [1, 2, 4, 8, 16, 32, 64, 128, 256, 1024];
+  var RACE_MASK = ['Человек', 'Орк', 'Дворф', 'Ночной эльф', 'Нежить', 'Таурен', 'Гном', 'Тролль', 'Эльф крови', 'Дренеи'];
+  var RACE_MASK_EN = ['Human', 'Orc', 'Dwarf', 'Night Elf', 'Undead', 'Tauren', 'Gnome', 'Troll', 'Blood Elf', 'Draenei'];
+  var RACE_BITS = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512];
+
+  /* ------------------------- описания колонок базы ------------------------ */
+
+  var PARAM_DESC = {
+    entry: ['Номер предмета', 'Item id'],
+    name: ['Название', 'Name'],
+    displayid: ['Номер модели', 'Display id'],
+    Quality: ['Качество', 'Quality'],
+    ItemLevel: ['Уровень предмета', 'Item level'],
+    RequiredLevel: ['Требуемый уровень', 'Required level'],
+    class: ['Класс предмета', 'Item class'],
+    subclass: ['Подкласс предмета', 'Item subclass'],
+    InventoryType: ['Тип слота', 'Inventory type'],
+    bonding: ['Привязка', 'Binding'],
+    BuyPrice: ['Цена покупки (медь)', 'Buy price (copper)'],
+    SellPrice: ['Цена продажи (медь)', 'Sell price (copper)'],
+    BuyCount: ['Количество в наборе', 'Buy count'],
+    maxcount: ['Уникальность', 'Unique limit'],
+    stackable: ['Стопка', 'Stack size'],
+    ContainerSlots: ['Ячеек в сумке', 'Container slots'],
+    StatsCount: ['Количество характеристик', 'Stats count'],
+    armor: ['Броня', 'Armor'],
+    block: ['Показатель блокирования', 'Block value'],
+    dmg_min1: ['Минимальный урон (1)', 'Min damage (1)'],
+    dmg_max1: ['Максимальный урон (1)', 'Max damage (1)'],
+    dmg_type1: ['Тип урона (1)', 'Damage type (1)'],
+    dmg_min2: ['Минимальный урон (2)', 'Min damage (2)'],
+    dmg_max2: ['Максимальный урон (2)', 'Max damage (2)'],
+    dmg_type2: ['Тип урона (2)', 'Damage type (2)'],
+    delay: ['Скорость оружия (мс)', 'Weapon delay (ms)'],
+    ammo_type: ['Тип боеприпасов', 'Ammo type'],
+    RangedModRange: ['Модификатор дистанции', 'Ranged mod range'],
+    holy_res: ['Сопротивление свету', 'Holy resistance'],
+    fire_res: ['Сопротивление огню', 'Fire resistance'],
+    nature_res: ['Сопротивление природе', 'Nature resistance'],
+    frost_res: ['Сопротивление льду', 'Frost resistance'],
+    shadow_res: ['Сопротивление тьме', 'Shadow resistance'],
+    arcane_res: ['Сопротивление тайной магии', 'Arcane resistance'],
+    MaxDurability: ['Максимальная прочность', 'Max durability'],
+    description: ['Описание от сервера', 'Server description'],
+    itemset: ['Номер комплекта', 'Item set id'],
+    socketBonus: ['Бонус гнёзд (наложение)', 'Socket bonus (enchant)'],
+    GemProperties: ['Свойства самоцвета', 'Gem properties'],
+    RandomProperty: ['Случайное свойство', 'Random property'],
+    RandomSuffix: ['Случайный суффикс', 'Random suffix'],
+    RequiredDisenchantSkill: ['Навык разбора', 'Required disenchant skill'],
+    DisenchantID: ['Таблица разбора', 'Disenchant id'],
+    Material: ['Материал', 'Material'],
+    sheath: ['Размещение на поясе', 'Sheath'],
+    Flags: ['Флаги предмета', 'Item flags'],
+    FlagsExtra: ['Дополнительные флаги', 'Extra flags'],
+    AllowableClass: ['Доступные классы (маска)', 'Allowable classes (mask)'],
+    AllowableRace: ['Доступные расы (маска)', 'Allowable races (mask)'],
+    RequiredSkill: ['Требуемый навык', 'Required skill'],
+    RequiredSkillRank: ['Ранг навыка', 'Required skill rank'],
+    ScalingStatDistribution: ['Масштабирование характеристик', 'Scaling stat distribution'],
+    ScalingStatValue: ['Значения масштабирования', 'Scaling stat value'],
+    ItemLimitCategory: ['Категория ограничения', 'Item limit category'],
+    MinMoneyLoot: ['Минимум денег в добыче', 'Min money loot'],
+    MaxMoneyLoot: ['Максимум денег в добыче', 'Max money loot'],
+    flagsCustom: ['Особые флаги сервера', 'Custom flags'],
+    startquest: ['Номер задания', 'Start quest'],
+    PageText: ['Текст страницы', 'Page text'],
+    LockID: ['Замок', 'Lock id'],
+    lockid: ['Замок', 'Lock id'],
+    FoodType: ['Тип еды', 'Food type'],
+    HolidayId: ['Праздник', 'Holiday id'],
+    ItemLimitCategoryId: ['Категория ограничения', 'Item limit category'],
+    Duration: ['Длительность', 'Duration'],
+    BagFamily: ['Семейство сумок', 'Bag family'],
+    area: ['Область', 'Area'],
+    Map: ['Карта', 'Map'],
+    TotemCategory: ['Категория тотема', 'Totem category'],
+    ScriptName: ['Скрипт', 'Script name'],
+    SoundOverrideSubclass: ['Звук подкласса', 'Sound override subclass'],
+    VerifiedBuild: ['Версия сборки', 'Verified build'],
+    requiredspell: ['Требуемое заклинание', 'Required spell'],
+    RequiredCityRank: ['Ранг города', 'Required city rank'],
+    requiredhonorrank: ['Ранг чести', 'Required honor rank'],
+    RequiredReputationFaction: ['Требуемая репутация', 'Required reputation faction'],
+    RequiredReputationRank: ['Ранг репутации', 'Required reputation rank'],
+    maxMoneyLoot: ['Максимум денег в добыче', 'Max money loot'],
+    minMoneyLoot: ['Минимум денег в добыче', 'Min money loot'],
+    FoodTypeId: ['Тип еды', 'Food type']
+  };
+
+  /* какие колонки базы не показываем в таблице параметров */
+  var PARAM_SKIP = ['spellid_', 'spelltrigger_', 'spellcharges_', 'spellppmRate_', 'spellcooldown_',
+    'spellcategory_', 'socketColor_', 'socketContent_', 'stat_type', 'stat_value', 'ScalingStat',
+    'AllowableRace', 'AllowableClass', 'FlagsExtra', 'flagsCustom', 'VerifiedBuild', 'SoundOverrideSubclass'];
+
+  function isParamSkipped(col) {
+    for (var i = 0; i < PARAM_SKIP.length; i++) {
+      if (col.indexOf(PARAM_SKIP[i]) === 0) return true;
+    }
+    return false;
+  }
+
+  /* ------------------------------- утилиты -------------------------------- */
+
+  function pluralRu(n, one, few, many) {
+    var m10 = n % 10, m100 = n % 100;
+    if (m100 >= 11 && m100 <= 14) return many;
+    if (m10 === 1) return one;
+    if (m10 >= 2 && m10 <= 4) return few;
+    return many;
+  }
+
+  L.UI = UI;
+  L.QUALITY = QUALITY;
+  L.CLASS = CLASS;
+  L.SUBCLASS = SUBCLASS;
+  L.SLOT = SLOT;
+  L.STAT = STAT;
+  L.STAT_PHRASE = STAT_PHRASE;
+  L.DAMAGE_TYPE = DAMAGE_TYPE;
+  L.SOCKET = SOCKET;
+  L.BONDING = BONDING;
+  L.RESIST = RESIST;
+  L.FLAGS = FLAGS;
+  L.FLAGS_EXTRA = FLAGS_EXTRA;
+  L.CLASS_MASK = CLASS_MASK;
+  L.CLASS_MASK_EN = CLASS_MASK_EN;
+  L.CLASS_BITS = CLASS_BITS;
+  L.RACE_MASK = RACE_MASK;
+  L.RACE_MASK_EN = RACE_MASK_EN;
+  L.RACE_BITS = RACE_BITS;
+  L.PARAM_DESC = PARAM_DESC;
+  L.isParamSkipped = isParamSkipped;
+  L.pluralRu = pluralRu;
+
+  global.ArmoryI18n = L;
+}(window));
