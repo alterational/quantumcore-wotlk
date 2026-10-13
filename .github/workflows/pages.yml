@@ -48,6 +48,9 @@ jobs:
           ls -la _site
 
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+          build_type: workflow
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
