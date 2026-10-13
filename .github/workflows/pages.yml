@@ -1,15 +1,21 @@
 name: pages
 
+# Публикация статического сайта армори на GitHub Pages.
+# Перед первым запуском включите Pages: Settings → Pages → Build and deployment →
+# Source: «GitHub Actions». После этого сайт будет обновляться автоматически.
+# Вариант без Actions: Source: «Deploy from a branch» → нужная ветка → «/ (root)».
+
 on:
   workflow_dispatch:
   push:
     branches:
-      - 'arena/**'
       - main
+      - 'arena/**'
     paths:
       - 'index.html'
       - 'assets/**'
       - 'data/**'
+      - 'sql/**'
       - '.github/workflows/pages.yml'
 
 permissions:
@@ -24,35 +30,43 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
-      - name: Пробуем включить GitHub Pages (если ещё не включён)
-        continue-on-error: true
+      - name: Проверяем, включён ли GitHub Pages
+        id: probe
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh api -X POST "repos/${{ github.repository }}/pages" \
-            -f 'source[branch]=${{ github.ref_name }}' -f 'source[path]=/' \
-            && echo "Pages включён для ветки ${{ github.ref_name }}" \
-            || echo "Нет прав на включение Pages — включите вручную: Settings → Pages → Deploy from a branch"
+          if gh api "repos/${{ github.repository }}/pages" >/dev/null 2>&1; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+            echo "GitHub Pages включён, публикуем сайт."
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=GitHub Pages не включён::Включите Settings → Pages → Source: GitHub Actions (или Deploy from a branch → / (root)), после чего сайт опубликуется автоматически."
+          fi
 
       - name: Готовим файлы сайта
+        if: steps.probe.outputs.enabled == 'true'
         run: |
-          mkdir -p _site
-          cp -r index.html assets data .nojekyll README.md _site/
-          mkdir -p _site/sql && cp sql/item_template.sql _site/sql/
-          ls -la _site
+          mkdir -p _site/sql
+          cp index.html .nojekyll README.md _site/
+          cp -r assets data _site/
+          cp sql/item_template.sql _site/sql/
+          du -sh _site
 
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
-          build_type: workflow
+        if: steps.probe.outputs.enabled == 'true'
+
       - uses: actions/upload-pages-artifact@v3
+        if: steps.probe.outputs.enabled == 'true'
         with:
           path: _site
+
       - id: deployment
+        if: steps.probe.outputs.enabled == 'true'
         uses: actions/deploy-pages@v4
+
+      - name: Итог
+        if: steps.probe.outputs.enabled == 'true'
+        run: echo "Сайт опубликован: ${{ steps.deployment.outputs.page_url }}"
