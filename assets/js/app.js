@@ -107,6 +107,15 @@
     return (I.SLOT[state.lang] || I.SLOT.ru)[item.inventoryType] || '—';
   }
 
+  /* строка слота в тултипе: у щита в клиенте показана рука, в которую он надевается
+     («Левая рука» / «Off Hand»), иначе слот и подкласс давали две строки «Щит» */
+  var TOOLTIP_SLOT = { ru: { 14: 'Левая рука' }, en: { 14: 'Off Hand' } };
+
+  function tooltipSlotName(item) {
+    var table = TOOLTIP_SLOT[state.lang] || TOOLTIP_SLOT.ru;
+    return table[item.inventoryType] || slotName(item);
+  }
+
   function className(item) {
     return (I.CLASS[state.lang] || I.CLASS.ru)[item['class']] || '—';
   }
@@ -344,8 +353,13 @@
     if (item.unique === 1) h.push('<div class="tt-line">' + t('unique') + '</div>');
     if (item.flags & 0x00080000) h.push('<div class="tt-line">' + t('unique_equipped') + '</div>');
 
-    if (item.inventoryType !== 0) h.push('<div class="tt-line">' + esc(slotName(item)) + '</div>');
-    h.push('<div class="tt-line">' + esc(subclassName(item)) + '</div>');
+    var slotLine = tooltipSlotName(item);
+    var subLine = subclassName(item);
+    /* если строки совпадают (щит, сумка), показываем её одну */
+    if (item.inventoryType !== 0 && slotLine && slotLine !== subLine) {
+      h.push('<div class="tt-line">' + esc(slotLine) + '</div>');
+    }
+    h.push('<div class="tt-line">' + esc(subLine) + '</div>');
 
     if (item.damage && item.damage.length) {
       var d = item.damage[0];
@@ -1568,15 +1582,16 @@
 
     /* переключатель языка */
     document.querySelectorAll('.lang-switch button').forEach(function (btn) {
-      btn.classList.toggle('active', btn.getAttribute('data-lang') === state.lang);
       btn.addEventListener('click', function () {
+        if (state.lang === btn.getAttribute('data-lang')) return;
         state.lang = btn.getAttribute('data-lang');
-        localStorage.setItem('armory.lang', state.lang);
+        try { localStorage.setItem('armory.lang', state.lang); } catch (err) { /* недоступно */ }
         saveState();
         paintStatic();
         render();
       });
     });
+    paintLangSwitch();
     document.querySelectorAll('.nav-btn').forEach(function (btn) {
       btn.addEventListener('click', function () { navigate({ view: btn.getAttribute('data-view') }); });
     });
@@ -1636,6 +1651,16 @@
     if (footer) footer.textContent = t('footer_note');
     document.title = t('siteTitle') + ' — ' + t('siteSubtitle');
     document.documentElement.lang = state.lang;
+    paintLangSwitch();
+  }
+
+  /* подсветка текущего языка в переключателе */
+  function paintLangSwitch() {
+    document.querySelectorAll('.lang-switch button').forEach(function (btn) {
+      var active = btn.getAttribute('data-lang') === state.lang;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
