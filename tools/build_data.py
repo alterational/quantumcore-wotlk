@@ -19,10 +19,14 @@ import struct
 import sys
 
 SQL_PATH = 'sql/item_template.sql'
+# отдельный дамп (другая ревизия той же серверной базы) — собирается в свой файл
+# и не пересекается с основным: ключи предметов в приложении разведены префиксом
+QC_SQL_PATH = os.environ.get('QC_SQL_PATH', 'sql/qc131.sql')
 KAEV = os.environ.get('KAEV_DIR', '/tmp/kaev')
 RURU_DBC = os.environ.get('RURU_DBC_DIR', '/tmp/ruRU/dbc/ruRU')
 WOWDUMPS = os.environ.get('WOWDUMPS_DIR', '/tmp/wowdumps')
 OUT = os.environ.get('OUT_PATH', 'data/db.json')
+QC_OUT = os.environ.get('QC_OUT_PATH', 'data/qc131.json')
 
 # смещения локализованных строк (локаль 0) в бинарных DBC клиента 3.3.5a
 SPELL_DBC_STRINGS = {'name': 144, 'rank': 161, 'description': 178, 'tooltip': 195}
@@ -127,6 +131,38 @@ def parse_item_sql(path):
             continue
         items.append(dict(zip(cols, vals)))
     return items
+
+
+def parse_locales_sql(path):
+    """Русская локализация предметов (locales_item, locale 8) из того же дампа."""
+    out = {}
+    if not os.path.exists(path):
+        return out
+    text = open(path, encoding='utf-8', errors='replace').read()
+    for ch in text.split('REPLACE INTO'):
+        if 'locales_item' not in ch[:200]:
+            continue
+        vpos = ch.find('VALUES')
+        if vpos < 0:
+            continue
+        head = ch[:vpos]
+        lp, rp = head.find('('), head.rfind(')')
+        cols = [c.strip(' `') for c in head[lp + 1:rp].split(',')]
+        body = ch[vpos + 6:].lstrip()
+        tup, _ = read_tuple(body, 1)
+        vals = tokenize_tuple(tup)
+        if len(vals) != len(cols):
+            continue
+        row = dict(zip(cols, vals))
+        try:
+            entry = int(row['entry'])
+        except (KeyError, TypeError, ValueError):
+            continue
+        out[entry] = {
+            'name': (row.get('name_loc8') or '').strip(),
+            'description': (row.get('description_loc8') or '').strip(),
+        }
+    return out
 
 
 # --------------------------------------------------------------------------
@@ -566,9 +602,18 @@ def load_radii(path):
 # --------------------------------------------------------------------------
 # Основная сборка
 # --------------------------------------------------------------------------
-def main():
-    items = parse_item_sql(SQL_PATH)
-    print('предметов в дампе:', len(items))
+def base_name(name):
+    """Название без уточнения в скобках: 'Alarming Clockbot (NOT IN USE)' -> 'alarming clockbot'."""
+    return re.sub(r'\s*\([^)]*\)\s*$', '', (name or '')).strip().lower()
+
+
+def build_dataset(sql_path, extra_source=None, strict_names=False):
+    """Собирает данные одного дампа item_template: предметы, заклинания, комплекты."""
+    items = parse_item_sql(sql_path)
+    items = [i for i in items if 'ItemLevel' in i]
+    locales = parse_locales_sql(sql_path)
+    print('%s: предметов %d, строк локализации %d'
+          % (os.path.basename(sql_path), len(items), len(locales)))
 
     needed_sets = {int(i['itemset']) for i in items if i.get('itemset')}
     needed_displays = {int(i['displayid']) for i in items if i.get('displayid')}
@@ -753,7 +798,24 @@ def main():
         match = 'none'
         name_en = official['en'].get(iid, '')
         name_ru = official['ru'].get(iid, '')
-        if name_en:
+        entry_conflict = None
+        if strict_names:
+            # entry этого дампа мог быть занят другим предметом официальной базы:
+            # официальные названия принимаем только при совпадении имени
+            if name_en and base_name(name_en) != base_name(sql_name):
+                entry_conflict = {'entry': iid, 'nameEn': name_en, 'nameRu': name_ru}
+            if name_en and base_name(name_en) == base_name(sql_name):
+                wl_id, match = iid, 'id'
+            else:
+                cand = by_name.get(sql_name.lower())
+                cand_en = official['en'].get(cand, '') if cand else ''
+                if cand and base_name(cand_en) == base_name(sql_name):
+                    wl_id, match = cand, 'name'
+                    name_en = cand_en
+                    name_ru = official['ru'].get(cand, '')
+                else:
+                    name_en, name_ru, wl_id, match = '', '', None, 'none'
+        elif name_en:
             wl_id, match = iid, 'id'
         else:
             cand = by_name.get(sql_name.lower())
@@ -763,6 +825,12 @@ def main():
                 name_ru = official['ru'].get(cand, '')
         if name_en and name_en.lower() == sql_name.lower():
             name_en = ''
+
+        # русское название из локализации сервера — отдельным полем:
+        # официальное (Wowhead) остаётся в nameRu и не подменяется
+        loc = locales.get(iid) or {}
+        name_ru_server = loc.get('name', '')
+        desc_ru = loc.get('description', '')
 
         spells = []
         for k in range(1, 6):
@@ -857,30 +925,59 @@ def main():
             'startQuest': int(it['startquest'] or 0),
             'pageText': int(it['PageText'] or 0),
             'flagsCustom': int(it['flagsCustom'] or 0),
-            'verifiedBuild': int(it['VerifiedBuild'] or 0),
+            'verifiedBuild': int(it.get('VerifiedBuild') or 0),
             'icon': icons.get(int(it['displayid'] or 0), ''),
             'meta': {k: v for k, v in it.items() if v not in (0, '', None)},
         }
+        if entry_conflict:
+            it_out['entryConflict'] = entry_conflict
+        if name_ru_server and name_ru_server != name_ru:
+            it_out['nameRuServer'] = name_ru_server
+        if desc_ru:
+            it_out['descriptionRu'] = desc_ru
         out_items.append(it_out)
 
-    db = {
-        'source': {
-            'fileName': os.path.basename(SQL_PATH),
-            'items': len(out_items),
-            'generatedFrom': 'item_template (YDBC/YTDB < 600), World of Warcraft 3.3.5a',
-        },
+    source = {
+        'fileName': os.path.basename(sql_path),
+        'items': len(out_items),
+        'generatedFrom': 'item_template (YDBC/YTDB < 600), World of Warcraft 3.3.5a',
+    }
+    if extra_source:
+        source.update(extra_source)
+    return {
+        'source': source,
         'items': out_items,
         'spells': {str(k): v for k, v in spells_out.items()},
         'sets': {str(k): v for k, v in sets_out.items()},
     }
-    os.makedirs(os.path.dirname(OUT), exist_ok=True)
-    with open(OUT, 'w', encoding='utf-8') as fh:
+
+
+def write_dataset(db, path):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, 'w', encoding='utf-8') as fh:
         json.dump(db, fh, ensure_ascii=False, separators=(',', ':'))
-    size = os.path.getsize(OUT)
     print('записано %s (%.1f КБ): предметов %d, заклинаний %d, комплектов %d'
-          % (OUT, size / 1024.0, len(out_items), len(spells_out), len(sets_out)))
-    matched = sum(1 for i in out_items if i['match'] != 'none')
-    print('сопоставлено с официальными названиями: %d из %d' % (matched, len(out_items)))
+          % (path, os.path.getsize(path) / 1024.0,
+             len(db['items']), len(db['spells']), len(db['sets'])))
+    matched = sum(1 for i in db['items'] if i['match'] != 'none')
+    print('сопоставлено с официальными названиями: %d из %d' % (matched, len(db['items'])))
+
+
+def main():
+    write_dataset(build_dataset(SQL_PATH), OUT)
+
+    # второй дамп: отдельный файл, свои ключи предметов (префикс qc), старая база не меняется
+    if QC_SQL_PATH and os.path.exists(QC_SQL_PATH):
+        qc = build_dataset(QC_SQL_PATH, strict_names=True, extra_source={
+            'kind': 'qc131',
+            'title': 'QC 13.1',
+            'separateFrom': os.path.basename(SQL_PATH),
+            'note': ('Предметы другой ревизии базы того же сервера '
+                     '(Quantum Database Rev 9.8, 30.11.2015). Хранятся отдельно: '
+                     'совпадающие entry не перезаписывают предметы основной базы.'),
+        })
+        qc['sets'] = {k: v for k, v in qc['sets'].items() if k != '0'}
+        write_dataset(qc, QC_OUT)
 
 
 if __name__ == '__main__':

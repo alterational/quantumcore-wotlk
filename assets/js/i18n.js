@@ -16,7 +16,27 @@
       nav_catalog: 'Каталог',
       nav_doll: 'Кукла персонажа',
       nav_compare: 'Сравнение',
+      nav_qc: 'QC 13.1',
       nav_about: 'О базе',
+      qc_title: 'QC 13.1 — отдельный дамп',
+      qc_note: 'Предметы из другого дампа того же сервера (Quantum Database Rev 9.8, 30.11.2015). ' +
+        'Они хранятся отдельно от основной базы: совпадающие entry не перезаписывают и не заменяют друг друга, ' +
+        'поэтому оба варианта предмета доступны одновременно. Цифры у совпадающих entry могут отличаться — ' +
+        'это разные ревизии одной базы.',
+      qc_badge: 'QC 13.1',
+      qc_badge_hint: 'Предмет из отдельного дампа sql/qc131.sql',
+      qc_total: 'Предметов в QC 13.1',
+      qc_open: 'Открыть каталог QC 13.1',
+      qc_dump_link: 'скачать sql-файл QC 13.1',
+      qc_about: 'Дамп QC 13.1 собран из world.sql (Quantum Database Rev 9.8, 30.11.2015) и отличается ' +
+        'от основной базы: часть entry принадлежит совсем другим предметам, поэтому такие совпадения ' +
+        'показаны отдельной пометкой, а не подменяют название.',
+      name_ru_server: 'Русское название (локализация сервера)',
+      desc_ru_hint: 'Описание из локализации сервера (RU)',
+      entry_conflict_title: 'Совпадение entry:',
+      entry_conflict_text: 'в современной базе Wowhead запись {entry} — это «{name}», то есть другой предмет. ' +
+        'Названия Wowhead для этого предмета не подставлялись.',
+      entry_conflict_hint: 'Предмет мог быть переопределён в дампе именно этого сервера.',
       search_placeholder: 'Поиск по названию, идентификатору, статам…',
       filters: 'Фильтры',
       filter_class: 'Тип',
@@ -164,7 +184,27 @@
       nav_catalog: 'Items',
       nav_doll: 'Character',
       nav_compare: 'Compare',
+      nav_qc: 'QC 13.1',
       nav_about: 'About',
+      qc_title: 'QC 13.1 — separate dump',
+      qc_note: 'Items from another dump of the same server (Quantum Database Rev 9.8, 30.11.2015). ' +
+        'They are kept apart from the main database: identical entries never overwrite each other, ' +
+        'so both versions of an item stay available. Stats of colliding entries may differ — ' +
+        'the two dumps are different revisions of one database.',
+      qc_badge: 'QC 13.1',
+      qc_badge_hint: 'Item from the separate dump sql/qc131.sql',
+      qc_total: 'QC 13.1 items',
+      qc_open: 'Open the QC 13.1 catalogue',
+      qc_dump_link: 'download the QC 13.1 sql file',
+      qc_about: 'The QC 13.1 dump comes from world.sql (Quantum Database Rev 9.8, 30.11.2015) and differs ' +
+        'from the main database: some entries belong to entirely different items, so such collisions are ' +
+        'flagged instead of replacing the name.',
+      name_ru_server: 'Russian name (server localisation)',
+      desc_ru_hint: 'Description from the server localisation (RU)',
+      entry_conflict_title: 'Entry collision:',
+      entry_conflict_text: 'in the current Wowhead data entry {entry} is "{name}", a different item. ' +
+        'Wowhead names were not applied to this item.',
+      entry_conflict_hint: 'The server dump may have redefined this entry.',
       search_placeholder: 'Search by name, id, stats…',
       filters: 'Filters',
       filter_class: 'Type',
@@ -340,7 +380,10 @@
       '4:0': 'Разное', '4:1': 'Ткань', '4:2': 'Кожа', '4:3': 'Кольчуга', '4:4': 'Латы',
       '4:5': 'Баклер', '4:6': 'Щит', '4:7': 'Манускрипт', '4:8': 'Идол', '4:9': 'Тотем', '4:10': 'Печать',
       '6:2': 'Стрела', '6:3': 'Пуля', '1:0': 'Сумка', '0:0': 'Расходуемый',
-      '15:0': 'Разное', '15:2': 'Предмет задания', '15:4': 'Разное'
+      '15:0': 'Разное', '15:1': 'Реагент', '15:2': 'Предмет задания', '15:4': 'Разное',
+      '15:5': 'Средство передвижения',
+      '0:8': 'Разное', '7:0': 'Хозяйственные товары', '7:10': 'Стихии', '7:12': 'Наложение чар',
+      '12:0': 'Задание'
     },
     en: {
       '2:0': 'One-Handed Axe', '2:1': 'Two-Handed Axe', '2:2': 'Bow', '2:3': 'Gun',
@@ -350,7 +393,10 @@
       '4:0': 'Miscellaneous', '4:1': 'Cloth', '4:2': 'Leather', '4:3': 'Mail', '4:4': 'Plate',
       '4:5': 'Buckler', '4:6': 'Shield', '4:7': 'Libram', '4:8': 'Idol', '4:9': 'Totem', '4:10': 'Sigil',
       '6:2': 'Arrow', '6:3': 'Bullet', '1:0': 'Bag', '0:0': 'Consumable',
-      '15:0': 'Junk', '15:2': 'Quest', '15:4': 'Miscellaneous'
+      '15:0': 'Junk', '15:1': 'Reagent', '15:2': 'Quest', '15:4': 'Miscellaneous',
+      '15:5': 'Mount',
+      '0:8': 'Other', '7:0': 'Trade Goods', '7:10': 'Elemental', '7:12': 'Enchanting',
+      '12:0': 'Quest'
     }
   };
 

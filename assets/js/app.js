@@ -6,8 +6,13 @@
   'use strict';
 
   var I = window.ArmoryI18n;
-  var DB = null;
-  var ITEMS_BY_ID = {};
+  var DB = null;               /* основная база: sql/item_template.sql */
+  var QC = null;               /* отдельная база: sql/qc131.sql (ключи с префиксом qc) */
+  var QC_PREFIX = 'qc';
+  var QC_FILE = 'data/qc131.json';
+  var ITEMS_BY_KEY = {};       /* ключ основной базы — id, отдельной — qc + id */
+  var SPELLS = {};
+  var SETS = {};
   var ICON_BASE = 'https://wow.zamimg.com/images/wow/icons/large/';
   var SOCKET_CSS = { 1: 'meta', 2: 'red', 4: 'yellow', 8: 'blue' };
   var TRIGGERS = {
@@ -123,7 +128,9 @@
   function subclassName(item) {
     var key = item['class'] + ':' + item.subclass;
     var map = I.SUBCLASS[state.lang] || I.SUBCLASS.ru;
-    return map[key] || map['ru'][key] || (state.lang === 'ru' ? 'Подкласс ' : 'Subclass ') + item.subclass;
+    var name = map[key] || (I.SUBCLASS.ru || {})[key];
+    /* подклассы, которых нет в справочнике (кастомный контент), не должны ломать карточку */
+    return name || (state.lang === 'ru' ? 'Разное (подкласс ' : 'Other (subclass ') + item.subclass + ')';
   }
 
   function statName(id) {
@@ -167,8 +174,8 @@
     return ((d.min + d.max) / 2) / (item.delay / 1000);
   }
 
-  function spellById(id) { return DB.spells[String(id)] || null; }
-  function setById(id) { return DB.sets[String(id)] || null; }
+  function spellById(id) { return SPELLS[String(id)] || null; }
+  function setById(id) { return SETS[String(id)] || null; }
 
   function spellName(spell) {
     if (!spell) return '';
@@ -325,7 +332,7 @@
     var lang = state.lang;
     var nameMain, nameSecond = [];
     if (lang === 'ru') {
-      nameMain = item.nameRu || item.name;
+      nameMain = item.nameRuServer || item.nameRu || item.name;
       if (item.nameRu && item.nameRu !== item.name) nameSecond.push(t('name_db') + ': ' + item.name);
       if (item.nameEnOfficial) nameSecond.push('Wowhead (EN): ' + item.nameEnOfficial);
     } else {
@@ -449,7 +456,9 @@
     }
     if (item.durability) h.push('<div class="tt-line">' + t('durability') + ' ' + item.durability + ' / ' + item.durability + '</div>');
     if (item.sellPrice) h.push('<div class="tt-line">' + t('sell_price') + ': ' + money(item.sellPrice) + '</div>');
-    if (item.description) h.push('<div class="tt-line gold small">«' + esc(item.description) + '»</div>');
+    var descShown = (state.lang === 'ru' && item.descriptionRu) ? item.descriptionRu : item.description;
+    if (descShown) h.push('<div class="tt-line gold small">«' + esc(descShown) + '»</div>');
+    if (item.qc) h.push('<div class="tt-line gray small">' + esc(t('qc_badge')) + '</div>');
     h.push('</div>');
     return h.join('');
   }
@@ -459,7 +468,8 @@
   function parseHash() {
     var hash = (location.hash || '#/catalog').replace(/^#\/?/, '');
     var parts = hash.split('/');
-    if (parts[0] === 'item' && parts[1]) return { view: 'item', id: parseInt(parts[1], 10) };
+    if (parts[0] === 'item' && parts[1]) return { view: 'item', id: String(parts[1]) };
+    if (parts[0] === 'qc') return { view: 'qc' };
     if (parts[0] === 'doll') return { view: 'doll' };
     if (parts[0] === 'compare') return { view: 'compare' };
     if (parts[0] === 'about') return { view: 'about' };
@@ -485,6 +495,7 @@
     if (!DB) { main.innerHTML = '<div class="panel panel-body">' + t('loading') + '</div>'; return; }
 
     if (route.view === 'item') main.innerHTML = viewItem(route.id);
+    else if (route.view === 'qc') main.innerHTML = viewCatalog(true);
     else if (route.view === 'doll') main.innerHTML = viewDoll();
     else if (route.view === 'compare') main.innerHTML = viewCompare();
     else if (route.view === 'about') main.innerHTML = viewAbout();
@@ -506,10 +517,16 @@
 
   /* ------------------------------- каталог -------------------------------- */
 
+  /* предметы текущего каталога: основная база или отдельный дамп QC */
+  function catalogItems() {
+    if (state.view === 'qc') return QC ? QC.items : [];
+    return DB ? DB.items : [];
+  }
+
   function filteredItems() {
     var f = state.filters;
     var q = (f.q || '').trim().toLowerCase();
-    var out = DB.items.filter(function (it) {
+    var out = catalogItems().filter(function (it) {
       if (f.itemClass !== '' && it['class'] !== +f.itemClass) return false;
       if (f.subclass !== '' && it.subclass !== +f.subclass) return false;
       if (f.slot !== '' && it.inventoryType !== +f.slot) return false;
@@ -546,7 +563,8 @@
     return out.join('<br>');
   }
 
-  function viewCatalog() {
+  function viewCatalog(isQc) {
+    var source = isQc ? (QC ? QC.items : []) : (DB ? DB.items : []);
     var items = filteredItems();
     var shown = items.slice(0, state.limit);
     var h = [];
@@ -571,7 +589,7 @@
 
     var subOptions = [['', t('all')]];
     var seenSub = {};
-    DB.items.forEach(function (it) {
+    source.forEach(function (it) {
       if (state.filters.itemClass !== '' && it['class'] !== +state.filters.itemClass) return;
       var key = it['class'] + '|' + it.subclass;
       if (seenSub[key]) return;
@@ -584,7 +602,7 @@
 
     var slotOpts = [['', t('all')]];
     var usedSlots = {};
-    DB.items.forEach(function (it) { usedSlots[it.inventoryType] = true; });
+    source.forEach(function (it) { usedSlots[it.inventoryType] = true; });
     Object.keys(usedSlots).sort(function (a, b) { return +a - +b; }).forEach(function (s) {
       slotOpts.push([s, (I.SLOT[state.lang] || I.SLOT.ru)[s] || ('Слот ' + s)]);
     });
@@ -606,10 +624,18 @@
     h.push('</div>');
     h.push('</div>');
 
-    h.push('<div class="panel-head" style="border-top:1px solid var(--line-soft);border-radius:0;">');
-    h.push('<h2>' + t('nav_catalog') + '</h2><span class="muted small">' + t('found') + ' ' +
-      num(items.length) + ' ' + t('of') + ' ' + num(DB.items.length) + '</span>');
-    h.push('</div>');
+    if (isQc) {
+      h.push('<div class="panel-head" style="border-top:1px solid var(--line-soft);border-radius:0;">');
+      h.push('<h2>' + t('qc_title') + '</h2><span class="muted small">' + t('found') + ' ' +
+        num(items.length) + ' ' + t('of') + ' ' + num(source.length) + '</span>');
+      h.push('</div>');
+      h.push('<div class="panel-body qc-note">' + t('qc_note') + '</div>');
+    } else {
+      h.push('<div class="panel-head" style="border-top:1px solid var(--line-soft);border-radius:0;">');
+      h.push('<h2>' + t('nav_catalog') + '</h2><span class="muted small">' + t('found') + ' ' +
+        num(items.length) + ' ' + t('of') + ' ' + num(source.length) + '</span>');
+      h.push('</div>');
+    }
 
     if (!items.length) {
       h.push('<div class="panel-body muted">' + t('nothing_found') + '</div>');
@@ -620,8 +646,8 @@
       h.push('<th>' + t('col_stats') + '</th><th>' + t('col_actions') + '</th>');
       h.push('</tr></thead><tbody>');
       shown.forEach(function (it) {
-        h.push('<tr data-id="' + it.id + '">');
-        h.push('<td><div class="item-cell" data-open="' + it.id + '">' + iconFrame(it) +
+        h.push('<tr data-id="' + it.key + '">');
+        h.push('<td><div class="item-cell" data-open="' + it.key + '">' + iconFrame(it) +
           '<div><div class="item-name ' + qClass(it.quality) + '">' + esc(displayName(it)) + '</div>' +
           '<div class="item-sub">' + esc(displaySub(it)) + '</div></div></div></td>');
         h.push('<td class="num">' + num(it.ilvl) + '</td>');
@@ -642,7 +668,7 @@
   }
 
   function displayName(item) {
-    if (state.lang === 'ru') return item.nameRu || item.name;
+    if (state.lang === 'ru') return item.nameRuServer || item.nameRu || item.name;
     return item.name;
   }
 
@@ -672,10 +698,10 @@
   function actionsHtml(item) {
     var h = [];
     if (equippable(item)) {
-      h.push('<button class="btn tiny" data-equip="' + item.id + '">' + t('action_equip') + '</button> ');
+      h.push('<button class="btn tiny" data-equip="' + item.key + '">' + t('action_equip') + '</button> ');
     }
-    h.push('<button class="btn tiny" data-cmp="' + item.id + '">' + t('action_compare') + '</button> ');
-    h.push('<button class="btn tiny ghost" data-open="' + item.id + '">' + t('action_open') + '</button>');
+    h.push('<button class="btn tiny" data-cmp="' + item.key + '">' + t('action_compare') + '</button> ');
+    h.push('<button class="btn tiny ghost" data-open="' + item.key + '">' + t('action_open') + '</button>');
     return h.join('');
   }
 
@@ -695,6 +721,7 @@
     h.push('<h1 class="' + qClass(item.quality) + '">' + esc(displayName(item)) + '</h1>');
     h.push('<div class="muted small">' + esc(displaySub(item) || '') + '</div>');
     h.push('<div class="badge-row">');
+    if (item.qc) h.push('<span class="badge qc" title="' + esc(t('qc_badge_hint')) + '">' + t('qc_badge') + '</span>');
     h.push('<span class="badge">#' + item.id + '</span>');
     h.push('<span class="badge">' + esc(qualityName(item.quality)) + '</span>');
     h.push('<span class="badge">' + esc(slotName(item)) + '</span>');
@@ -703,9 +730,9 @@
     if (!compatible(item)) h.push('<span class="badge warn">' + t('incompatible') + '</span>');
     h.push('</div>');
     h.push('<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">');
-    if (equippable(item)) h.push('<button class="btn primary" data-equip="' + item.id + '">' + t('action_equip') + '</button>');
-    h.push('<button class="btn" data-cmp="' + item.id + '">' + t('action_compare') + '</button>');
-    h.push('<button class="btn ghost" data-copy="' + item.id + '">' + t('copy_link') + '</button>');
+    if (equippable(item)) h.push('<button class="btn primary" data-equip="' + item.key + '">' + t('action_equip') + '</button>');
+    h.push('<button class="btn" data-cmp="' + item.key + '">' + t('action_compare') + '</button>');
+    h.push('<button class="btn ghost" data-copy="' + item.key + '">' + t('copy_link') + '</button>');
     var whUrl = item.wowheadId
       ? 'https://www.wowhead.com/wotlk/ru/item=' + item.wowheadId
       : 'https://www.wowhead.com/wotlk/ru/search?q=' + encodeURIComponent(item.name);
@@ -726,11 +753,24 @@
     h.push('<div class="panel"><div class="panel-head"><h3>' + t('names_title') + '</h3></div><div class="panel-body">');
     h.push('<dl class="kv">');
     h.push('<dt>' + t('name_db') + '</dt><dd>' + esc(item.name) + '</dd>');
-    h.push('<dt>' + t('name_wowhead_ru') + '</dt><dd>' + esc(item.nameRu || '—') + '</dd>');
+    if (item.nameRuServer) h.push('<dt>' + t('name_ru_server') + '</dt><dd>' + esc(item.nameRuServer) + '</dd>');
+    if (item.nameRu) h.push('<dt>' + t('name_wowhead_ru') + '</dt><dd>' + esc(item.nameRu) + '</dd>');
     h.push('<dt>' + t('name_wowhead_en') + '</dt><dd>' + esc(item.nameEnOfficial || item.name) + '</dd>');
     h.push('<dt>' + (state.lang === 'ru' ? 'Совпадение' : 'Match') + '</dt><dd>' +
       (item.match === 'id' ? t('name_matched_id') : item.match === 'name' ? t('name_matched_name') : t('name_custom')) + '</dd>');
-    h.push('</dl></div></div>');
+    h.push('</dl>');
+    if (item.descriptionRu && state.lang === 'ru') {
+      h.push('<p class="small muted">' + t('desc_ru_hint') + ': ' + esc(item.descriptionRu) + '</p>');
+    }
+    if (item.entryConflict) {
+      h.push('<div class="note warn small"><b>' + esc(t('entry_conflict_title')) + ' </b>' +
+        esc(t('entry_conflict_text')
+          .replace('{entry}', String(item.entryConflict.entry))
+          .replace('{name}', item.entryConflict.nameEn + (item.entryConflict.nameRu ? ' / ' + item.entryConflict.nameRu : ''))) +
+        '</div>');
+      if (!item.qc) h.push('<div class="note small">' + esc(t('entry_conflict_hint')) + '</div>');
+    }
+    h.push('</div></div>');
     h.push('</div>');
 
     /* правая колонка — вкладки */
@@ -841,7 +881,7 @@
         set.items.forEach(function (iid) {
           var it = itemById(iid);
           if (it) {
-            h.push('<span class="badge ' + qClass(it.quality) + '" style="cursor:pointer" data-open="' + iid + '">' +
+            h.push('<span class="badge ' + qClass(it.quality) + '" style="cursor:pointer" data-open="' + it.key + '">' +
               esc(displayName(it)) + '</span>');
           } else {
             h.push('<span class="badge">#' + iid + '</span>');
@@ -1118,7 +1158,7 @@
 
     h.push('<div class="compare-scroll"><table class="compare"><thead><tr><th>' + t('compare_param') + '</th>');
     items.forEach(function (it) {
-      h.push('<th><div class="item-cell" data-open="' + it.id + '">' + iconFrame(it, 'sm') +
+      h.push('<th><div class="item-cell" data-open="' + it.key + '">' + iconFrame(it, 'sm') +
         '<div><div class="' + qClass(it.quality) + '" style="font-weight:600">' + esc(displayName(it)) + '</div>' +
         '<div class="muted small">#' + it.id + '</div></div></div></th>');
     });
@@ -1199,7 +1239,15 @@
     h.push(cell(t('spells_total'), num(Object.keys(DB.spells).length)));
     h.push(cell(t('sets_total'), num(Object.keys(DB.sets).length)));
     h.push(cell(state.lang === 'ru' ? 'Файл дампа' : 'Dump file', '<span class="small">' + esc(DB.source.fileName) + '</span>'));
+    if (QC) h.push(cell(t('qc_total'), num(QC.items.length)));
     h.push('</div>');
+    if (QC) {
+      h.push('<h4 style="margin-top:18px">' + t('qc_title') + '</h4>');
+      h.push('<p class="small">' + t('qc_about') + '</p>');
+      h.push('<p class="small"><a href="' + esc('#/qc') + '">' + t('qc_open') + '</a> · ' +
+        '<a href="sql/qc131.sql">' + t('qc_dump_link') + '</a></p>');
+      if (QC.source.note) h.push('<p class="small muted">' + esc(QC.source.note) + '</p>');
+    }
     h.push('<h4 style="margin-top:18px">' + t('sources') + '</h4>');
     h.push('<ul class="small">');
     if (lang === 'ru') {
@@ -1226,8 +1274,15 @@
   var tooltipAnchor = null;   /* узел, под курсором которого всплыла подсказка */
   var hoverMuted = null;      /* точка клика: после нажатия подсказка ждёт, пока курсор сдвинется */
 
-  function itemById(id) {
-    return ITEMS_BY_ID[id] || null;
+  function itemById(key) {
+    return ITEMS_BY_KEY[String(key)] || null;
+  }
+
+  function isQcKey(key) { return String(key).indexOf(QC_PREFIX) === 0; }
+
+  /* предметы обеих баз — для куклы и сравнения */
+  function allItems() {
+    return (DB ? DB.items : []).concat(QC ? QC.items : []);
   }
 
   function showTooltip(html, event, key) {
@@ -1281,7 +1336,7 @@
       return itemById(state.char.equipped[key]);
     }
     var raw = node.getAttribute('data-open');
-    return raw ? itemById(parseInt(raw, 10)) : null;
+    return raw ? itemById(raw) : null;
   }
 
   /* один обработчик наведения на весь документ: узлы перерисовываются,
@@ -1321,7 +1376,7 @@
 
   function openSlotPicker(slotKey) {
     var accepts = SLOT_ACCEPTS[slotKey] || [];
-    var list = DB.items.filter(function (it) { return accepts.indexOf(it.inventoryType) >= 0; });
+    var list = allItems().filter(function (it) { return accepts.indexOf(it.inventoryType) >= 0; });
     closePicker();
     pickerEl = document.createElement('div');
     pickerEl.className = 'panel';
@@ -1341,7 +1396,7 @@
         if (!q) return true;
         return (it.name + ' ' + (it.nameRu || '') + ' ' + it.id).toLowerCase().indexOf(q) >= 0;
       }).slice(0, 60).forEach(function (it) {
-        body.push('<tr><td><div class="item-cell" data-pick="' + it.id + '">' + iconFrame(it, 'sm') +
+        body.push('<tr><td><div class="item-cell" data-pick="' + it.key + '">' + iconFrame(it, 'sm') +
           '<div><div class="item-name ' + qClass(it.quality) + '">' + esc(displayName(it)) + '</div>' +
           '<div class="item-sub">' + t('item_level') + ' ' + num(it.ilvl) + ' · ' + esc(subclassName(it)) + '</div></div></div></td></tr>');
       });
@@ -1357,7 +1412,7 @@
     pickerEl.addEventListener('click', function (e) {
       var pick = e.target.closest('[data-pick]');
       if (pick) {
-        equipItem(parseInt(pick.getAttribute('data-pick'), 10), slotKey);
+        equipItem(pick.getAttribute('data-pick'), slotKey);
         closePicker();
         return;
       }
@@ -1468,15 +1523,15 @@
         return;
       }
       var open = e.target.closest('[data-open]');
-      if (open) { navigate({ view: 'item', id: parseInt(open.getAttribute('data-open'), 10) }); return; }
+      if (open) { navigate({ view: 'item', id: open.getAttribute('data-open') }); return; }
       var eq = e.target.closest('[data-equip]');
-      if (eq) { equipItem(parseInt(eq.getAttribute('data-equip'), 10)); return; }
+      if (eq) { equipItem(eq.getAttribute('data-equip')); return; }
       var un = e.target.closest('[data-unequip]');
       if (un) { unequip(un.getAttribute('data-unequip')); return; }
       var cmp = e.target.closest('[data-cmp]');
-      if (cmp) { addCompare(parseInt(cmp.getAttribute('data-cmp'), 10)); return; }
+      if (cmp) { addCompare(cmp.getAttribute('data-cmp')); return; }
       var cp = e.target.closest('[data-copy]');
-      if (cp) { copyItemLink(parseInt(cp.getAttribute('data-copy'), 10)); return; }
+      if (cp) { copyItemLink(cp.getAttribute('data-copy')); return; }
       var slot = e.target.closest('[data-slot]');
       if (slot) { openSlotPicker(slot.getAttribute('data-slot')); return; }
       if (e.target.closest('#doll-clear')) { state.char.equipped = {}; saveState(); render(); return; }
@@ -1529,10 +1584,10 @@
     done();
   }
 
-  function copyItemLink(id) {
-    var item = itemById(id);
+  function copyItemLink(key) {
+    var item = itemById(key);
     if (!item) return;
-    var url = location.origin + location.pathname + '#/item/' + id;
+    var url = location.origin + location.pathname + '#/item/' + item.key;
     copyText('[' + displayName(item) + '] ' + url);
   }
 
@@ -1558,8 +1613,13 @@
       if (!raw) return;
       var s = JSON.parse(raw);
       if (s.lang) state.lang = s.lang;
-      if (s.compare) state.compare = s.compare;
-      if (s.char) state.char = s.char;
+      if (s.compare) state.compare = s.compare.map(String);
+      if (s.char) {
+        state.char = s.char;
+        var eq = {};
+        Object.keys(state.char.equipped || {}).forEach(function (k) { eq[k] = String(state.char.equipped[k]); });
+        state.char.equipped = eq;
+      }
       if (s.sort) state.sort = s.sort;
     } catch (err) { /* игнорируем повреждённое состояние */ }
     /* ссылка на куклу в адресе имеет приоритет */
@@ -1570,9 +1630,34 @@
       state.char.equipped = {};
       params.forEach(function (p) {
         var kv = p.split('=');
-        if (kv.length === 2) state.char.equipped[kv[0]] = parseInt(kv[1], 10);
+        if (kv.length === 2) state.char.equipped[kv[0]] = String(kv[1]);
       });
     }
+  }
+
+  /* Предметы обеих баз в одном справочнике: ключ основной базы — id,
+     отдельного дампа — qc + id, поэтому совпадающие entry не перезаписывают друг друга. */
+  function indexItems() {
+    ITEMS_BY_KEY = {};
+    SPELLS = {};
+    SETS = {};
+    (DB ? DB.items : []).forEach(function (it) {
+      it.key = String(it.id);
+      ITEMS_BY_KEY[it.key] = it;
+    });
+    if (QC) {
+      QC.items.forEach(function (it) {
+        it.key = QC_PREFIX + it.id;
+        it.qc = true;
+        ITEMS_BY_KEY[it.key] = it;
+      });
+      SPELLS = QC.spells || {};
+    }
+    if (DB) {
+      Object.keys(DB.spells || {}).forEach(function (id) { SPELLS[id] = DB.spells[id]; });
+      Object.keys(DB.sets || {}).forEach(function (id) { SETS[id] = DB.sets[id]; });
+    }
+    Object.keys(QC && QC.sets || {}).forEach(function (id) { SETS[id] = QC.sets[id]; });
   }
 
   /* --------------------------------- запуск ------------------------------- */
@@ -1618,13 +1703,24 @@
     window.addEventListener('blur', hideTooltip);
     window.addEventListener('scroll', hideTooltip, true);
 
-    fetch('data/db.json').then(function (r) {
-      if (!r.ok) throw new Error('http ' + r.status);
-      return r.json();
-    }).then(function (db) {
-      DB = db;
-      ITEMS_BY_ID = {};
-      db.items.forEach(function (it) { ITEMS_BY_ID[it.id] = it; });
+    function fetchJson(url) {
+      return fetch(url).then(function (r) {
+        if (!r.ok) throw new Error('http ' + r.status + ' ' + url);
+        return r.json();
+      });
+    }
+
+    /* отдельный дамп необязателен: если его нет, сайт работает на основной базе */
+    Promise.all([
+      fetchJson('data/db.json'),
+      fetchJson(QC_FILE).catch(function () { return null; })
+    ]).then(function (res) {
+      DB = res[0];
+      QC = res[1];
+      indexItems();
+      /* без файла отдельного дампа кнопка не нужна */
+      var qcBtn = document.getElementById('nav-qc');
+      if (qcBtn && !QC) qcBtn.style.display = 'none';
       paintStatic();
       render();
     }).catch(function (err) {
@@ -1641,6 +1737,7 @@
       '#nav-catalog': t('nav_catalog'),
       '#nav-doll': t('nav_doll'),
       '#nav-compare': t('nav_compare'),
+      '#nav-qc': t('nav_qc'),
       '#nav-about': t('nav_about')
     };
     Object.keys(map).forEach(function (sel) {
