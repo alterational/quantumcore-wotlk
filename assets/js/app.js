@@ -86,6 +86,19 @@
       '<span class="q-border" style="box-shadow:inset 0 0 0 2px ' + qualityHex(item.quality) + '"></span></span>';
   }
 
+  /* иконка заклинания (эффекта предмета, бонуса комплекта) */
+  function spellIcon(spell, cls) {
+    var icon = spell && spell.icon;
+    var classes = 'spell-icon' + (cls ? ' ' + cls : '');
+    if (!icon) return '<span class="' + classes + ' empty" title="—"></span>';
+    return '<span class="' + classes + '" title="' + esc(icon) + '" style="background-image:url(' +
+      iconUrl(icon) + ')"></span>';
+  }
+
+  function triggerLabel(trigger) {
+    return t(TRIGGERS[trigger] || 'trigger_use');
+  }
+
   function qualityHex(q) {
     return ['#9d9d9d', '#ffffff', '#1eff00', '#0070dd', '#a335ee', '#ff8000', '#e6cc80', '#00ccff'][q] || '#9d9d9d';
   }
@@ -382,7 +395,7 @@
       if (!spell) return;
       var label = t(TRIGGERS[s.trigger] || 'trigger_use');
       var text = spellText(spell);
-      h.push('<div class="tt-spell"><b>' + esc(label) + ':</b> <span class="tt-spell-text">' + esc(text) + '</span>');
+      h.push('<div class="tt-spell">' + spellIcon(spell) + '<b>' + esc(label) + ':</b> <span class="tt-spell-text">' + esc(text) + '</span>');
       var meta = [];
       if (s.cooldown > 0) meta.push(t('cooldown') + ' ' + durationText(s.cooldown));
       if (s.charges) meta.push(t('charges') + ' ' + s.charges);
@@ -769,9 +782,15 @@
         item.spells.forEach(function (s, idx) {
           var spell = spellById(s.id);
           h.push('<div class="spell-card">');
-          h.push('<div class="trigger">' + t(TRIGGERS[s.trigger] || 'trigger_use') + '</div>');
+          h.push('<div class="spell-head">' + spellIcon(spell, 'lg') + '<div>');
+          h.push('<div class="trigger">' + esc(triggerLabel(s.trigger)) + '</div>');
           if (spell) {
             h.push('<div class="sname">' + esc(spellName(spell)) + (spellRank(spell) ? ' <span class="muted small">(' + esc(spellRank(spell)) + ')</span>' : '') + '</div>');
+          } else {
+            h.push('<div class="sname">#' + s.id + '</div>');
+          }
+          h.push('</div></div>');
+          if (spell) {
             h.push('<div class="stext">' + esc(spellText(spell)) + '</div>');
             h.push('<div class="smeta">');
             h.push('<span>#' + s.id + '</span>');
@@ -791,8 +810,6 @@
             }
             h.push('<div style="margin-top:6px"><a target="_blank" rel="noopener" href="https://www.wowhead.com/wotlk/ru/spell=' +
               s.id + '">' + (lang === 'ru' ? 'Заклинание на Wowhead' : 'Spell on Wowhead') + ' →</a></div>');
-          } else {
-            h.push('<div class="sname">#' + s.id + '</div>');
           }
           h.push('</div>');
         });
@@ -821,7 +838,10 @@
         if (!set.bonuses.length) h.push('<div class="muted">—</div>');
         set.bonuses.forEach(function (b) {
           var txt = b.text[lang] || b.text.en || '';
-          h.push('<div class="spell-card"><div class="trigger">(' + b.threshold + ') ' + t('tab_set') + '</div>' +
+          var bSpell = spellById(b.spell);
+          h.push('<div class="spell-card"><div class="spell-head">' + spellIcon(bSpell, 'lg') + '<div>' +
+            '<div class="trigger">(' + b.threshold + ') ' + esc(t('tab_set')) + '</div>' +
+            '<div class="sname">' + esc(spellName(bSpell) || ('#' + b.spell)) + '</div></div></div>' +
             '<div class="stext">' + esc(txt || ('#' + b.spell)) + '</div>' +
             '<div class="smeta"><a target="_blank" rel="noopener" href="https://www.wowhead.com/wotlk/ru/spell=' + b.spell + '">spell=' + b.spell + '</a></div></div>');
         });
@@ -1002,7 +1022,8 @@
           '<span class="muted small">' + p.count + ' / ' + p.total + '</span></div>');
         p.set.bonuses.forEach(function (b) {
           var active = p.count >= b.threshold;
-          h.push('<div class="small" style="color:' + (active ? 'var(--good)' : 'var(--text-dim)') + '">(' + b.threshold + ') ' +
+          h.push('<div class="small" style="color:' + (active ? 'var(--good)' : 'var(--text-dim)') + '">' +
+            spellIcon(spellById(b.spell), 'sm') + '(' + b.threshold + ') ' +
             esc(b.text[state.lang] || b.text.en || '') + (active ? ' ✓' : '') + '</div>');
         });
         h.push('</div>');
@@ -1114,8 +1135,9 @@
     }));
     h.push(row(t('spells_effects'), function (it) {
       return it.spells.length ? it.spells.map(function (s) {
-        return '<div><span class="muted small">' + esc(t(TRIGGERS[s.trigger] || 'trigger_use')) + ':</span> ' +
-          esc(spellText(spellById(s.id)) || spellName(spellById(s.id))) + '</div>';
+        var sp = spellById(s.id);
+        return '<div>' + spellIcon(sp, 'sm') + '<span class="muted small">' + esc(triggerLabel(s.trigger)) + ':</span> ' +
+          esc(spellText(sp) || spellName(sp)) + '</div>';
       }).join('') : '—';
     }));
     h.push(row(t('tab_set'), function (it) {

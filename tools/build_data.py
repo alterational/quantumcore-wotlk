@@ -241,6 +241,31 @@ def dbc_records(path, field_map, wanted=None):
     return out
 
 
+def load_spell_icons(path):
+    """SpellIcon.dbc: id иконки -> имя ресурса (без пути Interface\\Icons\\)."""
+    out = {}
+    if not os.path.exists(path):
+        return out
+    f = open(path, 'rb')
+    magic, rc, fc, rs, sbs = struct.unpack('<4sIIII', f.read(20))
+    data = f.read(rc * rs)
+    strb = f.read(sbs)
+
+    def get(off):
+        if not off or off >= sbs:
+            return ''
+        e = strb.find(b'\0', off)
+        return strb[off:e].decode('utf-8', errors='replace') if e > off else ''
+
+    for i in range(rc):
+        base = i * rs
+        icon_id, tex = struct.unpack_from('<II', data, base)
+        name = get(tex).rsplit('\\', 1)[-1].strip().lower()
+        if name:
+            out[icon_id] = name
+    return out
+
+
 def dbc_strings(path, field_map):
     """Возвращает {id: {field: text}} для указанных полей-строк (локаль 0)."""
     f = open(path, 'rb')
@@ -626,6 +651,10 @@ def main():
         return SpellCtx(sp, dur, lang,
                         resolver=lambda other: make_ctx(other, lang) if other in spell_dbc else None)
 
+    spell_icons = load_spell_icons(os.path.join(RURU_DBC, 'SpellIcon.dbc'))
+    if spell_icons:
+        print('иконок заклинаний:', len(spell_icons))
+
     spells_out = {}
     for sid in sorted(needed_spells):
         ru = spell_dbc.get(sid, {})
@@ -639,7 +668,7 @@ def main():
             ru_text_src = en_text_src
         spells_out[sid] = {
             'id': sid,
-            'icon': int(ru.get('icon', 0) or 0),
+            'icon': spell_icons.get(int(ru.get('icon', 0) or 0), ''),
             'name': {'en': clean(en.get('Name_Lang_enUS')), 'ru': clean(ru.get('name'))},
             'rank': {'en': clean(en.get('NameSubtext_Lang_enUS')), 'ru': clean(ru.get('rank'))},
             'text': {

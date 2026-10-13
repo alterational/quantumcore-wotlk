@@ -343,6 +343,26 @@ main { max-width: 1400px; margin: 0 auto; padding: 20px 18px 70px; }
 .tt-spell .tt-spell-text.ru { color: #1eff00; }
 .tt-icon-inline { width: 14px; height: 14px; vertical-align: -2px; margin-right: 4px; border-radius: 2px; }
 
+/* иконка заклинания: эффекты предмета, бонусы комплектов */
+.spell-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  border-radius: 3px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 1px rgba(160, 180, 205, .45), 0 1px 2px rgba(0, 0, 0, .5);
+  vertical-align: -4px;
+}
+.spell-icon.lg { width: 34px; height: 34px; border-radius: 4px; }
+.spell-icon.sm { width: 15px; height: 15px; vertical-align: -3px; margin-right: 5px; }
+.spell-icon.empty {
+  background-image: repeating-linear-gradient(45deg, rgba(120, 140, 165, .18) 0 4px, rgba(0, 0, 0, 0) 4px 8px);
+}
+.tt-spell .spell-icon { margin-right: 5px; }
+
 .tt-name-secondary { font-size: 11.5px; color: var(--text-dim); }
 
 .tt-sockets { display: flex; gap: 6px; align-items: center; margin: 4px 0; }
@@ -419,6 +439,7 @@ table.data tr:hover td { background: rgba(127, 178, 229, .05); }
 .spell-card .sname { font-weight: 600; color: #ffd100; }
 .spell-card .stext { color: #1eff00; margin-top: 3px; }
 .spell-card .smeta { margin-top: 5px; font-size: 11.5px; color: var(--text-dim); display: flex; gap: 12px; flex-wrap: wrap; }
+.spell-card .spell-head { display: flex; gap: 10px; align-items: center; }
 
 /* --------------------------------- кукла -------------------------------- */
 

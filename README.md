@@ -45,7 +45,7 @@ python3 tools/build_data.py             # сборка data/db.json
 | переменная окружения | содержимое |
 | --- | --- |
 | `KAEV_DIR` | SQL-выгрузки клиентских DBC 3.3.5.12340 (`Spell.sql`, `ItemSet.sql`, `ItemDisplayInfo.sql`, `SpellDuration.sql`, `SpellItemEnchantment.sql`) |
-| `RURU_DBC_DIR` | бинарные DBC русской версии клиента 3.3.5a (`Spell.dbc`, `SpellRadius.dbc`, `SpellItemEnchantment.dbc`) |
+| `RURU_DBC_DIR` | бинарные DBC русской версии клиента 3.3.5a (`Spell.dbc`, `SpellRadius.dbc`, `SpellItemEnchantment.dbc`, `SpellIcon.dbc`) |
 | `WOWDUMPS_DIR` | выгрузки `itemsparse.csv` и `itemset.csv` для сверки названий предметов с Wowhead |
 
 Результат — единый файл `data/db.json`, который читает сайт.
