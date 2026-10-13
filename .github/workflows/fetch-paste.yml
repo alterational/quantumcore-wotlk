@@ -1,0 +1,34 @@
+name: fetch-paste
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'tools/fetch-paste.trigger'
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download source paste
+        run: |
+          set -eux
+          mkdir -p sql
+          curl -fsSL --retry 3 -A "Mozilla/5.0" "https://nopaste.net/uR77LUbLLS" -o sql/item_template.sql || \
+          curl -fsSL --retry 3 -A "Mozilla/5.0" "https://nopaste.net/uR77LUbLLS/raw" -o sql/item_template.sql
+          wc -c sql/item_template.sql
+          head -c 200 sql/item_template.sql
+      - name: Commit back
+        run: |
+          set -eux
+          git config user.name "data-fetch-bot"
+          git config user.email "data-fetch-bot@users.noreply.github.com"
+          git add -f sql/item_template.sql
+          if git diff --cached --quiet; then echo "no changes"; else
+            git commit -m "Add item_template SQL dump ($(wc -c < sql/item_template.sql) bytes)"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
