@@ -1163,12 +1163,12 @@
     h.push('<h4 style="margin-top:18px">' + t('sources') + '</h4>');
     h.push('<ul class="small">');
     if (lang === 'ru') {
-      h.push('<li>Дамп таблицы <b>item_template</b> (файл в разделе sql репозитория).</li>');
+      h.push('<li>Дамп таблицы <b>item_template</b> — <a href="sql/item_template.sql">скачать sql-файл</a>.</li>');
       h.push('<li>Названия и описания заклинаний, названия комплектов и бонусов гнёзд — из справочников клиента 3.3.5a (enUS и ruRU).</li>');
       h.push('<li>Русские и английские названия предметов — сверка с базой Wowhead.</li>');
       h.push('<li>Иконки — по номерам моделей предметов (ItemDisplayInfo).</li>');
     } else {
-      h.push('<li>The <b>item_template</b> dump (see the sql folder of this repository).</li>');
+      h.push('<li>The <b>item_template</b> dump — <a href="sql/item_template.sql">download the sql file</a>.</li>');
       h.push('<li>Spell names/descriptions, set names and socket bonus names from the 3.3.5a client data (enUS and ruRU).</li>');
       h.push('<li>Russian and English item names cross-checked against Wowhead.</li>');
       h.push('<li>Icons resolved from item display ids (ItemDisplayInfo).</li>');
