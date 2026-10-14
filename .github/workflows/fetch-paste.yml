@@ -33,7 +33,7 @@ jobs:
           got=0
           while read -r url path; do
             case "$url" in
-              ''|'#'*) continue ;;
+              ''|'#'*|'--'*) continue ;;
             esac
             [ -z "$path" ] && continue
             mkdir -p "$(dirname "$path")"
@@ -62,7 +62,7 @@ jobs:
           git config user.email "data-fetch-bot@users.noreply.github.com"
           while read -r url path; do
             case "$url" in
-              ''|'#'*) continue ;;
+              ''|'#'*|'--'*) continue ;;
             esac
             [ -n "$path" ] && git add -f "$path"
           done < tools/fetch-paste.list
