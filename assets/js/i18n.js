@@ -17,6 +17,7 @@
       nav_doll: 'Кукла персонажа',
       nav_compare: 'Сравнение',
       nav_qc: 'QC 13.1',
+      nav_public: 'Public',
       nav_about: 'О базе',
       qc_title: 'QC 13.1 — отдельный дамп',
       qc_note: 'Предметы из другого дампа того же сервера (Quantum Database Rev 9.8, 30.11.2015). ' +
@@ -31,6 +32,29 @@
       qc_about: 'Дамп QC 13.1 собран из world.sql (Quantum Database Rev 9.8, 30.11.2015) и отличается ' +
         'от основной базы: часть entry принадлежит совсем другим предметам, поэтому такие совпадения ' +
         'показаны отдельной пометкой, а не подменяют название.',
+      pub_title: 'Public — сборный дамп',
+      pub_note: 'Набор предметов из внешних дампов того же сервера (форумы, nopaste, GitHub-паки). ' +
+        'Хранится отдельно: совпадающие entry не перезаписывают ни основную базу, ни QC 13.1 — ' +
+        'все версии видны одновременно.',
+      pub_badge: 'Public',
+      pub_badge_hint: 'Предмет из отдельного дампа sql/public.sql',
+      pub_total: 'Предметов в Public',
+      pub_open: 'Открыть каталог Public',
+      pub_dump_link: 'скачать sql-файл Public',
+      pub_about: 'Публичный набор собран из внешних дампов item_template (18 источников: форумы, ' +
+        'зеркала, GitHub-паки). Значительная часть записей использует оригинальные номера Blizzard, ' +
+        'поэтому предметы хранятся отдельно и не заменяют ни основную базу, ни QC 13.1.',
+      pub_open_hint: 'Раздел Public открыт',
+      pub_locked_hint: 'Раздел Public защищён паролем',
+      pub_locked_title: 'Раздел Public защищён паролем',
+      pub_locked_text: 'Введите пароль в бокс ниже, чтобы открыть набор предметов Public.',
+      pub_locked_placeholder: 'Пароль',
+      pub_locked_submit: 'Открыть',
+      pub_locked_ok: 'Пароль принят, открываю раздел…',
+      pub_locked_error: 'Неверный пароль.',
+      pub_locked_note: 'Данные раздела — обычный файл сайта, поэтому пароль скрывает раздел ' +
+        'от случайного просмотра, но не заменяет защиту сервера.',
+      pub_lock_btn: 'Заблокировать раздел',
       name_ru_server: 'Русское название (локализация сервера)',
       desc_ru_hint: 'Описание из локализации сервера (RU)',
       entry_conflict_title: 'Совпадение entry:',
@@ -199,6 +223,30 @@
       qc_about: 'The QC 13.1 dump comes from world.sql (Quantum Database Rev 9.8, 30.11.2015) and differs ' +
         'from the main database: some entries belong to entirely different items, so such collisions are ' +
         'flagged instead of replacing the name.',
+      nav_public: 'Public',
+      pub_title: 'Public — merged dump',
+      pub_note: 'A set of items from external dumps of the same server (forums, nopaste, GitHub packs). ' +
+        'Kept separately: identical entries never overwrite the main database or QC 13.1, so every ' +
+        'version stays available.',
+      pub_badge: 'Public',
+      pub_badge_hint: 'Item from the separate dump sql/public.sql',
+      pub_total: 'Public items',
+      pub_open: 'Open the Public catalogue',
+      pub_dump_link: 'download the Public sql file',
+      pub_about: 'The public set is merged from external item_template dumps (18 sources: forums, ' +
+        'mirrors, GitHub packs). Many records reuse original Blizzard entries, so the items are kept ' +
+        'separately and never replace the main database or QC 13.1.',
+      pub_open_hint: 'The Public section is unlocked',
+      pub_locked_hint: 'The Public section is password protected',
+      pub_locked_title: 'The Public section is password protected',
+      pub_locked_text: 'Type the password in the box below to open the Public item set.',
+      pub_locked_placeholder: 'Password',
+      pub_locked_submit: 'Open',
+      pub_locked_ok: 'Password accepted, opening the section…',
+      pub_locked_error: 'Wrong password.',
+      pub_locked_note: 'The section data is a plain file of this site, so the password hides it from ' +
+        'casual visitors rather than replacing server-side protection.',
+      pub_lock_btn: 'Lock the section',
       name_ru_server: 'Russian name (server localisation)',
       desc_ru_hint: 'Description from the server localisation (RU)',
       entry_conflict_title: 'Entry collision:',
@@ -383,7 +431,27 @@
       '15:0': 'Разное', '15:1': 'Реагент', '15:2': 'Предмет задания', '15:4': 'Разное',
       '15:5': 'Средство передвижения',
       '0:8': 'Разное', '7:0': 'Хозяйственные товары', '7:10': 'Стихии', '7:12': 'Наложение чар',
-      '12:0': 'Задание'
+      '12:0': 'Задание',
+      '0:1': 'Зелья', '0:2': 'Эликсиры', '0:3': 'Настойки', '0:4': 'Свитки',
+      '0:5': 'Еда и напитки', '0:6': 'Улучшения', '0:7': 'Бинты', '1:1': 'Сумка душ',
+      '1:2': 'Сумка травника', '1:3': 'Сумка зачаровывателя', '1:4': 'Сумка инженера', '1:5': 'Сумка ювелира',
+      '1:6': 'Сумка шахтера', '1:7': 'Сумка кожевника', '1:8': 'Сумка начертателя', '2:9': 'Устаревшие',
+      '2:11': 'Экзотическое', '2:12': 'Экзотическое', '2:17': 'Копье', '3:0': 'Красные',
+      '3:1': 'Синие', '3:2': 'Желтые', '3:3': 'Фиолетовые', '3:4': 'Зеленые',
+      '3:5': 'Оранжевые', '3:6': 'Особые', '3:7': 'Простые', '3:8': 'Радужные',
+      '5:0': 'Реагент', '6:0': 'Жезл(НЕ ИСП.)', '6:1': 'Болт(НЕ ИСП.)', '6:4': 'Метательное(НЕ ИСП.)',
+      '7:1': 'Детали', '7:2': 'Взрывчатка', '7:3': 'Устройства', '7:4': 'Ювелирное дело',
+      '7:5': 'Ткань', '7:6': 'Кожа', '7:7': 'Металл и камень', '7:8': 'Мясо',
+      '7:9': 'Трава', '7:11': 'Другое', '7:13': 'Материалы', '7:14': 'Чары для доспехов',
+      '7:15': 'Чары для оружия', '8:0': 'Стандартный(НЕ ИСП.)', '9:0': 'Книга', '9:1': 'Кожевничество',
+      '9:2': 'Портняжное дело', '9:3': 'Инженерное дело', '9:4': 'Кузнечное дело', '9:5': 'Кулинария',
+      '9:6': 'Алхимия', '9:7': 'Первая помощь', '9:8': 'Наложение чар', '9:9': 'Рыбная ловля',
+      '9:10': 'Ювелирное дело', '9:11': 'Начертание', '10:0': 'Деньги (НЕ ИСП.)', '11:0': 'Колчан(НЕ ИСП.)',
+      '11:1': 'Колчан(НЕ ИСП.)', '11:2': 'Колчан', '11:3': 'Подсумок', '13:0': 'Ключ',
+      '13:1': 'Отмычка', '14:0': 'Постоянные', '15:3': 'Праздничные предметы', '16:1': 'Воин',
+      '16:2': 'Паладин', '16:3': 'Охотник', '16:4': 'Разбойник', '16:5': 'Жрец',
+      '16:6': 'Рыцарь смерти', '16:7': 'Шаман', '16:8': 'Маг', '16:9': 'Чернокнижник',
+      '16:11': 'Друид'
     },
     en: {
       '2:0': 'One-Handed Axe', '2:1': 'Two-Handed Axe', '2:2': 'Bow', '2:3': 'Gun',
@@ -396,7 +464,27 @@
       '15:0': 'Junk', '15:1': 'Reagent', '15:2': 'Quest', '15:4': 'Miscellaneous',
       '15:5': 'Mount',
       '0:8': 'Other', '7:0': 'Trade Goods', '7:10': 'Elemental', '7:12': 'Enchanting',
-      '12:0': 'Quest'
+      '12:0': 'Quest',
+      '0:1': 'Potion', '0:2': 'Elixir', '0:3': 'Flask', '0:4': 'Scroll',
+      '0:5': 'Food & Drink', '0:6': 'Item Enhancement', '0:7': 'Bandage', '1:1': 'Soul Bag',
+      '1:2': 'Herb Bag', '1:3': 'Enchanting Bag', '1:4': 'Engineering Bag', '1:5': 'Gem Bag',
+      '1:6': 'Mining Bag', '1:7': 'Leatherworking Bag', '1:8': 'Inscription Bag', '2:9': 'Obsolete',
+      '2:11': 'Exotic', '2:12': 'Exotic', '2:17': 'Spear', '3:0': 'Red',
+      '3:1': 'Blue', '3:2': 'Yellow', '3:3': 'Purple', '3:4': 'Green',
+      '3:5': 'Orange', '3:6': 'Meta', '3:7': 'Simple', '3:8': 'Prismatic',
+      '5:0': 'Reagent', '6:0': 'Wand(OBSOLETE)', '6:1': 'Bolt(OBSOLETE)', '6:4': 'Thrown(OBSOLETE)',
+      '7:1': 'Parts', '7:2': 'Explosives', '7:3': 'Devices', '7:4': 'Jewelcrafting',
+      '7:5': 'Cloth', '7:6': 'Leather', '7:7': 'Metal & Stone', '7:8': 'Meat',
+      '7:9': 'Herb', '7:11': 'Other', '7:13': 'Materials', '7:14': 'Armor Enchantment',
+      '7:15': 'Weapon Enchantment', '8:0': 'Generic(OBSOLETE)', '9:0': 'Book', '9:1': 'Leatherworking',
+      '9:2': 'Tailoring', '9:3': 'Engineering', '9:4': 'Blacksmithing', '9:5': 'Cooking',
+      '9:6': 'Alchemy', '9:7': 'First Aid', '9:8': 'Enchanting', '9:9': 'Fishing',
+      '9:10': 'Jewelcrafting', '9:11': 'Inscription', '10:0': 'Money(OBSOLETE)', '11:0': 'Quiver(OBSOLETE)',
+      '11:1': 'Quiver(OBSOLETE)', '11:2': 'Quiver', '11:3': 'Ammo Pouch', '13:0': 'Key',
+      '13:1': 'Lockpick', '14:0': 'Permanent', '15:3': 'Holiday', '16:1': 'Warrior',
+      '16:2': 'Paladin', '16:3': 'Hunter', '16:4': 'Rogue', '16:5': 'Priest',
+      '16:6': 'Death Knight', '16:7': 'Shaman', '16:8': 'Mage', '16:9': 'Warlock',
+      '16:11': 'Druid'
     }
   };
 

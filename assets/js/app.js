@@ -8,8 +8,13 @@
   var I = window.ArmoryI18n;
   var DB = null;               /* основная база: sql/item_template.sql */
   var QC = null;               /* отдельная база: sql/qc131.sql (ключи с префиксом qc) */
+  var PUBLIC = null;           /* отдельная база: sql/public.sql (ключи с префиксом pub) */
   var QC_PREFIX = 'qc';
+  var PUBLIC_PREFIX = 'pub';
   var QC_FILE = 'data/qc131.json';
+  var PUBLIC_FILE = 'data/public.json';
+  var PUBLIC_PASSWORD = '1337';
+  var PUBLIC_FLAG = 'armory.public';
   var ITEMS_BY_KEY = {};       /* ключ основной базы — id, отдельной — qc + id */
   var SPELLS = {};
   var SETS = {};
@@ -459,6 +464,7 @@
     var descShown = (state.lang === 'ru' && item.descriptionRu) ? item.descriptionRu : item.description;
     if (descShown) h.push('<div class="tt-line gold small">«' + esc(descShown) + '»</div>');
     if (item.qc) h.push('<div class="tt-line gray small">' + esc(t('qc_badge')) + '</div>');
+    if (item.pub) h.push('<div class="tt-line gray small">' + esc(t('pub_badge')) + '</div>');
     h.push('</div>');
     return h.join('');
   }
@@ -470,6 +476,7 @@
     var parts = hash.split('/');
     if (parts[0] === 'item' && parts[1]) return { view: 'item', id: String(parts[1]) };
     if (parts[0] === 'qc') return { view: 'qc' };
+    if (parts[0] === 'public') return { view: 'public' };
     if (parts[0] === 'doll') return { view: 'doll' };
     if (parts[0] === 'compare') return { view: 'compare' };
     if (parts[0] === 'about') return { view: 'about' };
@@ -495,7 +502,9 @@
     if (!DB) { main.innerHTML = '<div class="panel panel-body">' + t('loading') + '</div>'; return; }
 
     if (route.view === 'item') main.innerHTML = viewItem(route.id);
-    else if (route.view === 'qc') main.innerHTML = viewCatalog(true);
+    else if (route.view === 'qc') main.innerHTML = viewCatalog('qc');
+    else if (route.view === 'public') main.innerHTML = (publicUnlocked() && PUBLIC)
+      ? viewCatalog('public') : viewPublicLock();
     else if (route.view === 'doll') main.innerHTML = viewDoll();
     else if (route.view === 'compare') main.innerHTML = viewCompare();
     else if (route.view === 'about') main.innerHTML = viewAbout();
@@ -517,9 +526,10 @@
 
   /* ------------------------------- каталог -------------------------------- */
 
-  /* предметы текущего каталога: основная база или отдельный дамп QC */
+  /* предметы текущего каталога: основная база, отдельный дамп QC или Public */
   function catalogItems() {
     if (state.view === 'qc') return QC ? QC.items : [];
+    if (state.view === 'public') return PUBLIC ? PUBLIC.items : [];
     return DB ? DB.items : [];
   }
 
@@ -563,8 +573,28 @@
     return out.join('<br>');
   }
 
-  function viewCatalog(isQc) {
-    var source = isQc ? (QC ? QC.items : []) : (DB ? DB.items : []);
+  /* Раздел Public закрыт: показываем бокс для пароля (данные при этом не загружаются) */
+  function viewPublicLock() {
+    var h = [];
+    h.push('<div class="panel"><div class="panel-head"><h2>' + t('pub_locked_title') + '</h2></div>');
+    h.push('<div class="panel-body">');
+    h.push('<p class="muted">' + t('pub_locked_text') + '</p>');
+    h.push('<form id="pub-lock" class="lock-form" autocomplete="off">');
+    h.push('<input class="input" type="password" id="pub-pass" inputmode="numeric" ' +
+      'maxlength="12" placeholder="' + esc(t('pub_locked_placeholder')) + '" ' +
+      'aria-label="' + esc(t('pub_locked_placeholder')) + '">');
+    h.push('<button class="btn primary" type="submit">' + t('pub_locked_submit') + '</button>');
+    h.push('</form>');
+    h.push('<div class="lock-msg" id="pub-lock-msg" role="status"></div>');
+    h.push('<p class="small muted" style="margin-top:14px">' + t('pub_locked_note') + '</p>');
+    h.push('</div></div>');
+    return h.join('');
+  }
+
+  function viewCatalog(mode) {
+    var source = mode === 'qc' ? (QC ? QC.items : [])
+      : mode === 'public' ? (PUBLIC ? PUBLIC.items : [])
+      : (DB ? DB.items : []);
     var items = filteredItems();
     var shown = items.slice(0, state.limit);
     var h = [];
@@ -583,9 +613,14 @@
     h.push('</div>');
 
     h.push('<div class="filters">');
-    h.push(filterSelect('f-class', t('filter_class'),
-      [['', t('all')], ['4', className({ 'class': 4 })], ['2', className({ 'class': 2 })], ['1', className({ 'class': 1 })],
-        ['6', className({ 'class': 6 })], ['15', className({ 'class': 15 })]], state.filters.itemClass));
+    var classOpts = [['', t('all')]];
+    var seenClass = {};
+    source.forEach(function (it) {
+      if (seenClass[it['class']]) return;
+      seenClass[it['class']] = true;
+      classOpts.push([String(it['class']), className(it)]);
+    });
+    h.push(filterSelect('f-class', t('filter_class'), classOpts, state.filters.itemClass));
 
     var subOptions = [['', t('all')]];
     var seenSub = {};
@@ -608,8 +643,13 @@
     });
     h.push(filterSelect('f-slot', t('filter_slot'), slotOpts, state.filters.slot));
 
-    h.push(filterSelect('f-quality', t('filter_quality'),
-      [['', t('all')], ['4', qualityName(4)], ['5', qualityName(5)]], state.filters.quality));
+    var qualOpts = [['', t('all')]];
+    var seenQual = {};
+    source.forEach(function (it) { seenQual[it.quality] = true; });
+    Object.keys(seenQual).sort(function (a, b) { return b - a; }).forEach(function (q) {
+      qualOpts.push([q, qualityName(+q) || (t('quality') + ' ' + q)]);
+    });
+    h.push(filterSelect('f-quality', t('filter_quality'), qualOpts, state.filters.quality));
 
     h.push('<div class="filter narrow"><label>' + esc(t('filter_ilvl_min')) + '</label>' +
       '<input class="input" id="f-ilvl-min" type="number" min="0" value="' + esc(state.filters.ilvlMin) + '"></div>');
@@ -624,12 +664,19 @@
     h.push('</div>');
     h.push('</div>');
 
-    if (isQc) {
+    if (mode) {
+      var extra = mode === 'qc'
+        ? { title: t('qc_title'), note: t('qc_note'), cls: 'qc-note' }
+        : { title: t('pub_title'), note: t('pub_note'), cls: 'qc-note pub-note' };
       h.push('<div class="panel-head" style="border-top:1px solid var(--line-soft);border-radius:0;">');
-      h.push('<h2>' + t('qc_title') + '</h2><span class="muted small">' + t('found') + ' ' +
+      h.push('<h2>' + extra.title + '</h2><span class="muted small">' + t('found') + ' ' +
         num(items.length) + ' ' + t('of') + ' ' + num(source.length) + '</span>');
       h.push('</div>');
-      h.push('<div class="panel-body qc-note">' + t('qc_note') + '</div>');
+      h.push('<div class="panel-body ' + extra.cls + '">' + extra.note + '</div>');
+      if (mode === 'public') {
+        h.push('<div class="panel-body" style="border-top:1px solid var(--line-soft);text-align:right">' +
+          '<button class="btn tiny ghost" id="pub-lock-out">' + t('pub_lock_btn') + '</button></div>');
+      }
     } else {
       h.push('<div class="panel-head" style="border-top:1px solid var(--line-soft);border-radius:0;">');
       h.push('<h2>' + t('nav_catalog') + '</h2><span class="muted small">' + t('found') + ' ' +
@@ -722,6 +769,7 @@
     h.push('<div class="muted small">' + esc(displaySub(item) || '') + '</div>');
     h.push('<div class="badge-row">');
     if (item.qc) h.push('<span class="badge qc" title="' + esc(t('qc_badge_hint')) + '">' + t('qc_badge') + '</span>');
+    if (item.pub) h.push('<span class="badge qc pub" title="' + esc(t('pub_badge_hint')) + '">' + t('pub_badge') + '</span>');
     h.push('<span class="badge">#' + item.id + '</span>');
     h.push('<span class="badge">' + esc(qualityName(item.quality)) + '</span>');
     h.push('<span class="badge">' + esc(slotName(item)) + '</span>');
@@ -1240,6 +1288,7 @@
     h.push(cell(t('sets_total'), num(Object.keys(DB.sets).length)));
     h.push(cell(state.lang === 'ru' ? 'Файл дампа' : 'Dump file', '<span class="small">' + esc(DB.source.fileName) + '</span>'));
     if (QC) h.push(cell(t('qc_total'), num(QC.items.length)));
+    if (PUBLIC) h.push(cell(t('pub_total'), num(PUBLIC.items.length)));
     h.push('</div>');
     if (QC) {
       h.push('<h4 style="margin-top:18px">' + t('qc_title') + '</h4>');
@@ -1247,6 +1296,17 @@
       h.push('<p class="small"><a href="' + esc('#/qc') + '">' + t('qc_open') + '</a> · ' +
         '<a href="sql/qc131.sql">' + t('qc_dump_link') + '</a></p>');
       if (QC.source.note) h.push('<p class="small muted">' + esc(QC.source.note) + '</p>');
+    }
+    h.push('<h4 style="margin-top:18px">' + t('nav_public') + '</h4>');
+    if (PUBLIC) {
+      h.push('<p class="small">' + t('pub_about') + '</p>');
+      h.push('<p class="small">' + t('pub_total') + ': ' + num(PUBLIC.items.length) + ' · ' +
+        '<a href="' + esc('#/public') + '">' + t('pub_open') + '</a> · ' +
+        '<a href="sql/public.sql">' + t('pub_dump_link') + '</a></p>');
+      if (PUBLIC.source.note) h.push('<p class="small muted">' + esc(PUBLIC.source.note) + '</p>');
+    } else {
+      h.push('<p class="small muted">' + t('pub_locked_hint') + '. <a href="' + esc('#/public') + '">' +
+        t('pub_open') + '</a></p>');
     }
     h.push('<h4 style="margin-top:18px">' + t('sources') + '</h4>');
     h.push('<ul class="small">');
@@ -1279,10 +1339,13 @@
   }
 
   function isQcKey(key) { return String(key).indexOf(QC_PREFIX) === 0; }
+  function isPublicKey(key) { return String(key).indexOf(PUBLIC_PREFIX) === 0; }
 
-  /* предметы обеих баз — для куклы и сравнения */
+  /* предметы всех загруженных баз — для куклы и сравнения */
   function allItems() {
-    return (DB ? DB.items : []).concat(QC ? QC.items : []);
+    return (DB ? DB.items : [])
+      .concat(QC ? QC.items : [])
+      .concat(PUBLIC ? PUBLIC.items : []);
   }
 
   function showTooltip(html, event, key) {
@@ -1445,6 +1508,40 @@
         if (again) { again.focus(); again.setSelectionRange(again.value.length, again.value.length); }
       }, 220));
     }
+    /* раздел Public: ввод пароля и повторная блокировка */
+    var lock = view.querySelector('#pub-lock');
+    if (lock) {
+      lock.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var input = document.getElementById('pub-pass');
+        var msg = document.getElementById('pub-lock-msg');
+        if (!input) return;
+        if (input.value.trim() === PUBLIC_PASSWORD) {
+          if (msg) msg.textContent = t('pub_locked_ok');
+          unlockPublic().then(function () {
+            paintStatic();
+            render();
+          }).catch(function () {
+            if (msg) msg.textContent = t('error_load');
+          });
+        } else {
+          if (msg) msg.textContent = t('pub_locked_error');
+          input.classList.add('error');
+          setTimeout(function () { input.classList.remove('error'); }, 600);
+          input.select();
+        }
+      });
+      var pass = document.getElementById('pub-pass');
+      if (pass) pass.focus();
+    }
+    var lockOut = view.querySelector('#pub-lock-out');
+    if (lockOut) {
+      lockOut.addEventListener('click', function () {
+        lockPublic();
+        navigate({ view: 'public' });
+      });
+    }
+
     var sortSel = view.querySelector('#f-sort');
     if (sortSel) sortSel.addEventListener('change', function () { state.sort = sortSel.value; render(); });
 
@@ -1635,8 +1732,60 @@
     }
   }
 
-  /* Предметы обеих баз в одном справочнике: ключ основной базы — id,
-     отдельного дампа — qc + id, поэтому совпадающие entry не перезаписывают друг друга. */
+  function fetchJson(url) {
+    return fetch(url).then(function (r) {
+      if (!r.ok) throw new Error('http ' + r.status + ' ' + url);
+      return r.json();
+    });
+  }
+
+  /* --- раздел Public: открывается по паролю, данные читаются только после этого --- */
+
+  function publicUnlocked() {
+    try { return localStorage.getItem(PUBLIC_FLAG) === '1'; } catch (err) { return false; }
+  }
+
+  function setPublicFlag(on) {
+    try {
+      if (on) localStorage.setItem(PUBLIC_FLAG, '1');
+      else localStorage.removeItem(PUBLIC_FLAG);
+    } catch (err) { /* хранилище может быть недоступно */ }
+  }
+
+  function loadPublic() {
+    if (PUBLIC) return Promise.resolve(PUBLIC);
+    return fetchJson(PUBLIC_FILE).then(function (db) {
+      PUBLIC = db;
+      indexItems();
+      syncPublicUi();
+      return PUBLIC;
+    });
+  }
+
+  function unlockPublic() {
+    setPublicFlag(true);
+    return loadPublic();
+  }
+
+  function lockPublic() {
+    PUBLIC = null;
+    setPublicFlag(false);
+    indexItems();
+    syncPublicUi();
+  }
+
+  /* Кнопка Public: закрыта — половинчатая и с замком, открыта — обычная */
+  function syncPublicUi() {
+    var btn = document.getElementById('nav-public');
+    if (!btn) return;
+    var open = publicUnlocked() && !!PUBLIC;
+    btn.classList.toggle('locked', !open);
+    btn.setAttribute('title', open ? t('pub_open_hint') : t('pub_locked_hint'));
+    btn.setAttribute('aria-disabled', open ? 'false' : 'true');
+  }
+
+  /* Предметы всех баз в одном справочнике: ключ основной базы — id,
+     отдельных дампов — qc + id и pub + id, поэтому совпадающие entry не перезаписывают друг друга. */
   function indexItems() {
     ITEMS_BY_KEY = {};
     SPELLS = {};
@@ -1645,19 +1794,23 @@
       it.key = String(it.id);
       ITEMS_BY_KEY[it.key] = it;
     });
-    if (QC) {
-      QC.items.forEach(function (it) {
-        it.key = QC_PREFIX + it.id;
-        it.qc = true;
+    SPELLS = (QC && QC.spells) || {};
+    var extra = [QC, PUBLIC];
+    extra.forEach(function (src) {
+      if (!src) return;
+      src.items.forEach(function (it) {
+        it.key = (src === QC ? QC_PREFIX : PUBLIC_PREFIX) + it.id;
+        it.qc = src === QC;
+        it.pub = src === PUBLIC;
         ITEMS_BY_KEY[it.key] = it;
       });
-      SPELLS = QC.spells || {};
-    }
+      Object.keys(src.spells || {}).forEach(function (id) { SPELLS[id] = src.spells[id]; });
+      Object.keys(src.sets || {}).forEach(function (id) { SETS[id] = src.sets[id]; });
+    });
     if (DB) {
       Object.keys(DB.spells || {}).forEach(function (id) { SPELLS[id] = DB.spells[id]; });
       Object.keys(DB.sets || {}).forEach(function (id) { SETS[id] = DB.sets[id]; });
     }
-    Object.keys(QC && QC.sets || {}).forEach(function (id) { SETS[id] = QC.sets[id]; });
   }
 
   /* --------------------------------- запуск ------------------------------- */
@@ -1703,24 +1856,21 @@
     window.addEventListener('blur', hideTooltip);
     window.addEventListener('scroll', hideTooltip, true);
 
-    function fetchJson(url) {
-      return fetch(url).then(function (r) {
-        if (!r.ok) throw new Error('http ' + r.status + ' ' + url);
-        return r.json();
-      });
-    }
-
-    /* отдельный дамп необязателен: если его нет, сайт работает на основной базе */
+    /* отдельные дампы необязательны: если файла нет, сайт работает на остальных наборах */
     Promise.all([
       fetchJson('data/db.json'),
-      fetchJson(QC_FILE).catch(function () { return null; })
+      fetchJson(QC_FILE).catch(function () { return null; }),
+      publicUnlocked() ? fetchJson(PUBLIC_FILE).catch(function () { return null; })
+        : Promise.resolve(null)
     ]).then(function (res) {
       DB = res[0];
       QC = res[1];
+      PUBLIC = res[2];
       indexItems();
       /* без файла отдельного дампа кнопка не нужна */
       var qcBtn = document.getElementById('nav-qc');
       if (qcBtn && !QC) qcBtn.style.display = 'none';
+      if (!publicUnlocked() || !PUBLIC) setPublicFlag(false);
       paintStatic();
       render();
     }).catch(function (err) {
@@ -1738,6 +1888,7 @@
       '#nav-doll': t('nav_doll'),
       '#nav-compare': t('nav_compare'),
       '#nav-qc': t('nav_qc'),
+      '#nav-public': t('nav_public'),
       '#nav-about': t('nav_about')
     };
     Object.keys(map).forEach(function (sel) {
@@ -1749,6 +1900,7 @@
     document.title = t('siteTitle') + ' — ' + t('siteSubtitle');
     document.documentElement.lang = state.lang;
     paintLangSwitch();
+    syncPublicUi();
   }
 
   /* подсветка текущего языка в переключателе */

@@ -22,6 +22,9 @@
 * **Отдельный дамп «QC 13.1»** — 33 предмета другой ревизии базы того же сервера
   (Quantum Database Rev 9.8, 30.11.2015). Хранятся отдельным набором: совпадающие `entry`
   не перезаписывают предметы основной базы, оба варианта видны одновременно.
+* **Раздел «Public»** — 654 предмета из сборного внешнего дампа (18 источников). Открывается
+  только по паролю: пока он не введён, файл `data/public.json` даже не запрашивается.
+  Предметы тоже живут отдельным набором и не заменяют ни основную базу, ни QC 13.1.
 
 ## Файлы
 
@@ -32,8 +35,12 @@ assets/js/i18n.js          справочные таблицы и локализ
 assets/js/app.js           логика: каталог, карточка, кукла, сравнение
 data/db.json               собранные данные для сайта (основная база)
 data/qc131.json            данные отдельного дампа QC 13.1
+data/public.json           данные сборного дампа Public (загружается после пароля)
 sql/item_template.sql      исходный дамп таблицы item_template
 sql/qc131.sql              дамп QC 13.1 (33 предмета и русская локализация)
+sql/public.sql             сборный дамп Public (654 предмета, 12 групп-схем)
+tools/fetch-paste.list     список внешних дампов для загрузки через GitHub Actions
+.github/workflows/fetch-paste.yml   загрузка дампов и коммит результата
 tools/parse_items.py       разбор SQL-дампа
 tools/build_data.py        сборка data/db.json из дампа и справочников
 ```
@@ -42,12 +49,13 @@ tools/build_data.py        сборка data/db.json из дампа и спра
 
 ```bash
 python3 tools/parse_items.py            # проверка дампа: сколько предметов и заклинаний
-python3 tools/build_data.py             # сборка data/db.json и data/qc131.json
+python3 tools/build_data.py             # сборка data/db.json, data/qc131.json и data/public.json
 ```
 
-Один запуск собирает оба файла: `data/db.json` из `sql/item_template.sql` и `data/qc131.json`
-из `sql/qc131.sql` (переменная `QC_SQL_PATH`). Предметы второго дампа получают в приложении
-ключи с префиксом `qc`, поэтому записи с одинаковым `entry` не конфликтуют между собой.
+Один запуск собирает все три файла: `data/db.json` из `sql/item_template.sql`,
+`data/qc131.json` из `sql/qc131.sql` (`QC_SQL_PATH`) и `data/public.json` из `sql/public.sql`
+(`PUBLIC_SQL_PATH`). Предметы дополнительных дампов получают в приложении ключи с префиксами
+`qc` и `pub`, поэтому записи с одинаковым `entry` не конфликтуют между собой.
 
 `build_data.py` использует дамп `sql/item_template.sql` и справочники клиента 3.3.5a:
 
@@ -57,8 +65,12 @@ python3 tools/build_data.py             # сборка data/db.json и data/qc13
 | `RURU_DBC_DIR` | бинарные DBC русской версии клиента 3.3.5a (`Spell.dbc`, `SpellRadius.dbc`, `SpellItemEnchantment.dbc`, `SpellIcon.dbc`) |
 | `WOWDUMPS_DIR` | выгрузки `itemsparse.csv` и `itemset.csv` для сверки названий предметов с Wowhead |
 
-Результат — два файла, которые читает сайт: `data/db.json` (основная база) и `data/qc131.json`
-(отдельный дамп QC 13.1; если файла нет, сайт работает только на основной базе).
+Результат — три файла, которые читает сайт: `data/db.json` (основная база), `data/qc131.json`
+(дамп QC 13.1) и `data/public.json` (набор Public). Отсутствующие файлы дополнительных наборов
+сайт просто пропускает: без них он работает на остальных базах.
+
+Дампы из интернета попадают в репозиторий через GitHub Actions: ссылки перечислены в
+`tools/fetch-paste.list`, workflow `fetch-paste.yml` скачивает их и коммитит результат.
 
 ## Локальный запуск
 
@@ -69,8 +81,15 @@ python3 -m http.server 8080
 
 ## Публикация
 
-Сайт статический и работает на GitHub Pages без сборки: включите Pages для нужной ветки
-(Settings → Pages → Deploy from a branch → `/ (root)`).
+Сайт статический и публикуется GitHub Pages прямо из ветки
+(Settings → Pages → Deploy from a branch → ветка → `/ (root)`):
+<https://alterational.github.io/quantumcore-wotlk/>. Отдельная сборка не нужна — достаточно пуша.
+
+## Пароль раздела Public
+
+Пароль (`1337`) хранится в `assets/js/app.js` и проверяется в браузере — это скрытие раздела от
+случайного просмотра, а не защита серверных данных: файл `data/public.json` лежит на сайте
+открыто, как и сам SQL-дамп в репозитории.
 
 ## Правовые примечания
 

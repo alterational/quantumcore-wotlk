@@ -27,6 +27,8 @@ RURU_DBC = os.environ.get('RURU_DBC_DIR', '/tmp/ruRU/dbc/ruRU')
 WOWDUMPS = os.environ.get('WOWDUMPS_DIR', '/tmp/wowdumps')
 OUT = os.environ.get('OUT_PATH', 'data/db.json')
 QC_OUT = os.environ.get('QC_OUT_PATH', 'data/qc131.json')
+PUBLIC_SQL_PATH = os.environ.get('PUBLIC_SQL_PATH', 'sql/public.sql')
+PUBLIC_OUT = os.environ.get('PUBLIC_OUT_PATH', 'data/public.json')
 
 # смещения локализованных строк (локаль 0) в бинарных DBC клиента 3.3.5a
 SPELL_DBC_STRINGS = {'name': 144, 'rank': 161, 'description': 178, 'tooltip': 195}
@@ -111,25 +113,91 @@ def read_tuple(text, start):
     return text[start:], n
 
 
+def strip_sql_comments(text):
+    """Убирает комментарии -- ... (в том числе в конце строки с данными), не трогая строки в кавычках."""
+    out, i, n, quote = [], 0, len(text), ''
+    while i < n:
+        c = text[i]
+        if quote:
+            out.append(c)
+            if c == '\\' and i + 1 < n:
+                out.append(text[i + 1]); i += 2; continue
+            if c == quote:
+                if i + 1 < n and text[i + 1] == quote:
+                    out.append(text[i + 1]); i += 2; continue
+                quote = ''
+            i += 1
+            continue
+        if c in "'\"":
+            quote = c; out.append(c); i += 1; continue
+        if c == '-' and i + 1 < n and text[i + 1] == '-':
+            while i < n and text[i] != '\n':
+                i += 1
+            out.append('\n')
+            continue
+        out.append(c); i += 1
+    return ''.join(out)
+
+
+def strip_color_codes(text):
+    """Снимает игровую разметку из названий: |cffRRGGBB ... |r, ссылки |H...|h и значки |T...|t."""
+    if not text:
+        return text
+    return re.sub(r'\|c[0-9a-fA-F]{8}|\|r|\|H[^|]*\|h|\|h|\|T[^|]*\|t|\|n', '', text).strip()
+
+
+def chunk_columns(ch, vpos):
+    """Колонки одного выражения REPLACE INTO — у каждой группы дампа они свои."""
+    head = ch[:vpos]
+    lp, rp = head.find('('), head.rfind(')')
+    if lp < 0 or rp < lp:
+        return []
+    return [c.strip(' `') for c in head[lp + 1:rp].split(',')]
+
+
+def chunk_rows(ch, vpos):
+    """Все кортежи VALUES одного выражения (в дампе их может быть много)."""
+    body = ch[vpos + 6:]
+    i, n, out = 0, len(body), []
+    while i < n:
+        while i < n and body[i] != '(':
+            if body[i] == ';':
+                return out
+            i += 1
+        if i >= n:
+            break
+        tup, end = read_tuple(body, i + 1)
+        out.append(tokenize_tuple(tup))
+        i = end + 1
+    return out
+
+
 def parse_item_sql(path):
-    text = open(path, encoding='utf-8', errors='replace').read()
-    chunks = text.split('REPLACE INTO')
-    cols, items = None, []
-    for ch in chunks[1:]:
+    """Разбирает все REPLACE INTO item_template дампа. Колонки берутся для каждой группы свои,
+    поэтому файлы со вставками из разных схем (наборы по 42..139 колонок) читаются корректно."""
+    text = strip_sql_comments(open(path, encoding='utf-8', errors='replace').read())
+    items, skipped = [], 0
+    for ch in text.split('REPLACE INTO')[1:]:
         vpos = ch.find('VALUES')
         if vpos < 0:
             continue
-        head = ch[:vpos]
-        lp, rp = head.find('('), head.rfind(')')
-        if cols is None:
-            cols = [c.strip(' `') for c in head[lp + 1:rp].split(',')]
-        body = ch[vpos + 6:].lstrip()
-        tup, _ = read_tuple(body, 1)
-        vals = tokenize_tuple(tup)
-        if len(vals) != len(cols):
-            print('!! arity mismatch', len(vals), len(cols), file=sys.stderr)
+        cols = chunk_columns(ch, vpos)
+        if not cols:
             continue
-        items.append(dict(zip(cols, vals)))
+        for vals in chunk_rows(ch, vpos):
+            if len(vals) != len(cols):
+                skipped += 1
+                continue
+            row = {}
+            for k, v in zip(cols, vals):
+                if k in row:
+                    continue                       # дубли колонок (unk0) — оставляем первые
+                if isinstance(v, str) and ('name' == k or 'description' == k):
+                    v = strip_color_codes(v)
+                row[k] = v
+            items.append(row)
+    if skipped:
+        print('!! пропущено строк с другим числом значений:', skipped, file=sys.stderr)
     return items
 
 
@@ -607,10 +675,43 @@ def base_name(name):
     return re.sub(r'\s*\([^)]*\)\s*$', '', (name or '')).strip().lower()
 
 
+# поля, которые могут отсутствовать в дампах с укороченной схемой (42..138 колонок)
+ITEM_NUM_KEYS = [
+    'class', 'subclass', 'Quality', 'ItemLevel', 'RequiredLevel', 'InventoryType', 'bonding',
+    'maxcount', 'maxcount', 'stackable', 'ContainerSlots', 'armor', 'block', 'MaxDurability',
+    'BuyCount', 'BuyPrice', 'SellPrice', 'Flags', 'FlagsExtra', 'AllowableClass', 'AllowableRace',
+    'delay', 'RangedModRange', 'ammo_type', 'holy_res', 'fire_res', 'nature_res', 'frost_res',
+    'shadow_res', 'arcane_res', 'socketBonus', 'GemProperties', 'itemset', 'displayid', 'Material',
+    'sheath', 'DisenchantID', 'RequiredSkill', 'RequiredSkillRank', 'ScalingStatDistribution',
+    'ScalingStatValue', 'ItemLimitCategory', 'startquest', 'PageText', 'flagsCustom', 'Duration',
+    'HolidayId', 'FoodType', 'minMoneyLoot', 'maxMoneyLoot', 'VerifiedBuild', 'WDBVerified',
+]
+
+
+def normalize_items(items):
+    """Дополняет строки отсутствующими полями, чтобы один маппинг работал для всех схем дампа."""
+    for it in items:
+        for k in ITEM_NUM_KEYS:
+            if it.get(k) is None:
+                it[k] = 0
+        for k in ('name', 'description', 'ScriptName'):
+            if it.get(k) is None:
+                it[k] = ''
+            elif not isinstance(it[k], str):
+                it[k] = str(it[k])
+        if 'entry' in it and it['entry'] is not None:
+            try:
+                it['entry'] = int(float(it['entry']))
+            except (TypeError, ValueError):
+                pass
+    return items
+
+
 def build_dataset(sql_path, extra_source=None, strict_names=False):
     """Собирает данные одного дампа item_template: предметы, заклинания, комплекты."""
     items = parse_item_sql(sql_path)
-    items = [i for i in items if 'ItemLevel' in i]
+    items = [i for i in items if 'ItemLevel' in i]   # отсеиваем строки locales_item и чужих таблиц
+    items = normalize_items(items)
     locales = parse_locales_sql(sql_path)
     print('%s: предметов %d, строк локализации %d'
           % (os.path.basename(sql_path), len(items), len(locales)))
@@ -965,6 +1066,17 @@ def write_dataset(db, path):
 
 def main():
     write_dataset(build_dataset(SQL_PATH), OUT)
+
+    # публичный дамп: тоже отдельный файл и свои ключи (префикс pub)
+    if PUBLIC_SQL_PATH and os.path.exists(PUBLIC_SQL_PATH):
+        pub = build_dataset(PUBLIC_SQL_PATH, strict_names=True, extra_source={
+            'kind': 'public',
+            'title': 'Public',
+            'separateFrom': [os.path.basename(SQL_PATH), os.path.basename(QC_SQL_PATH)],
+            'note': ('Сборный набор из внешних дампов (форумы, nopaste, GitHub-паки). '
+                     'Хранится отдельно: совпадающие entry не перезаписывают ни основную базу, ни QC 13.1.'),
+        })
+        write_dataset(pub, PUBLIC_OUT)
 
     # второй дамп: отдельный файл, свои ключи предметов (префикс qc), старая база не меняется
     if QC_SQL_PATH and os.path.exists(QC_SQL_PATH):
