@@ -142,6 +142,32 @@ def strip_sql_comments(text):
     return ''.join(out)
 
 
+MOJIBAKE_HINT = re.compile(r'[À-ÿ]{3,}')
+MD_LINK = re.compile(r'\[([^\]]+)\]\([^)]*\)')
+
+
+def fix_mojibake(text):
+    """Возвращает текст из cp1251, ошибочно прочитанный как latin-1 («Èñïîëüçóéòå» -> «Используйте»)."""
+    if not text or not MOJIBAKE_HINT.search(text):
+        return text
+    try:
+        fixed = text.encode('latin-1').decode('cp1251')
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        return text
+    if re.search(r'[А-Яа-яЁё]', fixed) and not re.search(r'[ÐÑÂÃ]', fixed):
+        return fixed
+    return text
+
+
+def clean_text(text):
+    """Приводит текстовое поле в порядок: разметка ссылок из выгрузки, кодировка, игровые коды."""
+    if not isinstance(text, str):
+        return text
+    text = MD_LINK.sub(r'\1', text)
+    text = strip_color_codes(text)
+    return fix_mojibake(text)
+
+
 def strip_color_codes(text):
     """Снимает игровую разметку из названий: |cffRRGGBB ... |r, ссылки |H...|h и значки |T...|t."""
     if not text:
@@ -149,13 +175,75 @@ def strip_color_codes(text):
     return re.sub(r'\|c[0-9a-fA-F]{8}|\|r|\|H[^|]*\|h|\|h|\|T[^|]*\|t|\|n', '', text).strip()
 
 
+def known_column_names():
+    """Словарь имён колонок item_template, собранный из уже имеющихся дампов."""
+    names = set()
+    for path in (SQL_PATH, QC_SQL_PATH, PUBLIC_SQL_PATH, WOWDM_SQL_PATH):
+        if not path or not os.path.exists(path):
+            continue
+        text = open(path, encoding='utf-8', errors='replace').read()
+        for m in re.finditer(r'(?m)^[ \t]*(?:REPLACE|INSERT)[ \t]+INTO[ \t]+`?\w+`?[ \t]*\(([^;]*?)\)[ \t]*VALUES', text, re.S):
+            for c in m.group(1).split(','):
+                c = c.strip(' `\n\r\t')
+                if c and len(c) < 40 and ' ' not in c:
+                    names.add(c)
+    return sorted(names, key=len, reverse=True)
+
+
+def canonical_columns():
+    """Полный список колонок item_template в исходном порядке — из самого подробного дампа."""
+    best = []
+    for path in (SQL_PATH, QC_SQL_PATH, PUBLIC_SQL_PATH, WOWDM_SQL_PATH):
+        if not path or not os.path.exists(path):
+            continue
+        text = open(path, encoding='utf-8', errors='replace').read()
+        for m in re.finditer(r'(?m)^[ \t]*(?:REPLACE|INSERT)[ \t]+INTO[ \t]+`?\w+`?[ \t]*\(([^;]*?)\)[ \t]*VALUES', text, re.S):
+            cols = [c.strip(' `\n\r\t') for c in m.group(1).split(',')]
+            cols = [c for c in cols if c]
+            if len(cols) > len(best):
+                best = cols
+    return best
+
+
+def split_mushed_columns(blob, names=None):
+    """Разбирает «слипшийся» список колонок (дамп потерял запятые и скобки):
+    'entryclasssubclass...WDBVerified' -> ['entry', 'class', 'subclass', ...]."""
+    names = names or known_column_names()
+    if not names:
+        return []
+    out, i = [], 0
+    low = blob.lower()
+    while i < len(blob):
+        for n in names:
+            if low.startswith(n.lower(), i):
+                out.append(n)
+                i += len(n)
+                break
+        else:
+            return []
+    # если посимвольная разбивка не сходится с полным списком колонок — вернуть исходный порядок
+    canon = canonical_columns()
+    if canon and len(out) != len(canon):
+        return []
+    return out
+
+
 def chunk_columns(ch, vpos):
-    """Колонки одного выражения REPLACE INTO — у каждой группы дампа они свои."""
+    """Колонки одного выражения INSERT/REPLACE — у каждой группы дампа они свои."""
     head = ch[:vpos]
     lp, rp = head.find('('), head.rfind(')')
-    if lp < 0 or rp < lp:
-        return []
-    return [c.strip(' `') for c in head[lp + 1:rp].split(',')]
+    if lp >= 0 and rp > lp:
+        raw = head[lp + 1:rp]
+    else:
+        # дамп без скобок вокруг списка колонок: он идёт сразу после имени таблицы
+        m = re.match(r'[ \t]*(?:REPLACE|INSERT)[ \t]+INTO[ \t]+`?\w+`?', head)
+        start = m.end() if m else 0
+        raw = head[start:rp] if rp >= start else head[start:]
+    cols = [c.strip(' `') for c in raw.split(',')]
+    cols = [c for c in cols if c]
+    if len(cols) == 1 and len(cols[0]) > 20:
+        cols = split_mushed_columns(cols[0]) or cols
+    return cols
 
 
 def chunk_rows(ch, vpos):
@@ -185,16 +273,17 @@ def sql_statements(path):
     Сборные дампы помечают каждую группу строк комментарием «-- source: ...», поэтому
     по этой метке записи можно раскладывать по разделам сайта."""
     text = open(path, encoding='utf-8', errors='replace').read()
-    parts = re.split(r'(?m)^[ \t]*REPLACE INTO', text)
+    parts = re.split(r'(?m)^[ \t]*(REPLACE|INSERT)[ \t]+INTO', text)
     out, pending = [], ''
-    for i, part in enumerate(parts):
+    for i in range(0, len(parts) - 1, 2):
+        verb, body = parts[i + 1], parts[i + 2]
         if i == 0:
-            found = SOURCE_LABEL.findall(part)
+            found = SOURCE_LABEL.findall(parts[0])
             pending = found[-1] if found else ''
-            continue
-        out.append((pending, 'REPLACE INTO' + part))
-        found = SOURCE_LABEL.findall(part)
-        pending = found[-1] if found else ''
+        out.append((pending, verb + ' INTO' + body))
+        found = SOURCE_LABEL.findall(body)
+        if found:
+            pending = found[-1]
     return out
 
 
@@ -221,7 +310,7 @@ def parse_item_sql(path):
                 if k in row:
                     continue                       # дубли колонок (unk0) — оставляем первые
                 if isinstance(v, str) and ('name' == k or 'description' == k):
-                    v = strip_color_codes(v)
+                    v = clean_text(v)
                 row[k] = v
             try:
                 entry = int(str(row.get('entry')))
@@ -1127,6 +1216,8 @@ def main():
             'note': ('Отдельный набор предметов раздела WoWDM. Совпадающие entry не перезаписывают '
                      'ни основную базу, ни QC 13.1, ни Public.'),
         })
+        if not wowdm['items']:
+            raise SystemExit('!! %s: строки есть, но не разобрано ни одной записи — проверьте список колонок в шапке' % WOWDM_SQL_PATH)
         write_dataset(wowdm, WOWDM_OUT)
 
     # второй дамп: отдельный файл, свои ключи предметов (префикс qc), старая база не меняется
