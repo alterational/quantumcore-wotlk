@@ -44,14 +44,17 @@
         'предметы хранятся отдельно и не заменяют ни основную базу, ни QC 13.1.',
       pub_locked_title: 'Раздел Public защищён паролем',
       wowdm_title: 'WoWDM — отдельный раздел',
-      wowdm_note: 'Самостоятельный набор предметов под паролем. Хранится отдельно: совпадающие ' +
-        'entry не перезаписывают ни основную базу, ни QC 13.1, ни Public — все версии видны ' +
-        'одновременно.',
+      wowdm_note: 'Реальные кастомные предметы мира Denwer: сборка по дампу world.item_template, ' +
+        'служебные болванки (у которых название совпадало с номером записи) в него не попали. ' +
+        'Хранится отдельно: совпадающие entry не перезаписывают ни основную базу, ни QC 13.1, ' +
+        'ни Public — все версии видны одновременно.',
       wowdm_badge: 'WoWDM',
       wowdm_badge_hint: 'Предмет из раздела WoWDM',
-      wowdm_about: 'Раздел WoWDM — самостоятельный набор предметов, отдельный от всех остальных. ' +
-        'Сейчас в нём нет предметов: как только появится дамп для этого раздела, он будет собран ' +
-        'сюда собственным набором и ничего не затронет.',
+      wowdm_about: 'Раздел WoWDM — самостоятельный набор реальных кастомных предметов мира ' +
+        'Denwer, собранный из отдельного дампа world.item_template. Служебные болванки, у которых ' +
+        'название совпадало с номером записи, в набор не входят. У предметов свои ключи, поэтому ' +
+        'совпадающие с базой, QC 13.1 и Public номера entry остаются независимыми версиями ' +
+        'и ничего не подменяют.',
       sec_empty_text: 'В этом разделе пока нет предметов — для него ещё не добавлены данные.',
       sec_empty_hint: 'Раздел уже готов: как только дамп появится, предметы соберутся сюда ' +
         'отдельным набором со своими ключами и не затронут основную базу, QC 13.1 и Public.',
@@ -252,13 +255,17 @@
         'and never replace the main database or QC 13.1.',
       pub_locked_title: 'The Public section is password protected',
       wowdm_title: 'WoWDM — separate section',
-      wowdm_note: 'An independent item set behind the password. Kept separately: identical entries ' +
-        'never overwrite the main database, QC 13.1 or Public — every version stays available.',
+      wowdm_note: 'Real custom items of the Denwer world, built from a separate world.item_template ' +
+        'dump with the service placeholders (whose name equalled their entry) left out. Kept ' +
+        'separately: identical entries never overwrite the main database, QC 13.1 or Public — ' +
+        'every version stays available.',
       wowdm_badge: 'WoWDM',
       wowdm_badge_hint: 'Item from the WoWDM section',
-      wowdm_about: 'The WoWDM section is an item set of its own, separate from every other one. ' +
-        'It holds no items yet: once a dump for this section arrives, it will be built here as its ' +
-        'own set and will touch nothing else.',
+      wowdm_about: 'The WoWDM section is an item set of its own: the real custom items of the ' +
+        'Denwer world, built from a separate world.item_template dump. The service placeholders ' +
+        'whose name equalled their entry are left out of the set. The items live under their own ' +
+        'keys, so entries shared with the main database, QC 13.1 or Public stay independent ' +
+        'versions and never replace anything.',
       sec_empty_text: 'This section has no items yet — no data has been added for it.',
       sec_empty_hint: 'The section is ready: once a dump appears, its items will be built here as a ' +
         'separate set with its own keys and will not affect the main database, QC 13.1 or Public.',

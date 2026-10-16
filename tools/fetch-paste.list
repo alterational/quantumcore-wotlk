@@ -5,5 +5,8 @@
 #
 # Основной дамп армори (уже загружен):
 # https://nopaste.net/uR77LUbLLS sql/item_template.sql
-https://nopaste.net/qJ01XHweNB sql/public.sql
+# ВНИМАНИЕ: активная строка перезаписывает файл целиком — из публичного сборника
+# в репозитории лежит курированная версия (группы pack_35 и pack_36 удалены),
+# поэтому основная ссылка оставлена отключённой.
+# https://nopaste.net/qJ01XHweNB sql/public.sql
 https://nopaste.net/6KI7IKNVUa sql/wowdm.sql
