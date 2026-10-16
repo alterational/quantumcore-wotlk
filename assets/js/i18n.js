@@ -36,26 +36,26 @@
       pub_title: 'Public — сборный дамп',
       pub_note: 'Набор предметов из внешних дампов того же сервера (форумы, nopaste, GitHub-паки). ' +
         'Хранится отдельно: совпадающие entry не перезаписывают ни основную базу, ни QC 13.1 — ' +
-        'все версии видны одновременно. Паки pack_35 и pack_36 перенесены в отдельный раздел WoWDM.',
+        'все версии видны одновременно.',
       pub_badge: 'Public',
       pub_badge_hint: 'Предмет из отдельного дампа sql/public.sql',
       pub_about: 'Публичный набор собран из внешних дампов item_template (форумы, зеркала, ' +
         'GitHub-паки). Значительная часть записей использует оригинальные номера Blizzard, поэтому ' +
-        'предметы хранятся отдельно и не заменяют ни основную базу, ни QC 13.1. Записи паков ' +
-        'pack_35_PVE_T11_Apocalyptic.sql и pack_36_Arena_S9_Destructive.sql здесь не участвуют — ' +
-        'они вынесены в раздел WoWDM.',
+        'предметы хранятся отдельно и не заменяют ни основную базу, ни QC 13.1.',
       pub_locked_title: 'Раздел Public защищён паролем',
       wowdm_title: 'WoWDM — отдельный раздел',
-      wowdm_note: 'Предметы из паков pack_35_PVE_T11_Apocalyptic.sql (PvE T11 «Apocalyptic») и ' +
-        'pack_36_Arena_S9_Destructive.sql (арена S9 «Destructive») сборного дампа. Отдельный раздел: ' +
-        'совпадающие entry не перезаписывают ни основную базу, ни QC 13.1, ни Public — ' +
-        'все версии видны одновременно.',
+      wowdm_note: 'Самостоятельный набор предметов под паролем. Хранится отдельно: совпадающие ' +
+        'entry не перезаписывают ни основную базу, ни QC 13.1, ни Public — все версии видны ' +
+        'одновременно.',
       wowdm_badge: 'WoWDM',
-      wowdm_badge_hint: 'Предмет из раздела WoWDM (pack_35 и pack_36)',
-      wowdm_about: 'Раздел WoWDM — это 461 предмет из двух паков mega-pack: комплекты T11 ' +
-        '«Apocalyptic» (PvE) и арена-сет S9 «Destructive». Названия и характеристики авторские, ' +
-        'у большинства предметов номера не совпадают с обычной базой Blizzard, поэтому набор ' +
-        'хранится самостоятельно и ничего не заменяет.',
+      wowdm_badge_hint: 'Предмет из раздела WoWDM',
+      wowdm_about: 'Раздел WoWDM — самостоятельный набор предметов, отдельный от всех остальных. ' +
+        'Сейчас в нём нет предметов: как только появится дамп для этого раздела, он будет собран ' +
+        'сюда собственным набором и ничего не затронет.',
+      sec_empty_text: 'В этом разделе пока нет предметов — для него ещё не добавлены данные.',
+      sec_empty_hint: 'Раздел уже готов: как только дамп появится, предметы соберутся сюда ' +
+        'отдельным набором со своими ключами и не затронут основную базу, QC 13.1 и Public.',
+      sec_empty_short: 'Данных пока нет',
       wowdm_locked_title: 'Раздел WoWDM защищён паролем',
       lock_text: 'Введите пароль в бокс ниже, чтобы открыть раздел.',
       lock_placeholder: 'Пароль',
@@ -244,25 +244,25 @@
       pub_title: 'Public — merged dump',
       pub_note: 'A set of items from external dumps of the same server (forums, nopaste, GitHub packs). ' +
         'Kept separately: identical entries never overwrite the main database or QC 13.1, so every ' +
-        'version stays available. Packs pack_35 and pack_36 moved to the separate WoWDM section.',
+        'version stays available.',
       pub_badge: 'Public',
       pub_badge_hint: 'Item from the separate dump sql/public.sql',
       pub_about: 'The public set is merged from external item_template dumps (forums, mirrors, ' +
         'GitHub packs). Many records reuse original Blizzard entries, so the items are kept separately ' +
-        'and never replace the main database or QC 13.1. The packs pack_35_PVE_T11_Apocalyptic.sql and ' +
-        'pack_36_Arena_S9_Destructive.sql are not part of it — they live in the WoWDM section.',
+        'and never replace the main database or QC 13.1.',
       pub_locked_title: 'The Public section is password protected',
       wowdm_title: 'WoWDM — separate section',
-      wowdm_note: 'Items from the packs pack_35_PVE_T11_Apocalyptic.sql (PvE T11 "Apocalyptic") and ' +
-        'pack_36_Arena_S9_Destructive.sql (arena S9 "Destructive") of the merged dump. A separate ' +
-        'section: identical entries never overwrite the main database, QC 13.1 or Public — every ' +
-        'version stays available.',
+      wowdm_note: 'An independent item set behind the password. Kept separately: identical entries ' +
+        'never overwrite the main database, QC 13.1 or Public — every version stays available.',
       wowdm_badge: 'WoWDM',
-      wowdm_badge_hint: 'Item from the WoWDM section (pack_35 and pack_36)',
-      wowdm_about: 'The WoWDM section holds 461 items from two mega-pack batches: the T11 ' +
-        '"Apocalyptic" PvE sets and the S9 "Destructive" arena sets. Names and stats are custom, ' +
-        'most entries do not collide with the regular Blizzard database, so the set is kept on its ' +
-        'own and replaces nothing.',
+      wowdm_badge_hint: 'Item from the WoWDM section',
+      wowdm_about: 'The WoWDM section is an item set of its own, separate from every other one. ' +
+        'It holds no items yet: once a dump for this section arrives, it will be built here as its ' +
+        'own set and will touch nothing else.',
+      sec_empty_text: 'This section has no items yet — no data has been added for it.',
+      sec_empty_hint: 'The section is ready: once a dump appears, its items will be built here as a ' +
+        'separate set with its own keys and will not affect the main database, QC 13.1 or Public.',
+      sec_empty_short: 'No data yet',
       wowdm_locked_title: 'The WoWDM section is password protected',
       lock_text: 'Type the password in the box below to open the section.',
       lock_placeholder: 'Password',

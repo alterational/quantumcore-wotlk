@@ -28,10 +28,9 @@ WOWDUMPS = os.environ.get('WOWDUMPS_DIR', '/tmp/wowdumps')
 OUT = os.environ.get('OUT_PATH', 'data/db.json')
 QC_OUT = os.environ.get('QC_OUT_PATH', 'data/qc131.json')
 PUBLIC_SQL_PATH = os.environ.get('PUBLIC_SQL_PATH', 'sql/public.sql')
-# раздел WoWDM: часть сборного дампа, вынесенная в отдельный раздел сайта
+# раздел WoWDM: свой дамп, если файл добавят (пока раздела с данными нет)
+WOWDM_SQL_PATH = os.environ.get('WOWDM_SQL_PATH', 'sql/wowdm.sql')
 WOWDM_OUT = os.environ.get('WOWDM_OUT_PATH', 'data/wowdm.json')
-WOWDM_SQL_OUT = os.environ.get('WOWDM_SQL_PATH', 'sql/wowdm.sql')
-WOWDM_SOURCES = ('pack_35_PVE_T11_Apocalyptic.sql', 'pack_36_Arena_S9_Destructive.sql')
 PUBLIC_OUT = os.environ.get('PUBLIC_OUT_PATH', 'data/public.json')
 
 # смещения локализованных строк (локаль 0) в бинарных DBC клиента 3.3.5a
@@ -1092,26 +1091,6 @@ def build_dataset(sql_path, extra_source=None, strict_names=False, items=None, l
     }
 
 
-def write_wowdm_sql(src_path, out_path):
-    """Выгружает выражения разделов WoWDM из сборного дампа в отдельный файл (ссылка на сайте)."""
-    chunks = []
-    for group_src, raw in sql_statements(src_path):
-        if any(n in (group_src or '') for n in WOWDM_SOURCES):
-            chunks.append(re.sub(r'(?:\n[ \t]*--[^\n]*)+[ \t]*$', '', raw).rstrip())
-    if not chunks:
-        return
-    with open(out_path, 'w', encoding='utf-8') as fh:
-        fh.write('-- ================================================================\n')
-        fh.write('-- Раздел WoWDM: предметы из сборного дампа %s\n' % os.path.basename(src_path))
-        fh.write('-- Источники: ' + ', '.join(WOWDM_SOURCES) + '\n')
-        fh.write('-- Файл собран автоматически (tools/build_data.py) и повторяет только эти группы.\n')
-        fh.write('-- В разделе Public и в основной базе сайта эти записи не участвуют.\n')
-        fh.write('-- ================================================================\n\n')
-        fh.write('\n\n'.join(chunks))
-        fh.write('\n')
-    print('записано %s (%.1f КБ)' % (out_path, os.path.getsize(out_path) / 1024.0))
-
-
 def write_dataset(db, path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w', encoding='utf-8') as fh:
@@ -1126,42 +1105,29 @@ def write_dataset(db, path):
 def main():
     write_dataset(build_dataset(SQL_PATH), OUT)
 
-    # сборный дамп делится на два раздела: Public и WoWDM (паки pack_35 и pack_36)
+    # сборный дамп: отдельный файл и свои ключи (префикс pub)
     if PUBLIC_SQL_PATH and os.path.exists(PUBLIC_SQL_PATH):
-        rows = [i for i in parse_item_sql(PUBLIC_SQL_PATH) if 'ItemLevel' in i]
-        rows = normalize_items(rows)
-        locales = parse_locales_sql(PUBLIC_SQL_PATH)
-        wowdm_items, pub_items = [], []
-        for it in rows:
-            src = it.get('sourceFile') or ''
-            (wowdm_items if any(n in src for n in WOWDM_SOURCES) else pub_items).append(it)
-
-        pub = build_dataset(PUBLIC_SQL_PATH, items=pub_items, locales=locales, strict_names=True,
-                            extra_source={
+        pub = build_dataset(PUBLIC_SQL_PATH, strict_names=True, extra_source={
             'kind': 'public',
             'title': 'Public',
             'separateFrom': [os.path.basename(SQL_PATH), os.path.basename(QC_SQL_PATH),
-                             os.path.basename(WOWDM_SQL_OUT)],
-            'excludedSources': list(WOWDM_SOURCES),
+                             os.path.basename(WOWDM_SQL_PATH)],
             'note': ('Сборный набор из внешних дампов (форумы, nopaste, GitHub-паки). '
-                     'Хранится отдельно: совпадающие entry не перезаписывают ни основную базу, ни QC 13.1. '
-                     'Записи паков ' + ', '.join(WOWDM_SOURCES) + ' перенесены в отдельный раздел WoWDM.'),
+                     'Хранится отдельно: совпадающие entry не перезаписывают ни основную базу, ни QC 13.1.'),
         })
         write_dataset(pub, PUBLIC_OUT)
 
-        wowdm = build_dataset(PUBLIC_SQL_PATH, items=wowdm_items, locales=locales, strict_names=True,
-                              extra_source={
+    # раздел WoWDM: подключается только если для него есть свой дамп
+    if WOWDM_SQL_PATH and os.path.exists(WOWDM_SQL_PATH):
+        wowdm = build_dataset(WOWDM_SQL_PATH, strict_names=True, extra_source={
             'kind': 'wowdm',
             'title': 'WoWDM',
             'separateFrom': [os.path.basename(SQL_PATH), os.path.basename(QC_SQL_PATH),
                              os.path.basename(PUBLIC_SQL_PATH)],
-            'sources': list(WOWDM_SOURCES),
-            'note': ('Предметы из паков ' + ', '.join(WOWDM_SOURCES) + ' сборного дампа. '
-                     'Отдельный раздел: совпадающие entry не перезаписывают ни основную базу, '
-                     'ни QC 13.1, ни Public.'),
+            'note': ('Отдельный набор предметов раздела WoWDM. Совпадающие entry не перезаписывают '
+                     'ни основную базу, ни QC 13.1, ни Public.'),
         })
         write_dataset(wowdm, WOWDM_OUT)
-        write_wowdm_sql(PUBLIC_SQL_PATH, WOWDM_SQL_OUT)
 
     # второй дамп: отдельный файл, свои ключи предметов (префикс qc), старая база не меняется
     if QC_SQL_PATH and os.path.exists(QC_SQL_PATH):

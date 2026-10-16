@@ -519,8 +519,9 @@
     if (route.view === 'item') main.innerHTML = viewItem(route.id);
     else if (route.view === 'qc') main.innerHTML = viewCatalog('qc');
     else if (SECTION_DEFS[route.view]) {
-      main.innerHTML = (sectionUnlocked(route.view) && SECTIONS[route.view])
-        ? viewCatalog(route.view) : viewLockPanel(route.view);
+      if (!sectionUnlocked(route.view)) main.innerHTML = viewLockPanel(route.view);
+      else if (SECTIONS[route.view]) main.innerHTML = viewCatalog(route.view);
+      else main.innerHTML = viewSectionEmpty(route.view);
     }
     else if (route.view === 'doll') main.innerHTML = viewDoll();
     else if (route.view === 'compare') main.innerHTML = viewCompare();
@@ -590,7 +591,19 @@
     return out.join('<br>');
   }
 
-  /* Раздел Public закрыт: показываем бокс для пароля (данные при этом не загружаются) */
+  /* Раздел открыт, но данных для него ещё нет */
+  function viewSectionEmpty(key) {
+    var def = SECTION_DEFS[key];
+    var h = [];
+    h.push('<div class="panel"><div class="panel-head"><h2>' + t(def.titleKey) + '</h2></div>');
+    h.push('<div class="panel-body">');
+    h.push('<p class="muted">' + t('sec_empty_text') + '</p>');
+    h.push('<p class="small muted">' + t('sec_empty_hint') + '</p>');
+    h.push('</div></div>');
+    return h.join('');
+  }
+
+  /* Раздел закрыт: показываем бокс для пароля (данные при этом не загружаются) */
   function viewLockPanel(key) {
     var def = SECTION_DEFS[key];
     var h = [];
@@ -1330,14 +1343,17 @@
       h.push('<p class="small">' + t(def.aboutKey) + '</p>');
       if (data) {
         h.push('<p class="small">' + t('sec_total') + ': ' + num(data.items.length) + ' · ' +
-          '<a href="' + esc('#/' + k) + '">' + t('sec_open') + '</a> · ' +
-          '<a href="' + esc(data.dumpFile) + '">' + t('sec_dump_link') + '</a></p>');
+          '<a href="' + esc('#/' + k) + '">' + t('sec_open') + '</a>' +
+          (data.dumpFile ? ' · <a href="' + esc(data.dumpFile) + '">' + t('sec_dump_link') + '</a>' : '') +
+          '</p>');
         if (data.source.note) h.push('<p class="small muted">' + esc(data.source.note) + '</p>');
+      } else if (sectionUnlocked(k)) {
+        /* пароль уже вводили, но данных для раздела нет */
+        h.push('<p class="small muted">' + t('sec_empty_short') + '. <a href="' + esc('#/' + k) + '">' +
+          t('lock_title_short') + '</a></p>');
       } else {
-        /* дамп доступен и без пароля: он лежит в репозитории открыто */
         h.push('<p class="small muted">' + t('lock_hint_locked') + '. <a href="' + esc('#/' + k) + '">' +
-          t('lock_title_short') + '</a> · <a href="' + esc(def.dumpFile) + '">' + t('sec_dump_link') +
-          '</a></p>');
+          t('lock_title_short') + '</a></p>');
       }
     });
     h.push('<h4 style="margin-top:18px">' + t('sources') + '</h4>');
@@ -1371,8 +1387,6 @@
   }
 
   function isQcKey(key) { return String(key).indexOf(QC_PREFIX) === 0; }
-  function isPublicKey(key) { return String(key).indexOf(SECTION_DEFS.public.prefix) === 0; }
-
   /* загруженные запароленные разделы (Public, WoWDM) */
   function sectionList() {
     return SECTION_KEYS.map(function (k) { return SECTIONS[k]; }).filter(Boolean);
@@ -1802,12 +1816,15 @@
     if (!def) return Promise.resolve(null);
     if (SECTIONS[key]) return Promise.resolve(SECTIONS[key]);
     return fetchJson(def.file).then(function (db) {
-      db.dumpFile = def.dumpFile || db.dumpFile || ('sql/' + key + '.sql');
+      db.dumpFile = def.dumpFile || db.dumpFile;
       db.sectionKey = key;
       SECTIONS[key] = db;
       indexItems();
       syncLockedUi();
       return SECTIONS[key];
+    }).catch(function () {
+      /* дампа для раздела ещё нет — раздел остаётся пустым, а не «не открывшимся» */
+      return null;
     });
   }
 
@@ -1829,7 +1846,7 @@
       var def = SECTION_DEFS[k];
       var btn = document.getElementById(def.nav);
       if (!btn) return;
-      var open = sectionUnlocked(k) && !!SECTIONS[k];
+      var open = sectionUnlocked(k);
       btn.classList.toggle('locked', !open);
       btn.setAttribute('title', open ? t('lock_hint_open') : t('lock_hint_locked'));
       btn.setAttribute('aria-disabled', open ? 'false' : 'true');
@@ -1931,10 +1948,7 @@
     }))).then(function (res) {
       DB = res[0];
       QC = res[1];
-      SECTION_KEYS.forEach(function (k, i) {
-        SECTIONS[k] = res[2 + i];
-        if (!SECTIONS[k]) setSectionFlag(k, false);   /* файла нет — раздел остаётся закрытым */
-      });
+      SECTION_KEYS.forEach(function (k, i) { SECTIONS[k] = res[2 + i]; });
       indexItems();
       /* без файла отдельного дампа кнопка не нужна */
       var qcBtn = document.getElementById('nav-qc');
