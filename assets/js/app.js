@@ -8,13 +8,27 @@
   var I = window.ArmoryI18n;
   var DB = null;               /* основная база: sql/item_template.sql */
   var QC = null;               /* отдельная база: sql/qc131.sql (ключи с префиксом qc) */
-  var PUBLIC = null;           /* отдельная база: sql/public.sql (ключи с префиксом pub) */
   var QC_PREFIX = 'qc';
-  var PUBLIC_PREFIX = 'pub';
   var QC_FILE = 'data/qc131.json';
-  var PUBLIC_FILE = 'data/public.json';
-  var PUBLIC_PASSWORD = '1337';
-  var PUBLIC_FLAG = 'armory.public';
+  var SECTION_PASSWORD = '1337';
+  /* Запароленные разделы: у каждого свой файл данных, свои ключи предметов и своя
+     отметка «открыт». Пароль общий, данные читаются только после его ввода. */
+  var SECTION_DEFS = {
+    public: {
+      key: 'public', prefix: 'pub', file: 'data/public.json', flag: 'armory.public',
+      dumpFile: 'sql/public.sql',
+      nav: 'nav-public', titleKey: 'pub_title', noteKey: 'pub_note', aboutKey: 'pub_about',
+      badgeKey: 'pub_badge', badgeHintKey: 'pub_badge_hint', lockTitleKey: 'pub_locked_title'
+    },
+    wowdm: {
+      key: 'wowdm', prefix: 'wowdm', file: 'data/wowdm.json', flag: 'armory.wowdm',
+      dumpFile: 'sql/wowdm.sql',
+      nav: 'nav-wowdm', titleKey: 'wowdm_title', noteKey: 'wowdm_note', aboutKey: 'wowdm_about',
+      badgeKey: 'wowdm_badge', badgeHintKey: 'wowdm_badge_hint', lockTitleKey: 'wowdm_locked_title'
+    }
+  };
+  var SECTION_KEYS = ['public', 'wowdm'];
+  var SECTIONS = { public: null, wowdm: null };
   var ITEMS_BY_KEY = {};       /* ключ основной базы — id, отдельной — qc + id */
   var SPELLS = {};
   var SETS = {};
@@ -464,7 +478,8 @@
     var descShown = (state.lang === 'ru' && item.descriptionRu) ? item.descriptionRu : item.description;
     if (descShown) h.push('<div class="tt-line gold small">«' + esc(descShown) + '»</div>');
     if (item.qc) h.push('<div class="tt-line gray small">' + esc(t('qc_badge')) + '</div>');
-    if (item.pub) h.push('<div class="tt-line gray small">' + esc(t('pub_badge')) + '</div>');
+    if (item.sectionKey) h.push('<div class="tt-line gray small">' +
+      esc(t(SECTION_DEFS[item.sectionKey].badgeKey)) + '</div>');
     h.push('</div>');
     return h.join('');
   }
@@ -476,7 +491,7 @@
     var parts = hash.split('/');
     if (parts[0] === 'item' && parts[1]) return { view: 'item', id: String(parts[1]) };
     if (parts[0] === 'qc') return { view: 'qc' };
-    if (parts[0] === 'public') return { view: 'public' };
+    if (SECTION_DEFS[parts[0]]) return { view: parts[0] };   /* запароленные разделы */
     if (parts[0] === 'doll') return { view: 'doll' };
     if (parts[0] === 'compare') return { view: 'compare' };
     if (parts[0] === 'about') return { view: 'about' };
@@ -503,8 +518,10 @@
 
     if (route.view === 'item') main.innerHTML = viewItem(route.id);
     else if (route.view === 'qc') main.innerHTML = viewCatalog('qc');
-    else if (route.view === 'public') main.innerHTML = (publicUnlocked() && PUBLIC)
-      ? viewCatalog('public') : viewPublicLock();
+    else if (SECTION_DEFS[route.view]) {
+      main.innerHTML = (sectionUnlocked(route.view) && SECTIONS[route.view])
+        ? viewCatalog(route.view) : viewLockPanel(route.view);
+    }
     else if (route.view === 'doll') main.innerHTML = viewDoll();
     else if (route.view === 'compare') main.innerHTML = viewCompare();
     else if (route.view === 'about') main.innerHTML = viewAbout();
@@ -529,7 +546,7 @@
   /* предметы текущего каталога: основная база, отдельный дамп QC или Public */
   function catalogItems() {
     if (state.view === 'qc') return QC ? QC.items : [];
-    if (state.view === 'public') return PUBLIC ? PUBLIC.items : [];
+    if (SECTION_DEFS[state.view]) return SECTIONS[state.view] ? SECTIONS[state.view].items : [];
     return DB ? DB.items : [];
   }
 
@@ -574,26 +591,27 @@
   }
 
   /* Раздел Public закрыт: показываем бокс для пароля (данные при этом не загружаются) */
-  function viewPublicLock() {
+  function viewLockPanel(key) {
+    var def = SECTION_DEFS[key];
     var h = [];
-    h.push('<div class="panel"><div class="panel-head"><h2>' + t('pub_locked_title') + '</h2></div>');
+    h.push('<div class="panel"><div class="panel-head"><h2>' + t(def.lockTitleKey) + '</h2></div>');
     h.push('<div class="panel-body">');
-    h.push('<p class="muted">' + t('pub_locked_text') + '</p>');
-    h.push('<form id="pub-lock" class="lock-form" autocomplete="off">');
-    h.push('<input class="input" type="password" id="pub-pass" inputmode="numeric" ' +
-      'maxlength="12" placeholder="' + esc(t('pub_locked_placeholder')) + '" ' +
-      'aria-label="' + esc(t('pub_locked_placeholder')) + '">');
-    h.push('<button class="btn primary" type="submit">' + t('pub_locked_submit') + '</button>');
+    h.push('<p class="muted">' + t('lock_text') + '</p>');
+    h.push('<form id="lock-form" class="lock-form" data-mode="' + esc(key) + '" autocomplete="off">');
+    h.push('<input class="input" type="password" id="lock-pass" inputmode="numeric" ' +
+      'maxlength="12" placeholder="' + esc(t('lock_placeholder')) + '" ' +
+      'aria-label="' + esc(t('lock_placeholder')) + '">');
+    h.push('<button class="btn primary" type="submit">' + t('lock_submit') + '</button>');
     h.push('</form>');
-    h.push('<div class="lock-msg" id="pub-lock-msg" role="status"></div>');
-    h.push('<p class="small muted" style="margin-top:14px">' + t('pub_locked_note') + '</p>');
+    h.push('<div class="lock-msg" id="lock-msg" role="status"></div>');
+    h.push('<p class="small muted" style="margin-top:14px">' + t('lock_note') + '</p>');
     h.push('</div></div>');
     return h.join('');
   }
 
   function viewCatalog(mode) {
     var source = mode === 'qc' ? (QC ? QC.items : [])
-      : mode === 'public' ? (PUBLIC ? PUBLIC.items : [])
+      : SECTION_DEFS[mode] ? (SECTIONS[mode] ? SECTIONS[mode].items : [])
       : (DB ? DB.items : []);
     var items = filteredItems();
     var shown = items.slice(0, state.limit);
@@ -665,17 +683,19 @@
     h.push('</div>');
 
     if (mode) {
-      var extra = mode === 'qc'
-        ? { title: t('qc_title'), note: t('qc_note'), cls: 'qc-note' }
-        : { title: t('pub_title'), note: t('pub_note'), cls: 'qc-note pub-note' };
+      var def = mode === 'qc' ? null : SECTION_DEFS[mode];
+      var extra = def
+        ? { title: t(def.titleKey), note: t(def.noteKey), cls: 'qc-note pub-note' }
+        : { title: t('qc_title'), note: t('qc_note'), cls: 'qc-note' };
       h.push('<div class="panel-head" style="border-top:1px solid var(--line-soft);border-radius:0;">');
       h.push('<h2>' + extra.title + '</h2><span class="muted small">' + t('found') + ' ' +
         num(items.length) + ' ' + t('of') + ' ' + num(source.length) + '</span>');
       h.push('</div>');
       h.push('<div class="panel-body ' + extra.cls + '">' + extra.note + '</div>');
-      if (mode === 'public') {
+      if (def) {
         h.push('<div class="panel-body" style="border-top:1px solid var(--line-soft);text-align:right">' +
-          '<button class="btn tiny ghost" id="pub-lock-out">' + t('pub_lock_btn') + '</button></div>');
+          '<button class="btn tiny ghost" id="sec-lock-out" data-mode="' + esc(mode) + '">' +
+          t('lock_btn') + '</button></div>');
       }
     } else {
       h.push('<div class="panel-head" style="border-top:1px solid var(--line-soft);border-radius:0;">');
@@ -769,7 +789,11 @@
     h.push('<div class="muted small">' + esc(displaySub(item) || '') + '</div>');
     h.push('<div class="badge-row">');
     if (item.qc) h.push('<span class="badge qc" title="' + esc(t('qc_badge_hint')) + '">' + t('qc_badge') + '</span>');
-    if (item.pub) h.push('<span class="badge qc pub" title="' + esc(t('pub_badge_hint')) + '">' + t('pub_badge') + '</span>');
+    if (item.sectionKey) {
+      var sdef = SECTION_DEFS[item.sectionKey];
+      h.push('<span class="badge qc pub" title="' + esc(t(sdef.badgeHintKey)) + '">' +
+        t(sdef.badgeKey) + '</span>');
+    }
     h.push('<span class="badge">#' + item.id + '</span>');
     h.push('<span class="badge">' + esc(qualityName(item.quality)) + '</span>');
     h.push('<span class="badge">' + esc(slotName(item)) + '</span>');
@@ -1288,7 +1312,9 @@
     h.push(cell(t('sets_total'), num(Object.keys(DB.sets).length)));
     h.push(cell(state.lang === 'ru' ? 'Файл дампа' : 'Dump file', '<span class="small">' + esc(DB.source.fileName) + '</span>'));
     if (QC) h.push(cell(t('qc_total'), num(QC.items.length)));
-    if (PUBLIC) h.push(cell(t('pub_total'), num(PUBLIC.items.length)));
+    SECTION_KEYS.forEach(function (k) {
+      if (SECTIONS[k]) h.push(cell(t(SECTION_DEFS[k].titleKey), num(SECTIONS[k].items.length)));
+    });
     h.push('</div>');
     if (QC) {
       h.push('<h4 style="margin-top:18px">' + t('qc_title') + '</h4>');
@@ -1297,17 +1323,23 @@
         '<a href="sql/qc131.sql">' + t('qc_dump_link') + '</a></p>');
       if (QC.source.note) h.push('<p class="small muted">' + esc(QC.source.note) + '</p>');
     }
-    h.push('<h4 style="margin-top:18px">' + t('nav_public') + '</h4>');
-    if (PUBLIC) {
-      h.push('<p class="small">' + t('pub_about') + '</p>');
-      h.push('<p class="small">' + t('pub_total') + ': ' + num(PUBLIC.items.length) + ' · ' +
-        '<a href="' + esc('#/public') + '">' + t('pub_open') + '</a> · ' +
-        '<a href="sql/public.sql">' + t('pub_dump_link') + '</a></p>');
-      if (PUBLIC.source.note) h.push('<p class="small muted">' + esc(PUBLIC.source.note) + '</p>');
-    } else {
-      h.push('<p class="small muted">' + t('pub_locked_hint') + '. <a href="' + esc('#/public') + '">' +
-        t('pub_open') + '</a></p>');
-    }
+    SECTION_KEYS.forEach(function (k) {
+      var def = SECTION_DEFS[k];
+      var data = SECTIONS[k];
+      h.push('<h4 style="margin-top:18px">' + t(def.titleKey) + '</h4>');
+      h.push('<p class="small">' + t(def.aboutKey) + '</p>');
+      if (data) {
+        h.push('<p class="small">' + t('sec_total') + ': ' + num(data.items.length) + ' · ' +
+          '<a href="' + esc('#/' + k) + '">' + t('sec_open') + '</a> · ' +
+          '<a href="' + esc(data.dumpFile) + '">' + t('sec_dump_link') + '</a></p>');
+        if (data.source.note) h.push('<p class="small muted">' + esc(data.source.note) + '</p>');
+      } else {
+        /* дамп доступен и без пароля: он лежит в репозитории открыто */
+        h.push('<p class="small muted">' + t('lock_hint_locked') + '. <a href="' + esc('#/' + k) + '">' +
+          t('lock_title_short') + '</a> · <a href="' + esc(def.dumpFile) + '">' + t('sec_dump_link') +
+          '</a></p>');
+      }
+    });
     h.push('<h4 style="margin-top:18px">' + t('sources') + '</h4>');
     h.push('<ul class="small">');
     if (lang === 'ru') {
@@ -1339,13 +1371,18 @@
   }
 
   function isQcKey(key) { return String(key).indexOf(QC_PREFIX) === 0; }
-  function isPublicKey(key) { return String(key).indexOf(PUBLIC_PREFIX) === 0; }
+  function isPublicKey(key) { return String(key).indexOf(SECTION_DEFS.public.prefix) === 0; }
+
+  /* загруженные запароленные разделы (Public, WoWDM) */
+  function sectionList() {
+    return SECTION_KEYS.map(function (k) { return SECTIONS[k]; }).filter(Boolean);
+  }
 
   /* предметы всех загруженных баз — для куклы и сравнения */
   function allItems() {
     return (DB ? DB.items : [])
       .concat(QC ? QC.items : [])
-      .concat(PUBLIC ? PUBLIC.items : []);
+      .concat(sectionList().reduce(function (acc, s) { return acc.concat(s.items); }, []));
   }
 
   function showTooltip(html, event, key) {
@@ -1508,37 +1545,39 @@
         if (again) { again.focus(); again.setSelectionRange(again.value.length, again.value.length); }
       }, 220));
     }
-    /* раздел Public: ввод пароля и повторная блокировка */
-    var lock = view.querySelector('#pub-lock');
+    /* запароленные разделы: ввод пароля и повторная блокировка */
+    var lock = view.querySelector('#lock-form');
     if (lock) {
+      var mode = lock.getAttribute('data-mode');
       lock.addEventListener('submit', function (e) {
         e.preventDefault();
-        var input = document.getElementById('pub-pass');
-        var msg = document.getElementById('pub-lock-msg');
+        var input = document.getElementById('lock-pass');
+        var msg = document.getElementById('lock-msg');
         if (!input) return;
-        if (input.value.trim() === PUBLIC_PASSWORD) {
-          if (msg) msg.textContent = t('pub_locked_ok');
-          unlockPublic().then(function () {
+        if (input.value.trim() === SECTION_PASSWORD) {
+          if (msg) msg.textContent = t('lock_ok');
+          unlockSection(mode).then(function () {
             paintStatic();
             render();
           }).catch(function () {
             if (msg) msg.textContent = t('error_load');
           });
         } else {
-          if (msg) msg.textContent = t('pub_locked_error');
+          if (msg) msg.textContent = t('lock_error');
           input.classList.add('error');
           setTimeout(function () { input.classList.remove('error'); }, 600);
           input.select();
         }
       });
-      var pass = document.getElementById('pub-pass');
+      var pass = document.getElementById('lock-pass');
       if (pass) pass.focus();
     }
-    var lockOut = view.querySelector('#pub-lock-out');
+    var lockOut = view.querySelector('#sec-lock-out');
     if (lockOut) {
       lockOut.addEventListener('click', function () {
-        lockPublic();
-        navigate({ view: 'public' });
+        var key = lockOut.getAttribute('data-mode');
+        lockSection(key);
+        navigate({ view: key });
       });
     }
 
@@ -1739,49 +1778,62 @@
     });
   }
 
-  /* --- раздел Public: открывается по паролю, данные читаются только после этого --- */
+  /* --- запароленные разделы: данные читаются только после ввода пароля ---
+     Разделы независимы: у каждого свой файл, свои ключи предметов и своя отметка «открыт». */
 
-  function publicUnlocked() {
-    try { return localStorage.getItem(PUBLIC_FLAG) === '1'; } catch (err) { return false; }
+  function sectionUnlocked(key) {
+    var def = SECTION_DEFS[key];
+    if (!def) return false;
+    try { return localStorage.getItem(def.flag) === '1'; } catch (err) { return false; }
   }
 
-  function setPublicFlag(on) {
+  function setSectionFlag(key, on) {
+    var def = SECTION_DEFS[key];
+    if (!def) return;
     try {
-      if (on) localStorage.setItem(PUBLIC_FLAG, '1');
-      else localStorage.removeItem(PUBLIC_FLAG);
+      if (on) localStorage.setItem(def.flag, '1');
+      else localStorage.removeItem(def.flag);
     } catch (err) { /* хранилище может быть недоступно */ }
   }
 
-  function loadPublic() {
-    if (PUBLIC) return Promise.resolve(PUBLIC);
-    return fetchJson(PUBLIC_FILE).then(function (db) {
-      PUBLIC = db;
+  /* Загружает раздел, если он ещё не загружен; отметка «открыт» ставится сразу */
+  function loadSection(key) {
+    var def = SECTION_DEFS[key];
+    if (!def) return Promise.resolve(null);
+    if (SECTIONS[key]) return Promise.resolve(SECTIONS[key]);
+    return fetchJson(def.file).then(function (db) {
+      db.dumpFile = def.dumpFile || db.dumpFile || ('sql/' + key + '.sql');
+      db.sectionKey = key;
+      SECTIONS[key] = db;
       indexItems();
-      syncPublicUi();
-      return PUBLIC;
+      syncLockedUi();
+      return SECTIONS[key];
     });
   }
 
-  function unlockPublic() {
-    setPublicFlag(true);
-    return loadPublic();
+  function unlockSection(key) {
+    setSectionFlag(key, true);
+    return loadSection(key);
   }
 
-  function lockPublic() {
-    PUBLIC = null;
-    setPublicFlag(false);
+  function lockSection(key) {
+    SECTIONS[key] = null;
+    setSectionFlag(key, false);
     indexItems();
-    syncPublicUi();
+    syncLockedUi();
   }
 
-  /* Кнопка Public: закрыта — половинчатая и с замком, открыта — обычная */
-  function syncPublicUi() {
-    var btn = document.getElementById('nav-public');
-    if (!btn) return;
-    var open = publicUnlocked() && !!PUBLIC;
-    btn.classList.toggle('locked', !open);
-    btn.setAttribute('title', open ? t('pub_open_hint') : t('pub_locked_hint'));
-    btn.setAttribute('aria-disabled', open ? 'false' : 'true');
+  /* Кнопки разделов: закрытый раздел помечен замком, открытый — обычный */
+  function syncLockedUi() {
+    SECTION_KEYS.forEach(function (k) {
+      var def = SECTION_DEFS[k];
+      var btn = document.getElementById(def.nav);
+      if (!btn) return;
+      var open = sectionUnlocked(k) && !!SECTIONS[k];
+      btn.classList.toggle('locked', !open);
+      btn.setAttribute('title', open ? t('lock_hint_open') : t('lock_hint_locked'));
+      btn.setAttribute('aria-disabled', open ? 'false' : 'true');
+    });
   }
 
   /* Предметы всех баз в одном справочнике: ключ основной базы — id,
@@ -1795,13 +1847,20 @@
       ITEMS_BY_KEY[it.key] = it;
     });
     SPELLS = (QC && QC.spells) || {};
-    var extra = [QC, PUBLIC];
-    extra.forEach(function (src) {
-      if (!src) return;
+    if (QC) {
+      QC.items.forEach(function (it) {
+        it.key = QC_PREFIX + it.id;
+        it.qc = true;
+        ITEMS_BY_KEY[it.key] = it;
+      });
+      Object.keys(QC.spells || {}).forEach(function (id) { SPELLS[id] = QC.spells[id]; });
+      Object.keys(QC.sets || {}).forEach(function (id) { SETS[id] = QC.sets[id]; });
+    }
+    sectionList().forEach(function (src) {
+      var def = SECTION_DEFS[src.sectionKey];
       src.items.forEach(function (it) {
-        it.key = (src === QC ? QC_PREFIX : PUBLIC_PREFIX) + it.id;
-        it.qc = src === QC;
-        it.pub = src === PUBLIC;
+        it.key = def.prefix + it.id;
+        it.sectionKey = def.key;
         ITEMS_BY_KEY[it.key] = it;
       });
       Object.keys(src.spells || {}).forEach(function (id) { SPELLS[id] = src.spells[id]; });
@@ -1859,18 +1918,27 @@
     /* отдельные дампы необязательны: если файла нет, сайт работает на остальных наборах */
     Promise.all([
       fetchJson('data/db.json'),
-      fetchJson(QC_FILE).catch(function () { return null; }),
-      publicUnlocked() ? fetchJson(PUBLIC_FILE).catch(function () { return null; })
-        : Promise.resolve(null)
-    ]).then(function (res) {
+      fetchJson(QC_FILE).catch(function () { return null; })
+    ].concat(SECTION_KEYS.map(function (k) {
+      if (!sectionUnlocked(k)) return Promise.resolve(null);
+      return fetchJson(SECTION_DEFS[k].file)
+        .then(function (db) {
+          db.dumpFile = 'sql/' + k + '.sql';
+          db.sectionKey = k;
+          return db;
+        })
+        .catch(function () { return null; });
+    }))).then(function (res) {
       DB = res[0];
       QC = res[1];
-      PUBLIC = res[2];
+      SECTION_KEYS.forEach(function (k, i) {
+        SECTIONS[k] = res[2 + i];
+        if (!SECTIONS[k]) setSectionFlag(k, false);   /* файла нет — раздел остаётся закрытым */
+      });
       indexItems();
       /* без файла отдельного дампа кнопка не нужна */
       var qcBtn = document.getElementById('nav-qc');
       if (qcBtn && !QC) qcBtn.style.display = 'none';
-      if (!publicUnlocked() || !PUBLIC) setPublicFlag(false);
       paintStatic();
       render();
     }).catch(function (err) {
@@ -1889,6 +1957,7 @@
       '#nav-compare': t('nav_compare'),
       '#nav-qc': t('nav_qc'),
       '#nav-public': t('nav_public'),
+      '#nav-wowdm': t('nav_wowdm'),
       '#nav-about': t('nav_about')
     };
     Object.keys(map).forEach(function (sel) {
@@ -1900,7 +1969,7 @@
     document.title = t('siteTitle') + ' — ' + t('siteSubtitle');
     document.documentElement.lang = state.lang;
     paintLangSwitch();
-    syncPublicUi();
+    syncLockedUi();
   }
 
   /* подсветка текущего языка в переключателе */

@@ -28,6 +28,10 @@ WOWDUMPS = os.environ.get('WOWDUMPS_DIR', '/tmp/wowdumps')
 OUT = os.environ.get('OUT_PATH', 'data/db.json')
 QC_OUT = os.environ.get('QC_OUT_PATH', 'data/qc131.json')
 PUBLIC_SQL_PATH = os.environ.get('PUBLIC_SQL_PATH', 'sql/public.sql')
+# раздел WoWDM: часть сборного дампа, вынесенная в отдельный раздел сайта
+WOWDM_OUT = os.environ.get('WOWDM_OUT_PATH', 'data/wowdm.json')
+WOWDM_SQL_OUT = os.environ.get('WOWDM_SQL_PATH', 'sql/wowdm.sql')
+WOWDM_SOURCES = ('pack_35_PVE_T11_Apocalyptic.sql', 'pack_36_Arena_S9_Destructive.sql')
 PUBLIC_OUT = os.environ.get('PUBLIC_OUT_PATH', 'data/public.json')
 
 # смещения локализованных строк (локаль 0) в бинарных DBC клиента 3.3.5a
@@ -172,19 +176,44 @@ def chunk_rows(ch, vpos):
     return out
 
 
+SOURCE_LABEL = re.compile(r'^[ \t]*--[ \t]*(?:source|from):[ \t]*(.+?)[ \t]*$', re.M)
+ROW_LABEL = re.compile(r'--[ \t]*([^\s,()]+\.sql)[ \t]+entry[ \t]+(\d+)')
+
+
+def sql_statements(path):
+    """Возвращает [(метка_источника_группы, текст_выражения)] для каждого REPLACE INTO дампа.
+
+    Сборные дампы помечают каждую группу строк комментарием «-- source: ...», поэтому
+    по этой метке записи можно раскладывать по разделам сайта."""
+    text = open(path, encoding='utf-8', errors='replace').read()
+    parts = re.split(r'(?m)^[ \t]*REPLACE INTO', text)
+    out, pending = [], ''
+    for i, part in enumerate(parts):
+        if i == 0:
+            found = SOURCE_LABEL.findall(part)
+            pending = found[-1] if found else ''
+            continue
+        out.append((pending, 'REPLACE INTO' + part))
+        found = SOURCE_LABEL.findall(part)
+        pending = found[-1] if found else ''
+    return out
+
+
 def parse_item_sql(path):
     """Разбирает все REPLACE INTO item_template дампа. Колонки берутся для каждой группы свои,
-    поэтому файлы со вставками из разных схем (наборы по 42..139 колонок) читаются корректно."""
-    text = strip_sql_comments(open(path, encoding='utf-8', errors='replace').read())
+    поэтому файлы со вставками из разных схем (наборы по 42..139 колонок) читаются корректно.
+    У каждой записи сохраняется файл-источник, если он указан в дампе."""
     items, skipped = [], 0
-    for ch in text.split('REPLACE INTO')[1:]:
-        vpos = ch.find('VALUES')
+    for group_src, raw in sql_statements(path):
+        text = strip_sql_comments(raw)
+        vpos = text.find('VALUES')
         if vpos < 0:
             continue
-        cols = chunk_columns(ch, vpos)
+        cols = chunk_columns(text, vpos)
         if not cols:
             continue
-        for vals in chunk_rows(ch, vpos):
+        row_src = {int(m.group(2)): m.group(1) for m in ROW_LABEL.finditer(raw)}
+        for vals in chunk_rows(text, vpos):
             if len(vals) != len(cols):
                 skipped += 1
                 continue
@@ -195,6 +224,13 @@ def parse_item_sql(path):
                 if isinstance(v, str) and ('name' == k or 'description' == k):
                     v = strip_color_codes(v)
                 row[k] = v
+            try:
+                entry = int(str(row.get('entry')))
+            except (TypeError, ValueError):
+                entry = None
+            src = row_src.get(entry) or group_src
+            if src:
+                row['sourceFile'] = src
             items.append(row)
     if skipped:
         print('!! пропущено строк с другим числом значений:', skipped, file=sys.stderr)
@@ -707,12 +743,15 @@ def normalize_items(items):
     return items
 
 
-def build_dataset(sql_path, extra_source=None, strict_names=False):
-    """Собирает данные одного дампа item_template: предметы, заклинания, комплекты."""
-    items = parse_item_sql(sql_path)
-    items = [i for i in items if 'ItemLevel' in i]   # отсеиваем строки locales_item и чужих таблиц
-    items = normalize_items(items)
-    locales = parse_locales_sql(sql_path)
+def build_dataset(sql_path, extra_source=None, strict_names=False, items=None, locales=None):
+    """Собирает данные одного набора item_template: предметы, заклинания, комплекты.
+
+    Готовый список строк можно передать снаружи (items) — так один дамп делится на разделы."""
+    if items is None:
+        items = parse_item_sql(sql_path)
+        items = [i for i in items if 'ItemLevel' in i]  # отсеиваем locales_item и чужие таблицы
+        items = normalize_items(items)
+        locales = parse_locales_sql(sql_path)
     print('%s: предметов %d, строк локализации %d'
           % (os.path.basename(sql_path), len(items), len(locales)))
 
@@ -1053,6 +1092,26 @@ def build_dataset(sql_path, extra_source=None, strict_names=False):
     }
 
 
+def write_wowdm_sql(src_path, out_path):
+    """Выгружает выражения разделов WoWDM из сборного дампа в отдельный файл (ссылка на сайте)."""
+    chunks = []
+    for group_src, raw in sql_statements(src_path):
+        if any(n in (group_src or '') for n in WOWDM_SOURCES):
+            chunks.append(re.sub(r'(?:\n[ \t]*--[^\n]*)+[ \t]*$', '', raw).rstrip())
+    if not chunks:
+        return
+    with open(out_path, 'w', encoding='utf-8') as fh:
+        fh.write('-- ================================================================\n')
+        fh.write('-- Раздел WoWDM: предметы из сборного дампа %s\n' % os.path.basename(src_path))
+        fh.write('-- Источники: ' + ', '.join(WOWDM_SOURCES) + '\n')
+        fh.write('-- Файл собран автоматически (tools/build_data.py) и повторяет только эти группы.\n')
+        fh.write('-- В разделе Public и в основной базе сайта эти записи не участвуют.\n')
+        fh.write('-- ================================================================\n\n')
+        fh.write('\n\n'.join(chunks))
+        fh.write('\n')
+    print('записано %s (%.1f КБ)' % (out_path, os.path.getsize(out_path) / 1024.0))
+
+
 def write_dataset(db, path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w', encoding='utf-8') as fh:
@@ -1067,16 +1126,42 @@ def write_dataset(db, path):
 def main():
     write_dataset(build_dataset(SQL_PATH), OUT)
 
-    # публичный дамп: тоже отдельный файл и свои ключи (префикс pub)
+    # сборный дамп делится на два раздела: Public и WoWDM (паки pack_35 и pack_36)
     if PUBLIC_SQL_PATH and os.path.exists(PUBLIC_SQL_PATH):
-        pub = build_dataset(PUBLIC_SQL_PATH, strict_names=True, extra_source={
+        rows = [i for i in parse_item_sql(PUBLIC_SQL_PATH) if 'ItemLevel' in i]
+        rows = normalize_items(rows)
+        locales = parse_locales_sql(PUBLIC_SQL_PATH)
+        wowdm_items, pub_items = [], []
+        for it in rows:
+            src = it.get('sourceFile') or ''
+            (wowdm_items if any(n in src for n in WOWDM_SOURCES) else pub_items).append(it)
+
+        pub = build_dataset(PUBLIC_SQL_PATH, items=pub_items, locales=locales, strict_names=True,
+                            extra_source={
             'kind': 'public',
             'title': 'Public',
-            'separateFrom': [os.path.basename(SQL_PATH), os.path.basename(QC_SQL_PATH)],
+            'separateFrom': [os.path.basename(SQL_PATH), os.path.basename(QC_SQL_PATH),
+                             os.path.basename(WOWDM_SQL_OUT)],
+            'excludedSources': list(WOWDM_SOURCES),
             'note': ('Сборный набор из внешних дампов (форумы, nopaste, GitHub-паки). '
-                     'Хранится отдельно: совпадающие entry не перезаписывают ни основную базу, ни QC 13.1.'),
+                     'Хранится отдельно: совпадающие entry не перезаписывают ни основную базу, ни QC 13.1. '
+                     'Записи паков ' + ', '.join(WOWDM_SOURCES) + ' перенесены в отдельный раздел WoWDM.'),
         })
         write_dataset(pub, PUBLIC_OUT)
+
+        wowdm = build_dataset(PUBLIC_SQL_PATH, items=wowdm_items, locales=locales, strict_names=True,
+                              extra_source={
+            'kind': 'wowdm',
+            'title': 'WoWDM',
+            'separateFrom': [os.path.basename(SQL_PATH), os.path.basename(QC_SQL_PATH),
+                             os.path.basename(PUBLIC_SQL_PATH)],
+            'sources': list(WOWDM_SOURCES),
+            'note': ('Предметы из паков ' + ', '.join(WOWDM_SOURCES) + ' сборного дампа. '
+                     'Отдельный раздел: совпадающие entry не перезаписывают ни основную базу, '
+                     'ни QC 13.1, ни Public.'),
+        })
+        write_dataset(wowdm, WOWDM_OUT)
+        write_wowdm_sql(PUBLIC_SQL_PATH, WOWDM_SQL_OUT)
 
     # второй дамп: отдельный файл, свои ключи предметов (префикс qc), старая база не меняется
     if QC_SQL_PATH and os.path.exists(QC_SQL_PATH):

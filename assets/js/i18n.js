@@ -18,6 +18,7 @@
       nav_compare: 'Сравнение',
       nav_qc: 'QC 13.1',
       nav_public: 'Public',
+      nav_wowdm: 'WoWDM',
       nav_about: 'О базе',
       qc_title: 'QC 13.1 — отдельный дамп',
       qc_note: 'Предметы из другого дампа того же сервера (Quantum Database Rev 9.8, 30.11.2015). ' +
@@ -35,26 +36,41 @@
       pub_title: 'Public — сборный дамп',
       pub_note: 'Набор предметов из внешних дампов того же сервера (форумы, nopaste, GitHub-паки). ' +
         'Хранится отдельно: совпадающие entry не перезаписывают ни основную базу, ни QC 13.1 — ' +
-        'все версии видны одновременно.',
+        'все версии видны одновременно. Паки pack_35 и pack_36 перенесены в отдельный раздел WoWDM.',
       pub_badge: 'Public',
       pub_badge_hint: 'Предмет из отдельного дампа sql/public.sql',
-      pub_total: 'Предметов в Public',
-      pub_open: 'Открыть каталог Public',
-      pub_dump_link: 'скачать sql-файл Public',
-      pub_about: 'Публичный набор собран из внешних дампов item_template (18 источников: форумы, ' +
-        'зеркала, GitHub-паки). Значительная часть записей использует оригинальные номера Blizzard, ' +
-        'поэтому предметы хранятся отдельно и не заменяют ни основную базу, ни QC 13.1.',
-      pub_open_hint: 'Раздел Public открыт',
-      pub_locked_hint: 'Раздел Public защищён паролем',
+      pub_about: 'Публичный набор собран из внешних дампов item_template (форумы, зеркала, ' +
+        'GitHub-паки). Значительная часть записей использует оригинальные номера Blizzard, поэтому ' +
+        'предметы хранятся отдельно и не заменяют ни основную базу, ни QC 13.1. Записи паков ' +
+        'pack_35_PVE_T11_Apocalyptic.sql и pack_36_Arena_S9_Destructive.sql здесь не участвуют — ' +
+        'они вынесены в раздел WoWDM.',
       pub_locked_title: 'Раздел Public защищён паролем',
-      pub_locked_text: 'Введите пароль в бокс ниже, чтобы открыть набор предметов Public.',
-      pub_locked_placeholder: 'Пароль',
-      pub_locked_submit: 'Открыть',
-      pub_locked_ok: 'Пароль принят, открываю раздел…',
-      pub_locked_error: 'Неверный пароль.',
-      pub_locked_note: 'Данные раздела — обычный файл сайта, поэтому пароль скрывает раздел ' +
+      wowdm_title: 'WoWDM — отдельный раздел',
+      wowdm_note: 'Предметы из паков pack_35_PVE_T11_Apocalyptic.sql (PvE T11 «Apocalyptic») и ' +
+        'pack_36_Arena_S9_Destructive.sql (арена S9 «Destructive») сборного дампа. Отдельный раздел: ' +
+        'совпадающие entry не перезаписывают ни основную базу, ни QC 13.1, ни Public — ' +
+        'все версии видны одновременно.',
+      wowdm_badge: 'WoWDM',
+      wowdm_badge_hint: 'Предмет из раздела WoWDM (pack_35 и pack_36)',
+      wowdm_about: 'Раздел WoWDM — это 461 предмет из двух паков mega-pack: комплекты T11 ' +
+        '«Apocalyptic» (PvE) и арена-сет S9 «Destructive». Названия и характеристики авторские, ' +
+        'у большинства предметов номера не совпадают с обычной базой Blizzard, поэтому набор ' +
+        'хранится самостоятельно и ничего не заменяет.',
+      wowdm_locked_title: 'Раздел WoWDM защищён паролем',
+      lock_text: 'Введите пароль в бокс ниже, чтобы открыть раздел.',
+      lock_placeholder: 'Пароль',
+      lock_submit: 'Открыть',
+      lock_ok: 'Пароль принят, открываю раздел…',
+      lock_error: 'Неверный пароль.',
+      lock_note: 'Данные раздела — обычный файл сайта, поэтому пароль скрывает раздел ' +
         'от случайного просмотра, но не заменяет защиту сервера.',
-      pub_lock_btn: 'Заблокировать раздел',
+      lock_btn: 'Заблокировать раздел',
+      lock_hint_open: 'Раздел открыт',
+      lock_hint_locked: 'Раздел защищён паролем',
+      lock_title_short: 'Открыть по паролю',
+      sec_total: 'Предметов в разделе',
+      sec_open: 'Открыть каталог',
+      sec_dump_link: 'скачать sql-файл',
       name_ru_server: 'Русское название (локализация сервера)',
       desc_ru_hint: 'Описание из локализации сервера (RU)',
       entry_conflict_title: 'Совпадение entry:',
@@ -224,29 +240,44 @@
         'from the main database: some entries belong to entirely different items, so such collisions are ' +
         'flagged instead of replacing the name.',
       nav_public: 'Public',
+      nav_wowdm: 'WoWDM',
       pub_title: 'Public — merged dump',
       pub_note: 'A set of items from external dumps of the same server (forums, nopaste, GitHub packs). ' +
         'Kept separately: identical entries never overwrite the main database or QC 13.1, so every ' +
-        'version stays available.',
+        'version stays available. Packs pack_35 and pack_36 moved to the separate WoWDM section.',
       pub_badge: 'Public',
       pub_badge_hint: 'Item from the separate dump sql/public.sql',
-      pub_total: 'Public items',
-      pub_open: 'Open the Public catalogue',
-      pub_dump_link: 'download the Public sql file',
-      pub_about: 'The public set is merged from external item_template dumps (18 sources: forums, ' +
-        'mirrors, GitHub packs). Many records reuse original Blizzard entries, so the items are kept ' +
-        'separately and never replace the main database or QC 13.1.',
-      pub_open_hint: 'The Public section is unlocked',
-      pub_locked_hint: 'The Public section is password protected',
+      pub_about: 'The public set is merged from external item_template dumps (forums, mirrors, ' +
+        'GitHub packs). Many records reuse original Blizzard entries, so the items are kept separately ' +
+        'and never replace the main database or QC 13.1. The packs pack_35_PVE_T11_Apocalyptic.sql and ' +
+        'pack_36_Arena_S9_Destructive.sql are not part of it — they live in the WoWDM section.',
       pub_locked_title: 'The Public section is password protected',
-      pub_locked_text: 'Type the password in the box below to open the Public item set.',
-      pub_locked_placeholder: 'Password',
-      pub_locked_submit: 'Open',
-      pub_locked_ok: 'Password accepted, opening the section…',
-      pub_locked_error: 'Wrong password.',
-      pub_locked_note: 'The section data is a plain file of this site, so the password hides it from ' +
+      wowdm_title: 'WoWDM — separate section',
+      wowdm_note: 'Items from the packs pack_35_PVE_T11_Apocalyptic.sql (PvE T11 "Apocalyptic") and ' +
+        'pack_36_Arena_S9_Destructive.sql (arena S9 "Destructive") of the merged dump. A separate ' +
+        'section: identical entries never overwrite the main database, QC 13.1 or Public — every ' +
+        'version stays available.',
+      wowdm_badge: 'WoWDM',
+      wowdm_badge_hint: 'Item from the WoWDM section (pack_35 and pack_36)',
+      wowdm_about: 'The WoWDM section holds 461 items from two mega-pack batches: the T11 ' +
+        '"Apocalyptic" PvE sets and the S9 "Destructive" arena sets. Names and stats are custom, ' +
+        'most entries do not collide with the regular Blizzard database, so the set is kept on its ' +
+        'own and replaces nothing.',
+      wowdm_locked_title: 'The WoWDM section is password protected',
+      lock_text: 'Type the password in the box below to open the section.',
+      lock_placeholder: 'Password',
+      lock_submit: 'Open',
+      lock_ok: 'Password accepted, opening the section…',
+      lock_error: 'Wrong password.',
+      lock_note: 'The section data is a plain file of this site, so the password hides it from ' +
         'casual visitors rather than replacing server-side protection.',
-      pub_lock_btn: 'Lock the section',
+      lock_btn: 'Lock the section',
+      lock_hint_open: 'The section is unlocked',
+      lock_hint_locked: 'The section is password protected',
+      lock_title_short: 'Open with a password',
+      sec_total: 'Items in the section',
+      sec_open: 'Open the catalogue',
+      sec_dump_link: 'download the sql file',
       name_ru_server: 'Russian name (server localisation)',
       desc_ru_hint: 'Description from the server localisation (RU)',
       entry_conflict_title: 'Entry collision:',
@@ -723,6 +754,7 @@
     RequiredReputationFaction: ['Требуемая репутация', 'Required reputation faction'],
     RequiredReputationRank: ['Ранг репутации', 'Required reputation rank'],
     maxMoneyLoot: ['Максимум денег в добыче', 'Max money loot'],
+    sourceFile: ['Файл-источник (дамп)', 'Source file (dump)'],
     minMoneyLoot: ['Минимум денег в добыче', 'Min money loot'],
     FoodTypeId: ['Тип еды', 'Food type']
   };
