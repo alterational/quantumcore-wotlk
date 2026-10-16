@@ -1,0 +1,72 @@
+name: fetch-paste
+
+# Загрузка внешних SQL-дампов (nopaste.net и подобных) в репозиторий.
+#
+# GitHub Actions работает как «мост»: из обычной сети ссылки nopaste.net
+# доступны, а прямой запрос из некоторых окружений блокируется.
+# Скачанные файлы проверяются на то, что это действительно SQL, и коммитятся обратно.
+#
+# Список ссылок — в tools/fetch-paste.list (по строке на файл).
+# Перезапуск: workflow_dispatch или любой push, затрагивающий этот файл,
+# tools/fetch-paste.list или tools/fetch-paste.trigger.
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'tools/fetch-paste.trigger'
+      - 'tools/fetch-paste.list'
+      - '.github/workflows/fetch-paste.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download dumps
+        run: |
+          set -eux
+          got=0
+          while read -r url path; do
+            case "$url" in
+              ''|'#'*|'--'*) continue ;;
+            esac
+            [ -z "$path" ] && continue
+            mkdir -p "$(dirname "$path")"
+            echo "==> $url -> $path"
+            # у nopaste.net «сырой» текст отдаётся и по обычной ссылке, и по /raw
+            curl -fsSL --retry 3 -A "Mozilla/5.0" "$url" -o "$path" || \
+              curl -fsSL --retry 3 -A "Mozilla/5.0" "${url%/}/raw" -o "$path"
+            head -c 300 "$path" | sed -n '1,6p'
+            echo
+            # защита: вместо дампа мог прийти HTML или страница ошибки
+            if ! grep -qaiE 'replace into|insert into|create table' "$path"; then
+              echo "::error title=Не похоже на SQL::Файл $path не содержит SQL-выражений"
+              head -c 400 "$path"
+              exit 1
+            fi
+            wc -c "$path"
+            got=$((got + 1))
+          done < tools/fetch-paste.list
+          echo "файлов загружено: $got"
+          test "$got" -gt 0
+
+      - name: Commit back
+        run: |
+          set -eux
+          git config user.name "data-fetch-bot"
+          git config user.email "data-fetch-bot@users.noreply.github.com"
+          while read -r url path; do
+            case "$url" in
+              ''|'#'*|'--'*) continue ;;
+            esac
+            [ -n "$path" ] && git add -f "$path"
+          done < tools/fetch-paste.list
+          if git diff --cached --quiet; then echo "no changes"; else
+            git commit -m "Add SQL dump(s) from external paste"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
