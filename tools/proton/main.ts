@@ -35,6 +35,10 @@ const openPGPCryptoModule = new OpenPGPCryptoWithCryptoProxy(CryptoProxy);
 
 function doFetch(req: any): Promise<Response> {
     const headers = new Headers(req.headers);
+    // API требует x-pm-appversion (SDK сам его не ставит — это дело хост-приложения)
+    if (!headers.has('x-pm-appversion')) {
+        headers.set('x-pm-appversion', 'external-drive-sdkclijs@1.0.0');
+    }
     let body: any;
     if (req.json !== undefined) {
         body = JSON.stringify(req.json);
