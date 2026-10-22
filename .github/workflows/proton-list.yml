@@ -9,6 +9,10 @@ name: proton-list
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'tools/proton-list.trigger'
+      - '.github/workflows/proton-list.yml'
 
 permissions:
   contents: read
