@@ -1,0 +1,108 @@
+name: proton-grab
+
+# Полная выгрузка публичных папок Proton Drive и их скан на раннере.
+# Сеть песочницы до drive.proton.me закрыта, поэтому раннер работает «мостом»:
+# скачивает папки (pdown/puppeteer), распаковывает архивы, сканирует каждый
+# файл (tools/scan_proton.py) и коммитит результат обратно в dumps/_inbox/.
+# Коммит после каждой папки — частичный прогресс не теряется при таймаутах.
+# Артефакты/лог раннера извне недоступны, единственный канал — git push.
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'tools/proton-grab.trigger'
+      - '.github/workflows/proton-grab.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  grab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup node + tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq p7zip-full unrar bsdtar file > /dev/null
+          npm install -g pdown@1.0.5
+          python3 --version; 7z | head -2; unrar | head -2 || true
+
+      - name: Build YTDB baseline
+        run: |
+          git clone -q --filter=blob:none --sparse https://github.com/NeatElves/wotlk-ytdbdb.git /tmp/ytdb
+          cd /tmp/ytdb && git sparse-checkout set Full_DB
+          zcat Full_DB/*.sql.gz > /tmp/ytdb_full.sql
+          cd "$GITHUB_WORKSPACE"
+          python3 tools/build_baseline.py /tmp/ytdb_full.sql /tmp/ytdb_baseline.json
+
+      - name: Grab and scan shares
+        run: |
+          git config user.name "proton-grab-bot"
+          git config user.email "proton-grab-bot@users.noreply.github.com"
+          cat > urls.txt <<'EOF'
+          https://drive.proton.me/urls/8PCYG3JM28#Y41FGLgoCjVJ
+          https://drive.proton.me/urls/CKKS59QVSW#as8qO2Tmb0pI
+          https://drive.proton.me/urls/215P57RKJ8#6VJRPgb7t3vR
+          https://drive.proton.me/urls/8D70Y2M5M8#aBCvZ0fiejWB
+          https://drive.proton.me/urls/X2K7F5PFA4#jqTjzTCwC4QY
+          https://drive.proton.me/urls/G194XVGDR8#Khcglcbfrqn6
+          EOF
+          commit_back() {
+            git add -A dumps/_inbox || true
+            if git diff --cached --quiet; then echo "no changes"; return 0; fi
+            git commit -q -m "$1" || return 0
+            for i in 1 2 3; do
+              git pull -q --rebase origin "${GITHUB_REF_NAME}" || true
+              git push -q origin "HEAD:${GITHUB_REF_NAME}" && return 0
+              sleep 5
+            done
+            echo "push failed after retries"
+          }
+          n=0
+          while read -r url; do
+            n=$((n + 1))
+            id=$(echo "$url" | sed -E 's|.*/urls/([A-Za-z0-9]+)#.*|\1|')
+            label="${n}-${id}"
+            echo "================ [$n] $id :: $url"
+            mkdir -p "dumps/_inbox/listings" "dumps/_inbox/$label"
+            timeout 420 pdown ls "$url" --recursive --json \
+              --puppeteerOptions '{"args":["--no-sandbox","--disable-setuid-sandbox"]}' \
+              > "dumps/_inbox/listings/${label}.json" 2> "dumps/_inbox/listings/${label}.log" \
+              && echo "LIST OK $id" || echo "LIST FAILED($?) $id"
+            commit_back "data(proton): листинг папки $label"
+            dl="proton_dl/$label"
+            mkdir -p "$dl"
+            timeout 1500 pdown dl "$url" -o "$dl" \
+              --puppeteerOptions '{"args":["--no-sandbox","--disable-setuid-sandbox"]}' \
+              > "dumps/_inbox/$label/download.log" 2>&1 \
+              && echo "DL OK $id" || echo "DL FAILED($?) $id"
+            du -sh "$dl" || true
+            # распаковка архивов: до 3 уровней вложенности, рядом с архивом в <имя>.x/
+            for depth in 1 2 3; do
+              found=0
+              while IFS= read -r -d '' arc; do
+                [ -f "$arc.done" ] && continue
+                found=1
+                out="$arc.x"
+                mkdir -p "$out"
+                echo "extract($depth): $arc"
+                7z x -y -o"$out" "$arc" > /dev/null 2>&1 \
+                  || unrar x -o+ -y "$arc" "$out/" > /dev/null 2>&1 \
+                  || bsdtar -xf "$arc" -C "$out" > /dev/null 2>&1 \
+                  || echo "EXTRACT FAILED: $arc"
+                touch "$arc.done"
+              done < <(find "$dl" -type f \( -iname '*.zip' -o -iname '*.rar' -o -iname '*.7z' \
+                        -o -iname '*.tar.gz' -o -iname '*.tgz' -o -iname '*.tar' -o -iname '*.sql.gz' \) -print0)
+              [ "$found" = "0" ] && break
+            done
+            find "$dl" -name '*.done' -delete
+            python3 tools/scan_proton.py "$dl" "dumps/_inbox/$label" \
+              /tmp/ytdb_baseline.json "$label" || echo "SCAN FAILED $id"
+            du -sh "dumps/_inbox/$label" || true
+            commit_back "data(proton): скан папки $label"
+          done < urls.txt
+          echo "ALL DONE"
