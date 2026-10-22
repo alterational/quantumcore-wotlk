@@ -1,27 +1,507 @@
-2026-10-22T07:23:10.339Z INFO [interface] Getting info for URL access token 8PCYG3JM28
-2026-10-22T07:23:10.900Z INFO [api] GET https://drive-api.proton.me/drive/urls/8PCYG3JM28/info: 200 (560ms)
+2026-10-22T07:33:25.153Z INFO [interface] Getting info for URL access token 8PCYG3JM28
+2026-10-22T07:33:25.644Z INFO [api] GET https://drive-api.proton.me/drive/urls/8PCYG3JM28/info: 200 (490ms)
 INFO {"isCustomPasswordProtected":false,"isLegacy":false,"vendorType":0}
-2026-10-22T07:23:10.900Z INFO [interface] Authenticating URL access token 8PCYG3JM28
-2026-10-22T07:23:11.532Z INFO [api] POST https://drive-api.proton.me/drive/urls/8PCYG3JM28/auth: 200 (536ms)
-2026-10-22T07:23:11.654Z INFO [publicLink-interface] Getting root node
-2026-10-22T07:23:11.833Z WARNING [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 400 (178ms)
-2026-10-22T07:23:11.834Z ERROR [nodes-api] Failed to fetch node metadata for volume SgfKCen9iQnXZv58ixOXxg
-Error: Missing x-pm-appversion header
-Stack:
-APICodeError: Missing x-pm-appversion header
-    at apiErrorFactory (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/apiService/errors.js:61:24)
-    at makeRequest (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/apiService/apiService.js:137:23)
-2026-10-22T07:23:11.834Z WARNING [nodes-api] Failed to load 1 nodes
-72 |             }
-73 |         };
-74 |         yield* asyncIteratorRace(iterateNodesPerVolumeGenerator(), API_CONCURRENCY);
-75 |         if (errors.length) {
-76 |             this.logger.warn(`Failed to load ${errors.length} nodes`);
-77 |             throw new ProtonDriveError(c('Error').t`Some items could not be loaded`, {
-                       ^
-ProtonDriveError: Some items could not be loaded
-      at iterateNodes (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/nodes/apiService.js:77:19)
-
-::error file=tools/proton/node_modules/@protontech/drive-sdk/dist/internal/nodes/apiService.js,line=77,col=19,title=ProtonDriveError: Some items could not be loaded::%0A      at iterateNodes (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/nodes/apiService.js:77:19)
-
-Bun v1.4.3 (Linux x64)
+2026-10-22T07:33:25.644Z INFO [interface] Authenticating URL access token 8PCYG3JM28
+2026-10-22T07:33:25.926Z INFO [api] POST https://drive-api.proton.me/drive/urls/8PCYG3JM28/auth: 200 (191ms)
+2026-10-22T07:33:26.042Z INFO [publicLink-interface] Getting root node
+2026-10-22T07:33:26.205Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (162ms)
+ROOT folder Darksorrow
+2026-10-22T07:33:26.217Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~6lpNNsnQHfqMN30cmFhvJA
+2026-10-22T07:33:26.371Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/6lpNNsnQHfqMN30cmFhvJA/children?: 200 (154ms)
+2026-10-22T07:33:26.577Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (205ms)
+FILE Darksorrow/bigdump.php (35677 B)
+2026-10-22T07:33:26.849Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~ZyvQTCF1TkmveT0uA17MDQ
+2026-10-22T07:33:26.852Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~ZyvQTCF1TkmveT0uA17MDQ~1CaB9XyUPj0IA4FcYFouYg: Starting download
+2026-10-22T07:33:27.046Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/ZyvQTCF1TkmveT0uA17MDQ/revisions/1CaB9XyUPj0IA4FcYFouYg?PageSize=20&FromBlockIndex=1: 200 (194ms)
+2026-10-22T07:33:27.046Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~ZyvQTCF1TkmveT0uA17MDQ~1CaB9XyUPj0IA4FcYFouYg: block 1: Download started
+2026-10-22T07:33:27.219Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/ZyvQTCF1TkmveT0uA17MDQ/revisions/1CaB9XyUPj0IA4FcYFouYg?PageSize=20&FromBlockIndex=2: 200 (172ms)
+2026-10-22T07:33:27.763Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (716ms)
+2026-10-22T07:33:27.900Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":35677,"milliseconds":1.9222439999998642}
+2026-10-22T07:33:27.900Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~ZyvQTCF1TkmveT0uA17MDQ~1CaB9XyUPj0IA4FcYFouYg: block 1: Downloaded
+2026-10-22T07:33:27.900Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~ZyvQTCF1TkmveT0uA17MDQ~1CaB9XyUPj0IA4FcYFouYg: Flushing completed block 1
+2026-10-22T07:33:27.900Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~ZyvQTCF1TkmveT0uA17MDQ~1CaB9XyUPj0IA4FcYFouYg: Skipping manifest check
+2026-10-22T07:33:27.900Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~ZyvQTCF1TkmveT0uA17MDQ~1CaB9XyUPj0IA4FcYFouYg: Download succeeded
+2026-10-22T07:33:27.900Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":35761,"claimedFileSize":35761}
+FILE Darksorrow/Pediq2.sql (18966 B)
+2026-10-22T07:33:27.901Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~AWmp5sTZOp3OXcR2eVQyqw
+2026-10-22T07:33:27.901Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~AWmp5sTZOp3OXcR2eVQyqw~EreGdnCdNqQlBM1l3P0R8w: Starting download
+2026-10-22T07:33:28.085Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/AWmp5sTZOp3OXcR2eVQyqw/revisions/EreGdnCdNqQlBM1l3P0R8w?PageSize=20&FromBlockIndex=1: 200 (184ms)
+2026-10-22T07:33:28.085Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~AWmp5sTZOp3OXcR2eVQyqw~EreGdnCdNqQlBM1l3P0R8w: block 1: Download started
+2026-10-22T07:33:28.266Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/AWmp5sTZOp3OXcR2eVQyqw/revisions/EreGdnCdNqQlBM1l3P0R8w?PageSize=20&FromBlockIndex=2: 200 (181ms)
+2026-10-22T07:33:28.283Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (198ms)
+2026-10-22T07:33:28.299Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":18966,"milliseconds":0.8370100000001912}
+2026-10-22T07:33:28.299Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~AWmp5sTZOp3OXcR2eVQyqw~EreGdnCdNqQlBM1l3P0R8w: block 1: Downloaded
+2026-10-22T07:33:28.299Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~AWmp5sTZOp3OXcR2eVQyqw~EreGdnCdNqQlBM1l3P0R8w: Flushing completed block 1
+2026-10-22T07:33:28.299Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~AWmp5sTZOp3OXcR2eVQyqw~EreGdnCdNqQlBM1l3P0R8w: Skipping manifest check
+2026-10-22T07:33:28.299Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~AWmp5sTZOp3OXcR2eVQyqw~EreGdnCdNqQlBM1l3P0R8w: Download succeeded
+2026-10-22T07:33:28.299Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":19050,"claimedFileSize":19050}
+FILE Darksorrow/world4.zip (12030580 B)
+2026-10-22T07:33:28.299Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~527bzgPfiVwu3f18ozCgTw
+2026-10-22T07:33:28.299Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~527bzgPfiVwu3f18ozCgTw~vEbi-h3Zkzxw1m5VxQ8lRg: Starting download
+2026-10-22T07:33:28.500Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/527bzgPfiVwu3f18ozCgTw/revisions/vEbi-h3Zkzxw1m5VxQ8lRg?PageSize=20&FromBlockIndex=1: 200 (200ms)
+2026-10-22T07:33:28.500Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~527bzgPfiVwu3f18ozCgTw~vEbi-h3Zkzxw1m5VxQ8lRg: block 1: Download started
+2026-10-22T07:33:28.500Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~527bzgPfiVwu3f18ozCgTw~vEbi-h3Zkzxw1m5VxQ8lRg: block 2: Download started
+2026-10-22T07:33:28.500Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~527bzgPfiVwu3f18ozCgTw~vEbi-h3Zkzxw1m5VxQ8lRg: block 3: Download started
+2026-10-22T07:33:28.675Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/527bzgPfiVwu3f18ozCgTw/revisions/vEbi-h3Zkzxw1m5VxQ8lRg?PageSize=20&FromBlockIndex=4: 200 (175ms)
+2026-10-22T07:33:28.730Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (230ms)
+2026-10-22T07:33:29.070Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (570ms)
+2026-10-22T07:33:29.899Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":4194304,"milliseconds":12.231122000000141}
+2026-10-22T07:33:29.899Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~527bzgPfiVwu3f18ozCgTw~vEbi-h3Zkzxw1m5VxQ8lRg: block 1: Downloaded
+2026-10-22T07:33:29.957Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (1457ms)
+2026-10-22T07:33:30.389Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":3641972,"milliseconds":6.329928000000109}
+2026-10-22T07:33:30.389Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~527bzgPfiVwu3f18ozCgTw~vEbi-h3Zkzxw1m5VxQ8lRg: block 3: Downloaded
+2026-10-22T07:33:31.332Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":4194304,"milliseconds":7.815860000000612}
+2026-10-22T07:33:31.332Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~527bzgPfiVwu3f18ozCgTw~vEbi-h3Zkzxw1m5VxQ8lRg: block 2: Downloaded
+2026-10-22T07:33:31.332Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~527bzgPfiVwu3f18ozCgTw~vEbi-h3Zkzxw1m5VxQ8lRg: Flushing completed block 1
+2026-10-22T07:33:31.333Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~527bzgPfiVwu3f18ozCgTw~vEbi-h3Zkzxw1m5VxQ8lRg: Flushing completed block 2
+2026-10-22T07:33:31.334Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~527bzgPfiVwu3f18ozCgTw~vEbi-h3Zkzxw1m5VxQ8lRg: Flushing completed block 3
+2026-10-22T07:33:31.335Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~527bzgPfiVwu3f18ozCgTw~vEbi-h3Zkzxw1m5VxQ8lRg: Skipping manifest check
+2026-10-22T07:33:31.335Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~527bzgPfiVwu3f18ozCgTw~vEbi-h3Zkzxw1m5VxQ8lRg: Download succeeded
+2026-10-22T07:33:31.335Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":12000000,"approximateClaimedFileSize":12000000,"downloadedSize":12031555,"claimedFileSize":12031555}
+FILE Darksorrow/Скрипт на босса.txt (3508 B)
+2026-10-22T07:33:31.336Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~2vs-CzxJGfEPegAANAZ38Q
+2026-10-22T07:33:31.336Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~2vs-CzxJGfEPegAANAZ38Q~i2bL0b53rK7Eeco1-mxGsg: Starting download
+2026-10-22T07:33:31.524Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/2vs-CzxJGfEPegAANAZ38Q/revisions/i2bL0b53rK7Eeco1-mxGsg?PageSize=20&FromBlockIndex=1: 200 (188ms)
+2026-10-22T07:33:31.524Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~2vs-CzxJGfEPegAANAZ38Q~i2bL0b53rK7Eeco1-mxGsg: block 1: Download started
+2026-10-22T07:33:31.691Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (166ms)
+2026-10-22T07:33:31.692Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":3508,"milliseconds":0.7593349999997372}
+2026-10-22T07:33:31.692Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~2vs-CzxJGfEPegAANAZ38Q~i2bL0b53rK7Eeco1-mxGsg: block 1: Downloaded
+2026-10-22T07:33:31.711Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/2vs-CzxJGfEPegAANAZ38Q/revisions/i2bL0b53rK7Eeco1-mxGsg?PageSize=20&FromBlockIndex=2: 200 (186ms)
+2026-10-22T07:33:31.712Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~2vs-CzxJGfEPegAANAZ38Q~i2bL0b53rK7Eeco1-mxGsg: Flushing completed block 1
+2026-10-22T07:33:31.712Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~2vs-CzxJGfEPegAANAZ38Q~i2bL0b53rK7Eeco1-mxGsg: Skipping manifest check
+2026-10-22T07:33:31.712Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~2vs-CzxJGfEPegAANAZ38Q~i2bL0b53rK7Eeco1-mxGsg: Download succeeded
+2026-10-22T07:33:31.712Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":3589,"claimedFileSize":3589}
+FILE Darksorrow/characters.zip (13694 B)
+2026-10-22T07:33:31.712Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~aqOLloWRgQXb-v0RBep6Cg
+2026-10-22T07:33:31.712Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~aqOLloWRgQXb-v0RBep6Cg~vTzMXBD4FS62My4PGF-2EQ: Starting download
+2026-10-22T07:33:31.899Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/aqOLloWRgQXb-v0RBep6Cg/revisions/vTzMXBD4FS62My4PGF-2EQ?PageSize=20&FromBlockIndex=1: 200 (187ms)
+2026-10-22T07:33:31.899Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~aqOLloWRgQXb-v0RBep6Cg~vTzMXBD4FS62My4PGF-2EQ: block 1: Download started
+2026-10-22T07:33:32.083Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (184ms)
+2026-10-22T07:33:32.087Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":13694,"milliseconds":3.4884720000000016}
+2026-10-22T07:33:32.087Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~aqOLloWRgQXb-v0RBep6Cg~vTzMXBD4FS62My4PGF-2EQ: block 1: Downloaded
+2026-10-22T07:33:32.125Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/aqOLloWRgQXb-v0RBep6Cg/revisions/vTzMXBD4FS62My4PGF-2EQ?PageSize=20&FromBlockIndex=2: 200 (226ms)
+2026-10-22T07:33:32.125Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~aqOLloWRgQXb-v0RBep6Cg~vTzMXBD4FS62My4PGF-2EQ: Flushing completed block 1
+2026-10-22T07:33:32.125Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~aqOLloWRgQXb-v0RBep6Cg~vTzMXBD4FS62My4PGF-2EQ: Skipping manifest check
+2026-10-22T07:33:32.125Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~aqOLloWRgQXb-v0RBep6Cg~vTzMXBD4FS62My4PGF-2EQ: Download succeeded
+2026-10-22T07:33:32.125Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":13778,"claimedFileSize":13778}
+FILE Darksorrow/Darksorrow.txt (138 B)
+2026-10-22T07:33:32.126Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~YiJ4iCpmY0bx8jJdMMcZNQ
+2026-10-22T07:33:32.126Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~YiJ4iCpmY0bx8jJdMMcZNQ~UZcPDXlmTszNDmLPUN3Lig: Starting download
+2026-10-22T07:33:32.306Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/YiJ4iCpmY0bx8jJdMMcZNQ/revisions/UZcPDXlmTszNDmLPUN3Lig?PageSize=20&FromBlockIndex=1: 200 (180ms)
+2026-10-22T07:33:32.306Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~YiJ4iCpmY0bx8jJdMMcZNQ~UZcPDXlmTszNDmLPUN3Lig: block 1: Download started
+2026-10-22T07:33:32.467Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (161ms)
+2026-10-22T07:33:32.468Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":138,"milliseconds":0.6919420000003811}
+2026-10-22T07:33:32.468Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~YiJ4iCpmY0bx8jJdMMcZNQ~UZcPDXlmTszNDmLPUN3Lig: block 1: Downloaded
+2026-10-22T07:33:32.496Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/YiJ4iCpmY0bx8jJdMMcZNQ/revisions/UZcPDXlmTszNDmLPUN3Lig?PageSize=20&FromBlockIndex=2: 200 (189ms)
+2026-10-22T07:33:32.496Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~YiJ4iCpmY0bx8jJdMMcZNQ~UZcPDXlmTszNDmLPUN3Lig: Flushing completed block 1
+2026-10-22T07:33:32.496Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~YiJ4iCpmY0bx8jJdMMcZNQ~UZcPDXlmTszNDmLPUN3Lig: Skipping manifest check
+2026-10-22T07:33:32.496Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~YiJ4iCpmY0bx8jJdMMcZNQ~UZcPDXlmTszNDmLPUN3Lig: Download succeeded
+2026-10-22T07:33:32.496Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":217,"claimedFileSize":217}
+2026-10-22T07:33:32.497Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~W5AQIDl1PFQy02v-qcHPCw
+2026-10-22T07:33:32.686Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/W5AQIDl1PFQy02v-qcHPCw/children?: 200 (189ms)
+2026-10-22T07:33:32.855Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (168ms)
+FILE Darksorrow/Фиксы для бд/T2.txt (2765 B)
+2026-10-22T07:33:32.912Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Il2mFtJhmDFEHSgxbwfgYA
+2026-10-22T07:33:32.912Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Il2mFtJhmDFEHSgxbwfgYA~IKXoZD6TYIAQZULCbHaZkw: Starting download
+2026-10-22T07:33:33.131Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Il2mFtJhmDFEHSgxbwfgYA/revisions/IKXoZD6TYIAQZULCbHaZkw?PageSize=20&FromBlockIndex=1: 200 (219ms)
+2026-10-22T07:33:33.131Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Il2mFtJhmDFEHSgxbwfgYA~IKXoZD6TYIAQZULCbHaZkw: block 1: Download started
+2026-10-22T07:33:33.283Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (152ms)
+2026-10-22T07:33:33.284Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2765,"milliseconds":0.6237389999987499}
+2026-10-22T07:33:33.284Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Il2mFtJhmDFEHSgxbwfgYA~IKXoZD6TYIAQZULCbHaZkw: block 1: Downloaded
+2026-10-22T07:33:33.298Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Il2mFtJhmDFEHSgxbwfgYA/revisions/IKXoZD6TYIAQZULCbHaZkw?PageSize=20&FromBlockIndex=2: 200 (167ms)
+2026-10-22T07:33:33.298Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Il2mFtJhmDFEHSgxbwfgYA~IKXoZD6TYIAQZULCbHaZkw: Flushing completed block 1
+2026-10-22T07:33:33.298Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Il2mFtJhmDFEHSgxbwfgYA~IKXoZD6TYIAQZULCbHaZkw: Skipping manifest check
+2026-10-22T07:33:33.298Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Il2mFtJhmDFEHSgxbwfgYA~IKXoZD6TYIAQZULCbHaZkw: Download succeeded
+2026-10-22T07:33:33.298Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2846,"claimedFileSize":2846}
+FILE Darksorrow/Фиксы для бд/Расстановка вендоров.txt (21957 B)
+2026-10-22T07:33:33.298Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~0DLB0Pxqk6RdqjmPvAfEmg
+2026-10-22T07:33:33.299Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~0DLB0Pxqk6RdqjmPvAfEmg~7aj8b4su-xZFqhZjQv6P7Q: Starting download
+2026-10-22T07:33:33.509Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/0DLB0Pxqk6RdqjmPvAfEmg/revisions/7aj8b4su-xZFqhZjQv6P7Q?PageSize=20&FromBlockIndex=1: 200 (210ms)
+2026-10-22T07:33:33.509Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~0DLB0Pxqk6RdqjmPvAfEmg~7aj8b4su-xZFqhZjQv6P7Q: block 1: Download started
+2026-10-22T07:33:33.657Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/0DLB0Pxqk6RdqjmPvAfEmg/revisions/7aj8b4su-xZFqhZjQv6P7Q?PageSize=20&FromBlockIndex=2: 200 (148ms)
+2026-10-22T07:33:33.699Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (190ms)
+2026-10-22T07:33:33.700Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":21957,"milliseconds":0.601966000000175}
+2026-10-22T07:33:33.700Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~0DLB0Pxqk6RdqjmPvAfEmg~7aj8b4su-xZFqhZjQv6P7Q: block 1: Downloaded
+2026-10-22T07:33:33.700Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~0DLB0Pxqk6RdqjmPvAfEmg~7aj8b4su-xZFqhZjQv6P7Q: Flushing completed block 1
+2026-10-22T07:33:33.700Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~0DLB0Pxqk6RdqjmPvAfEmg~7aj8b4su-xZFqhZjQv6P7Q: Skipping manifest check
+2026-10-22T07:33:33.700Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~0DLB0Pxqk6RdqjmPvAfEmg~7aj8b4su-xZFqhZjQv6P7Q: Download succeeded
+2026-10-22T07:33:33.700Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":22041,"claimedFileSize":22041}
+FILE Darksorrow/Фиксы для бд/Цены buyprice sellprice.txt (102 B)
+2026-10-22T07:33:33.700Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~alqNYouBklKcgMwas5TYqA
+2026-10-22T07:33:33.700Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~alqNYouBklKcgMwas5TYqA~4vPkU38wMKtQ5C6IArSpcA: Starting download
+2026-10-22T07:33:33.874Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/alqNYouBklKcgMwas5TYqA/revisions/4vPkU38wMKtQ5C6IArSpcA?PageSize=20&FromBlockIndex=1: 200 (174ms)
+2026-10-22T07:33:33.874Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~alqNYouBklKcgMwas5TYqA~4vPkU38wMKtQ5C6IArSpcA: block 1: Download started
+2026-10-22T07:33:34.023Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (149ms)
+2026-10-22T07:33:34.023Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":102,"milliseconds":0.6336040000005596}
+2026-10-22T07:33:34.023Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~alqNYouBklKcgMwas5TYqA~4vPkU38wMKtQ5C6IArSpcA: block 1: Downloaded
+2026-10-22T07:33:34.068Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/alqNYouBklKcgMwas5TYqA/revisions/4vPkU38wMKtQ5C6IArSpcA?PageSize=20&FromBlockIndex=2: 200 (194ms)
+2026-10-22T07:33:34.068Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~alqNYouBklKcgMwas5TYqA~4vPkU38wMKtQ5C6IArSpcA: Flushing completed block 1
+2026-10-22T07:33:34.068Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~alqNYouBklKcgMwas5TYqA~4vPkU38wMKtQ5C6IArSpcA: Skipping manifest check
+2026-10-22T07:33:34.069Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~alqNYouBklKcgMwas5TYqA~4vPkU38wMKtQ5C6IArSpcA: Download succeeded
+2026-10-22T07:33:34.069Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":180,"claimedFileSize":180}
+FILE Darksorrow/Фиксы для бд/Телепортер тринити!.sql (54627 B)
+2026-10-22T07:33:34.069Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~iZ-iSFrOa5WFK1vXW6IhWg
+2026-10-22T07:33:34.069Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~iZ-iSFrOa5WFK1vXW6IhWg~iEaoivrsSXil62APHXjpYg: Starting download
+2026-10-22T07:33:34.266Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/iZ-iSFrOa5WFK1vXW6IhWg/revisions/iEaoivrsSXil62APHXjpYg?PageSize=20&FromBlockIndex=1: 200 (197ms)
+2026-10-22T07:33:34.266Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~iZ-iSFrOa5WFK1vXW6IhWg~iEaoivrsSXil62APHXjpYg: block 1: Download started
+2026-10-22T07:33:34.431Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/iZ-iSFrOa5WFK1vXW6IhWg/revisions/iEaoivrsSXil62APHXjpYg?PageSize=20&FromBlockIndex=2: 200 (165ms)
+2026-10-22T07:33:34.442Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (176ms)
+2026-10-22T07:33:34.444Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":54627,"milliseconds":0.7289870000004157}
+2026-10-22T07:33:34.444Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~iZ-iSFrOa5WFK1vXW6IhWg~iEaoivrsSXil62APHXjpYg: block 1: Downloaded
+2026-10-22T07:33:34.444Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~iZ-iSFrOa5WFK1vXW6IhWg~iEaoivrsSXil62APHXjpYg: Flushing completed block 1
+2026-10-22T07:33:34.444Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~iZ-iSFrOa5WFK1vXW6IhWg~iEaoivrsSXil62APHXjpYg: Skipping manifest check
+2026-10-22T07:33:34.444Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~iZ-iSFrOa5WFK1vXW6IhWg~iEaoivrsSXil62APHXjpYg: Download succeeded
+2026-10-22T07:33:34.444Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":54714,"claimedFileSize":54714}
+FILE Darksorrow/Фиксы для бд/Кольца ЦЛК без репы.txt (13590 B)
+2026-10-22T07:33:34.444Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~kvUwAqdvqwsFMp-wviB1zg
+2026-10-22T07:33:34.444Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~kvUwAqdvqwsFMp-wviB1zg~H16yXkONeQl-HGrgI75EeA: Starting download
+2026-10-22T07:33:34.650Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/kvUwAqdvqwsFMp-wviB1zg/revisions/H16yXkONeQl-HGrgI75EeA?PageSize=20&FromBlockIndex=1: 200 (206ms)
+2026-10-22T07:33:34.650Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~kvUwAqdvqwsFMp-wviB1zg~H16yXkONeQl-HGrgI75EeA: block 1: Download started
+2026-10-22T07:33:34.818Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (168ms)
+2026-10-22T07:33:34.819Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":13590,"milliseconds":0.6125329999995301}
+2026-10-22T07:33:34.819Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~kvUwAqdvqwsFMp-wviB1zg~H16yXkONeQl-HGrgI75EeA: block 1: Downloaded
+2026-10-22T07:33:34.836Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/kvUwAqdvqwsFMp-wviB1zg/revisions/H16yXkONeQl-HGrgI75EeA?PageSize=20&FromBlockIndex=2: 200 (186ms)
+2026-10-22T07:33:34.836Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~kvUwAqdvqwsFMp-wviB1zg~H16yXkONeQl-HGrgI75EeA: Flushing completed block 1
+2026-10-22T07:33:34.836Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~kvUwAqdvqwsFMp-wviB1zg~H16yXkONeQl-HGrgI75EeA: Skipping manifest check
+2026-10-22T07:33:34.836Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~kvUwAqdvqwsFMp-wviB1zg~H16yXkONeQl-HGrgI75EeA: Download succeeded
+2026-10-22T07:33:34.836Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":13674,"claimedFileSize":13674}
+FILE Darksorrow/Фиксы для бд/Старт в столицах.sql (1474 B)
+2026-10-22T07:33:34.836Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~LjsdAbtgB4CyCfcAZFP05Q
+2026-10-22T07:33:34.836Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~LjsdAbtgB4CyCfcAZFP05Q~lTk1Mia_v5aow9msO74lxw: Starting download
+2026-10-22T07:33:35.015Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/LjsdAbtgB4CyCfcAZFP05Q/revisions/lTk1Mia_v5aow9msO74lxw?PageSize=20&FromBlockIndex=1: 200 (178ms)
+2026-10-22T07:33:35.015Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~LjsdAbtgB4CyCfcAZFP05Q~lTk1Mia_v5aow9msO74lxw: block 1: Download started
+2026-10-22T07:33:35.161Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (145ms)
+2026-10-22T07:33:35.162Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":1474,"milliseconds":0.6896779999988212}
+2026-10-22T07:33:35.162Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~LjsdAbtgB4CyCfcAZFP05Q~lTk1Mia_v5aow9msO74lxw: block 1: Downloaded
+2026-10-22T07:33:35.211Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/LjsdAbtgB4CyCfcAZFP05Q/revisions/lTk1Mia_v5aow9msO74lxw?PageSize=20&FromBlockIndex=2: 200 (196ms)
+2026-10-22T07:33:35.211Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~LjsdAbtgB4CyCfcAZFP05Q~lTk1Mia_v5aow9msO74lxw: Flushing completed block 1
+2026-10-22T07:33:35.211Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~LjsdAbtgB4CyCfcAZFP05Q~lTk1Mia_v5aow9msO74lxw: Skipping manifest check
+2026-10-22T07:33:35.211Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~LjsdAbtgB4CyCfcAZFP05Q~lTk1Mia_v5aow9msO74lxw: Download succeeded
+2026-10-22T07:33:35.211Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":1555,"claimedFileSize":1555}
+FILE Darksorrow/Фиксы для бд/Тотемы при старте.sql (416 B)
+2026-10-22T07:33:35.211Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~CIggLFpEpjOMzavqfYyovg
+2026-10-22T07:33:35.211Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~CIggLFpEpjOMzavqfYyovg~kubRWk05Ocr4aBgojodXvQ: Starting download
+2026-10-22T07:33:35.379Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/CIggLFpEpjOMzavqfYyovg/revisions/kubRWk05Ocr4aBgojodXvQ?PageSize=20&FromBlockIndex=1: 200 (167ms)
+2026-10-22T07:33:35.379Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~CIggLFpEpjOMzavqfYyovg~kubRWk05Ocr4aBgojodXvQ: block 1: Download started
+2026-10-22T07:33:35.540Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (161ms)
+2026-10-22T07:33:35.541Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":416,"milliseconds":0.6085570000013831}
+2026-10-22T07:33:35.541Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~CIggLFpEpjOMzavqfYyovg~kubRWk05Ocr4aBgojodXvQ: block 1: Downloaded
+2026-10-22T07:33:35.560Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/CIggLFpEpjOMzavqfYyovg/revisions/kubRWk05Ocr4aBgojodXvQ?PageSize=20&FromBlockIndex=2: 200 (181ms)
+2026-10-22T07:33:35.560Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~CIggLFpEpjOMzavqfYyovg~kubRWk05Ocr4aBgojodXvQ: Flushing completed block 1
+2026-10-22T07:33:35.561Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~CIggLFpEpjOMzavqfYyovg~kubRWk05Ocr4aBgojodXvQ: Skipping manifest check
+2026-10-22T07:33:35.561Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~CIggLFpEpjOMzavqfYyovg~kubRWk05Ocr4aBgojodXvQ: Download succeeded
+2026-10-22T07:33:35.561Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":496,"claimedFileSize":496}
+FILE Darksorrow/Фиксы для бд/Tier 10 не гер.txt (2638 B)
+2026-10-22T07:33:35.561Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~BZ75dHAsQE29XHnDZPBL_w
+2026-10-22T07:33:35.561Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BZ75dHAsQE29XHnDZPBL_w~Lm-4JWNU1TW624648XsEXA: Starting download
+2026-10-22T07:33:35.716Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/BZ75dHAsQE29XHnDZPBL_w/revisions/Lm-4JWNU1TW624648XsEXA?PageSize=20&FromBlockIndex=1: 200 (155ms)
+2026-10-22T07:33:35.716Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BZ75dHAsQE29XHnDZPBL_w~Lm-4JWNU1TW624648XsEXA: block 1: Download started
+2026-10-22T07:33:35.864Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (148ms)
+2026-10-22T07:33:35.865Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2638,"milliseconds":0.5693320000009408}
+2026-10-22T07:33:35.865Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BZ75dHAsQE29XHnDZPBL_w~Lm-4JWNU1TW624648XsEXA: block 1: Downloaded
+2026-10-22T07:33:35.893Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/BZ75dHAsQE29XHnDZPBL_w/revisions/Lm-4JWNU1TW624648XsEXA?PageSize=20&FromBlockIndex=2: 200 (177ms)
+2026-10-22T07:33:35.894Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BZ75dHAsQE29XHnDZPBL_w~Lm-4JWNU1TW624648XsEXA: Flushing completed block 1
+2026-10-22T07:33:35.894Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~BZ75dHAsQE29XHnDZPBL_w~Lm-4JWNU1TW624648XsEXA: Skipping manifest check
+2026-10-22T07:33:35.894Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BZ75dHAsQE29XHnDZPBL_w~Lm-4JWNU1TW624648XsEXA: Download succeeded
+2026-10-22T07:33:35.894Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2719,"claimedFileSize":2719}
+FILE Darksorrow/Фиксы для бд/т10 вендор гер.txt (3283 B)
+2026-10-22T07:33:35.894Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Wr-evRhUP81UTi_y4mrAaA
+2026-10-22T07:33:35.894Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Wr-evRhUP81UTi_y4mrAaA~Eq0a9IVFJ3Pyvr-OJtcs4Q: Starting download
+2026-10-22T07:33:36.060Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Wr-evRhUP81UTi_y4mrAaA/revisions/Eq0a9IVFJ3Pyvr-OJtcs4Q?PageSize=20&FromBlockIndex=1: 200 (166ms)
+2026-10-22T07:33:36.060Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Wr-evRhUP81UTi_y4mrAaA~Eq0a9IVFJ3Pyvr-OJtcs4Q: block 1: Download started
+2026-10-22T07:33:36.216Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (156ms)
+2026-10-22T07:33:36.217Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":3283,"milliseconds":0.6264529999989463}
+2026-10-22T07:33:36.217Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Wr-evRhUP81UTi_y4mrAaA~Eq0a9IVFJ3Pyvr-OJtcs4Q: block 1: Downloaded
+2026-10-22T07:33:36.270Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Wr-evRhUP81UTi_y4mrAaA/revisions/Eq0a9IVFJ3Pyvr-OJtcs4Q?PageSize=20&FromBlockIndex=2: 200 (209ms)
+2026-10-22T07:33:36.270Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Wr-evRhUP81UTi_y4mrAaA~Eq0a9IVFJ3Pyvr-OJtcs4Q: Flushing completed block 1
+2026-10-22T07:33:36.270Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Wr-evRhUP81UTi_y4mrAaA~Eq0a9IVFJ3Pyvr-OJtcs4Q: Skipping manifest check
+2026-10-22T07:33:36.270Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Wr-evRhUP81UTi_y4mrAaA~Eq0a9IVFJ3Pyvr-OJtcs4Q: Download succeeded
+2026-10-22T07:33:36.270Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":3364,"claimedFileSize":3364}
+FILE Darksorrow/Фиксы для бд/Скрипт на вендоров.txt (20375 B)
+2026-10-22T07:33:36.270Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~bt4BEgsq55NXmNP2PMcj8A
+2026-10-22T07:33:36.271Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bt4BEgsq55NXmNP2PMcj8A~gEax4xTeAYnFVWI3aSyPhA: Starting download
+2026-10-22T07:33:36.454Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/bt4BEgsq55NXmNP2PMcj8A/revisions/gEax4xTeAYnFVWI3aSyPhA?PageSize=20&FromBlockIndex=1: 200 (183ms)
+2026-10-22T07:33:36.454Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bt4BEgsq55NXmNP2PMcj8A~gEax4xTeAYnFVWI3aSyPhA: block 1: Download started
+2026-10-22T07:33:36.638Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (183ms)
+2026-10-22T07:33:36.639Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":20375,"milliseconds":0.6322820000004867}
+2026-10-22T07:33:36.639Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bt4BEgsq55NXmNP2PMcj8A~gEax4xTeAYnFVWI3aSyPhA: block 1: Downloaded
+2026-10-22T07:33:36.645Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/bt4BEgsq55NXmNP2PMcj8A/revisions/gEax4xTeAYnFVWI3aSyPhA?PageSize=20&FromBlockIndex=2: 200 (190ms)
+2026-10-22T07:33:36.645Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bt4BEgsq55NXmNP2PMcj8A~gEax4xTeAYnFVWI3aSyPhA: Flushing completed block 1
+2026-10-22T07:33:36.645Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~bt4BEgsq55NXmNP2PMcj8A~gEax4xTeAYnFVWI3aSyPhA: Skipping manifest check
+2026-10-22T07:33:36.645Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bt4BEgsq55NXmNP2PMcj8A~gEax4xTeAYnFVWI3aSyPhA: Download succeeded
+2026-10-22T07:33:36.645Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":20459,"claimedFileSize":20459}
+FILE Darksorrow/Фиксы для бд/Transmogrification.diff (81615 B)
+2026-10-22T07:33:36.645Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Tlr1ZO2DNSnoJL7Z16iFXQ
+2026-10-22T07:33:36.645Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Tlr1ZO2DNSnoJL7Z16iFXQ~2ZgPyeNahZ4jeH5GSDtcUw: Starting download
+2026-10-22T07:33:36.829Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Tlr1ZO2DNSnoJL7Z16iFXQ/revisions/2ZgPyeNahZ4jeH5GSDtcUw?PageSize=20&FromBlockIndex=1: 200 (184ms)
+2026-10-22T07:33:36.829Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Tlr1ZO2DNSnoJL7Z16iFXQ~2ZgPyeNahZ4jeH5GSDtcUw: block 1: Download started
+2026-10-22T07:33:37.023Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Tlr1ZO2DNSnoJL7Z16iFXQ/revisions/2ZgPyeNahZ4jeH5GSDtcUw?PageSize=20&FromBlockIndex=2: 200 (194ms)
+2026-10-22T07:33:37.038Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (209ms)
+2026-10-22T07:33:37.041Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":81615,"milliseconds":0.7080050000004121}
+2026-10-22T07:33:37.041Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Tlr1ZO2DNSnoJL7Z16iFXQ~2ZgPyeNahZ4jeH5GSDtcUw: block 1: Downloaded
+2026-10-22T07:33:37.041Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Tlr1ZO2DNSnoJL7Z16iFXQ~2ZgPyeNahZ4jeH5GSDtcUw: Flushing completed block 1
+2026-10-22T07:33:37.041Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Tlr1ZO2DNSnoJL7Z16iFXQ~2ZgPyeNahZ4jeH5GSDtcUw: Skipping manifest check
+2026-10-22T07:33:37.041Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Tlr1ZO2DNSnoJL7Z16iFXQ~2ZgPyeNahZ4jeH5GSDtcUw: Download succeeded
+2026-10-22T07:33:37.042Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":81702,"claimedFileSize":81702}
+FILE Darksorrow/world2.zip (10345118 B)
+2026-10-22T07:33:37.042Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~3V_h5Sy9pu23UE6kwwzUog
+2026-10-22T07:33:37.042Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~3V_h5Sy9pu23UE6kwwzUog~2l_wA90Bq_EHQabw8xHS_A: Starting download
+2026-10-22T07:33:37.220Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/3V_h5Sy9pu23UE6kwwzUog/revisions/2l_wA90Bq_EHQabw8xHS_A?PageSize=20&FromBlockIndex=1: 200 (178ms)
+2026-10-22T07:33:37.220Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~3V_h5Sy9pu23UE6kwwzUog~2l_wA90Bq_EHQabw8xHS_A: block 1: Download started
+2026-10-22T07:33:37.220Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~3V_h5Sy9pu23UE6kwwzUog~2l_wA90Bq_EHQabw8xHS_A: block 2: Download started
+2026-10-22T07:33:37.220Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~3V_h5Sy9pu23UE6kwwzUog~2l_wA90Bq_EHQabw8xHS_A: block 3: Download started
+2026-10-22T07:33:37.403Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/3V_h5Sy9pu23UE6kwwzUog/revisions/2l_wA90Bq_EHQabw8xHS_A?PageSize=20&FromBlockIndex=4: 200 (183ms)
+2026-10-22T07:33:37.408Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (188ms)
+2026-10-22T07:33:37.440Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (220ms)
+2026-10-22T07:33:37.445Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (225ms)
+2026-10-22T07:33:37.477Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":1956510,"milliseconds":4.746996000001673}
+2026-10-22T07:33:37.477Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~3V_h5Sy9pu23UE6kwwzUog~2l_wA90Bq_EHQabw8xHS_A: block 3: Downloaded
+2026-10-22T07:33:37.703Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":4194304,"milliseconds":10.403352999999697}
+2026-10-22T07:33:37.703Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~3V_h5Sy9pu23UE6kwwzUog~2l_wA90Bq_EHQabw8xHS_A: block 1: Downloaded
+2026-10-22T07:33:37.712Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":4194304,"milliseconds":8.399674000000232}
+2026-10-22T07:33:37.712Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~3V_h5Sy9pu23UE6kwwzUog~2l_wA90Bq_EHQabw8xHS_A: block 2: Downloaded
+2026-10-22T07:33:37.712Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~3V_h5Sy9pu23UE6kwwzUog~2l_wA90Bq_EHQabw8xHS_A: Flushing completed block 1
+2026-10-22T07:33:37.713Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~3V_h5Sy9pu23UE6kwwzUog~2l_wA90Bq_EHQabw8xHS_A: Flushing completed block 2
+2026-10-22T07:33:37.714Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~3V_h5Sy9pu23UE6kwwzUog~2l_wA90Bq_EHQabw8xHS_A: Flushing completed block 3
+2026-10-22T07:33:37.714Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~3V_h5Sy9pu23UE6kwwzUog~2l_wA90Bq_EHQabw8xHS_A: Skipping manifest check
+2026-10-22T07:33:37.714Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~3V_h5Sy9pu23UE6kwwzUog~2l_wA90Bq_EHQabw8xHS_A: Download succeeded
+2026-10-22T07:33:37.714Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":10300000,"approximateClaimedFileSize":10300000,"downloadedSize":10345997,"claimedFileSize":10345997}
+FILE Darksorrow/auth.zip (1489 B)
+2026-10-22T07:33:37.715Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~QBiH79WhN1X6NSsG-_mV5A
+2026-10-22T07:33:37.715Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QBiH79WhN1X6NSsG-_mV5A~PIKddPThJQKsl3_JkWQXoQ: Starting download
+2026-10-22T07:33:37.894Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/QBiH79WhN1X6NSsG-_mV5A/revisions/PIKddPThJQKsl3_JkWQXoQ?PageSize=20&FromBlockIndex=1: 200 (179ms)
+2026-10-22T07:33:37.895Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QBiH79WhN1X6NSsG-_mV5A~PIKddPThJQKsl3_JkWQXoQ: block 1: Download started
+2026-10-22T07:33:38.051Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (156ms)
+2026-10-22T07:33:38.051Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":1489,"milliseconds":0.5339499999990949}
+2026-10-22T07:33:38.051Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QBiH79WhN1X6NSsG-_mV5A~PIKddPThJQKsl3_JkWQXoQ: block 1: Downloaded
+2026-10-22T07:33:38.078Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/QBiH79WhN1X6NSsG-_mV5A/revisions/PIKddPThJQKsl3_JkWQXoQ?PageSize=20&FromBlockIndex=2: 200 (183ms)
+2026-10-22T07:33:38.078Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QBiH79WhN1X6NSsG-_mV5A~PIKddPThJQKsl3_JkWQXoQ: Flushing completed block 1
+2026-10-22T07:33:38.078Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~QBiH79WhN1X6NSsG-_mV5A~PIKddPThJQKsl3_JkWQXoQ: Skipping manifest check
+2026-10-22T07:33:38.078Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QBiH79WhN1X6NSsG-_mV5A~PIKddPThJQKsl3_JkWQXoQ: Download succeeded
+2026-10-22T07:33:38.078Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":1570,"claimedFileSize":1570}
+FILE Darksorrow/ID Героик ПВЕ.txt (159 B)
+2026-10-22T07:33:38.078Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~X0DAIrS2B978xX6bK9Paaw
+2026-10-22T07:33:38.079Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~X0DAIrS2B978xX6bK9Paaw~bAUsGkf6Jx6dz42Vo3WD9g: Starting download
+2026-10-22T07:33:38.270Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/X0DAIrS2B978xX6bK9Paaw/revisions/bAUsGkf6Jx6dz42Vo3WD9g?PageSize=20&FromBlockIndex=1: 200 (191ms)
+2026-10-22T07:33:38.270Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~X0DAIrS2B978xX6bK9Paaw~bAUsGkf6Jx6dz42Vo3WD9g: block 1: Download started
+2026-10-22T07:33:38.418Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (147ms)
+2026-10-22T07:33:38.419Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":159,"milliseconds":0.6138240000000224}
+2026-10-22T07:33:38.419Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~X0DAIrS2B978xX6bK9Paaw~bAUsGkf6Jx6dz42Vo3WD9g: block 1: Downloaded
+2026-10-22T07:33:38.469Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/X0DAIrS2B978xX6bK9Paaw/revisions/bAUsGkf6Jx6dz42Vo3WD9g?PageSize=20&FromBlockIndex=2: 200 (198ms)
+2026-10-22T07:33:38.469Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~X0DAIrS2B978xX6bK9Paaw~bAUsGkf6Jx6dz42Vo3WD9g: Flushing completed block 1
+2026-10-22T07:33:38.469Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~X0DAIrS2B978xX6bK9Paaw~bAUsGkf6Jx6dz42Vo3WD9g: Skipping manifest check
+2026-10-22T07:33:38.469Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~X0DAIrS2B978xX6bK9Paaw~bAUsGkf6Jx6dz42Vo3WD9g: Download succeeded
+2026-10-22T07:33:38.469Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":238,"claimedFileSize":238}
+FILE Darksorrow/Камень возвращения.txt (5396 B)
+2026-10-22T07:33:38.469Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~4PgoyCtFmCWrtXuVtcDv8Q
+2026-10-22T07:33:38.470Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~4PgoyCtFmCWrtXuVtcDv8Q~19JvrKW4JiklH_bSpKpORA: Starting download
+2026-10-22T07:33:38.652Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/4PgoyCtFmCWrtXuVtcDv8Q/revisions/19JvrKW4JiklH_bSpKpORA?PageSize=20&FromBlockIndex=1: 200 (182ms)
+2026-10-22T07:33:38.652Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~4PgoyCtFmCWrtXuVtcDv8Q~19JvrKW4JiklH_bSpKpORA: block 1: Download started
+2026-10-22T07:33:38.791Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (139ms)
+2026-10-22T07:33:38.792Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":5396,"milliseconds":0.5418050000007497}
+2026-10-22T07:33:38.792Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~4PgoyCtFmCWrtXuVtcDv8Q~19JvrKW4JiklH_bSpKpORA: block 1: Downloaded
+2026-10-22T07:33:38.828Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/4PgoyCtFmCWrtXuVtcDv8Q/revisions/19JvrKW4JiklH_bSpKpORA?PageSize=20&FromBlockIndex=2: 200 (176ms)
+2026-10-22T07:33:38.828Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~4PgoyCtFmCWrtXuVtcDv8Q~19JvrKW4JiklH_bSpKpORA: Flushing completed block 1
+2026-10-22T07:33:38.828Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~4PgoyCtFmCWrtXuVtcDv8Q~19JvrKW4JiklH_bSpKpORA: Skipping manifest check
+2026-10-22T07:33:38.828Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~4PgoyCtFmCWrtXuVtcDv8Q~19JvrKW4JiklH_bSpKpORA: Download succeeded
+2026-10-22T07:33:38.828Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":5477,"claimedFileSize":5477}
+FILE Darksorrow/Служитель солнца Грегор.sql (3890 B)
+2026-10-22T07:33:38.828Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~bIIwrYBwamVINnZA8igq1Q
+2026-10-22T07:33:38.828Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bIIwrYBwamVINnZA8igq1Q~B7tN5lH2dILaFksVreQrFA: Starting download
+2026-10-22T07:33:39.023Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/bIIwrYBwamVINnZA8igq1Q/revisions/B7tN5lH2dILaFksVreQrFA?PageSize=20&FromBlockIndex=1: 200 (195ms)
+2026-10-22T07:33:39.023Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bIIwrYBwamVINnZA8igq1Q~B7tN5lH2dILaFksVreQrFA: block 1: Download started
+2026-10-22T07:33:39.172Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (149ms)
+2026-10-22T07:33:39.173Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":3890,"milliseconds":0.59499599999981}
+2026-10-22T07:33:39.173Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bIIwrYBwamVINnZA8igq1Q~B7tN5lH2dILaFksVreQrFA: block 1: Downloaded
+2026-10-22T07:33:39.244Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/bIIwrYBwamVINnZA8igq1Q/revisions/B7tN5lH2dILaFksVreQrFA?PageSize=20&FromBlockIndex=2: 200 (221ms)
+2026-10-22T07:33:39.244Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bIIwrYBwamVINnZA8igq1Q~B7tN5lH2dILaFksVreQrFA: Flushing completed block 1
+2026-10-22T07:33:39.244Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~bIIwrYBwamVINnZA8igq1Q~B7tN5lH2dILaFksVreQrFA: Skipping manifest check
+2026-10-22T07:33:39.244Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bIIwrYBwamVINnZA8igq1Q~B7tN5lH2dILaFksVreQrFA: Download succeeded
+2026-10-22T07:33:39.244Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":3971,"claimedFileSize":3971}
+FILE Darksorrow/locales_creature.sql (5117861 B)
+2026-10-22T07:33:39.245Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~l_LoEcdIbql9H40g8Fte9A
+2026-10-22T07:33:39.245Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~l_LoEcdIbql9H40g8Fte9A~aGG_NEa3It3vaswF_n9pEQ: Starting download
+2026-10-22T07:33:39.410Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/l_LoEcdIbql9H40g8Fte9A/revisions/aGG_NEa3It3vaswF_n9pEQ?PageSize=20&FromBlockIndex=1: 200 (165ms)
+2026-10-22T07:33:39.410Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~l_LoEcdIbql9H40g8Fte9A~aGG_NEa3It3vaswF_n9pEQ: block 1: Download started
+2026-10-22T07:33:39.410Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~l_LoEcdIbql9H40g8Fte9A~aGG_NEa3It3vaswF_n9pEQ: block 2: Download started
+2026-10-22T07:33:39.590Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/l_LoEcdIbql9H40g8Fte9A/revisions/aGG_NEa3It3vaswF_n9pEQ?PageSize=20&FromBlockIndex=3: 200 (180ms)
+2026-10-22T07:33:39.613Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (203ms)
+2026-10-22T07:33:39.618Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (208ms)
+2026-10-22T07:33:39.641Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":923557,"milliseconds":2.3631060000006983}
+2026-10-22T07:33:39.641Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~l_LoEcdIbql9H40g8Fte9A~aGG_NEa3It3vaswF_n9pEQ: block 2: Downloaded
+2026-10-22T07:33:39.813Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":4194304,"milliseconds":9.535483999999997}
+2026-10-22T07:33:39.813Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~l_LoEcdIbql9H40g8Fte9A~aGG_NEa3It3vaswF_n9pEQ: block 1: Downloaded
+2026-10-22T07:33:39.813Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~l_LoEcdIbql9H40g8Fte9A~aGG_NEa3It3vaswF_n9pEQ: Flushing completed block 1
+2026-10-22T07:33:39.814Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~l_LoEcdIbql9H40g8Fte9A~aGG_NEa3It3vaswF_n9pEQ: Flushing completed block 2
+2026-10-22T07:33:39.814Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~l_LoEcdIbql9H40g8Fte9A~aGG_NEa3It3vaswF_n9pEQ: Skipping manifest check
+2026-10-22T07:33:39.814Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~l_LoEcdIbql9H40g8Fte9A~aGG_NEa3It3vaswF_n9pEQ: Download succeeded
+2026-10-22T07:33:39.814Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":5100000,"approximateClaimedFileSize":5100000,"downloadedSize":5118336,"claimedFileSize":5118336}
+FILE Darksorrow/mysql.zip (106200 B)
+2026-10-22T07:33:39.814Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~MOrII8AVNQPTzJix9yIVTw
+2026-10-22T07:33:39.815Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~MOrII8AVNQPTzJix9yIVTw~DjtIiLRzinsu08kTj9Aaww: Starting download
+2026-10-22T07:33:40.016Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/MOrII8AVNQPTzJix9yIVTw/revisions/DjtIiLRzinsu08kTj9Aaww?PageSize=20&FromBlockIndex=1: 200 (201ms)
+2026-10-22T07:33:40.016Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~MOrII8AVNQPTzJix9yIVTw~DjtIiLRzinsu08kTj9Aaww: block 1: Download started
+2026-10-22T07:33:40.197Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (181ms)
+2026-10-22T07:33:40.199Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":106200,"milliseconds":0.8963189999994938}
+2026-10-22T07:33:40.199Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~MOrII8AVNQPTzJix9yIVTw~DjtIiLRzinsu08kTj9Aaww: block 1: Downloaded
+2026-10-22T07:33:40.205Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/MOrII8AVNQPTzJix9yIVTw/revisions/DjtIiLRzinsu08kTj9Aaww?PageSize=20&FromBlockIndex=2: 200 (189ms)
+2026-10-22T07:33:40.205Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~MOrII8AVNQPTzJix9yIVTw~DjtIiLRzinsu08kTj9Aaww: Flushing completed block 1
+2026-10-22T07:33:40.206Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~MOrII8AVNQPTzJix9yIVTw~DjtIiLRzinsu08kTj9Aaww: Skipping manifest check
+2026-10-22T07:33:40.206Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~MOrII8AVNQPTzJix9yIVTw~DjtIiLRzinsu08kTj9Aaww: Download succeeded
+2026-10-22T07:33:40.206Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":106287,"claimedFileSize":106287}
+FILE Darksorrow/277 iLvL items.txt (315 B)
+2026-10-22T07:33:40.206Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~blLYO1gAGGIla9qgFo8Phw
+2026-10-22T07:33:40.206Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~blLYO1gAGGIla9qgFo8Phw~pCfgT05fmZIHvN8Bqr5rNQ: Starting download
+2026-10-22T07:33:40.381Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/blLYO1gAGGIla9qgFo8Phw/revisions/pCfgT05fmZIHvN8Bqr5rNQ?PageSize=20&FromBlockIndex=1: 200 (175ms)
+2026-10-22T07:33:40.381Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~blLYO1gAGGIla9qgFo8Phw~pCfgT05fmZIHvN8Bqr5rNQ: block 1: Download started
+2026-10-22T07:33:40.536Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (155ms)
+2026-10-22T07:33:40.537Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":315,"milliseconds":0.5307240000001912}
+2026-10-22T07:33:40.537Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~blLYO1gAGGIla9qgFo8Phw~pCfgT05fmZIHvN8Bqr5rNQ: block 1: Downloaded
+2026-10-22T07:33:40.584Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/blLYO1gAGGIla9qgFo8Phw/revisions/pCfgT05fmZIHvN8Bqr5rNQ?PageSize=20&FromBlockIndex=2: 200 (203ms)
+2026-10-22T07:33:40.584Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~blLYO1gAGGIla9qgFo8Phw~pCfgT05fmZIHvN8Bqr5rNQ: Flushing completed block 1
+2026-10-22T07:33:40.584Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~blLYO1gAGGIla9qgFo8Phw~pCfgT05fmZIHvN8Bqr5rNQ: Skipping manifest check
+2026-10-22T07:33:40.584Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~blLYO1gAGGIla9qgFo8Phw~pCfgT05fmZIHvN8Bqr5rNQ: Download succeeded
+2026-10-22T07:33:40.584Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":395,"claimedFileSize":395}
+FILE Darksorrow/Твин Lovexian.txt (2765 B)
+2026-10-22T07:33:40.584Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~maeIU2Kq5k6W54mGNOHVwg
+2026-10-22T07:33:40.585Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~maeIU2Kq5k6W54mGNOHVwg~AAh2Os7s9aRYKHbwt4CLog: Starting download
+2026-10-22T07:33:40.781Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/maeIU2Kq5k6W54mGNOHVwg/revisions/AAh2Os7s9aRYKHbwt4CLog?PageSize=20&FromBlockIndex=1: 200 (196ms)
+2026-10-22T07:33:40.781Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~maeIU2Kq5k6W54mGNOHVwg~AAh2Os7s9aRYKHbwt4CLog: block 1: Download started
+2026-10-22T07:33:40.934Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (152ms)
+2026-10-22T07:33:40.935Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2765,"milliseconds":0.5627070000009553}
+2026-10-22T07:33:40.935Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~maeIU2Kq5k6W54mGNOHVwg~AAh2Os7s9aRYKHbwt4CLog: block 1: Downloaded
+2026-10-22T07:33:40.976Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/maeIU2Kq5k6W54mGNOHVwg/revisions/AAh2Os7s9aRYKHbwt4CLog?PageSize=20&FromBlockIndex=2: 200 (194ms)
+2026-10-22T07:33:40.976Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~maeIU2Kq5k6W54mGNOHVwg~AAh2Os7s9aRYKHbwt4CLog: Flushing completed block 1
+2026-10-22T07:33:40.976Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~maeIU2Kq5k6W54mGNOHVwg~AAh2Os7s9aRYKHbwt4CLog: Skipping manifest check
+2026-10-22T07:33:40.976Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~maeIU2Kq5k6W54mGNOHVwg~AAh2Os7s9aRYKHbwt4CLog: Download succeeded
+2026-10-22T07:33:40.976Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2846,"claimedFileSize":2846}
+FILE Darksorrow/world3.zip (424959 B)
+2026-10-22T07:33:40.976Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~fHe8Oi1lTe8BTpxhR2Hd6A
+2026-10-22T07:33:40.976Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fHe8Oi1lTe8BTpxhR2Hd6A~QksvHMCeIOPA5gKXhWJDhQ: Starting download
+2026-10-22T07:33:41.166Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/fHe8Oi1lTe8BTpxhR2Hd6A/revisions/QksvHMCeIOPA5gKXhWJDhQ?PageSize=20&FromBlockIndex=1: 200 (190ms)
+2026-10-22T07:33:41.166Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fHe8Oi1lTe8BTpxhR2Hd6A~QksvHMCeIOPA5gKXhWJDhQ: block 1: Download started
+2026-10-22T07:33:41.350Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (184ms)
+2026-10-22T07:33:41.360Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":424959,"milliseconds":1.282028999999966}
+2026-10-22T07:33:41.360Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fHe8Oi1lTe8BTpxhR2Hd6A~QksvHMCeIOPA5gKXhWJDhQ: block 1: Downloaded
+2026-10-22T07:33:41.362Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/fHe8Oi1lTe8BTpxhR2Hd6A/revisions/QksvHMCeIOPA5gKXhWJDhQ?PageSize=20&FromBlockIndex=2: 200 (196ms)
+2026-10-22T07:33:41.362Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fHe8Oi1lTe8BTpxhR2Hd6A~QksvHMCeIOPA5gKXhWJDhQ: Flushing completed block 1
+2026-10-22T07:33:41.362Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~fHe8Oi1lTe8BTpxhR2Hd6A~QksvHMCeIOPA5gKXhWJDhQ: Skipping manifest check
+2026-10-22T07:33:41.362Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fHe8Oi1lTe8BTpxhR2Hd6A~QksvHMCeIOPA5gKXhWJDhQ: Download succeeded
+2026-10-22T07:33:41.362Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":400000,"approximateClaimedFileSize":400000,"downloadedSize":425062,"claimedFileSize":425062}
+FILE Darksorrow/h60749_forum.sql (22134699 B)
+2026-10-22T07:33:41.363Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA
+2026-10-22T07:33:41.363Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: Starting download
+2026-10-22T07:33:41.537Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/8KOxuNtWL_PAIoyplbKnZA/revisions/TEXIh5BzfOxI1DL5d5CHmA?PageSize=20&FromBlockIndex=1: 200 (174ms)
+2026-10-22T07:33:41.541Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: block 1: Download started
+2026-10-22T07:33:41.541Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: block 2: Download started
+2026-10-22T07:33:41.541Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: block 3: Download started
+2026-10-22T07:33:41.541Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: block 4: Download started
+2026-10-22T07:33:41.541Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: block 5: Download started
+2026-10-22T07:33:41.541Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: block 6: Download started
+2026-10-22T07:33:41.715Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/8KOxuNtWL_PAIoyplbKnZA/revisions/TEXIh5BzfOxI1DL5d5CHmA?PageSize=20&FromBlockIndex=7: 200 (174ms)
+2026-10-22T07:33:41.742Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (201ms)
+2026-10-22T07:33:41.752Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (211ms)
+2026-10-22T07:33:41.756Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (215ms)
+2026-10-22T07:33:41.848Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":4194304,"milliseconds":13.01191000000108}
+2026-10-22T07:33:41.848Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: block 2: Downloaded
+2026-10-22T07:33:41.879Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":4194304,"milliseconds":7.8301529999989725}
+2026-10-22T07:33:41.879Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: block 1: Downloaded
+2026-10-22T07:33:41.895Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":4194304,"milliseconds":8.806352999999945}
+2026-10-22T07:33:41.895Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: block 3: Downloaded
+2026-10-22T07:33:41.937Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (396ms)
+2026-10-22T07:33:42.001Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (460ms)
+2026-10-22T07:33:42.011Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (470ms)
+2026-10-22T07:33:42.962Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":1163179,"milliseconds":1.8638299999984156}
+2026-10-22T07:33:42.962Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: block 6: Downloaded
+2026-10-22T07:33:43.348Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":4194304,"milliseconds":8.88676299999861}
+2026-10-22T07:33:43.348Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: block 4: Downloaded
+2026-10-22T07:33:43.379Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":4194304,"milliseconds":3.856493999999657}
+2026-10-22T07:33:43.379Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: block 5: Downloaded
+2026-10-22T07:33:43.379Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: Flushing completed block 1
+2026-10-22T07:33:43.380Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: Flushing completed block 2
+2026-10-22T07:33:43.381Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: Flushing completed block 3
+2026-10-22T07:33:43.382Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: Flushing completed block 4
+2026-10-22T07:33:43.383Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: Flushing completed block 5
+2026-10-22T07:33:43.384Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: Flushing completed block 6
+2026-10-22T07:33:43.384Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: Skipping manifest check
+2026-10-22T07:33:43.384Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~8KOxuNtWL_PAIoyplbKnZA~TEXIh5BzfOxI1DL5d5CHmA: Download succeeded
+2026-10-22T07:33:43.384Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":22100000,"approximateClaimedFileSize":22100000,"downloadedSize":22136550,"claimedFileSize":22136550}
+FILE Darksorrow/world1.zip (2020479 B)
+2026-10-22T07:33:43.384Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~2HnUoRnLlDI6Jqt3BADzTw
+2026-10-22T07:33:43.385Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~2HnUoRnLlDI6Jqt3BADzTw~NiQg6huhwysOulH595LC7w: Starting download
+2026-10-22T07:33:43.560Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/2HnUoRnLlDI6Jqt3BADzTw/revisions/NiQg6huhwysOulH595LC7w?PageSize=20&FromBlockIndex=1: 200 (175ms)
+2026-10-22T07:33:43.560Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~2HnUoRnLlDI6Jqt3BADzTw~NiQg6huhwysOulH595LC7w: block 1: Download started
+2026-10-22T07:33:43.753Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/2HnUoRnLlDI6Jqt3BADzTw/revisions/NiQg6huhwysOulH595LC7w?PageSize=20&FromBlockIndex=2: 200 (193ms)
+2026-10-22T07:33:43.754Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (194ms)
+2026-10-22T07:33:43.792Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2020479,"milliseconds":2.7332530000021507}
+2026-10-22T07:33:43.792Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~2HnUoRnLlDI6Jqt3BADzTw~NiQg6huhwysOulH595LC7w: block 1: Downloaded
+2026-10-22T07:33:43.792Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~2HnUoRnLlDI6Jqt3BADzTw~NiQg6huhwysOulH595LC7w: Flushing completed block 1
+2026-10-22T07:33:43.792Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~2HnUoRnLlDI6Jqt3BADzTw~NiQg6huhwysOulH595LC7w: Skipping manifest check
+2026-10-22T07:33:43.792Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~2HnUoRnLlDI6Jqt3BADzTw~NiQg6huhwysOulH595LC7w: Download succeeded
+2026-10-22T07:33:43.792Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":2000000,"approximateClaimedFileSize":2000000,"downloadedSize":2020678,"claimedFileSize":2020678}
+FILE Darksorrow/Кра'ар, ледяной вой.sql (3113 B)
+2026-10-22T07:33:43.793Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~-SG89ouqG2f2p-368a3ytw
+2026-10-22T07:33:43.793Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~-SG89ouqG2f2p-368a3ytw~IrpIYNcRFEmdXniKwwaOOw: Starting download
+2026-10-22T07:33:44.005Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/-SG89ouqG2f2p-368a3ytw/revisions/IrpIYNcRFEmdXniKwwaOOw?PageSize=20&FromBlockIndex=1: 200 (212ms)
+2026-10-22T07:33:44.005Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~-SG89ouqG2f2p-368a3ytw~IrpIYNcRFEmdXniKwwaOOw: block 1: Download started
+2026-10-22T07:33:44.160Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (155ms)
+2026-10-22T07:33:44.161Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":3113,"milliseconds":0.4814139999980398}
+2026-10-22T07:33:44.161Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~-SG89ouqG2f2p-368a3ytw~IrpIYNcRFEmdXniKwwaOOw: block 1: Downloaded
+2026-10-22T07:33:44.200Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/-SG89ouqG2f2p-368a3ytw/revisions/IrpIYNcRFEmdXniKwwaOOw?PageSize=20&FromBlockIndex=2: 200 (195ms)
+2026-10-22T07:33:44.200Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~-SG89ouqG2f2p-368a3ytw~IrpIYNcRFEmdXniKwwaOOw: Flushing completed block 1
+2026-10-22T07:33:44.200Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~-SG89ouqG2f2p-368a3ytw~IrpIYNcRFEmdXniKwwaOOw: Skipping manifest check
+2026-10-22T07:33:44.201Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~-SG89ouqG2f2p-368a3ytw~IrpIYNcRFEmdXniKwwaOOw: Download succeeded
+2026-10-22T07:33:44.201Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":3194,"claimedFileSize":3194}
+FILE Darksorrow/smart_scripts.sql (1068074 B)
+2026-10-22T07:33:44.201Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~m_XUvKfA0FoLIGAHrsCwjQ
+2026-10-22T07:33:44.201Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~m_XUvKfA0FoLIGAHrsCwjQ~_valRsPZx3qKBqv1FY9mww: Starting download
+2026-10-22T07:33:44.359Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/m_XUvKfA0FoLIGAHrsCwjQ/revisions/_valRsPZx3qKBqv1FY9mww?PageSize=20&FromBlockIndex=1: 200 (158ms)
+2026-10-22T07:33:44.359Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~m_XUvKfA0FoLIGAHrsCwjQ~_valRsPZx3qKBqv1FY9mww: block 1: Download started
+2026-10-22T07:33:44.545Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (186ms)
+2026-10-22T07:33:44.547Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/m_XUvKfA0FoLIGAHrsCwjQ/revisions/_valRsPZx3qKBqv1FY9mww?PageSize=20&FromBlockIndex=2: 200 (188ms)
+2026-10-22T07:33:44.566Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":1068074,"milliseconds":1.9411910000017087}
+2026-10-22T07:33:44.566Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~m_XUvKfA0FoLIGAHrsCwjQ~_valRsPZx3qKBqv1FY9mww: block 1: Downloaded
+2026-10-22T07:33:44.566Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~m_XUvKfA0FoLIGAHrsCwjQ~_valRsPZx3qKBqv1FY9mww: Flushing completed block 1
+2026-10-22T07:33:44.566Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~m_XUvKfA0FoLIGAHrsCwjQ~_valRsPZx3qKBqv1FY9mww: Skipping manifest check
+2026-10-22T07:33:44.566Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~m_XUvKfA0FoLIGAHrsCwjQ~_valRsPZx3qKBqv1FY9mww: Download succeeded
+2026-10-22T07:33:44.566Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":1000000,"approximateClaimedFileSize":1000000,"downloadedSize":1068225,"claimedFileSize":1068225}
+FILE Darksorrow/Альтершоп.txt (426825 B)
+2026-10-22T07:33:44.567Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~mxYciG1zEaZz_LRkzsuADg
+2026-10-22T07:33:44.567Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~mxYciG1zEaZz_LRkzsuADg~dNpGp7KT_0we7hXOpBu6wg: Starting download
+2026-10-22T07:33:44.775Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/mxYciG1zEaZz_LRkzsuADg/revisions/dNpGp7KT_0we7hXOpBu6wg?PageSize=20&FromBlockIndex=1: 200 (208ms)
+2026-10-22T07:33:44.776Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~mxYciG1zEaZz_LRkzsuADg~dNpGp7KT_0we7hXOpBu6wg: block 1: Download started
+2026-10-22T07:33:44.947Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/mxYciG1zEaZz_LRkzsuADg/revisions/dNpGp7KT_0we7hXOpBu6wg?PageSize=20&FromBlockIndex=2: 200 (171ms)
+2026-10-22T07:33:44.966Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (190ms)
+2026-10-22T07:33:44.983Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":426825,"milliseconds":1.3703019999993558}
+2026-10-22T07:33:44.983Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~mxYciG1zEaZz_LRkzsuADg~dNpGp7KT_0we7hXOpBu6wg: block 1: Downloaded
+2026-10-22T07:33:44.983Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~mxYciG1zEaZz_LRkzsuADg~dNpGp7KT_0we7hXOpBu6wg: Flushing completed block 1
+2026-10-22T07:33:44.983Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~mxYciG1zEaZz_LRkzsuADg~dNpGp7KT_0we7hXOpBu6wg: Skipping manifest check
+2026-10-22T07:33:44.983Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~mxYciG1zEaZz_LRkzsuADg~dNpGp7KT_0we7hXOpBu6wg: Download succeeded
+2026-10-22T07:33:44.983Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":400000,"approximateClaimedFileSize":400000,"downloadedSize":426928,"claimedFileSize":426928}
+FILE Darksorrow/ДОП НПС.txt (77 B)
+2026-10-22T07:33:44.983Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~gk2tw5QSg0TL7O4qtxcTzQ
+2026-10-22T07:33:44.984Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~gk2tw5QSg0TL7O4qtxcTzQ~-XscDi9CpiWbdoR76PHCGw: Starting download
+2026-10-22T07:33:45.135Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/gk2tw5QSg0TL7O4qtxcTzQ/revisions/-XscDi9CpiWbdoR76PHCGw?PageSize=20&FromBlockIndex=1: 200 (151ms)
+2026-10-22T07:33:45.135Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~gk2tw5QSg0TL7O4qtxcTzQ~-XscDi9CpiWbdoR76PHCGw: block 1: Download started
+2026-10-22T07:33:45.285Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/gk2tw5QSg0TL7O4qtxcTzQ/revisions/-XscDi9CpiWbdoR76PHCGw?PageSize=20&FromBlockIndex=2: 200 (150ms)
+2026-10-22T07:33:45.286Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (151ms)
+2026-10-22T07:33:45.287Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":77,"milliseconds":0.5779699999984587}
+2026-10-22T07:33:45.287Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~gk2tw5QSg0TL7O4qtxcTzQ~-XscDi9CpiWbdoR76PHCGw: block 1: Downloaded
+2026-10-22T07:33:45.287Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~gk2tw5QSg0TL7O4qtxcTzQ~-XscDi9CpiWbdoR76PHCGw: Flushing completed block 1
+2026-10-22T07:33:45.287Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~gk2tw5QSg0TL7O4qtxcTzQ~-XscDi9CpiWbdoR76PHCGw: Skipping manifest check
+2026-10-22T07:33:45.287Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~gk2tw5QSg0TL7O4qtxcTzQ~-XscDi9CpiWbdoR76PHCGw: Download succeeded
+2026-10-22T07:33:45.287Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":155,"claimedFileSize":155}
+FILE Darksorrow/Зов стихий etc у шаманов.txt (103 B)
+2026-10-22T07:33:45.288Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~6V3A70k49lmZ4z3gY4ZOzQ
+2026-10-22T07:33:45.288Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~6V3A70k49lmZ4z3gY4ZOzQ~sIwg_SgDRrYApy9IMLRBFw: Starting download
+2026-10-22T07:33:45.503Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/6V3A70k49lmZ4z3gY4ZOzQ/revisions/sIwg_SgDRrYApy9IMLRBFw?PageSize=20&FromBlockIndex=1: 200 (215ms)
+2026-10-22T07:33:45.503Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~6V3A70k49lmZ4z3gY4ZOzQ~sIwg_SgDRrYApy9IMLRBFw: block 1: Download started
+2026-10-22T07:33:45.668Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (165ms)
+2026-10-22T07:33:45.669Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":103,"milliseconds":0.6202329999978247}
+2026-10-22T07:33:45.669Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~6V3A70k49lmZ4z3gY4ZOzQ~sIwg_SgDRrYApy9IMLRBFw: block 1: Downloaded
+2026-10-22T07:33:45.670Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/6V3A70k49lmZ4z3gY4ZOzQ/revisions/sIwg_SgDRrYApy9IMLRBFw?PageSize=20&FromBlockIndex=2: 200 (167ms)
+2026-10-22T07:33:45.670Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~6V3A70k49lmZ4z3gY4ZOzQ~sIwg_SgDRrYApy9IMLRBFw: Flushing completed block 1
+2026-10-22T07:33:45.670Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~6V3A70k49lmZ4z3gY4ZOzQ~sIwg_SgDRrYApy9IMLRBFw: Skipping manifest check
+2026-10-22T07:33:45.670Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~6V3A70k49lmZ4z3gY4ZOzQ~sIwg_SgDRrYApy9IMLRBFw: Download succeeded
+2026-10-22T07:33:45.670Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":181,"claimedFileSize":181}
+DONE files=34 errors=0
