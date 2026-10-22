@@ -1,7 +1,7 @@
-2026-10-22T06:57:10.240Z INFO [interface] Getting info for URL access token G194XVGDR8
-2026-10-22T06:57:10.560Z INFO [api] GET https://drive-api.proton.me/drive/urls/G194XVGDR8/info: 200 (319ms)
+2026-10-22T07:03:39.869Z INFO [interface] Getting info for URL access token G194XVGDR8
+2026-10-22T07:03:40.449Z INFO [api] GET https://drive-api.proton.me/drive/urls/G194XVGDR8/info: 200 (578ms)
 INFO {"isCustomPasswordProtected":false,"isLegacy":false,"vendorType":0}
-2026-10-22T06:57:10.560Z INFO [interface] Authenticating URL access token G194XVGDR8
+2026-10-22T07:03:40.449Z INFO [interface] Authenticating URL access token G194XVGDR8
 50 |             throw new Error();
 51 |         }
 52 | 
