@@ -1,0 +1,9 @@
+MANUAL[before-client] status=1
+MANUAL[after-client] status=1
+2026-10-22T07:16:53.779Z INFO [interface] Getting info for URL access token 8PCYG3JM28
+2026-10-22T07:16:54.016Z INFO [api] GET https://drive-api.proton.me/drive/urls/8PCYG3JM28/info: 200 (236ms)
+INFO OK {"isCustomPasswordProtected":false,"isLegacy":false,"vendorType":0}
+MANUAL[after-info] status=1
+2026-10-22T07:16:54.249Z INFO [interface] Authenticating URL access token 8PCYG3JM28
+AUTH ERROR Unable to verify server identity
+MANUAL[after-auth] status=1
