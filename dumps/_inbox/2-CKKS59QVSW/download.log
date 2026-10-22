@@ -1,7 +1,7 @@
-2026-10-22T06:57:02.136Z INFO [interface] Getting info for URL access token CKKS59QVSW
-2026-10-22T06:57:02.585Z INFO [api] GET https://drive-api.proton.me/drive/urls/CKKS59QVSW/info: 200 (447ms)
+2026-10-22T07:03:27.436Z INFO [interface] Getting info for URL access token CKKS59QVSW
+2026-10-22T07:03:28.094Z INFO [api] GET https://drive-api.proton.me/drive/urls/CKKS59QVSW/info: 200 (657ms)
 INFO {"isCustomPasswordProtected":false,"isLegacy":false,"vendorType":0}
-2026-10-22T06:57:02.586Z INFO [interface] Authenticating URL access token CKKS59QVSW
+2026-10-22T07:03:28.094Z INFO [interface] Authenticating URL access token CKKS59QVSW
 50 |             throw new Error();
 51 |         }
 52 | 
