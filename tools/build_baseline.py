@@ -31,9 +31,23 @@ SIG_FIELDS = (
 
 
 def norm(v):
+    # mysqldump-дампы заключают числа в кавычки ('28'), обычные дампы — нет;
+    # без приведения числовых строк к числам отпечаток не совпадёт никогда
+    if isinstance(v, str):
+        s = v.strip()
+        try:
+            return int(s)
+        except ValueError:
+            pass
+        try:
+            f = float(s)
+            return int(f) if f == int(f) else f
+        except ValueError:
+            pass
+        return s.lower()
     if isinstance(v, float) and v == int(v):
         v = int(v)
-    return str(v).strip().lower() if isinstance(v, str) else v
+    return v
 
 
 def row_sig(row):

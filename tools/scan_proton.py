@@ -207,6 +207,12 @@ def main():
                         continue
                     totals['item_rows'] += 1
                     blob = ('%s %s' % (row.get('name', ''), row.get('description', '') or ''))
+                    # алиасы схем (mangos Flags2/unk0 против trinity FlagsExtra/...)
+                    sig_row = dict(row)
+                    for a, b in (('Flags2', 'FlagsExtra'), ('unk0', 'SoundOverrideSubclass'),
+                                 ('duration', 'Duration'), ('WDBVerified', 'VerifiedBuild')):
+                        if a in sig_row and b not in sig_row:
+                            sig_row[b] = sig_row[a]
                     base = baseline.get(entry)
                     ilvl = row.get('ItemLevel')
                     try:
@@ -221,7 +227,7 @@ def main():
                             reason.append('имя != YTDB')
                         if ilvl_i != int(base.get('ilvl') or 0):
                             reason.append('ilvl != YTDB')
-                        if build_baseline.row_sig(row) != base.get('sig'):
+                        if build_baseline.row_sig(sig_row) != base.get('sig'):
                             reason.append('статы != YTDB')
                     if ilvl_i == 300:
                         reason.append('ItemLevel 300')
