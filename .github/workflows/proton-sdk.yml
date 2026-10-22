@@ -16,6 +16,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   grab:
@@ -64,6 +65,9 @@ jobs:
           echo "grab start $(date -u +%H:%M:%S)" >> dumps/_inbox/_debug/steps.txt
           git config user.name "proton-grab-bot"
           git config user.email "proton-grab-bot@users.noreply.github.com"
+          if [ -f tools/proton-only.txt ]; then
+            cp tools/proton-only.txt urls.txt
+          else
           cat > urls.txt <<'EOF'
           https://drive.proton.me/urls/8PCYG3JM28#Y41FGLgoCjVJ
           https://drive.proton.me/urls/CKKS59QVSW#as8qO2Tmb0pI
@@ -72,6 +76,7 @@ jobs:
           https://drive.proton.me/urls/X2K7F5PFA4#jqTjzTCwC4QY
           https://drive.proton.me/urls/G194XVGDR8#Khcglcbfrqn6
           EOF
+          fi
           commit_back() {
             git add -A dumps/_inbox || true
             if git diff --cached --quiet; then echo "no changes"; return 0; fi
@@ -125,6 +130,8 @@ jobs:
 
       - name: Commit debug (always)
         if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "proton-grab-bot"
           git config user.email "proton-grab-bot@users.noreply.github.com"
@@ -132,11 +139,42 @@ jobs:
           { echo "job status: ${{ job.status }}"; date -u; df -h / | tail -2; \
             du -sh proton_dl dumps/_inbox 2>/dev/null; } > dumps/_inbox/_debug/job-sdk.txt 2>&1 || true
           git add -A dumps/_inbox || true
-          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
-          git commit -q -m "data(proton): отладочные логи запуска (SDK)" || exit 0
-          for i in 1 2 3; do
-            git pull -q --rebase origin "${GITHUB_REF_NAME}" || true
-            git push -q origin "HEAD:${GITHUB_REF_NAME}" && exit 0
-            sleep 5
-          done
-          echo "push failed after retries"
+          PUSHLOG=dumps/_inbox/_debug/push.txt
+          : > "$PUSHLOG"
+          if git diff --cached --quiet; then
+            echo "no changes" >> "$PUSHLOG"
+          else
+            git commit -q -m "data(proton): отладочные логи запуска (SDK)" >> "$PUSHLOG" 2>&1 || echo "commit failed" >> "$PUSHLOG"
+            for i in 1 2 3; do
+              git pull --rebase origin "${GITHUB_REF_NAME}" >> "$PUSHLOG" 2>&1 || echo "rebase failed ($i)" >> "$PUSHLOG"
+              if git push origin "HEAD:${GITHUB_REF_NAME}" >> "$PUSHLOG" 2>&1; then
+                echo "push OK ($i)" >> "$PUSHLOG"
+                break
+              fi
+              echo "push failed ($i)" >> "$PUSHLOG"
+              sleep 5
+            done
+          fi
+          # отчёт в issue: лог раннера и артефакты извне недоступны, а API — да
+          { echo "## steps"; cat dumps/_inbox/_debug/steps.txt 2>/dev/null; \
+            echo; echo "## push"; cat "$PUSHLOG"; \
+            echo; echo "## git log"; git log --oneline -5; \
+            echo; echo "## reports"; head -13 dumps/_inbox/*/report.md 2>/dev/null | head -80; \
+          } > /tmp/issue.md 2>&1 || true
+          python3 - <<'PYEOF'
+          import json, os, urllib.request
+          body = open('/tmp/issue.md', encoding='utf-8', errors='replace').read()[:60000]
+          data = json.dumps({'title': 'proton-sdk debug report', 'body': body}).encode()
+          req = urllib.request.Request(
+              'https://api.github.com/repos/%s/issues' % os.environ['GITHUB_REPOSITORY'],
+              data=data, method='POST',
+              headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+                       'Accept': 'application/vnd.github+json',
+                       'Content-Type': 'application/json'})
+          try:
+              resp = urllib.request.urlopen(req)
+              print('issue created:', resp.status)
+          except Exception as e:
+              print('issue failed:', e)
+          PYEOF
+          git log --oneline -3
