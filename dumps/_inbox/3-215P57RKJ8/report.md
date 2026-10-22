@@ -4,8 +4,8 @@
 - text: 2397
 - archives: 18
 - item_files: 2222
-- item_rows: 2362
-- candidates: 2362
+- item_rows: 2442
+- candidates: 2442
 - standard_skipped: 0
 - vendor_rows: 10703
 - creature_rows: 0
@@ -2227,7 +2227,7 @@
 - `рисовки/ещё сборка/Sets/оружия/Throwing Gladiator's-588817.sql` (2214 Б): item_template строк: 1, кандидатов: 1
 - `рисовки/ещё сборка/Sets/оружия/Wand Gladiator's-588818.sql` (2210 Б): item_template строк: 1, кандидатов: 1
 - `рисовки/ещё сборка/Shield_90002/Shield-90002.sql` (2173 Б): item_template строк: 1, кандидатов: 1
-- `рисовки/ещё сборка/arena.rar.x/8arena.sql` (226102 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/ещё сборка/arena.rar.x/8arena.sql` (226102 Б): разбор без списка колонок; item_template строк: 80, кандидатов: 80
 - `рисовки/ещё сборка/bliz_SeT/blizz_set-90600.sql` (2174 Б): item_template строк: 1, кандидатов: 1
 - `рисовки/ещё сборка/bliz_SeT/blizz_set-90601.sql` (2166 Б): item_template строк: 1, кандидатов: 1
 - `рисовки/ещё сборка/bliz_SeT/blizz_set-90602.sql` (2173 Б): item_template строк: 1, кандидатов: 1
