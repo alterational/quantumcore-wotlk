@@ -1,0 +1,60 @@
+name: proton-list
+
+# Разведка публичных папок Proton Drive: только листинг дерева файлов
+# (имена, размеры, MIME) по каждой ссылке. Сами файлы НЕ скачиваются.
+# Нужен, чтобы оценить объём и состав перед полной загрузкой: сеть
+# песочницы до drive.proton.me закрыта, а раннер GitHub Actions работает
+# «мостом» (как fetch-paste). Расшифровка публичных ссылок делается
+# браузерной автоматизацией (pdown + puppeteer) прямо на раннере.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install pdown
+        run: npm install -g pdown@1.0.5
+
+      - name: List shares
+        run: |
+          mkdir -p listings
+          cat > urls.txt <<'EOF'
+          https://drive.proton.me/urls/8PCYG3JM28#Y41FGLgoCjVJ
+          https://drive.proton.me/urls/CKKS59QVSW#as8qO2Tmb0pI
+          https://drive.proton.me/urls/215P57RKJ8#6VJRPgb7t3vR
+          https://drive.proton.me/urls/8D70Y2M5M8#aBCvZ0fiejWB
+          https://drive.proton.me/urls/X2K7F5PFA4#jqTjzTCwC4QY
+          https://drive.proton.me/urls/G194XVGDR8#Khcglcbfrqn6
+          EOF
+          n=0
+          while read -r url; do
+            n=$((n + 1))
+            id=$(echo "$url" | sed -E 's|.*/urls/([A-Za-z0-9]+)#.*|\1|')
+            echo "================ [$n] $id :: $url"
+            # отдельный таймаут на каждую ссылку, падение одной не валит остальные
+            timeout 480 pdown ls "$url" --recursive --json \
+              --puppeteerOptions '{"args":["--no-sandbox","--disable-setuid-sandbox"]}' \
+              > "listings/${n}-${id}.json" 2> "listings/${n}-${id}.log" \
+              && echo "OK  $id" || echo "FAILED($?) $id"
+            wc -c "listings/${n}-${id}.json" "listings/${n}-${id}.log" || true
+            tail -5 "listings/${n}-${id}.log" || true
+          done < urls.txt
+          ls -la listings/
+
+      - name: Upload listings
+        uses: actions/upload-artifact@v4
+        with:
+          name: proton-listings
+          path: listings/
+          if-no-files-found: warn
