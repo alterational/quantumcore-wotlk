@@ -1,27 +1,200 @@
-2026-10-22T07:23:13.671Z INFO [interface] Getting info for URL access token CKKS59QVSW
-2026-10-22T07:23:14.299Z INFO [api] GET https://drive-api.proton.me/drive/urls/CKKS59QVSW/info: 200 (627ms)
+2026-10-22T07:34:05.482Z INFO [interface] Getting info for URL access token CKKS59QVSW
+2026-10-22T07:34:05.903Z INFO [api] GET https://drive-api.proton.me/drive/urls/CKKS59QVSW/info: 200 (420ms)
 INFO {"isCustomPasswordProtected":false,"isLegacy":false,"vendorType":0}
-2026-10-22T07:23:14.299Z INFO [interface] Authenticating URL access token CKKS59QVSW
-2026-10-22T07:23:15.288Z INFO [api] POST https://drive-api.proton.me/drive/urls/CKKS59QVSW/auth: 200 (898ms)
-2026-10-22T07:23:15.409Z INFO [publicLink-interface] Getting root node
-2026-10-22T07:23:15.591Z WARNING [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 400 (180ms)
-2026-10-22T07:23:15.591Z ERROR [nodes-api] Failed to fetch node metadata for volume SgfKCen9iQnXZv58ixOXxg
-Error: Missing x-pm-appversion header
-Stack:
-APICodeError: Missing x-pm-appversion header
-    at apiErrorFactory (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/apiService/errors.js:61:24)
-    at makeRequest (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/apiService/apiService.js:137:23)
-2026-10-22T07:23:15.591Z WARNING [nodes-api] Failed to load 1 nodes
-72 |             }
-73 |         };
-74 |         yield* asyncIteratorRace(iterateNodesPerVolumeGenerator(), API_CONCURRENCY);
-75 |         if (errors.length) {
-76 |             this.logger.warn(`Failed to load ${errors.length} nodes`);
-77 |             throw new ProtonDriveError(c('Error').t`Some items could not be loaded`, {
-                       ^
-ProtonDriveError: Some items could not be loaded
-      at iterateNodes (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/nodes/apiService.js:77:19)
-
-::error file=tools/proton/node_modules/@protontech/drive-sdk/dist/internal/nodes/apiService.js,line=77,col=19,title=ProtonDriveError: Some items could not be loaded::%0A      at iterateNodes (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/nodes/apiService.js:77:19)
-
-Bun v1.4.3 (Linux x64)
+2026-10-22T07:34:05.904Z INFO [interface] Authenticating URL access token CKKS59QVSW
+2026-10-22T07:34:06.180Z INFO [api] POST https://drive-api.proton.me/drive/urls/CKKS59QVSW/auth: 200 (189ms)
+2026-10-22T07:34:06.295Z INFO [publicLink-interface] Getting root node
+2026-10-22T07:34:06.471Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (175ms)
+ROOT folder Баланс Рисовки by Fatality(Lovexian)
+2026-10-22T07:34:06.481Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~SVhoBMiXF4cSgObZHR2Y8g
+2026-10-22T07:34:06.658Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/SVhoBMiXF4cSgObZHR2Y8g/children?: 200 (176ms)
+2026-10-22T07:34:06.855Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (197ms)
+2026-10-22T07:34:06.907Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~FxfzSY1qQNyNhqI-aJBYpg
+2026-10-22T07:34:07.065Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/FxfzSY1qQNyNhqI-aJBYpg/children?: 200 (158ms)
+2026-10-22T07:34:07.246Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (180ms)
+FILE Баланс Рисовки by Fatality(Lovexian)/ID/ID Легендарок Arena-Tournament.txt (243 B)
+2026-10-22T07:34:07.331Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~b6nH4TwbxbKV6Dqes5QUyQ
+2026-10-22T07:34:07.334Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~b6nH4TwbxbKV6Dqes5QUyQ~f2vaU4djZKJC4oyHeMEEDA: Starting download
+2026-10-22T07:34:07.546Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/b6nH4TwbxbKV6Dqes5QUyQ/revisions/f2vaU4djZKJC4oyHeMEEDA?PageSize=20&FromBlockIndex=1: 200 (212ms)
+2026-10-22T07:34:07.547Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~b6nH4TwbxbKV6Dqes5QUyQ~f2vaU4djZKJC4oyHeMEEDA: block 1: Download started
+2026-10-22T07:34:07.728Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/b6nH4TwbxbKV6Dqes5QUyQ/revisions/f2vaU4djZKJC4oyHeMEEDA?PageSize=20&FromBlockIndex=2: 200 (181ms)
+2026-10-22T07:34:07.975Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (428ms)
+2026-10-22T07:34:07.977Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":243,"milliseconds":1.7016160000002856}
+2026-10-22T07:34:07.978Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~b6nH4TwbxbKV6Dqes5QUyQ~f2vaU4djZKJC4oyHeMEEDA: block 1: Downloaded
+2026-10-22T07:34:07.978Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~b6nH4TwbxbKV6Dqes5QUyQ~f2vaU4djZKJC4oyHeMEEDA: Flushing completed block 1
+2026-10-22T07:34:07.978Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~b6nH4TwbxbKV6Dqes5QUyQ~f2vaU4djZKJC4oyHeMEEDA: Skipping manifest check
+2026-10-22T07:34:07.978Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~b6nH4TwbxbKV6Dqes5QUyQ~f2vaU4djZKJC4oyHeMEEDA: Download succeeded
+2026-10-22T07:34:07.978Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":323,"claimedFileSize":323}
+FILE Баланс Рисовки by Fatality(Lovexian)/ID/Рисованные Сеты PvP.txt (4919 B)
+2026-10-22T07:34:07.978Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~fDWk0bt-OxJKQJ00o4M_bw
+2026-10-22T07:34:07.979Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fDWk0bt-OxJKQJ00o4M_bw~HpWH49GZdFbffpPAd0Qt0g: Starting download
+2026-10-22T07:34:08.196Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/fDWk0bt-OxJKQJ00o4M_bw/revisions/HpWH49GZdFbffpPAd0Qt0g?PageSize=20&FromBlockIndex=1: 200 (217ms)
+2026-10-22T07:34:08.196Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fDWk0bt-OxJKQJ00o4M_bw~HpWH49GZdFbffpPAd0Qt0g: block 1: Download started
+2026-10-22T07:34:08.357Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (161ms)
+2026-10-22T07:34:08.358Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":4919,"milliseconds":0.7242999999998574}
+2026-10-22T07:34:08.358Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fDWk0bt-OxJKQJ00o4M_bw~HpWH49GZdFbffpPAd0Qt0g: block 1: Downloaded
+2026-10-22T07:34:08.398Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/fDWk0bt-OxJKQJ00o4M_bw/revisions/HpWH49GZdFbffpPAd0Qt0g?PageSize=20&FromBlockIndex=2: 200 (202ms)
+2026-10-22T07:34:08.398Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fDWk0bt-OxJKQJ00o4M_bw~HpWH49GZdFbffpPAd0Qt0g: Flushing completed block 1
+2026-10-22T07:34:08.398Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~fDWk0bt-OxJKQJ00o4M_bw~HpWH49GZdFbffpPAd0Qt0g: Skipping manifest check
+2026-10-22T07:34:08.398Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fDWk0bt-OxJKQJ00o4M_bw~HpWH49GZdFbffpPAd0Qt0g: Download succeeded
+2026-10-22T07:34:08.398Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":5000,"claimedFileSize":5000}
+FILE Баланс Рисовки by Fatality(Lovexian)/ID/Рисованные Сеты PvE.txt (4919 B)
+2026-10-22T07:34:08.398Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~WTZ10ASrGUQ5to01XaapYQ
+2026-10-22T07:34:08.398Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~WTZ10ASrGUQ5to01XaapYQ~AANFplTYOsUO2TzNWJrN7g: Starting download
+2026-10-22T07:34:08.590Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/WTZ10ASrGUQ5to01XaapYQ/revisions/AANFplTYOsUO2TzNWJrN7g?PageSize=20&FromBlockIndex=1: 200 (192ms)
+2026-10-22T07:34:08.590Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~WTZ10ASrGUQ5to01XaapYQ~AANFplTYOsUO2TzNWJrN7g: block 1: Download started
+2026-10-22T07:34:08.758Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/WTZ10ASrGUQ5to01XaapYQ/revisions/AANFplTYOsUO2TzNWJrN7g?PageSize=20&FromBlockIndex=2: 200 (168ms)
+2026-10-22T07:34:08.759Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (169ms)
+2026-10-22T07:34:08.759Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":4919,"milliseconds":0.3706630000001496}
+2026-10-22T07:34:08.759Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~WTZ10ASrGUQ5to01XaapYQ~AANFplTYOsUO2TzNWJrN7g: block 1: Downloaded
+2026-10-22T07:34:08.759Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~WTZ10ASrGUQ5to01XaapYQ~AANFplTYOsUO2TzNWJrN7g: Flushing completed block 1
+2026-10-22T07:34:08.759Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~WTZ10ASrGUQ5to01XaapYQ~AANFplTYOsUO2TzNWJrN7g: Skipping manifest check
+2026-10-22T07:34:08.759Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~WTZ10ASrGUQ5to01XaapYQ~AANFplTYOsUO2TzNWJrN7g: Download succeeded
+2026-10-22T07:34:08.759Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":5000,"claimedFileSize":5000}
+FILE Баланс Рисовки by Fatality(Lovexian)/ID/Рисованные Пухи.txt (4700 B)
+2026-10-22T07:34:08.759Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~fKoE6DiMMeEA22-8uiUwqA
+2026-10-22T07:34:08.760Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fKoE6DiMMeEA22-8uiUwqA~hUwULRlm97xIDFmrrBvuWA: Starting download
+2026-10-22T07:34:08.949Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/fKoE6DiMMeEA22-8uiUwqA/revisions/hUwULRlm97xIDFmrrBvuWA?PageSize=20&FromBlockIndex=1: 200 (189ms)
+2026-10-22T07:34:08.949Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fKoE6DiMMeEA22-8uiUwqA~hUwULRlm97xIDFmrrBvuWA: block 1: Download started
+2026-10-22T07:34:09.113Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/fKoE6DiMMeEA22-8uiUwqA/revisions/hUwULRlm97xIDFmrrBvuWA?PageSize=20&FromBlockIndex=2: 200 (164ms)
+2026-10-22T07:34:09.133Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (184ms)
+2026-10-22T07:34:09.133Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":4700,"milliseconds":0.43737800000008065}
+2026-10-22T07:34:09.133Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fKoE6DiMMeEA22-8uiUwqA~hUwULRlm97xIDFmrrBvuWA: block 1: Downloaded
+2026-10-22T07:34:09.133Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fKoE6DiMMeEA22-8uiUwqA~hUwULRlm97xIDFmrrBvuWA: Flushing completed block 1
+2026-10-22T07:34:09.133Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~fKoE6DiMMeEA22-8uiUwqA~hUwULRlm97xIDFmrrBvuWA: Skipping manifest check
+2026-10-22T07:34:09.133Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fKoE6DiMMeEA22-8uiUwqA~hUwULRlm97xIDFmrrBvuWA: Download succeeded
+2026-10-22T07:34:09.133Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":4781,"claimedFileSize":4781}
+FILE Баланс Рисовки by Fatality(Lovexian)/ID/Рисованные нонсеты.txt (3285 B)
+2026-10-22T07:34:09.134Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~z4CXc703skPc6NXr6z_b5A
+2026-10-22T07:34:09.134Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~z4CXc703skPc6NXr6z_b5A~JkrqHQwLUUKokymGo8N3Xw: Starting download
+2026-10-22T07:34:09.318Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/z4CXc703skPc6NXr6z_b5A/revisions/JkrqHQwLUUKokymGo8N3Xw?PageSize=20&FromBlockIndex=1: 200 (184ms)
+2026-10-22T07:34:09.319Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~z4CXc703skPc6NXr6z_b5A~JkrqHQwLUUKokymGo8N3Xw: block 1: Download started
+2026-10-22T07:34:09.466Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (146ms)
+2026-10-22T07:34:09.471Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":3285,"milliseconds":0.8180710000001454}
+2026-10-22T07:34:09.471Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~z4CXc703skPc6NXr6z_b5A~JkrqHQwLUUKokymGo8N3Xw: block 1: Downloaded
+2026-10-22T07:34:09.519Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/z4CXc703skPc6NXr6z_b5A/revisions/JkrqHQwLUUKokymGo8N3Xw?PageSize=20&FromBlockIndex=2: 200 (200ms)
+2026-10-22T07:34:09.520Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~z4CXc703skPc6NXr6z_b5A~JkrqHQwLUUKokymGo8N3Xw: Flushing completed block 1
+2026-10-22T07:34:09.520Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~z4CXc703skPc6NXr6z_b5A~JkrqHQwLUUKokymGo8N3Xw: Skipping manifest check
+2026-10-22T07:34:09.520Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~z4CXc703skPc6NXr6z_b5A~JkrqHQwLUUKokymGo8N3Xw: Download succeeded
+2026-10-22T07:34:09.520Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":3366,"claimedFileSize":3366}
+FILE Баланс Рисовки by Fatality(Lovexian)/ID/Рисованный Оффсет.txt (2858 B)
+2026-10-22T07:34:09.520Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Dd7ZfXdMcspfuCNV7JLArg
+2026-10-22T07:34:09.520Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Dd7ZfXdMcspfuCNV7JLArg~YH3U60wiHZZJF2dcpBWWSA: Starting download
+2026-10-22T07:34:09.705Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Dd7ZfXdMcspfuCNV7JLArg/revisions/YH3U60wiHZZJF2dcpBWWSA?PageSize=20&FromBlockIndex=1: 200 (185ms)
+2026-10-22T07:34:09.705Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Dd7ZfXdMcspfuCNV7JLArg~YH3U60wiHZZJF2dcpBWWSA: block 1: Download started
+2026-10-22T07:34:09.861Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Dd7ZfXdMcspfuCNV7JLArg/revisions/YH3U60wiHZZJF2dcpBWWSA?PageSize=20&FromBlockIndex=2: 200 (156ms)
+2026-10-22T07:34:09.866Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (161ms)
+2026-10-22T07:34:09.867Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2858,"milliseconds":0.5931730000002062}
+2026-10-22T07:34:09.867Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Dd7ZfXdMcspfuCNV7JLArg~YH3U60wiHZZJF2dcpBWWSA: block 1: Downloaded
+2026-10-22T07:34:09.867Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Dd7ZfXdMcspfuCNV7JLArg~YH3U60wiHZZJF2dcpBWWSA: Flushing completed block 1
+2026-10-22T07:34:09.867Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Dd7ZfXdMcspfuCNV7JLArg~YH3U60wiHZZJF2dcpBWWSA: Skipping manifest check
+2026-10-22T07:34:09.867Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Dd7ZfXdMcspfuCNV7JLArg~YH3U60wiHZZJF2dcpBWWSA: Download succeeded
+2026-10-22T07:34:09.867Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2939,"claimedFileSize":2939}
+FILE Баланс Рисовки by Fatality(Lovexian)/ID/Рисованные рубашки и сумки.txt (2212 B)
+2026-10-22T07:34:09.867Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~vDcW_YZZS9TG8hxpPNtVIg
+2026-10-22T07:34:09.867Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~vDcW_YZZS9TG8hxpPNtVIg~E7KyCU7Sp17bHbntAM8RDg: Starting download
+2026-10-22T07:34:10.068Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/vDcW_YZZS9TG8hxpPNtVIg/revisions/E7KyCU7Sp17bHbntAM8RDg?PageSize=20&FromBlockIndex=1: 200 (201ms)
+2026-10-22T07:34:10.068Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~vDcW_YZZS9TG8hxpPNtVIg~E7KyCU7Sp17bHbntAM8RDg: block 1: Download started
+2026-10-22T07:34:10.220Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (152ms)
+2026-10-22T07:34:10.221Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2212,"milliseconds":0.7075049999994008}
+2026-10-22T07:34:10.221Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~vDcW_YZZS9TG8hxpPNtVIg~E7KyCU7Sp17bHbntAM8RDg: block 1: Downloaded
+2026-10-22T07:34:10.256Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/vDcW_YZZS9TG8hxpPNtVIg/revisions/E7KyCU7Sp17bHbntAM8RDg?PageSize=20&FromBlockIndex=2: 200 (187ms)
+2026-10-22T07:34:10.256Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~vDcW_YZZS9TG8hxpPNtVIg~E7KyCU7Sp17bHbntAM8RDg: Flushing completed block 1
+2026-10-22T07:34:10.256Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~vDcW_YZZS9TG8hxpPNtVIg~E7KyCU7Sp17bHbntAM8RDg: Skipping manifest check
+2026-10-22T07:34:10.256Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~vDcW_YZZS9TG8hxpPNtVIg~E7KyCU7Sp17bHbntAM8RDg: Download succeeded
+2026-10-22T07:34:10.256Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2293,"claimedFileSize":2293}
+FILE Баланс Рисовки by Fatality(Lovexian)/ID/Инфа.txt (145 B)
+2026-10-22T07:34:10.256Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~tQiK2EJoTxIQ9EuOne8Kpw
+2026-10-22T07:34:10.256Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~tQiK2EJoTxIQ9EuOne8Kpw~9nHLVj3DsJVsAOHk3kOjAw: Starting download
+2026-10-22T07:34:10.415Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/tQiK2EJoTxIQ9EuOne8Kpw/revisions/9nHLVj3DsJVsAOHk3kOjAw?PageSize=20&FromBlockIndex=1: 200 (159ms)
+2026-10-22T07:34:10.415Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~tQiK2EJoTxIQ9EuOne8Kpw~9nHLVj3DsJVsAOHk3kOjAw: block 1: Download started
+2026-10-22T07:34:10.573Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (158ms)
+2026-10-22T07:34:10.574Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":145,"milliseconds":0.5900180000007822}
+2026-10-22T07:34:10.574Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~tQiK2EJoTxIQ9EuOne8Kpw~9nHLVj3DsJVsAOHk3kOjAw: block 1: Downloaded
+2026-10-22T07:34:10.609Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/tQiK2EJoTxIQ9EuOne8Kpw/revisions/9nHLVj3DsJVsAOHk3kOjAw?PageSize=20&FromBlockIndex=2: 200 (194ms)
+2026-10-22T07:34:10.609Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~tQiK2EJoTxIQ9EuOne8Kpw~9nHLVj3DsJVsAOHk3kOjAw: Flushing completed block 1
+2026-10-22T07:34:10.609Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~tQiK2EJoTxIQ9EuOne8Kpw~9nHLVj3DsJVsAOHk3kOjAw: Skipping manifest check
+2026-10-22T07:34:10.609Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~tQiK2EJoTxIQ9EuOne8Kpw~9nHLVj3DsJVsAOHk3kOjAw: Download succeeded
+2026-10-22T07:34:10.609Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":224,"claimedFileSize":224}
+FILE Баланс Рисовки by Fatality(Lovexian)/Трансмогрифицированные легендарки.txt (117138 B)
+2026-10-22T07:34:10.609Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~qmMaEG8LD8END6kaoG6ukQ
+2026-10-22T07:34:10.609Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qmMaEG8LD8END6kaoG6ukQ~QpSi86GQjFquVStFCjNplw: Starting download
+2026-10-22T07:34:10.819Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/qmMaEG8LD8END6kaoG6ukQ/revisions/QpSi86GQjFquVStFCjNplw?PageSize=20&FromBlockIndex=1: 200 (210ms)
+2026-10-22T07:34:10.819Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qmMaEG8LD8END6kaoG6ukQ~QpSi86GQjFquVStFCjNplw: block 1: Download started
+2026-10-22T07:34:11.014Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/qmMaEG8LD8END6kaoG6ukQ/revisions/QpSi86GQjFquVStFCjNplw?PageSize=20&FromBlockIndex=2: 200 (195ms)
+2026-10-22T07:34:11.032Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (213ms)
+2026-10-22T07:34:11.310Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":117138,"milliseconds":0.9714420000000246}
+2026-10-22T07:34:11.310Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qmMaEG8LD8END6kaoG6ukQ~QpSi86GQjFquVStFCjNplw: block 1: Downloaded
+2026-10-22T07:34:11.310Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qmMaEG8LD8END6kaoG6ukQ~QpSi86GQjFquVStFCjNplw: Flushing completed block 1
+2026-10-22T07:34:11.310Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~qmMaEG8LD8END6kaoG6ukQ~QpSi86GQjFquVStFCjNplw: Skipping manifest check
+2026-10-22T07:34:11.310Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qmMaEG8LD8END6kaoG6ukQ~QpSi86GQjFquVStFCjNplw: Download succeeded
+2026-10-22T07:34:11.310Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":117225,"claimedFileSize":117225}
+FILE Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar (34059 B)
+2026-10-22T07:34:11.311Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~IWsexmjfq6mB1Te2CDAM_g
+2026-10-22T07:34:11.311Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~IWsexmjfq6mB1Te2CDAM_g~gYU6yeTRm82ptfLlVkLbOw: Starting download
+2026-10-22T07:34:11.496Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/IWsexmjfq6mB1Te2CDAM_g/revisions/gYU6yeTRm82ptfLlVkLbOw?PageSize=20&FromBlockIndex=1: 200 (185ms)
+2026-10-22T07:34:11.496Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~IWsexmjfq6mB1Te2CDAM_g~gYU6yeTRm82ptfLlVkLbOw: block 1: Download started
+2026-10-22T07:34:11.661Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (165ms)
+2026-10-22T07:34:11.677Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":34059,"milliseconds":0.6648759999998219}
+2026-10-22T07:34:11.677Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~IWsexmjfq6mB1Te2CDAM_g~gYU6yeTRm82ptfLlVkLbOw: block 1: Downloaded
+2026-10-22T07:34:11.681Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/IWsexmjfq6mB1Te2CDAM_g/revisions/gYU6yeTRm82ptfLlVkLbOw?PageSize=20&FromBlockIndex=2: 200 (184ms)
+2026-10-22T07:34:11.681Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~IWsexmjfq6mB1Te2CDAM_g~gYU6yeTRm82ptfLlVkLbOw: Flushing completed block 1
+2026-10-22T07:34:11.681Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~IWsexmjfq6mB1Te2CDAM_g~gYU6yeTRm82ptfLlVkLbOw: Skipping manifest check
+2026-10-22T07:34:11.681Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~IWsexmjfq6mB1Te2CDAM_g~gYU6yeTRm82ptfLlVkLbOw: Download succeeded
+2026-10-22T07:34:11.681Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":34143,"claimedFileSize":34143}
+FILE Баланс Рисовки by Fatality(Lovexian)/NPC Legendaries.txt (2940 B)
+2026-10-22T07:34:11.681Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~scIqPNI_y9qd1DPAclJn-w
+2026-10-22T07:34:11.681Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~scIqPNI_y9qd1DPAclJn-w~l7o29CNVSnktvttM91pQzw: Starting download
+2026-10-22T07:34:11.881Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/scIqPNI_y9qd1DPAclJn-w/revisions/l7o29CNVSnktvttM91pQzw?PageSize=20&FromBlockIndex=1: 200 (200ms)
+2026-10-22T07:34:11.881Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~scIqPNI_y9qd1DPAclJn-w~l7o29CNVSnktvttM91pQzw: block 1: Download started
+2026-10-22T07:34:12.029Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (148ms)
+2026-10-22T07:34:12.030Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2940,"milliseconds":0.5839190000006056}
+2026-10-22T07:34:12.030Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~scIqPNI_y9qd1DPAclJn-w~l7o29CNVSnktvttM91pQzw: block 1: Downloaded
+2026-10-22T07:34:12.066Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/scIqPNI_y9qd1DPAclJn-w/revisions/l7o29CNVSnktvttM91pQzw?PageSize=20&FromBlockIndex=2: 200 (184ms)
+2026-10-22T07:34:12.066Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~scIqPNI_y9qd1DPAclJn-w~l7o29CNVSnktvttM91pQzw: Flushing completed block 1
+2026-10-22T07:34:12.066Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~scIqPNI_y9qd1DPAclJn-w~l7o29CNVSnktvttM91pQzw: Skipping manifest check
+2026-10-22T07:34:12.066Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~scIqPNI_y9qd1DPAclJn-w~l7o29CNVSnktvttM91pQzw: Download succeeded
+2026-10-22T07:34:12.066Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":3021,"claimedFileSize":3021}
+2026-10-22T07:34:12.066Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~3lprh6Uz91cqRtZm1vIElQ
+2026-10-22T07:34:12.237Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/3lprh6Uz91cqRtZm1vIElQ/children?: 200 (171ms)
+2026-10-22T07:34:12.429Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (192ms)
+FILE Баланс Рисовки by Fatality(Lovexian)/Скрипты баланс-рисовок/Скрипт NPC.txt (20666 B)
+2026-10-22T07:34:12.439Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~3mb0qX-GJekH04nTvdqMEQ
+2026-10-22T07:34:12.441Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~3mb0qX-GJekH04nTvdqMEQ~R_ybEPYa-wrQ8VymFFdVWg: Starting download
+2026-10-22T07:34:12.636Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/3mb0qX-GJekH04nTvdqMEQ/revisions/R_ybEPYa-wrQ8VymFFdVWg?PageSize=20&FromBlockIndex=1: 200 (195ms)
+2026-10-22T07:34:12.637Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~3mb0qX-GJekH04nTvdqMEQ~R_ybEPYa-wrQ8VymFFdVWg: block 1: Download started
+2026-10-22T07:34:12.795Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (158ms)
+2026-10-22T07:34:12.801Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":20666,"milliseconds":0.6756070000001273}
+2026-10-22T07:34:12.801Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~3mb0qX-GJekH04nTvdqMEQ~R_ybEPYa-wrQ8VymFFdVWg: block 1: Downloaded
+2026-10-22T07:34:12.812Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/3mb0qX-GJekH04nTvdqMEQ/revisions/R_ybEPYa-wrQ8VymFFdVWg?PageSize=20&FromBlockIndex=2: 200 (175ms)
+2026-10-22T07:34:12.812Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~3mb0qX-GJekH04nTvdqMEQ~R_ybEPYa-wrQ8VymFFdVWg: Flushing completed block 1
+2026-10-22T07:34:12.812Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~3mb0qX-GJekH04nTvdqMEQ~R_ybEPYa-wrQ8VymFFdVWg: Skipping manifest check
+2026-10-22T07:34:12.812Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~3mb0qX-GJekH04nTvdqMEQ~R_ybEPYa-wrQ8VymFFdVWg: Download succeeded
+2026-10-22T07:34:12.812Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":20750,"claimedFileSize":20750}
+FILE Баланс Рисовки by Fatality(Lovexian)/Скрипты баланс-рисовок/Скрипт.txt (867757 B)
+2026-10-22T07:34:12.812Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~96B6QEljGp026Yxa-6mzlw
+2026-10-22T07:34:12.813Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~96B6QEljGp026Yxa-6mzlw~zyaqlBZu7kTGGNRY1l5Rog: Starting download
+2026-10-22T07:34:12.984Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/96B6QEljGp026Yxa-6mzlw/revisions/zyaqlBZu7kTGGNRY1l5Rog?PageSize=20&FromBlockIndex=1: 200 (171ms)
+2026-10-22T07:34:12.984Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~96B6QEljGp026Yxa-6mzlw~zyaqlBZu7kTGGNRY1l5Rog: block 1: Download started
+2026-10-22T07:34:13.157Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/96B6QEljGp026Yxa-6mzlw/revisions/zyaqlBZu7kTGGNRY1l5Rog?PageSize=20&FromBlockIndex=2: 200 (173ms)
+2026-10-22T07:34:13.163Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (179ms)
+2026-10-22T07:34:13.782Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":867757,"milliseconds":2.213380999999572}
+2026-10-22T07:34:13.782Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~96B6QEljGp026Yxa-6mzlw~zyaqlBZu7kTGGNRY1l5Rog: block 1: Downloaded
+2026-10-22T07:34:13.782Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~96B6QEljGp026Yxa-6mzlw~zyaqlBZu7kTGGNRY1l5Rog: Flushing completed block 1
+2026-10-22T07:34:13.782Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~96B6QEljGp026Yxa-6mzlw~zyaqlBZu7kTGGNRY1l5Rog: Skipping manifest check
+2026-10-22T07:34:13.782Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~96B6QEljGp026Yxa-6mzlw~zyaqlBZu7kTGGNRY1l5Rog: Download succeeded
+2026-10-22T07:34:13.782Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":800000,"approximateClaimedFileSize":800000,"downloadedSize":867892,"claimedFileSize":867892}
+FILE Баланс Рисовки by Fatality(Lovexian)/Скрипты баланс-рисовок/Сумка арены.txt (2764 B)
+2026-10-22T07:34:13.782Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~yK_vLmGvDLh6cNDqaztLUw
+2026-10-22T07:34:13.783Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yK_vLmGvDLh6cNDqaztLUw~PBXP9DbIOGqSeaJ8EQPFyA: Starting download
+2026-10-22T07:34:13.989Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/yK_vLmGvDLh6cNDqaztLUw/revisions/PBXP9DbIOGqSeaJ8EQPFyA?PageSize=20&FromBlockIndex=1: 200 (206ms)
+2026-10-22T07:34:13.989Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yK_vLmGvDLh6cNDqaztLUw~PBXP9DbIOGqSeaJ8EQPFyA: block 1: Download started
+2026-10-22T07:34:14.137Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (148ms)
+2026-10-22T07:34:14.137Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2764,"milliseconds":0.5907289999995555}
+2026-10-22T07:34:14.138Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yK_vLmGvDLh6cNDqaztLUw~PBXP9DbIOGqSeaJ8EQPFyA: block 1: Downloaded
+2026-10-22T07:34:14.155Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/yK_vLmGvDLh6cNDqaztLUw/revisions/PBXP9DbIOGqSeaJ8EQPFyA?PageSize=20&FromBlockIndex=2: 200 (166ms)
+2026-10-22T07:34:14.155Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yK_vLmGvDLh6cNDqaztLUw~PBXP9DbIOGqSeaJ8EQPFyA: Flushing completed block 1
+2026-10-22T07:34:14.155Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~yK_vLmGvDLh6cNDqaztLUw~PBXP9DbIOGqSeaJ8EQPFyA: Skipping manifest check
+2026-10-22T07:34:14.155Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yK_vLmGvDLh6cNDqaztLUw~PBXP9DbIOGqSeaJ8EQPFyA: Download succeeded
+2026-10-22T07:34:14.155Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2845,"claimedFileSize":2845}
+DONE files=14 errors=0
