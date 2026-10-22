@@ -18,6 +18,7 @@
 Использование:
   scan_proton.py <папка_шары> <выходная_папка> <baseline.json> <метка_шары>
 """
+import hashlib
 import json
 import os
 import re
@@ -49,6 +50,76 @@ def is_text(path, ext):
         return False
 
 
+def safe_name(rel):
+    """Безопасное и ГАРАНТИРОВАННО уникальное имя файла для результатов:
+    раньше разные кириллические пути схлопывались в одно имя и перезаписывали
+    друг друга — теперь к очищенному пути добавляется md5-суффикс."""
+    base = re.sub(r'[^A-Za-z0-9_.-]+', '_', rel)[:70].strip('_.') or 'file'
+    return '%s_%s' % (base, hashlib.md5(rel.encode('utf-8')).hexdigest()[:8])
+
+
+def create_table_cols(text, table):
+    m = re.search(r'CREATE TABLE(?:\s+IF NOT EXISTS)?\s+`%s`\s*\((.*?)\)\s*ENGINE' % table,
+                  text, re.S | re.I)
+    if not m:
+        return []
+    return build_data.table_columns(m.group(1))
+
+
+def statements_for(text, table):
+    """Сегменты выражений INSERT/REPLACE INTO <table> (до следующего выражения)."""
+    starts = [m.start() for m in re.finditer(
+        r'(?:INSERT|REPLACE)\s+INTO\s+`?%s`?' % table, text, re.I)]
+    out = []
+    for i, s in enumerate(starts):
+        e = starts[i + 1] if i + 1 < len(starts) else len(text)
+        out.append(text[s:e])
+    return out
+
+
+def rows_from_segment(seg, fallback_cols_list):
+    """Кортежи одного выражения: колонки из самого выражения, иначе — запасные."""
+    vpos = seg.upper().find('VALUES')
+    if vpos < 0:
+        return [], False
+    cols = build_data.chunk_columns(seg, vpos)
+    used_fallback = False
+    if not cols:
+        for cand in fallback_cols_list:
+            if cand:
+                cols = cand
+                used_fallback = True
+                break
+    if not cols:
+        return [], False
+    rows = []
+    for vals in build_data.chunk_rows(seg, vpos):
+        if len(vals) != len(cols):
+            continue
+        row = {}
+        for k, v in zip(cols, vals):
+            if k not in row:
+                row[k] = v
+        rows.append(row)
+    return rows, used_fallback
+
+
+def parse_items_fallback(path, text):
+    """Разбор item_template без списка колонок (mysqldump VALUES (...)):
+    порядок колонок — из CREATE TABLE того же файла или канонический."""
+    canon = build_data.canonical_columns()
+    fallbacks = [create_table_cols(text, 'item_template'), canon, canon[:-1] if canon else []]
+    rows = []
+    for seg in statements_for(text, 'item_template'):
+        seg_rows, _ = rows_from_segment(seg, fallbacks)
+        for row in seg_rows:
+            for k in ('name', 'description'):
+                if isinstance(row.get(k), str):
+                    row[k] = build_data.clean_text(row[k])
+            rows.append(row)
+    return rows
+
+
 def parse_table_rows(path, table):
     """Строки таблицы table из SQL-файла штатным построчным парсером."""
     rows_out = []
@@ -56,26 +127,10 @@ def parse_table_rows(path, table):
         text = open(path, encoding='utf-8', errors='replace').read()
     except OSError:
         return rows_out
-    stmt_re = re.compile(
-        r'(?:INSERT|REPLACE)\s+INTO\s+`?' + table + r'`?(.*?);(?=\s*(?:--|\n\s*(?:INSERT|REPLACE|/\*|$)))',
-        re.I | re.S)
-    simple_re = re.compile(
-        r'(?:INSERT|REPLACE)\s+INTO\s+`?' + table + r'`?\s*(\([^)]*\))?\s*VALUES\s*(.*?);',
-        re.I | re.S)
-    for m in simple_re.finditer(text):
-        chunk = 'X INTO t %s VALUES %s' % (m.group(1) or '', m.group(2))
-        vpos = chunk.find('VALUES')
-        cols = build_data.chunk_columns(chunk, vpos)
-        if not cols:
-            continue
-        for vals in build_data.chunk_rows(chunk, vpos):
-            if len(vals) != len(cols):
-                continue
-            row = {}
-            for k, v in zip(cols, vals):
-                if k not in row:
-                    row[k] = v
-            rows_out.append(row)
+    fallbacks = [create_table_cols(text, table)]
+    for seg in statements_for(text, table):
+        seg_rows, _ = rows_from_segment(seg, fallbacks)
+        rows_out.extend(seg_rows)
     return rows_out
 
 
@@ -132,9 +187,14 @@ def main():
 
             if ITEM_STMT_RE.search(text):
                 totals['item_files'] += 1
-                safe = re.sub(r'[^A-Za-z0-9_.-]+', '_', rel)
+                safe = safe_name(rel)
                 try:
                     rows = build_data.parse_item_sql(path)
+                    if not rows:
+                        # дампы без списка колонок (mysqldump VALUES (...))
+                        rows = parse_items_fallback(path, text)
+                        if rows:
+                            notes.append('разбор без списка колонок')
                 except Exception as exc:  # парсер не должен ронять скан
                     totals['parse_errors'] += 1
                     rows = []
@@ -184,7 +244,7 @@ def main():
                 rows = parse_table_rows(path, 'npc_vendor')
                 totals['vendor_rows'] += len(rows)
                 if rows:
-                    safe = re.sub(r'[^A-Za-z0-9_.-]+', '_', rel)
+                    safe = safe_name(rel)
                     with open(os.path.join(out_dir, 'vendor', safe + '.jsonl'),
                               'w', encoding='utf-8') as fh:
                         for r in rows:
@@ -197,7 +257,7 @@ def main():
                         if KEYWORD_RE.search(json.dumps(r, ensure_ascii=False))]
                 totals['creature_rows'] += len(rows)
                 if rows:
-                    safe = re.sub(r'[^A-Za-z0-9_.-]+', '_', rel)
+                    safe = safe_name(rel)
                     with open(os.path.join(out_dir, 'creatures', safe + '.jsonl'),
                               'w', encoding='utf-8') as fh:
                         for r in rows:
