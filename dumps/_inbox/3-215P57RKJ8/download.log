@@ -1,0 +1,22 @@
+2026-10-22T06:57:04.091Z INFO [interface] Getting info for URL access token 215P57RKJ8
+2026-10-22T06:57:04.522Z INFO [api] GET https://drive-api.proton.me/drive/urls/215P57RKJ8/info: 200 (430ms)
+INFO {"isCustomPasswordProtected":false,"isLegacy":false,"vendorType":0}
+2026-10-22T06:57:04.522Z INFO [interface] Authenticating URL access token 215P57RKJ8
+50 |             throw new Error();
+51 |         }
+52 | 
+53 |         return modulusData;
+54 |     } catch {
+55 |         throw new Error("Unable to verify server identity");
+                       ^
+error: Unable to verify server identity
+      at <anonymous> (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/crypto/src/srp/utils/modulus.ts:55:19)
+      at async <anonymous> (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/crypto/src/srp/utils/modulus.ts:64:31)
+      at async <anonymous> (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/crypto/src/srp/srp.ts:196:32)
+      at async auth (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/sharingPublic/session/session.js:31:92)
+      at async auth (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/sharingPublic/session/manager.js:64:59)
+      at async <anonymous> (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/protonDriveClient.js:93:148)
+
+::error file=tools/proton/node_modules/@protontech/crypto/src/srp/utils/modulus.ts,line=55,col=19,title=error: Unable to verify server identity::%0A      at <anonymous> (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/crypto/src/srp/utils/modulus.ts:55:19)%0A      at async <anonymous> (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/crypto/src/srp/utils/modulus.ts:64:31)%0A      at async <anonymous> (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/crypto/src/srp/srp.ts:196:32)%0A      at async auth (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/sharingPublic/session/session.js:31:92)%0A      at async auth (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/sharingPublic/session/manager.js:64:59)%0A      at async <anonymous> (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/protonDriveClient.js:93:148)
+
+Bun v1.4.3 (Linux x64)
