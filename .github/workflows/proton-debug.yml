@@ -26,6 +26,9 @@ jobs:
           bun tools/proton/debug_modulus.ts 8PCYG3JM28 \
             > dumps/_inbox/_debug/modulus.txt 2>&1 || true
           cat dumps/_inbox/_debug/modulus.txt
+          bun tools/proton/debug_auth.ts "https://drive.proton.me/urls/8PCYG3JM28#Y41FGLgoCjVJ" \
+            > dumps/_inbox/_debug/auth.txt 2>&1 || true
+          cat dumps/_inbox/_debug/auth.txt
       - name: Commit debug
         run: |
           git config user.name "proton-grab-bot"
