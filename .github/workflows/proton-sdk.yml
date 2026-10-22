@@ -27,6 +27,7 @@ jobs:
       - name: Setup tools
         run: |
           mkdir -p dumps/_inbox/_debug
+          echo "setup-tools $(date -u +%H:%M:%S)" >> dumps/_inbox/_debug/steps.txt
           set -x
           sudo apt-get update -qq 2>&1 | tail -3 || true
           sudo apt-get install -y -qq p7zip-full bsdtar file 2>&1 | tail -3 || true
@@ -43,11 +44,14 @@ jobs:
       - name: Install SDK deps
         working-directory: tools/proton
         run: |
+          echo "sdk-deps start $(date -u +%H:%M:%S)" >> "$GITHUB_WORKSPACE/dumps/_inbox/_debug/steps.txt"
           npm install 2>&1 | tail -3
+          echo "sdk-deps done $(date -u +%H:%M:%S)" >> "$GITHUB_WORKSPACE/dumps/_inbox/_debug/steps.txt"
           ls node_modules/@protontech
 
       - name: Build YTDB baseline
         run: |
+          echo "baseline start $(date -u +%H:%M:%S)" >> dumps/_inbox/_debug/steps.txt
           git clone -q --filter=blob:none --sparse https://github.com/NeatElves/wotlk-ytdbdb.git /tmp/ytdb
           cd /tmp/ytdb && git sparse-checkout set Full_DB
           zcat Full_DB/*.sql.gz > /tmp/ytdb_full.sql
@@ -57,6 +61,7 @@ jobs:
 
       - name: Grab and scan shares
         run: |
+          echo "grab start $(date -u +%H:%M:%S)" >> dumps/_inbox/_debug/steps.txt
           git config user.name "proton-grab-bot"
           git config user.email "proton-grab-bot@users.noreply.github.com"
           cat > urls.txt <<'EOF'
