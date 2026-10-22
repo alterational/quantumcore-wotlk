@@ -1,3 +1,27 @@
-Some downloads failed:
-- Timed out after waiting 20000ms
+2026-10-22T07:23:20.286Z INFO [interface] Getting info for URL access token 8D70Y2M5M8
+2026-10-22T07:23:21.493Z INFO [api] GET https://drive-api.proton.me/drive/urls/8D70Y2M5M8/info: 200 (1205ms)
+INFO {"isCustomPasswordProtected":false,"isLegacy":false,"vendorType":0}
+2026-10-22T07:23:21.493Z INFO [interface] Authenticating URL access token 8D70Y2M5M8
+2026-10-22T07:23:22.038Z INFO [api] POST https://drive-api.proton.me/drive/urls/8D70Y2M5M8/auth: 200 (456ms)
+2026-10-22T07:23:22.159Z INFO [publicLink-interface] Getting root node
+2026-10-22T07:23:22.336Z WARNING [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 400 (175ms)
+2026-10-22T07:23:22.336Z ERROR [nodes-api] Failed to fetch node metadata for volume SgfKCen9iQnXZv58ixOXxg
+Error: Missing x-pm-appversion header
+Stack:
+APICodeError: Missing x-pm-appversion header
+    at apiErrorFactory (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/apiService/errors.js:61:24)
+    at makeRequest (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/apiService/apiService.js:137:23)
+2026-10-22T07:23:22.336Z WARNING [nodes-api] Failed to load 1 nodes
+72 |             }
+73 |         };
+74 |         yield* asyncIteratorRace(iterateNodesPerVolumeGenerator(), API_CONCURRENCY);
+75 |         if (errors.length) {
+76 |             this.logger.warn(`Failed to load ${errors.length} nodes`);
+77 |             throw new ProtonDriveError(c('Error').t`Some items could not be loaded`, {
+                       ^
+ProtonDriveError: Some items could not be loaded
+      at iterateNodes (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/nodes/apiService.js:77:19)
 
+::error file=tools/proton/node_modules/@protontech/drive-sdk/dist/internal/nodes/apiService.js,line=77,col=19,title=ProtonDriveError: Some items could not be loaded::%0A      at iterateNodes (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/nodes/apiService.js:77:19)
+
+Bun v1.4.3 (Linux x64)
