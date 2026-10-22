@@ -1,0 +1,12 @@
+{
+  "name": "proton-dl",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@protontech/drive-sdk": "0.23.0",
+    "@protontech/crypto": "2.2.0"
+  },
+  "overrides": {
+    "openpgp": "npm:@protontech/openpgp@6.2.2"
+  }
+}
