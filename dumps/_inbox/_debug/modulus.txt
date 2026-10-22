@@ -1,0 +1,11 @@
+HTTP 200 date: Thu, 22 Oct 2026 07:13:04 GMT x-pm-date: 22 Oct 2026 07:13:04 GMT
+KEYS Modulus,ServerEphemeral,UrlPasswordSalt,SRPSession,Version,Flags,IsDoc,VendorType,DirectAccess,Code
+Version: 4 Flags: 2
+MODULUS len 642
+MODULUS head: "-----BEGIN PGP SIGNED MESSAGE-----\nHash: SHA256\n\nC3r7OKJvjG3hdfS6FKLc6tzbKZ4YNNVqBS/dK9Ljy7RxWsodelsH8fkVWZ+vKe4bpzY9eld"
+serverTime updated: true
+importPublicKey OK
+exportPublicKey OK len 555
+VERIFY status: 1
+VERIFY data head: "C3r7OKJvjG3hdfS6FKLc6tzbKZ4YNNVqBS/dK9Ljy7RxWsodelsH8fkVWZ+v"
+VERIFY errors: null
