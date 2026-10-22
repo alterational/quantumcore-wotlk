@@ -1,7 +1,7 @@
-2026-10-22T06:56:59.944Z INFO [interface] Getting info for URL access token 8PCYG3JM28
-2026-10-22T06:57:00.500Z INFO [api] GET https://drive-api.proton.me/drive/urls/8PCYG3JM28/info: 200 (554ms)
+2026-10-22T07:03:24.796Z INFO [interface] Getting info for URL access token 8PCYG3JM28
+2026-10-22T07:03:25.368Z INFO [api] GET https://drive-api.proton.me/drive/urls/8PCYG3JM28/info: 200 (571ms)
 INFO {"isCustomPasswordProtected":false,"isLegacy":false,"vendorType":0}
-2026-10-22T06:57:00.501Z INFO [interface] Authenticating URL access token 8PCYG3JM28
+2026-10-22T07:03:25.368Z INFO [interface] Authenticating URL access token 8PCYG3JM28
 50 |             throw new Error();
 51 |         }
 52 | 
