@@ -1,27 +1,1161 @@
-2026-10-22T07:23:23.897Z INFO [interface] Getting info for URL access token X2K7F5PFA4
-2026-10-22T07:23:24.523Z INFO [api] GET https://drive-api.proton.me/drive/urls/X2K7F5PFA4/info: 200 (626ms)
+2026-10-22T07:52:27.709Z INFO [interface] Getting info for URL access token X2K7F5PFA4
+2026-10-22T07:52:28.266Z INFO [api] GET https://drive-api.proton.me/drive/urls/X2K7F5PFA4/info: 200 (556ms)
 INFO {"isCustomPasswordProtected":false,"isLegacy":false,"vendorType":0}
-2026-10-22T07:23:24.524Z INFO [interface] Authenticating URL access token X2K7F5PFA4
-2026-10-22T07:23:25.560Z INFO [api] POST https://drive-api.proton.me/drive/urls/X2K7F5PFA4/auth: 200 (946ms)
-2026-10-22T07:23:25.683Z INFO [publicLink-interface] Getting root node
-2026-10-22T07:23:25.875Z WARNING [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 400 (191ms)
-2026-10-22T07:23:25.875Z ERROR [nodes-api] Failed to fetch node metadata for volume SgfKCen9iQnXZv58ixOXxg
-Error: Missing x-pm-appversion header
-Stack:
-APICodeError: Missing x-pm-appversion header
-    at apiErrorFactory (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/apiService/errors.js:61:24)
-    at makeRequest (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/apiService/apiService.js:137:23)
-2026-10-22T07:23:25.875Z WARNING [nodes-api] Failed to load 1 nodes
-72 |             }
-73 |         };
-74 |         yield* asyncIteratorRace(iterateNodesPerVolumeGenerator(), API_CONCURRENCY);
-75 |         if (errors.length) {
-76 |             this.logger.warn(`Failed to load ${errors.length} nodes`);
-77 |             throw new ProtonDriveError(c('Error').t`Some items could not be loaded`, {
-                       ^
-ProtonDriveError: Some items could not be loaded
-      at iterateNodes (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/nodes/apiService.js:77:19)
-
-::error file=tools/proton/node_modules/@protontech/drive-sdk/dist/internal/nodes/apiService.js,line=77,col=19,title=ProtonDriveError: Some items could not be loaded::%0A      at iterateNodes (/home/runner/work/quantumcore-wotlk/quantumcore-wotlk/tools/proton/node_modules/@protontech/drive-sdk/dist/internal/nodes/apiService.js:77:19)
-
-Bun v1.4.3 (Linux x64)
+2026-10-22T07:52:28.266Z INFO [interface] Authenticating URL access token X2K7F5PFA4
+2026-10-22T07:52:28.612Z INFO [api] POST https://drive-api.proton.me/drive/urls/X2K7F5PFA4/auth: 200 (257ms)
+2026-10-22T07:52:28.727Z INFO [publicLink-interface] Getting root node
+2026-10-22T07:52:28.902Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (173ms)
+ROOT folder ris
+2026-10-22T07:52:28.913Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~cZ63xaKgLLJVfC84XKVZaw
+2026-10-22T07:52:29.090Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/cZ63xaKgLLJVfC84XKVZaw/children?: 200 (176ms)
+2026-10-22T07:52:29.320Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (229ms)
+2026-10-22T07:52:29.449Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~kPqUS0kZdkshD4RQQjSNjQ
+2026-10-22T07:52:29.651Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/kPqUS0kZdkshD4RQQjSNjQ/children?: 200 (202ms)
+2026-10-22T07:52:29.869Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (217ms)
+FILE ris/Стрелы/Стрелы рисованые(Тьма)-2512212.sql (2171 B)
+2026-10-22T07:52:29.882Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~hyeONkxGSnckalbxb8OMGw
+2026-10-22T07:52:29.885Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hyeONkxGSnckalbxb8OMGw~z37MMlueHlUxKmeti6VT6w: Starting download
+2026-10-22T07:52:30.047Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/hyeONkxGSnckalbxb8OMGw/revisions/z37MMlueHlUxKmeti6VT6w?PageSize=20&FromBlockIndex=1: 200 (162ms)
+2026-10-22T07:52:30.047Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hyeONkxGSnckalbxb8OMGw~z37MMlueHlUxKmeti6VT6w: block 1: Download started
+2026-10-22T07:52:30.208Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/hyeONkxGSnckalbxb8OMGw/revisions/z37MMlueHlUxKmeti6VT6w?PageSize=20&FromBlockIndex=2: 200 (160ms)
+2026-10-22T07:52:30.588Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (541ms)
+2026-10-22T07:52:30.590Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2171,"milliseconds":1.613698000000113}
+2026-10-22T07:52:30.590Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hyeONkxGSnckalbxb8OMGw~z37MMlueHlUxKmeti6VT6w: block 1: Downloaded
+2026-10-22T07:52:30.590Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hyeONkxGSnckalbxb8OMGw~z37MMlueHlUxKmeti6VT6w: Flushing completed block 1
+2026-10-22T07:52:30.591Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~hyeONkxGSnckalbxb8OMGw~z37MMlueHlUxKmeti6VT6w: Skipping manifest check
+2026-10-22T07:52:30.591Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hyeONkxGSnckalbxb8OMGw~z37MMlueHlUxKmeti6VT6w: Download succeeded
+2026-10-22T07:52:30.591Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2252,"claimedFileSize":2252}
+FILE ris/Стрелы/Стрелы рисованые(Аркан)-2512126.sql (2168 B)
+2026-10-22T07:52:30.591Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~PL0b133MVY9R0CnIROJwiA
+2026-10-22T07:52:30.591Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PL0b133MVY9R0CnIROJwiA~lvzcnvrBbTYcpOZlljyX1A: Starting download
+2026-10-22T07:52:30.762Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/PL0b133MVY9R0CnIROJwiA/revisions/lvzcnvrBbTYcpOZlljyX1A?PageSize=20&FromBlockIndex=1: 200 (171ms)
+2026-10-22T07:52:30.762Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PL0b133MVY9R0CnIROJwiA~lvzcnvrBbTYcpOZlljyX1A: block 1: Download started
+2026-10-22T07:52:30.905Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (143ms)
+2026-10-22T07:52:30.907Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2168,"milliseconds":0.7740650000000642}
+2026-10-22T07:52:30.907Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PL0b133MVY9R0CnIROJwiA~lvzcnvrBbTYcpOZlljyX1A: block 1: Downloaded
+2026-10-22T07:52:30.959Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/PL0b133MVY9R0CnIROJwiA/revisions/lvzcnvrBbTYcpOZlljyX1A?PageSize=20&FromBlockIndex=2: 200 (197ms)
+2026-10-22T07:52:30.959Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PL0b133MVY9R0CnIROJwiA~lvzcnvrBbTYcpOZlljyX1A: Flushing completed block 1
+2026-10-22T07:52:30.959Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~PL0b133MVY9R0CnIROJwiA~lvzcnvrBbTYcpOZlljyX1A: Skipping manifest check
+2026-10-22T07:52:30.959Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PL0b133MVY9R0CnIROJwiA~lvzcnvrBbTYcpOZlljyX1A: Download succeeded
+2026-10-22T07:52:30.959Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2249,"claimedFileSize":2249}
+FILE ris/Стрелы/Стрелы рисованые(Лёд)-251243.sql (1849 B)
+2026-10-22T07:52:30.959Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~cHLopnw7QR406HnrgStsAg
+2026-10-22T07:52:30.959Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cHLopnw7QR406HnrgStsAg~Td1Kt0M6FLxCpyULkBEYmg: Starting download
+2026-10-22T07:52:31.149Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/cHLopnw7QR406HnrgStsAg/revisions/Td1Kt0M6FLxCpyULkBEYmg?PageSize=20&FromBlockIndex=1: 200 (190ms)
+2026-10-22T07:52:31.150Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cHLopnw7QR406HnrgStsAg~Td1Kt0M6FLxCpyULkBEYmg: block 1: Download started
+2026-10-22T07:52:31.288Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (138ms)
+2026-10-22T07:52:31.293Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":1849,"milliseconds":0.6094169999996666}
+2026-10-22T07:52:31.293Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cHLopnw7QR406HnrgStsAg~Td1Kt0M6FLxCpyULkBEYmg: block 1: Downloaded
+2026-10-22T07:52:31.330Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/cHLopnw7QR406HnrgStsAg/revisions/Td1Kt0M6FLxCpyULkBEYmg?PageSize=20&FromBlockIndex=2: 200 (180ms)
+2026-10-22T07:52:31.330Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cHLopnw7QR406HnrgStsAg~Td1Kt0M6FLxCpyULkBEYmg: Flushing completed block 1
+2026-10-22T07:52:31.331Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~cHLopnw7QR406HnrgStsAg~Td1Kt0M6FLxCpyULkBEYmg: Skipping manifest check
+2026-10-22T07:52:31.331Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cHLopnw7QR406HnrgStsAg~Td1Kt0M6FLxCpyULkBEYmg: Download succeeded
+2026-10-22T07:52:31.331Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":1930,"claimedFileSize":1930}
+FILE ris/Стрелы/Стрелы рисованые(Огонь)-2512432.sql (1855 B)
+2026-10-22T07:52:31.331Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~cYZmRVLmLUZC4_K2mX6nbQ
+2026-10-22T07:52:31.331Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cYZmRVLmLUZC4_K2mX6nbQ~UpXJlpDnRBr6UgsvHbWNLw: Starting download
+2026-10-22T07:52:31.488Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/cYZmRVLmLUZC4_K2mX6nbQ/revisions/UpXJlpDnRBr6UgsvHbWNLw?PageSize=20&FromBlockIndex=1: 200 (157ms)
+2026-10-22T07:52:31.488Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cYZmRVLmLUZC4_K2mX6nbQ~UpXJlpDnRBr6UgsvHbWNLw: block 1: Download started
+2026-10-22T07:52:31.637Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (149ms)
+2026-10-22T07:52:31.638Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":1855,"milliseconds":0.5718510000001515}
+2026-10-22T07:52:31.638Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cYZmRVLmLUZC4_K2mX6nbQ~UpXJlpDnRBr6UgsvHbWNLw: block 1: Downloaded
+2026-10-22T07:52:31.668Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/cYZmRVLmLUZC4_K2mX6nbQ/revisions/UpXJlpDnRBr6UgsvHbWNLw?PageSize=20&FromBlockIndex=2: 200 (180ms)
+2026-10-22T07:52:31.668Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cYZmRVLmLUZC4_K2mX6nbQ~UpXJlpDnRBr6UgsvHbWNLw: Flushing completed block 1
+2026-10-22T07:52:31.668Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~cYZmRVLmLUZC4_K2mX6nbQ~UpXJlpDnRBr6UgsvHbWNLw: Skipping manifest check
+2026-10-22T07:52:31.668Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cYZmRVLmLUZC4_K2mX6nbQ~UpXJlpDnRBr6UgsvHbWNLw: Download succeeded
+2026-10-22T07:52:31.668Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":1936,"claimedFileSize":1936}
+FILE ris/Стрелы/Стрелы рисованые(Свет)-251221.sql (2219 B)
+2026-10-22T07:52:31.668Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~UaeSXpMQILIXAKCKU8Sqpg
+2026-10-22T07:52:31.668Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~UaeSXpMQILIXAKCKU8Sqpg~M4wMaqcDcG88TsMor47ayA: Starting download
+2026-10-22T07:52:31.864Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/UaeSXpMQILIXAKCKU8Sqpg/revisions/M4wMaqcDcG88TsMor47ayA?PageSize=20&FromBlockIndex=1: 200 (195ms)
+2026-10-22T07:52:31.864Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~UaeSXpMQILIXAKCKU8Sqpg~M4wMaqcDcG88TsMor47ayA: block 1: Download started
+2026-10-22T07:52:32.004Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (140ms)
+2026-10-22T07:52:32.009Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2219,"milliseconds":0.6469740000002275}
+2026-10-22T07:52:32.009Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~UaeSXpMQILIXAKCKU8Sqpg~M4wMaqcDcG88TsMor47ayA: block 1: Downloaded
+2026-10-22T07:52:32.060Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/UaeSXpMQILIXAKCKU8Sqpg/revisions/M4wMaqcDcG88TsMor47ayA?PageSize=20&FromBlockIndex=2: 200 (196ms)
+2026-10-22T07:52:32.060Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~UaeSXpMQILIXAKCKU8Sqpg~M4wMaqcDcG88TsMor47ayA: Flushing completed block 1
+2026-10-22T07:52:32.060Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~UaeSXpMQILIXAKCKU8Sqpg~M4wMaqcDcG88TsMor47ayA: Skipping manifest check
+2026-10-22T07:52:32.060Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~UaeSXpMQILIXAKCKU8Sqpg~M4wMaqcDcG88TsMor47ayA: Download succeeded
+2026-10-22T07:52:32.060Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2300,"claimedFileSize":2300}
+2026-10-22T07:52:32.060Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~hjSs5jP-tBGncmfnKIItgQ
+2026-10-22T07:52:32.211Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/hjSs5jP-tBGncmfnKIItgQ/children?: 200 (151ms)
+2026-10-22T07:52:32.427Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (216ms)
+FILE ris/Рубаха/Shirt-100321.sql (2195 B)
+2026-10-22T07:52:32.437Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~FsjkulQ1S8DfhCKAbj8Hnw
+2026-10-22T07:52:32.437Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~FsjkulQ1S8DfhCKAbj8Hnw~DPLnYS27SF44mPhETb4_qQ: Starting download
+2026-10-22T07:52:32.627Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/FsjkulQ1S8DfhCKAbj8Hnw/revisions/DPLnYS27SF44mPhETb4_qQ?PageSize=20&FromBlockIndex=1: 200 (190ms)
+2026-10-22T07:52:32.628Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~FsjkulQ1S8DfhCKAbj8Hnw~DPLnYS27SF44mPhETb4_qQ: block 1: Download started
+2026-10-22T07:52:32.785Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (157ms)
+2026-10-22T07:52:32.785Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/FsjkulQ1S8DfhCKAbj8Hnw/revisions/DPLnYS27SF44mPhETb4_qQ?PageSize=20&FromBlockIndex=2: 200 (157ms)
+2026-10-22T07:52:32.786Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2195,"milliseconds":0.5923609999999826}
+2026-10-22T07:52:32.786Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~FsjkulQ1S8DfhCKAbj8Hnw~DPLnYS27SF44mPhETb4_qQ: block 1: Downloaded
+2026-10-22T07:52:32.786Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~FsjkulQ1S8DfhCKAbj8Hnw~DPLnYS27SF44mPhETb4_qQ: Flushing completed block 1
+2026-10-22T07:52:32.786Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~FsjkulQ1S8DfhCKAbj8Hnw~DPLnYS27SF44mPhETb4_qQ: Skipping manifest check
+2026-10-22T07:52:32.786Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~FsjkulQ1S8DfhCKAbj8Hnw~DPLnYS27SF44mPhETb4_qQ: Download succeeded
+2026-10-22T07:52:32.786Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2276,"claimedFileSize":2276}
+FILE ris/Рубаха/Shirt DD-101324.sql (2184 B)
+2026-10-22T07:52:32.786Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~iHE-2iQlJCARFI-BTGTp5Q
+2026-10-22T07:52:32.786Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~iHE-2iQlJCARFI-BTGTp5Q~b-luIK0EkhaaQnkYmLVxJA: Starting download
+2026-10-22T07:52:32.956Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/iHE-2iQlJCARFI-BTGTp5Q/revisions/b-luIK0EkhaaQnkYmLVxJA?PageSize=20&FromBlockIndex=1: 200 (170ms)
+2026-10-22T07:52:32.957Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~iHE-2iQlJCARFI-BTGTp5Q~b-luIK0EkhaaQnkYmLVxJA: block 1: Download started
+2026-10-22T07:52:33.107Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (150ms)
+2026-10-22T07:52:33.108Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2184,"milliseconds":0.6844799999998941}
+2026-10-22T07:52:33.108Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~iHE-2iQlJCARFI-BTGTp5Q~b-luIK0EkhaaQnkYmLVxJA: block 1: Downloaded
+2026-10-22T07:52:33.150Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/iHE-2iQlJCARFI-BTGTp5Q/revisions/b-luIK0EkhaaQnkYmLVxJA?PageSize=20&FromBlockIndex=2: 200 (193ms)
+2026-10-22T07:52:33.151Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~iHE-2iQlJCARFI-BTGTp5Q~b-luIK0EkhaaQnkYmLVxJA: Flushing completed block 1
+2026-10-22T07:52:33.151Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~iHE-2iQlJCARFI-BTGTp5Q~b-luIK0EkhaaQnkYmLVxJA: Skipping manifest check
+2026-10-22T07:52:33.151Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~iHE-2iQlJCARFI-BTGTp5Q~b-luIK0EkhaaQnkYmLVxJA: Download succeeded
+2026-10-22T07:52:33.151Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2265,"claimedFileSize":2265}
+FILE ris/платформа артаса.txt (15 B)
+2026-10-22T07:52:33.151Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Ds3i7tNrxnSCKRCbiXnbxw
+2026-10-22T07:52:33.151Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Ds3i7tNrxnSCKRCbiXnbxw~gIagWRG0ZyFXEBwV3xRaag: Starting download
+2026-10-22T07:52:33.323Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Ds3i7tNrxnSCKRCbiXnbxw/revisions/gIagWRG0ZyFXEBwV3xRaag?PageSize=20&FromBlockIndex=1: 200 (172ms)
+2026-10-22T07:52:33.324Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Ds3i7tNrxnSCKRCbiXnbxw~gIagWRG0ZyFXEBwV3xRaag: block 1: Download started
+2026-10-22T07:52:33.466Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (142ms)
+2026-10-22T07:52:33.467Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":15,"milliseconds":0.6774490000007063}
+2026-10-22T07:52:33.467Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Ds3i7tNrxnSCKRCbiXnbxw~gIagWRG0ZyFXEBwV3xRaag: block 1: Downloaded
+2026-10-22T07:52:33.528Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Ds3i7tNrxnSCKRCbiXnbxw/revisions/gIagWRG0ZyFXEBwV3xRaag?PageSize=20&FromBlockIndex=2: 200 (204ms)
+2026-10-22T07:52:33.529Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Ds3i7tNrxnSCKRCbiXnbxw~gIagWRG0ZyFXEBwV3xRaag: Flushing completed block 1
+2026-10-22T07:52:33.529Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Ds3i7tNrxnSCKRCbiXnbxw~gIagWRG0ZyFXEBwV3xRaag: Skipping manifest check
+2026-10-22T07:52:33.529Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Ds3i7tNrxnSCKRCbiXnbxw~gIagWRG0ZyFXEBwV3xRaag: Download succeeded
+2026-10-22T07:52:33.529Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":93,"claimedFileSize":93}
+2026-10-22T07:52:33.529Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~LJR34D19PbD7AbmqPFTBiQ
+2026-10-22T07:52:33.713Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/LJR34D19PbD7AbmqPFTBiQ/children?: 200 (184ms)
+2026-10-22T07:52:33.931Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (217ms)
+FILE ris/Сумка/BaG DD-111235.sql (2214 B)
+2026-10-22T07:52:33.958Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~1vDxs1dQkmBAYIIloR0cDA
+2026-10-22T07:52:33.958Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~1vDxs1dQkmBAYIIloR0cDA~IqwliAPHsYtqvUDCAsTtEg: Starting download
+2026-10-22T07:52:34.125Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/1vDxs1dQkmBAYIIloR0cDA/revisions/IqwliAPHsYtqvUDCAsTtEg?PageSize=20&FromBlockIndex=1: 200 (167ms)
+2026-10-22T07:52:34.125Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~1vDxs1dQkmBAYIIloR0cDA~IqwliAPHsYtqvUDCAsTtEg: block 1: Download started
+2026-10-22T07:52:34.270Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (145ms)
+2026-10-22T07:52:34.271Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2214,"milliseconds":0.6014299999997093}
+2026-10-22T07:52:34.271Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~1vDxs1dQkmBAYIIloR0cDA~IqwliAPHsYtqvUDCAsTtEg: block 1: Downloaded
+2026-10-22T07:52:34.300Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/1vDxs1dQkmBAYIIloR0cDA/revisions/IqwliAPHsYtqvUDCAsTtEg?PageSize=20&FromBlockIndex=2: 200 (175ms)
+2026-10-22T07:52:34.301Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~1vDxs1dQkmBAYIIloR0cDA~IqwliAPHsYtqvUDCAsTtEg: Flushing completed block 1
+2026-10-22T07:52:34.301Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~1vDxs1dQkmBAYIIloR0cDA~IqwliAPHsYtqvUDCAsTtEg: Skipping manifest check
+2026-10-22T07:52:34.301Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~1vDxs1dQkmBAYIIloR0cDA~IqwliAPHsYtqvUDCAsTtEg: Download succeeded
+2026-10-22T07:52:34.301Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2295,"claimedFileSize":2295}
+FILE ris/Сумка/BaG.sql (6663 B)
+2026-10-22T07:52:34.301Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~j4fTXVOIYw2tK8z8NjrvNg
+2026-10-22T07:52:34.301Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~j4fTXVOIYw2tK8z8NjrvNg~3krVOt8b3iTW0nXRpA3ajw: Starting download
+2026-10-22T07:52:34.494Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/j4fTXVOIYw2tK8z8NjrvNg/revisions/3krVOt8b3iTW0nXRpA3ajw?PageSize=20&FromBlockIndex=1: 200 (193ms)
+2026-10-22T07:52:34.494Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~j4fTXVOIYw2tK8z8NjrvNg~3krVOt8b3iTW0nXRpA3ajw: block 1: Download started
+2026-10-22T07:52:34.641Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (146ms)
+2026-10-22T07:52:34.662Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":6663,"milliseconds":0.5470130000003337}
+2026-10-22T07:52:34.662Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~j4fTXVOIYw2tK8z8NjrvNg~3krVOt8b3iTW0nXRpA3ajw: block 1: Downloaded
+2026-10-22T07:52:34.684Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/j4fTXVOIYw2tK8z8NjrvNg/revisions/3krVOt8b3iTW0nXRpA3ajw?PageSize=20&FromBlockIndex=2: 200 (189ms)
+2026-10-22T07:52:34.684Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~j4fTXVOIYw2tK8z8NjrvNg~3krVOt8b3iTW0nXRpA3ajw: Flushing completed block 1
+2026-10-22T07:52:34.684Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~j4fTXVOIYw2tK8z8NjrvNg~3krVOt8b3iTW0nXRpA3ajw: Skipping manifest check
+2026-10-22T07:52:34.684Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~j4fTXVOIYw2tK8z8NjrvNg~3krVOt8b3iTW0nXRpA3ajw: Download succeeded
+2026-10-22T07:52:34.684Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":6744,"claimedFileSize":6744}
+FILE ris/Сумка/BaG-111236.sql (2227 B)
+2026-10-22T07:52:34.685Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~bGlwy_IkPQzkoh4jahoehg
+2026-10-22T07:52:34.685Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bGlwy_IkPQzkoh4jahoehg~lXlQ27QbLdDcFQ6APZZ6oA: Starting download
+2026-10-22T07:52:34.869Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/bGlwy_IkPQzkoh4jahoehg/revisions/lXlQ27QbLdDcFQ6APZZ6oA?PageSize=20&FromBlockIndex=1: 200 (184ms)
+2026-10-22T07:52:34.870Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bGlwy_IkPQzkoh4jahoehg~lXlQ27QbLdDcFQ6APZZ6oA: block 1: Download started
+2026-10-22T07:52:35.017Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (147ms)
+2026-10-22T07:52:35.019Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2227,"milliseconds":1.53602200000023}
+2026-10-22T07:52:35.019Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bGlwy_IkPQzkoh4jahoehg~lXlQ27QbLdDcFQ6APZZ6oA: block 1: Downloaded
+2026-10-22T07:52:35.058Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/bGlwy_IkPQzkoh4jahoehg/revisions/lXlQ27QbLdDcFQ6APZZ6oA?PageSize=20&FromBlockIndex=2: 200 (188ms)
+2026-10-22T07:52:35.058Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bGlwy_IkPQzkoh4jahoehg~lXlQ27QbLdDcFQ6APZZ6oA: Flushing completed block 1
+2026-10-22T07:52:35.059Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~bGlwy_IkPQzkoh4jahoehg~lXlQ27QbLdDcFQ6APZZ6oA: Skipping manifest check
+2026-10-22T07:52:35.059Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bGlwy_IkPQzkoh4jahoehg~lXlQ27QbLdDcFQ6APZZ6oA: Download succeeded
+2026-10-22T07:52:35.059Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2308,"claimedFileSize":2308}
+FILE ris/Сумка/BaG CasToR-111234.sql (2214 B)
+2026-10-22T07:52:35.059Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~bYfqqW9HJ9qZPv1Cc1S6AQ
+2026-10-22T07:52:35.060Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bYfqqW9HJ9qZPv1Cc1S6AQ~QkSjPplG5_I7g1gf0rEXYw: Starting download
+2026-10-22T07:52:35.267Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/bYfqqW9HJ9qZPv1Cc1S6AQ/revisions/QkSjPplG5_I7g1gf0rEXYw?PageSize=20&FromBlockIndex=1: 200 (207ms)
+2026-10-22T07:52:35.267Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bYfqqW9HJ9qZPv1Cc1S6AQ~QkSjPplG5_I7g1gf0rEXYw: block 1: Download started
+2026-10-22T07:52:35.410Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (143ms)
+2026-10-22T07:52:35.411Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2214,"milliseconds":0.6347050000003946}
+2026-10-22T07:52:35.411Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bYfqqW9HJ9qZPv1Cc1S6AQ~QkSjPplG5_I7g1gf0rEXYw: block 1: Downloaded
+2026-10-22T07:52:35.430Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/bYfqqW9HJ9qZPv1Cc1S6AQ/revisions/QkSjPplG5_I7g1gf0rEXYw?PageSize=20&FromBlockIndex=2: 200 (163ms)
+2026-10-22T07:52:35.430Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bYfqqW9HJ9qZPv1Cc1S6AQ~QkSjPplG5_I7g1gf0rEXYw: Flushing completed block 1
+2026-10-22T07:52:35.430Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~bYfqqW9HJ9qZPv1Cc1S6AQ~QkSjPplG5_I7g1gf0rEXYw: Skipping manifest check
+2026-10-22T07:52:35.430Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~bYfqqW9HJ9qZPv1Cc1S6AQ~QkSjPplG5_I7g1gf0rEXYw: Download succeeded
+2026-10-22T07:52:35.430Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2295,"claimedFileSize":2295}
+FILE ris/Сумка/BaG HonoR-111237.sql (2194 B)
+2026-10-22T07:52:35.430Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~wnMfXUwuYH-SFMINt6uMyw
+2026-10-22T07:52:35.431Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wnMfXUwuYH-SFMINt6uMyw~oahk9bErJRDg1r1hGiq1GQ: Starting download
+2026-10-22T07:52:35.579Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/wnMfXUwuYH-SFMINt6uMyw/revisions/oahk9bErJRDg1r1hGiq1GQ?PageSize=20&FromBlockIndex=1: 200 (148ms)
+2026-10-22T07:52:35.579Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wnMfXUwuYH-SFMINt6uMyw~oahk9bErJRDg1r1hGiq1GQ: block 1: Download started
+2026-10-22T07:52:35.720Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (141ms)
+2026-10-22T07:52:35.721Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2194,"milliseconds":0.5675650000002861}
+2026-10-22T07:52:35.721Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wnMfXUwuYH-SFMINt6uMyw~oahk9bErJRDg1r1hGiq1GQ: block 1: Downloaded
+2026-10-22T07:52:35.770Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/wnMfXUwuYH-SFMINt6uMyw/revisions/oahk9bErJRDg1r1hGiq1GQ?PageSize=20&FromBlockIndex=2: 200 (191ms)
+2026-10-22T07:52:35.770Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wnMfXUwuYH-SFMINt6uMyw~oahk9bErJRDg1r1hGiq1GQ: Flushing completed block 1
+2026-10-22T07:52:35.770Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~wnMfXUwuYH-SFMINt6uMyw~oahk9bErJRDg1r1hGiq1GQ: Skipping manifest check
+2026-10-22T07:52:35.770Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wnMfXUwuYH-SFMINt6uMyw~oahk9bErJRDg1r1hGiq1GQ: Download succeeded
+2026-10-22T07:52:35.770Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2275,"claimedFileSize":2275}
+2026-10-22T07:52:35.770Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~ZQ84rFansFHEcKkJ4NDJQQ
+2026-10-22T07:52:35.936Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/ZQ84rFansFHEcKkJ4NDJQQ/children?: 200 (165ms)
+2026-10-22T07:52:36.139Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (203ms)
+FILE ris/Донат/аксик 550 WMR-999882.sql (2242 B)
+2026-10-22T07:52:36.159Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~XErb4pTzy4Q2a5qV32CnTw
+2026-10-22T07:52:36.160Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~XErb4pTzy4Q2a5qV32CnTw~8TrI22vElzpkB3f2laTOvw: Starting download
+2026-10-22T07:52:36.353Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/XErb4pTzy4Q2a5qV32CnTw/revisions/8TrI22vElzpkB3f2laTOvw?PageSize=20&FromBlockIndex=1: 200 (193ms)
+2026-10-22T07:52:36.353Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~XErb4pTzy4Q2a5qV32CnTw~8TrI22vElzpkB3f2laTOvw: block 1: Download started
+2026-10-22T07:52:36.506Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (153ms)
+2026-10-22T07:52:36.507Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2242,"milliseconds":0.5730419999999867}
+2026-10-22T07:52:36.507Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~XErb4pTzy4Q2a5qV32CnTw~8TrI22vElzpkB3f2laTOvw: block 1: Downloaded
+2026-10-22T07:52:36.546Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/XErb4pTzy4Q2a5qV32CnTw/revisions/8TrI22vElzpkB3f2laTOvw?PageSize=20&FromBlockIndex=2: 200 (193ms)
+2026-10-22T07:52:36.546Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~XErb4pTzy4Q2a5qV32CnTw~8TrI22vElzpkB3f2laTOvw: Flushing completed block 1
+2026-10-22T07:52:36.546Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~XErb4pTzy4Q2a5qV32CnTw~8TrI22vElzpkB3f2laTOvw: Skipping manifest check
+2026-10-22T07:52:36.546Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~XErb4pTzy4Q2a5qV32CnTw~8TrI22vElzpkB3f2laTOvw: Download succeeded
+2026-10-22T07:52:36.546Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2323,"claimedFileSize":2323}
+FILE ris/Донат/руки 200 WMR-999878.sql (2248 B)
+2026-10-22T07:52:36.546Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~qevQZvMdONhs1bAK9Q0CjA
+2026-10-22T07:52:36.546Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qevQZvMdONhs1bAK9Q0CjA~ThkUtaKLPd0Wi9vAKLuAVg: Starting download
+2026-10-22T07:52:36.715Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/qevQZvMdONhs1bAK9Q0CjA/revisions/ThkUtaKLPd0Wi9vAKLuAVg?PageSize=20&FromBlockIndex=1: 200 (169ms)
+2026-10-22T07:52:36.716Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qevQZvMdONhs1bAK9Q0CjA~ThkUtaKLPd0Wi9vAKLuAVg: block 1: Download started
+2026-10-22T07:52:36.856Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (140ms)
+2026-10-22T07:52:36.858Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2248,"milliseconds":0.5091759999995702}
+2026-10-22T07:52:36.858Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qevQZvMdONhs1bAK9Q0CjA~ThkUtaKLPd0Wi9vAKLuAVg: block 1: Downloaded
+2026-10-22T07:52:36.900Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/qevQZvMdONhs1bAK9Q0CjA/revisions/ThkUtaKLPd0Wi9vAKLuAVg?PageSize=20&FromBlockIndex=2: 200 (184ms)
+2026-10-22T07:52:36.900Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qevQZvMdONhs1bAK9Q0CjA~ThkUtaKLPd0Wi9vAKLuAVg: Flushing completed block 1
+2026-10-22T07:52:36.900Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~qevQZvMdONhs1bAK9Q0CjA~ThkUtaKLPd0Wi9vAKLuAVg: Skipping manifest check
+2026-10-22T07:52:36.900Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qevQZvMdONhs1bAK9Q0CjA~ThkUtaKLPd0Wi9vAKLuAVg: Download succeeded
+2026-10-22T07:52:36.900Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2329,"claimedFileSize":2329}
+FILE ris/Донат/плечи 200 WMR-999876.sql (2247 B)
+2026-10-22T07:52:36.901Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~K4pNa0sZyHxW-OCABEoaoQ
+2026-10-22T07:52:36.901Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~K4pNa0sZyHxW-OCABEoaoQ~wtITCyC5hUEfP8LyNYKbpA: Starting download
+2026-10-22T07:52:37.073Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/K4pNa0sZyHxW-OCABEoaoQ/revisions/wtITCyC5hUEfP8LyNYKbpA?PageSize=20&FromBlockIndex=1: 200 (172ms)
+2026-10-22T07:52:37.073Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~K4pNa0sZyHxW-OCABEoaoQ~wtITCyC5hUEfP8LyNYKbpA: block 1: Download started
+2026-10-22T07:52:37.223Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (150ms)
+2026-10-22T07:52:37.228Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2247,"milliseconds":0.5485749999988911}
+2026-10-22T07:52:37.228Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~K4pNa0sZyHxW-OCABEoaoQ~wtITCyC5hUEfP8LyNYKbpA: block 1: Downloaded
+2026-10-22T07:52:37.239Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/K4pNa0sZyHxW-OCABEoaoQ/revisions/wtITCyC5hUEfP8LyNYKbpA?PageSize=20&FromBlockIndex=2: 200 (166ms)
+2026-10-22T07:52:37.239Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~K4pNa0sZyHxW-OCABEoaoQ~wtITCyC5hUEfP8LyNYKbpA: Flushing completed block 1
+2026-10-22T07:52:37.239Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~K4pNa0sZyHxW-OCABEoaoQ~wtITCyC5hUEfP8LyNYKbpA: Skipping manifest check
+2026-10-22T07:52:37.239Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~K4pNa0sZyHxW-OCABEoaoQ~wtITCyC5hUEfP8LyNYKbpA: Download succeeded
+2026-10-22T07:52:37.239Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2328,"claimedFileSize":2328}
+FILE ris/Донат/палец 350 WMR-999881.sql (2239 B)
+2026-10-22T07:52:37.240Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~lACe0M3_60rvTCdXx61NTw
+2026-10-22T07:52:37.240Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~lACe0M3_60rvTCdXx61NTw~sTPz6Iq_urV0hgJIVy4vEA: Starting download
+2026-10-22T07:52:37.418Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/lACe0M3_60rvTCdXx61NTw/revisions/sTPz6Iq_urV0hgJIVy4vEA?PageSize=20&FromBlockIndex=1: 200 (178ms)
+2026-10-22T07:52:37.418Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~lACe0M3_60rvTCdXx61NTw~sTPz6Iq_urV0hgJIVy4vEA: block 1: Download started
+2026-10-22T07:52:37.565Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (147ms)
+2026-10-22T07:52:37.569Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2239,"milliseconds":0.6379200000010314}
+2026-10-22T07:52:37.570Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~lACe0M3_60rvTCdXx61NTw~sTPz6Iq_urV0hgJIVy4vEA: block 1: Downloaded
+2026-10-22T07:52:37.619Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/lACe0M3_60rvTCdXx61NTw/revisions/sTPz6Iq_urV0hgJIVy4vEA?PageSize=20&FromBlockIndex=2: 200 (201ms)
+2026-10-22T07:52:37.619Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~lACe0M3_60rvTCdXx61NTw~sTPz6Iq_urV0hgJIVy4vEA: Flushing completed block 1
+2026-10-22T07:52:37.619Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~lACe0M3_60rvTCdXx61NTw~sTPz6Iq_urV0hgJIVy4vEA: Skipping manifest check
+2026-10-22T07:52:37.619Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~lACe0M3_60rvTCdXx61NTw~sTPz6Iq_urV0hgJIVy4vEA: Download succeeded
+2026-10-22T07:52:37.619Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2320,"claimedFileSize":2320}
+FILE ris/Донат/голова 200 WMR-999877.sql (2246 B)
+2026-10-22T07:52:37.620Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~xmn49DY5X9oc_Y7_elDg-w
+2026-10-22T07:52:37.620Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~xmn49DY5X9oc_Y7_elDg-w~zbS5hmK9KE9Zz0-vhOultQ: Starting download
+2026-10-22T07:52:37.779Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/xmn49DY5X9oc_Y7_elDg-w/revisions/zbS5hmK9KE9Zz0-vhOultQ?PageSize=20&FromBlockIndex=1: 200 (159ms)
+2026-10-22T07:52:37.779Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~xmn49DY5X9oc_Y7_elDg-w~zbS5hmK9KE9Zz0-vhOultQ: block 1: Download started
+2026-10-22T07:52:37.923Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (144ms)
+2026-10-22T07:52:37.924Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2246,"milliseconds":0.5782949999993434}
+2026-10-22T07:52:37.924Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~xmn49DY5X9oc_Y7_elDg-w~zbS5hmK9KE9Zz0-vhOultQ: block 1: Downloaded
+2026-10-22T07:52:37.963Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/xmn49DY5X9oc_Y7_elDg-w/revisions/zbS5hmK9KE9Zz0-vhOultQ?PageSize=20&FromBlockIndex=2: 200 (183ms)
+2026-10-22T07:52:37.963Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~xmn49DY5X9oc_Y7_elDg-w~zbS5hmK9KE9Zz0-vhOultQ: Flushing completed block 1
+2026-10-22T07:52:37.963Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~xmn49DY5X9oc_Y7_elDg-w~zbS5hmK9KE9Zz0-vhOultQ: Skipping manifest check
+2026-10-22T07:52:37.963Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~xmn49DY5X9oc_Y7_elDg-w~zbS5hmK9KE9Zz0-vhOultQ: Download succeeded
+2026-10-22T07:52:37.964Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2327,"claimedFileSize":2327}
+FILE ris/Донат/грудь 200 WMR-999879.sql (2247 B)
+2026-10-22T07:52:37.964Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~lvgHg6aGoA-D3aPxJrf9Og
+2026-10-22T07:52:37.964Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~lvgHg6aGoA-D3aPxJrf9Og~9I7KNjEkotfU_u-E-gcBvg: Starting download
+2026-10-22T07:52:38.171Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/lvgHg6aGoA-D3aPxJrf9Og/revisions/9I7KNjEkotfU_u-E-gcBvg?PageSize=20&FromBlockIndex=1: 200 (207ms)
+2026-10-22T07:52:38.172Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~lvgHg6aGoA-D3aPxJrf9Og~9I7KNjEkotfU_u-E-gcBvg: block 1: Download started
+2026-10-22T07:52:38.321Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (149ms)
+2026-10-22T07:52:38.326Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2247,"milliseconds":0.5668129999994562}
+2026-10-22T07:52:38.326Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~lvgHg6aGoA-D3aPxJrf9Og~9I7KNjEkotfU_u-E-gcBvg: block 1: Downloaded
+2026-10-22T07:52:38.335Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/lvgHg6aGoA-D3aPxJrf9Og/revisions/9I7KNjEkotfU_u-E-gcBvg?PageSize=20&FromBlockIndex=2: 200 (163ms)
+2026-10-22T07:52:38.335Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~lvgHg6aGoA-D3aPxJrf9Og~9I7KNjEkotfU_u-E-gcBvg: Flushing completed block 1
+2026-10-22T07:52:38.335Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~lvgHg6aGoA-D3aPxJrf9Og~9I7KNjEkotfU_u-E-gcBvg: Skipping manifest check
+2026-10-22T07:52:38.335Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~lvgHg6aGoA-D3aPxJrf9Og~9I7KNjEkotfU_u-E-gcBvg: Download succeeded
+2026-10-22T07:52:38.335Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2328,"claimedFileSize":2328}
+FILE ris/Донат/ноги 200 WMR-999880.sql (2247 B)
+2026-10-22T07:52:38.336Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~4cQesA5i5QxYs0y7yjsWWg
+2026-10-22T07:52:38.336Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~4cQesA5i5QxYs0y7yjsWWg~ucTCHAGNEW5teej3GHhc0w: Starting download
+2026-10-22T07:52:38.513Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/4cQesA5i5QxYs0y7yjsWWg/revisions/ucTCHAGNEW5teej3GHhc0w?PageSize=20&FromBlockIndex=1: 200 (177ms)
+2026-10-22T07:52:38.513Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~4cQesA5i5QxYs0y7yjsWWg~ucTCHAGNEW5teej3GHhc0w: block 1: Download started
+2026-10-22T07:52:38.666Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (153ms)
+2026-10-22T07:52:38.667Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2247,"milliseconds":0.6054010000007111}
+2026-10-22T07:52:38.667Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~4cQesA5i5QxYs0y7yjsWWg~ucTCHAGNEW5teej3GHhc0w: block 1: Downloaded
+2026-10-22T07:52:38.680Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/4cQesA5i5QxYs0y7yjsWWg/revisions/ucTCHAGNEW5teej3GHhc0w?PageSize=20&FromBlockIndex=2: 200 (167ms)
+2026-10-22T07:52:38.680Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~4cQesA5i5QxYs0y7yjsWWg~ucTCHAGNEW5teej3GHhc0w: Flushing completed block 1
+2026-10-22T07:52:38.680Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~4cQesA5i5QxYs0y7yjsWWg~ucTCHAGNEW5teej3GHhc0w: Skipping manifest check
+2026-10-22T07:52:38.680Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~4cQesA5i5QxYs0y7yjsWWg~ucTCHAGNEW5teej3GHhc0w: Download succeeded
+2026-10-22T07:52:38.680Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2328,"claimedFileSize":2328}
+2026-10-22T07:52:38.680Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~UdZ20jgS5-0lQLDx8g6xfA
+2026-10-22T07:52:38.867Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/UdZ20jgS5-0lQLDx8g6xfA/children?: 200 (187ms)
+2026-10-22T07:52:39.043Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (176ms)
+FILE ris/Тотемы,Идолы Т.Д/Mega Igol-2000002.sql (2227 B)
+2026-10-22T07:52:39.064Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~0RzgCrs6UmMlpFZkQdv55Q
+2026-10-22T07:52:39.065Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~0RzgCrs6UmMlpFZkQdv55Q~1FRu4Kfcf8BTqk_buY0mOA: Starting download
+2026-10-22T07:52:39.287Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/0RzgCrs6UmMlpFZkQdv55Q/revisions/1FRu4Kfcf8BTqk_buY0mOA?PageSize=20&FromBlockIndex=1: 200 (222ms)
+2026-10-22T07:52:39.287Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~0RzgCrs6UmMlpFZkQdv55Q~1FRu4Kfcf8BTqk_buY0mOA: block 1: Download started
+2026-10-22T07:52:39.428Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (141ms)
+2026-10-22T07:52:39.432Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2227,"milliseconds":0.579541999999492}
+2026-10-22T07:52:39.432Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~0RzgCrs6UmMlpFZkQdv55Q~1FRu4Kfcf8BTqk_buY0mOA: block 1: Downloaded
+2026-10-22T07:52:39.449Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/0RzgCrs6UmMlpFZkQdv55Q/revisions/1FRu4Kfcf8BTqk_buY0mOA?PageSize=20&FromBlockIndex=2: 200 (162ms)
+2026-10-22T07:52:39.449Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~0RzgCrs6UmMlpFZkQdv55Q~1FRu4Kfcf8BTqk_buY0mOA: Flushing completed block 1
+2026-10-22T07:52:39.449Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~0RzgCrs6UmMlpFZkQdv55Q~1FRu4Kfcf8BTqk_buY0mOA: Skipping manifest check
+2026-10-22T07:52:39.449Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~0RzgCrs6UmMlpFZkQdv55Q~1FRu4Kfcf8BTqk_buY0mOA: Download succeeded
+2026-10-22T07:52:39.449Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2308,"claimedFileSize":2308}
+FILE ris/Тотемы,Идолы Т.Д/Mega Relic-2000001.sql (2228 B)
+2026-10-22T07:52:39.450Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Bx-YfUntjTzeXcZHmiJxFg
+2026-10-22T07:52:39.450Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Bx-YfUntjTzeXcZHmiJxFg~M7tL4KerXPvZmp8ft5G7gA: Starting download
+2026-10-22T07:52:39.635Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Bx-YfUntjTzeXcZHmiJxFg/revisions/M7tL4KerXPvZmp8ft5G7gA?PageSize=20&FromBlockIndex=1: 200 (185ms)
+2026-10-22T07:52:39.635Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Bx-YfUntjTzeXcZHmiJxFg~M7tL4KerXPvZmp8ft5G7gA: block 1: Download started
+2026-10-22T07:52:39.788Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (153ms)
+2026-10-22T07:52:39.793Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2228,"milliseconds":0.5422459999990679}
+2026-10-22T07:52:39.793Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Bx-YfUntjTzeXcZHmiJxFg~M7tL4KerXPvZmp8ft5G7gA: block 1: Downloaded
+2026-10-22T07:52:39.846Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Bx-YfUntjTzeXcZHmiJxFg/revisions/M7tL4KerXPvZmp8ft5G7gA?PageSize=20&FromBlockIndex=2: 200 (211ms)
+2026-10-22T07:52:39.846Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Bx-YfUntjTzeXcZHmiJxFg~M7tL4KerXPvZmp8ft5G7gA: Flushing completed block 1
+2026-10-22T07:52:39.847Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Bx-YfUntjTzeXcZHmiJxFg~M7tL4KerXPvZmp8ft5G7gA: Skipping manifest check
+2026-10-22T07:52:39.847Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Bx-YfUntjTzeXcZHmiJxFg~M7tL4KerXPvZmp8ft5G7gA: Download succeeded
+2026-10-22T07:52:39.847Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2309,"claimedFileSize":2309}
+FILE ris/Тотемы,Идолы Т.Д/Mega Pechat-2000004.sql (2238 B)
+2026-10-22T07:52:39.847Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~u0IEyIuX4IVhQXz-HNDULQ
+2026-10-22T07:52:39.847Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~u0IEyIuX4IVhQXz-HNDULQ~2fGAo1nZvpQ03IwwJF1PIg: Starting download
+2026-10-22T07:52:40.052Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/u0IEyIuX4IVhQXz-HNDULQ/revisions/2fGAo1nZvpQ03IwwJF1PIg?PageSize=20&FromBlockIndex=1: 200 (205ms)
+2026-10-22T07:52:40.052Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~u0IEyIuX4IVhQXz-HNDULQ~2fGAo1nZvpQ03IwwJF1PIg: block 1: Download started
+2026-10-22T07:52:40.194Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (142ms)
+2026-10-22T07:52:40.195Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2238,"milliseconds":0.518050000000585}
+2026-10-22T07:52:40.195Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~u0IEyIuX4IVhQXz-HNDULQ~2fGAo1nZvpQ03IwwJF1PIg: block 1: Downloaded
+2026-10-22T07:52:40.234Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/u0IEyIuX4IVhQXz-HNDULQ/revisions/2fGAo1nZvpQ03IwwJF1PIg?PageSize=20&FromBlockIndex=2: 200 (182ms)
+2026-10-22T07:52:40.234Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~u0IEyIuX4IVhQXz-HNDULQ~2fGAo1nZvpQ03IwwJF1PIg: Flushing completed block 1
+2026-10-22T07:52:40.234Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~u0IEyIuX4IVhQXz-HNDULQ~2fGAo1nZvpQ03IwwJF1PIg: Skipping manifest check
+2026-10-22T07:52:40.234Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~u0IEyIuX4IVhQXz-HNDULQ~2fGAo1nZvpQ03IwwJF1PIg: Download succeeded
+2026-10-22T07:52:40.234Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2319,"claimedFileSize":2319}
+FILE ris/Тотемы,Идолы Т.Д/Mega Totem-2000003.sql (2228 B)
+2026-10-22T07:52:40.234Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~ZUfC1OXCGPHgKkhuCtzV0A
+2026-10-22T07:52:40.235Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~ZUfC1OXCGPHgKkhuCtzV0A~NstVQry7DjPO6lniXPIqwA: Starting download
+2026-10-22T07:52:40.422Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/ZUfC1OXCGPHgKkhuCtzV0A/revisions/NstVQry7DjPO6lniXPIqwA?PageSize=20&FromBlockIndex=1: 200 (187ms)
+2026-10-22T07:52:40.423Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~ZUfC1OXCGPHgKkhuCtzV0A~NstVQry7DjPO6lniXPIqwA: block 1: Download started
+2026-10-22T07:52:40.564Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (141ms)
+2026-10-22T07:52:40.568Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2228,"milliseconds":0.5142039999991539}
+2026-10-22T07:52:40.568Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~ZUfC1OXCGPHgKkhuCtzV0A~NstVQry7DjPO6lniXPIqwA: block 1: Downloaded
+2026-10-22T07:52:40.607Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/ZUfC1OXCGPHgKkhuCtzV0A/revisions/NstVQry7DjPO6lniXPIqwA?PageSize=20&FromBlockIndex=2: 200 (184ms)
+2026-10-22T07:52:40.608Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~ZUfC1OXCGPHgKkhuCtzV0A~NstVQry7DjPO6lniXPIqwA: Flushing completed block 1
+2026-10-22T07:52:40.608Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~ZUfC1OXCGPHgKkhuCtzV0A~NstVQry7DjPO6lniXPIqwA: Skipping manifest check
+2026-10-22T07:52:40.608Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~ZUfC1OXCGPHgKkhuCtzV0A~NstVQry7DjPO6lniXPIqwA: Download succeeded
+2026-10-22T07:52:40.608Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2309,"claimedFileSize":2309}
+2026-10-22T07:52:40.608Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~uFFKImoLYnMtRfNl2RHFhQ
+2026-10-22T07:52:40.780Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/uFFKImoLYnMtRfNl2RHFhQ/children?: 200 (172ms)
+2026-10-22T07:52:40.980Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (200ms)
+FILE ris/Плащь/Back-100320.sql (2190 B)
+2026-10-22T07:52:40.986Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~FV2m2vwlxdvTehPtEgUHSQ
+2026-10-22T07:52:40.986Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~FV2m2vwlxdvTehPtEgUHSQ~tzu-uT1n_R5zdvgVKLCcWw: Starting download
+2026-10-22T07:52:41.172Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/FV2m2vwlxdvTehPtEgUHSQ/revisions/tzu-uT1n_R5zdvgVKLCcWw?PageSize=20&FromBlockIndex=1: 200 (186ms)
+2026-10-22T07:52:41.172Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~FV2m2vwlxdvTehPtEgUHSQ~tzu-uT1n_R5zdvgVKLCcWw: block 1: Download started
+2026-10-22T07:52:41.321Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (148ms)
+2026-10-22T07:52:41.327Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2190,"milliseconds":1.5452359999999317}
+2026-10-22T07:52:41.327Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~FV2m2vwlxdvTehPtEgUHSQ~tzu-uT1n_R5zdvgVKLCcWw: block 1: Downloaded
+2026-10-22T07:52:41.340Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/FV2m2vwlxdvTehPtEgUHSQ/revisions/tzu-uT1n_R5zdvgVKLCcWw?PageSize=20&FromBlockIndex=2: 200 (167ms)
+2026-10-22T07:52:41.340Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~FV2m2vwlxdvTehPtEgUHSQ~tzu-uT1n_R5zdvgVKLCcWw: Flushing completed block 1
+2026-10-22T07:52:41.340Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~FV2m2vwlxdvTehPtEgUHSQ~tzu-uT1n_R5zdvgVKLCcWw: Skipping manifest check
+2026-10-22T07:52:41.340Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~FV2m2vwlxdvTehPtEgUHSQ~tzu-uT1n_R5zdvgVKLCcWw: Download succeeded
+2026-10-22T07:52:41.340Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2271,"claimedFileSize":2271}
+FILE ris/Плащь/Back DD-100323.sql (2185 B)
+2026-10-22T07:52:41.340Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~XCpE1J-yGvYub3RWuzxCZg
+2026-10-22T07:52:41.340Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~XCpE1J-yGvYub3RWuzxCZg~BX8stqBlPplwzVa-OVVq3g: Starting download
+2026-10-22T07:52:41.549Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/XCpE1J-yGvYub3RWuzxCZg/revisions/BX8stqBlPplwzVa-OVVq3g?PageSize=20&FromBlockIndex=1: 200 (209ms)
+2026-10-22T07:52:41.549Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~XCpE1J-yGvYub3RWuzxCZg~BX8stqBlPplwzVa-OVVq3g: block 1: Download started
+2026-10-22T07:52:41.691Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (142ms)
+2026-10-22T07:52:41.696Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2185,"milliseconds":0.6062829999991663}
+2026-10-22T07:52:41.696Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~XCpE1J-yGvYub3RWuzxCZg~BX8stqBlPplwzVa-OVVq3g: block 1: Downloaded
+2026-10-22T07:52:41.736Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/XCpE1J-yGvYub3RWuzxCZg/revisions/BX8stqBlPplwzVa-OVVq3g?PageSize=20&FromBlockIndex=2: 200 (187ms)
+2026-10-22T07:52:41.736Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~XCpE1J-yGvYub3RWuzxCZg~BX8stqBlPplwzVa-OVVq3g: Flushing completed block 1
+2026-10-22T07:52:41.736Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~XCpE1J-yGvYub3RWuzxCZg~BX8stqBlPplwzVa-OVVq3g: Skipping manifest check
+2026-10-22T07:52:41.736Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~XCpE1J-yGvYub3RWuzxCZg~BX8stqBlPplwzVa-OVVq3g: Download succeeded
+2026-10-22T07:52:41.736Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2266,"claimedFileSize":2266}
+2026-10-22T07:52:41.736Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~nHnayfITzlDURQnXTKCGnw
+2026-10-22T07:52:41.932Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/nHnayfITzlDURQnXTKCGnw/children?: 200 (196ms)
+2026-10-22T07:52:42.109Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (177ms)
+FILE ris/Маунт при старте/Mount.sql (3372 B)
+2026-10-22T07:52:42.114Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~M7sukWWAfk49n7b_iUP2Qw
+2026-10-22T07:52:42.114Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~M7sukWWAfk49n7b_iUP2Qw~zLiAuJB7IuJAmB0lRRAYTQ: Starting download
+2026-10-22T07:52:42.311Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/M7sukWWAfk49n7b_iUP2Qw/revisions/zLiAuJB7IuJAmB0lRRAYTQ?PageSize=20&FromBlockIndex=1: 200 (197ms)
+2026-10-22T07:52:42.311Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~M7sukWWAfk49n7b_iUP2Qw~zLiAuJB7IuJAmB0lRRAYTQ: block 1: Download started
+2026-10-22T07:52:42.459Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (148ms)
+2026-10-22T07:52:42.464Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":3372,"milliseconds":0.5879150000000664}
+2026-10-22T07:52:42.464Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~M7sukWWAfk49n7b_iUP2Qw~zLiAuJB7IuJAmB0lRRAYTQ: block 1: Downloaded
+2026-10-22T07:52:42.481Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/M7sukWWAfk49n7b_iUP2Qw/revisions/zLiAuJB7IuJAmB0lRRAYTQ?PageSize=20&FromBlockIndex=2: 200 (169ms)
+2026-10-22T07:52:42.481Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~M7sukWWAfk49n7b_iUP2Qw~zLiAuJB7IuJAmB0lRRAYTQ: Flushing completed block 1
+2026-10-22T07:52:42.481Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~M7sukWWAfk49n7b_iUP2Qw~zLiAuJB7IuJAmB0lRRAYTQ: Skipping manifest check
+2026-10-22T07:52:42.481Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~M7sukWWAfk49n7b_iUP2Qw~zLiAuJB7IuJAmB0lRRAYTQ: Download succeeded
+2026-10-22T07:52:42.481Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":3453,"claimedFileSize":3453}
+2026-10-22T07:52:42.481Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~XXybpPilxRyx43z5jBr04g
+2026-10-22T07:52:42.694Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/XXybpPilxRyx43z5jBr04g/children?: 200 (213ms)
+2026-10-22T07:52:42.873Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (179ms)
+FILE ris/Табард/Tabard-100322.sql (2198 B)
+2026-10-22T07:52:42.883Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~2-850QVIfQ3XiJ8TMoCibg
+2026-10-22T07:52:42.884Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~2-850QVIfQ3XiJ8TMoCibg~IQeBXWFt_SC3sANJsMznPA: Starting download
+2026-10-22T07:52:43.045Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/2-850QVIfQ3XiJ8TMoCibg/revisions/IQeBXWFt_SC3sANJsMznPA?PageSize=20&FromBlockIndex=1: 200 (161ms)
+2026-10-22T07:52:43.045Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~2-850QVIfQ3XiJ8TMoCibg~IQeBXWFt_SC3sANJsMznPA: block 1: Download started
+2026-10-22T07:52:43.188Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (142ms)
+2026-10-22T07:52:43.192Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2198,"milliseconds":0.5613450000000739}
+2026-10-22T07:52:43.192Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~2-850QVIfQ3XiJ8TMoCibg~IQeBXWFt_SC3sANJsMznPA: block 1: Downloaded
+2026-10-22T07:52:43.201Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/2-850QVIfQ3XiJ8TMoCibg/revisions/IQeBXWFt_SC3sANJsMznPA?PageSize=20&FromBlockIndex=2: 200 (155ms)
+2026-10-22T07:52:43.201Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~2-850QVIfQ3XiJ8TMoCibg~IQeBXWFt_SC3sANJsMznPA: Flushing completed block 1
+2026-10-22T07:52:43.201Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~2-850QVIfQ3XiJ8TMoCibg~IQeBXWFt_SC3sANJsMznPA: Skipping manifest check
+2026-10-22T07:52:43.201Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~2-850QVIfQ3XiJ8TMoCibg~IQeBXWFt_SC3sANJsMznPA: Download succeeded
+2026-10-22T07:52:43.201Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2279,"claimedFileSize":2279}
+FILE ris/Табард/Tabard DD-100147.sql (2187 B)
+2026-10-22T07:52:43.202Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~PNP5eKfd6XLUOqzEtmw2vw
+2026-10-22T07:52:43.202Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PNP5eKfd6XLUOqzEtmw2vw~xwalFafkcEkKncbKROs1ag: Starting download
+2026-10-22T07:52:43.360Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/PNP5eKfd6XLUOqzEtmw2vw/revisions/xwalFafkcEkKncbKROs1ag?PageSize=20&FromBlockIndex=1: 200 (158ms)
+2026-10-22T07:52:43.361Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PNP5eKfd6XLUOqzEtmw2vw~xwalFafkcEkKncbKROs1ag: block 1: Download started
+2026-10-22T07:52:43.500Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (139ms)
+2026-10-22T07:52:43.505Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2187,"milliseconds":0.5760969999992085}
+2026-10-22T07:52:43.505Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PNP5eKfd6XLUOqzEtmw2vw~xwalFafkcEkKncbKROs1ag: block 1: Downloaded
+2026-10-22T07:52:43.572Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/PNP5eKfd6XLUOqzEtmw2vw/revisions/xwalFafkcEkKncbKROs1ag?PageSize=20&FromBlockIndex=2: 200 (211ms)
+2026-10-22T07:52:43.572Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PNP5eKfd6XLUOqzEtmw2vw~xwalFafkcEkKncbKROs1ag: Flushing completed block 1
+2026-10-22T07:52:43.573Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~PNP5eKfd6XLUOqzEtmw2vw~xwalFafkcEkKncbKROs1ag: Skipping manifest check
+2026-10-22T07:52:43.573Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PNP5eKfd6XLUOqzEtmw2vw~xwalFafkcEkKncbKROs1ag: Download succeeded
+2026-10-22T07:52:43.573Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2268,"claimedFileSize":2268}
+2026-10-22T07:52:43.573Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~OKzmlqUGQNOqdp3M66xuLQ
+2026-10-22T07:52:43.769Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/OKzmlqUGQNOqdp3M66xuLQ/children?: 200 (196ms)
+2026-10-22T07:52:43.939Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (170ms)
+FILE ris/Верховая езда при старте/Ridings.sql (8210 B)
+2026-10-22T07:52:43.943Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~A-Awb1QFRFzh3ZQV0B-_nw
+2026-10-22T07:52:43.944Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~A-Awb1QFRFzh3ZQV0B-_nw~2aDudhYIya3mr9PJqDPrCg: Starting download
+2026-10-22T07:52:44.111Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/A-Awb1QFRFzh3ZQV0B-_nw/revisions/2aDudhYIya3mr9PJqDPrCg?PageSize=20&FromBlockIndex=1: 200 (167ms)
+2026-10-22T07:52:44.111Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~A-Awb1QFRFzh3ZQV0B-_nw~2aDudhYIya3mr9PJqDPrCg: block 1: Download started
+2026-10-22T07:52:44.286Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (175ms)
+2026-10-22T07:52:44.287Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/A-Awb1QFRFzh3ZQV0B-_nw/revisions/2aDudhYIya3mr9PJqDPrCg?PageSize=20&FromBlockIndex=2: 200 (176ms)
+2026-10-22T07:52:44.303Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":8210,"milliseconds":0.4974480000018957}
+2026-10-22T07:52:44.303Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~A-Awb1QFRFzh3ZQV0B-_nw~2aDudhYIya3mr9PJqDPrCg: block 1: Downloaded
+2026-10-22T07:52:44.303Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~A-Awb1QFRFzh3ZQV0B-_nw~2aDudhYIya3mr9PJqDPrCg: Flushing completed block 1
+2026-10-22T07:52:44.303Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~A-Awb1QFRFzh3ZQV0B-_nw~2aDudhYIya3mr9PJqDPrCg: Skipping manifest check
+2026-10-22T07:52:44.303Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~A-Awb1QFRFzh3ZQV0B-_nw~2aDudhYIya3mr9PJqDPrCg: Download succeeded
+2026-10-22T07:52:44.303Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":8290,"claimedFileSize":8290}
+2026-10-22T07:52:44.303Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~shtHl6e_s0ra6oogUNrKsw
+2026-10-22T07:52:44.471Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/shtHl6e_s0ra6oogUNrKsw/children?: 200 (168ms)
+2026-10-22T07:52:44.683Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (212ms)
+FILE ris/Вендоры/Вендоры 2.sql (7819 B)
+2026-10-22T07:52:44.688Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~oE9CVAALAFD0tHBAyLZcTg
+2026-10-22T07:52:44.688Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~oE9CVAALAFD0tHBAyLZcTg~6v73by-9w9ZxkSuRyo9K-A: Starting download
+2026-10-22T07:52:44.861Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/oE9CVAALAFD0tHBAyLZcTg/revisions/6v73by-9w9ZxkSuRyo9K-A?PageSize=20&FromBlockIndex=1: 200 (173ms)
+2026-10-22T07:52:44.861Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~oE9CVAALAFD0tHBAyLZcTg~6v73by-9w9ZxkSuRyo9K-A: block 1: Download started
+2026-10-22T07:52:45.027Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (166ms)
+2026-10-22T07:52:45.028Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":7819,"milliseconds":0.594504999997298}
+2026-10-22T07:52:45.028Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~oE9CVAALAFD0tHBAyLZcTg~6v73by-9w9ZxkSuRyo9K-A: block 1: Downloaded
+2026-10-22T07:52:45.081Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/oE9CVAALAFD0tHBAyLZcTg/revisions/6v73by-9w9ZxkSuRyo9K-A?PageSize=20&FromBlockIndex=2: 200 (220ms)
+2026-10-22T07:52:45.081Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~oE9CVAALAFD0tHBAyLZcTg~6v73by-9w9ZxkSuRyo9K-A: Flushing completed block 1
+2026-10-22T07:52:45.082Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~oE9CVAALAFD0tHBAyLZcTg~6v73by-9w9ZxkSuRyo9K-A: Skipping manifest check
+2026-10-22T07:52:45.082Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~oE9CVAALAFD0tHBAyLZcTg~6v73by-9w9ZxkSuRyo9K-A: Download succeeded
+2026-10-22T07:52:45.082Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":7900,"claimedFileSize":7900}
+FILE ris/Вендоры/Вендоры.sql (7824 B)
+2026-10-22T07:52:45.082Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Y4b9dx5QdhkoXfN1oz0VUw
+2026-10-22T07:52:45.082Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Y4b9dx5QdhkoXfN1oz0VUw~eT3cLWG34o66umCwpVSBlQ: Starting download
+2026-10-22T07:52:45.269Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Y4b9dx5QdhkoXfN1oz0VUw/revisions/eT3cLWG34o66umCwpVSBlQ?PageSize=20&FromBlockIndex=1: 200 (187ms)
+2026-10-22T07:52:45.269Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Y4b9dx5QdhkoXfN1oz0VUw~eT3cLWG34o66umCwpVSBlQ: block 1: Download started
+2026-10-22T07:52:45.411Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (142ms)
+2026-10-22T07:52:45.433Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":7824,"milliseconds":0.50644199999806}
+2026-10-22T07:52:45.433Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Y4b9dx5QdhkoXfN1oz0VUw~eT3cLWG34o66umCwpVSBlQ: block 1: Downloaded
+2026-10-22T07:52:45.453Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Y4b9dx5QdhkoXfN1oz0VUw/revisions/eT3cLWG34o66umCwpVSBlQ?PageSize=20&FromBlockIndex=2: 200 (184ms)
+2026-10-22T07:52:45.453Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Y4b9dx5QdhkoXfN1oz0VUw~eT3cLWG34o66umCwpVSBlQ: Flushing completed block 1
+2026-10-22T07:52:45.453Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Y4b9dx5QdhkoXfN1oz0VUw~eT3cLWG34o66umCwpVSBlQ: Skipping manifest check
+2026-10-22T07:52:45.453Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Y4b9dx5QdhkoXfN1oz0VUw~eT3cLWG34o66umCwpVSBlQ: Download succeeded
+2026-10-22T07:52:45.453Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":7905,"claimedFileSize":7905}
+2026-10-22T07:52:45.453Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~Vs5RSqglepoAzHXjHhlCmQ
+2026-10-22T07:52:45.623Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/Vs5RSqglepoAzHXjHhlCmQ/children?: 200 (170ms)
+2026-10-22T07:52:45.831Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (208ms)
+FILE ris/Телепорт/teleport.sql (54623 B)
+2026-10-22T07:52:45.838Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~SXnvrlZ5-fwj0CGUWUYxKA
+2026-10-22T07:52:45.838Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~SXnvrlZ5-fwj0CGUWUYxKA~vu9PtSDACPY2ZFMHZXS0OA: Starting download
+2026-10-22T07:52:46.024Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/SXnvrlZ5-fwj0CGUWUYxKA/revisions/vu9PtSDACPY2ZFMHZXS0OA?PageSize=20&FromBlockIndex=1: 200 (185ms)
+2026-10-22T07:52:46.024Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~SXnvrlZ5-fwj0CGUWUYxKA~vu9PtSDACPY2ZFMHZXS0OA: block 1: Download started
+2026-10-22T07:52:46.206Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (182ms)
+2026-10-22T07:52:46.224Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/SXnvrlZ5-fwj0CGUWUYxKA/revisions/vu9PtSDACPY2ZFMHZXS0OA?PageSize=20&FromBlockIndex=2: 200 (199ms)
+2026-10-22T07:52:46.389Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":54623,"milliseconds":0.690589000001637}
+2026-10-22T07:52:46.389Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~SXnvrlZ5-fwj0CGUWUYxKA~vu9PtSDACPY2ZFMHZXS0OA: block 1: Downloaded
+2026-10-22T07:52:46.389Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~SXnvrlZ5-fwj0CGUWUYxKA~vu9PtSDACPY2ZFMHZXS0OA: Flushing completed block 1
+2026-10-22T07:52:46.389Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~SXnvrlZ5-fwj0CGUWUYxKA~vu9PtSDACPY2ZFMHZXS0OA: Skipping manifest check
+2026-10-22T07:52:46.389Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~SXnvrlZ5-fwj0CGUWUYxKA~vu9PtSDACPY2ZFMHZXS0OA: Download succeeded
+2026-10-22T07:52:46.389Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":54710,"claimedFileSize":54710}
+2026-10-22T07:52:46.390Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~F7taPwhS8AyvmUNzhPJixA
+2026-10-22T07:52:46.553Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/F7taPwhS8AyvmUNzhPJixA/children?: 200 (163ms)
+2026-10-22T07:52:46.720Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (166ms)
+FILE ris/Оружие/Dagger of demolisher-20982-6кк.sql (2330 B)
+2026-10-22T07:52:46.782Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~oSSSkHKV1uBJUSaszBRQTA
+2026-10-22T07:52:46.782Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~oSSSkHKV1uBJUSaszBRQTA~2UptwZtMVK0Dzeu1bAfwBQ: Starting download
+2026-10-22T07:52:46.979Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/oSSSkHKV1uBJUSaszBRQTA/revisions/2UptwZtMVK0Dzeu1bAfwBQ?PageSize=20&FromBlockIndex=1: 200 (197ms)
+2026-10-22T07:52:46.979Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~oSSSkHKV1uBJUSaszBRQTA~2UptwZtMVK0Dzeu1bAfwBQ: block 1: Download started
+2026-10-22T07:52:47.132Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (153ms)
+2026-10-22T07:52:47.133Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2330,"milliseconds":0.6885010000005423}
+2026-10-22T07:52:47.133Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~oSSSkHKV1uBJUSaszBRQTA~2UptwZtMVK0Dzeu1bAfwBQ: block 1: Downloaded
+2026-10-22T07:52:47.159Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/oSSSkHKV1uBJUSaszBRQTA/revisions/2UptwZtMVK0Dzeu1bAfwBQ?PageSize=20&FromBlockIndex=2: 200 (177ms)
+2026-10-22T07:52:47.159Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~oSSSkHKV1uBJUSaszBRQTA~2UptwZtMVK0Dzeu1bAfwBQ: Flushing completed block 1
+2026-10-22T07:52:47.159Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~oSSSkHKV1uBJUSaszBRQTA~2UptwZtMVK0Dzeu1bAfwBQ: Skipping manifest check
+2026-10-22T07:52:47.159Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~oSSSkHKV1uBJUSaszBRQTA~2UptwZtMVK0Dzeu1bAfwBQ: Download succeeded
+2026-10-22T07:52:47.159Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2411,"claimedFileSize":2411}
+FILE ris/Оружие/Start Sword 1H-1000005.sql (2252 B)
+2026-10-22T07:52:47.159Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Y9_NBpejoXXVAyTTp80lOQ
+2026-10-22T07:52:47.160Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Y9_NBpejoXXVAyTTp80lOQ~XQHNOTdjIbgkzOklYq-VhA: Starting download
+2026-10-22T07:52:47.354Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Y9_NBpejoXXVAyTTp80lOQ/revisions/XQHNOTdjIbgkzOklYq-VhA?PageSize=20&FromBlockIndex=1: 200 (194ms)
+2026-10-22T07:52:47.354Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Y9_NBpejoXXVAyTTp80lOQ~XQHNOTdjIbgkzOklYq-VhA: block 1: Download started
+2026-10-22T07:52:47.498Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (144ms)
+2026-10-22T07:52:47.499Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2252,"milliseconds":0.5205840000016906}
+2026-10-22T07:52:47.499Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Y9_NBpejoXXVAyTTp80lOQ~XQHNOTdjIbgkzOklYq-VhA: block 1: Downloaded
+2026-10-22T07:52:47.554Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Y9_NBpejoXXVAyTTp80lOQ/revisions/XQHNOTdjIbgkzOklYq-VhA?PageSize=20&FromBlockIndex=2: 200 (200ms)
+2026-10-22T07:52:47.554Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Y9_NBpejoXXVAyTTp80lOQ~XQHNOTdjIbgkzOklYq-VhA: Flushing completed block 1
+2026-10-22T07:52:47.554Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Y9_NBpejoXXVAyTTp80lOQ~XQHNOTdjIbgkzOklYq-VhA: Skipping manifest check
+2026-10-22T07:52:47.554Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Y9_NBpejoXXVAyTTp80lOQ~XQHNOTdjIbgkzOklYq-VhA: Download succeeded
+2026-10-22T07:52:47.554Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2333,"claimedFileSize":2333}
+FILE ris/Оружие/Axe of demolisher-2227-6кк.sql (2325 B)
+2026-10-22T07:52:47.554Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~JxUqo4upXRZ6oQdIe1fcXg
+2026-10-22T07:52:47.555Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~JxUqo4upXRZ6oQdIe1fcXg~20egHFsIhwml3ulFRfB5nA: Starting download
+2026-10-22T07:52:47.742Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/JxUqo4upXRZ6oQdIe1fcXg/revisions/20egHFsIhwml3ulFRfB5nA?PageSize=20&FromBlockIndex=1: 200 (187ms)
+2026-10-22T07:52:47.742Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~JxUqo4upXRZ6oQdIe1fcXg~20egHFsIhwml3ulFRfB5nA: block 1: Download started
+2026-10-22T07:52:47.897Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (155ms)
+2026-10-22T07:52:47.898Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2325,"milliseconds":0.5922009999994771}
+2026-10-22T07:52:47.898Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~JxUqo4upXRZ6oQdIe1fcXg~20egHFsIhwml3ulFRfB5nA: block 1: Downloaded
+2026-10-22T07:52:47.965Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/JxUqo4upXRZ6oQdIe1fcXg/revisions/20egHFsIhwml3ulFRfB5nA?PageSize=20&FromBlockIndex=2: 200 (222ms)
+2026-10-22T07:52:47.965Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~JxUqo4upXRZ6oQdIe1fcXg~20egHFsIhwml3ulFRfB5nA: Flushing completed block 1
+2026-10-22T07:52:47.966Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~JxUqo4upXRZ6oQdIe1fcXg~20egHFsIhwml3ulFRfB5nA: Skipping manifest check
+2026-10-22T07:52:47.966Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~JxUqo4upXRZ6oQdIe1fcXg~20egHFsIhwml3ulFRfB5nA: Download succeeded
+2026-10-22T07:52:47.966Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2406,"claimedFileSize":2406}
+FILE ris/Оружие/Sword of demolisher3267-6кк.sql (2328 B)
+2026-10-22T07:52:47.966Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~wDEju5Jf0hz78lAWwpcEKA
+2026-10-22T07:52:47.966Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wDEju5Jf0hz78lAWwpcEKA~f3eNxVG4w5kOL4sOE2UkGg: Starting download
+2026-10-22T07:52:48.175Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/wDEju5Jf0hz78lAWwpcEKA/revisions/f3eNxVG4w5kOL4sOE2UkGg?PageSize=20&FromBlockIndex=1: 200 (209ms)
+2026-10-22T07:52:48.175Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wDEju5Jf0hz78lAWwpcEKA~f3eNxVG4w5kOL4sOE2UkGg: block 1: Download started
+2026-10-22T07:52:48.328Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (153ms)
+2026-10-22T07:52:48.328Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2328,"milliseconds":0.5914899999988847}
+2026-10-22T07:52:48.328Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wDEju5Jf0hz78lAWwpcEKA~f3eNxVG4w5kOL4sOE2UkGg: block 1: Downloaded
+2026-10-22T07:52:48.361Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/wDEju5Jf0hz78lAWwpcEKA/revisions/f3eNxVG4w5kOL4sOE2UkGg?PageSize=20&FromBlockIndex=2: 200 (186ms)
+2026-10-22T07:52:48.362Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wDEju5Jf0hz78lAWwpcEKA~f3eNxVG4w5kOL4sOE2UkGg: Flushing completed block 1
+2026-10-22T07:52:48.362Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~wDEju5Jf0hz78lAWwpcEKA~f3eNxVG4w5kOL4sOE2UkGg: Skipping manifest check
+2026-10-22T07:52:48.362Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wDEju5Jf0hz78lAWwpcEKA~f3eNxVG4w5kOL4sOE2UkGg: Download succeeded
+2026-10-22T07:52:48.362Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2409,"claimedFileSize":2409}
+FILE ris/Оружие/Staff of demolisher943-6кк.sql (2327 B)
+2026-10-22T07:52:48.362Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~wyp9GAoD75C-tfKjJWNQxg
+2026-10-22T07:52:48.362Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wyp9GAoD75C-tfKjJWNQxg~2Bm4toN0VfzXeSX5Uz9S_w: Starting download
+2026-10-22T07:52:48.570Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/wyp9GAoD75C-tfKjJWNQxg/revisions/2Bm4toN0VfzXeSX5Uz9S_w?PageSize=20&FromBlockIndex=1: 200 (208ms)
+2026-10-22T07:52:48.570Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wyp9GAoD75C-tfKjJWNQxg~2Bm4toN0VfzXeSX5Uz9S_w: block 1: Download started
+2026-10-22T07:52:48.723Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (153ms)
+2026-10-22T07:52:48.725Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2327,"milliseconds":0.5437480000000505}
+2026-10-22T07:52:48.725Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wyp9GAoD75C-tfKjJWNQxg~2Bm4toN0VfzXeSX5Uz9S_w: block 1: Downloaded
+2026-10-22T07:52:48.759Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/wyp9GAoD75C-tfKjJWNQxg/revisions/2Bm4toN0VfzXeSX5Uz9S_w?PageSize=20&FromBlockIndex=2: 200 (189ms)
+2026-10-22T07:52:48.759Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wyp9GAoD75C-tfKjJWNQxg~2Bm4toN0VfzXeSX5Uz9S_w: Flushing completed block 1
+2026-10-22T07:52:48.759Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~wyp9GAoD75C-tfKjJWNQxg~2Bm4toN0VfzXeSX5Uz9S_w: Skipping manifest check
+2026-10-22T07:52:48.759Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wyp9GAoD75C-tfKjJWNQxg~2Bm4toN0VfzXeSX5Uz9S_w: Download succeeded
+2026-10-22T07:52:48.759Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2408,"claimedFileSize":2408}
+FILE ris/Оружие/Start Axe 1H-1000003.sql (2249 B)
+2026-10-22T07:52:48.759Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~A9JhheitXOdcMoR-l1zRfw
+2026-10-22T07:52:48.759Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~A9JhheitXOdcMoR-l1zRfw~J7UYeH4d3sxp4ltpR0r0ew: Starting download
+2026-10-22T07:52:48.960Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/A9JhheitXOdcMoR-l1zRfw/revisions/J7UYeH4d3sxp4ltpR0r0ew?PageSize=20&FromBlockIndex=1: 200 (201ms)
+2026-10-22T07:52:48.960Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~A9JhheitXOdcMoR-l1zRfw~J7UYeH4d3sxp4ltpR0r0ew: block 1: Download started
+2026-10-22T07:52:49.107Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (147ms)
+2026-10-22T07:52:49.107Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2249,"milliseconds":0.5392710000014631}
+2026-10-22T07:52:49.108Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~A9JhheitXOdcMoR-l1zRfw~J7UYeH4d3sxp4ltpR0r0ew: block 1: Downloaded
+2026-10-22T07:52:49.125Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/A9JhheitXOdcMoR-l1zRfw/revisions/J7UYeH4d3sxp4ltpR0r0ew?PageSize=20&FromBlockIndex=2: 200 (165ms)
+2026-10-22T07:52:49.125Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~A9JhheitXOdcMoR-l1zRfw~J7UYeH4d3sxp4ltpR0r0ew: Flushing completed block 1
+2026-10-22T07:52:49.125Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~A9JhheitXOdcMoR-l1zRfw~J7UYeH4d3sxp4ltpR0r0ew: Skipping manifest check
+2026-10-22T07:52:49.125Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~A9JhheitXOdcMoR-l1zRfw~J7UYeH4d3sxp4ltpR0r0ew: Download succeeded
+2026-10-22T07:52:49.125Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2330,"claimedFileSize":2330}
+FILE ris/Оружие/Start Sword 2H-1000001.sql (2252 B)
+2026-10-22T07:52:49.125Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~R-tLW_AL9iyF8cfvEc9z2A
+2026-10-22T07:52:49.125Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~R-tLW_AL9iyF8cfvEc9z2A~YbjSNr9tmorZlePPCX-_YA: Starting download
+2026-10-22T07:52:49.346Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/R-tLW_AL9iyF8cfvEc9z2A/revisions/YbjSNr9tmorZlePPCX-_YA?PageSize=20&FromBlockIndex=1: 200 (221ms)
+2026-10-22T07:52:49.346Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~R-tLW_AL9iyF8cfvEc9z2A~YbjSNr9tmorZlePPCX-_YA: block 1: Download started
+2026-10-22T07:52:49.498Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (152ms)
+2026-10-22T07:52:49.499Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2252,"milliseconds":0.5818260000014561}
+2026-10-22T07:52:49.499Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~R-tLW_AL9iyF8cfvEc9z2A~YbjSNr9tmorZlePPCX-_YA: block 1: Downloaded
+2026-10-22T07:52:49.516Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/R-tLW_AL9iyF8cfvEc9z2A/revisions/YbjSNr9tmorZlePPCX-_YA?PageSize=20&FromBlockIndex=2: 200 (170ms)
+2026-10-22T07:52:49.516Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~R-tLW_AL9iyF8cfvEc9z2A~YbjSNr9tmorZlePPCX-_YA: Flushing completed block 1
+2026-10-22T07:52:49.516Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~R-tLW_AL9iyF8cfvEc9z2A~YbjSNr9tmorZlePPCX-_YA: Skipping manifest check
+2026-10-22T07:52:49.516Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~R-tLW_AL9iyF8cfvEc9z2A~YbjSNr9tmorZlePPCX-_YA: Download succeeded
+2026-10-22T07:52:49.516Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2333,"claimedFileSize":2333}
+FILE ris/Оружие/Dagger SPD of demolisher-20836-6кк.sql (2336 B)
+2026-10-22T07:52:49.517Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~U3itBOiFkQ8G8qDXZ0ItzA
+2026-10-22T07:52:49.517Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~U3itBOiFkQ8G8qDXZ0ItzA~qHxRnpQnaLNTdZy9xfNKKA: Starting download
+2026-10-22T07:52:49.726Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/U3itBOiFkQ8G8qDXZ0ItzA/revisions/qHxRnpQnaLNTdZy9xfNKKA?PageSize=20&FromBlockIndex=1: 200 (209ms)
+2026-10-22T07:52:49.726Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~U3itBOiFkQ8G8qDXZ0ItzA~qHxRnpQnaLNTdZy9xfNKKA: block 1: Download started
+2026-10-22T07:52:49.867Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (141ms)
+2026-10-22T07:52:49.868Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2336,"milliseconds":0.5746450000006007}
+2026-10-22T07:52:49.868Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~U3itBOiFkQ8G8qDXZ0ItzA~qHxRnpQnaLNTdZy9xfNKKA: block 1: Downloaded
+2026-10-22T07:52:49.917Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/U3itBOiFkQ8G8qDXZ0ItzA/revisions/qHxRnpQnaLNTdZy9xfNKKA?PageSize=20&FromBlockIndex=2: 200 (190ms)
+2026-10-22T07:52:49.918Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~U3itBOiFkQ8G8qDXZ0ItzA~qHxRnpQnaLNTdZy9xfNKKA: Flushing completed block 1
+2026-10-22T07:52:49.918Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~U3itBOiFkQ8G8qDXZ0ItzA~qHxRnpQnaLNTdZy9xfNKKA: Skipping manifest check
+2026-10-22T07:52:49.918Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~U3itBOiFkQ8G8qDXZ0ItzA~qHxRnpQnaLNTdZy9xfNKKA: Download succeeded
+2026-10-22T07:52:49.918Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2417,"claimedFileSize":2417}
+FILE ris/Оружие/Start Dagger 1H-1000004.sql (2253 B)
+2026-10-22T07:52:49.918Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~OhaYSFzF-uLTYSWTagZ3aA
+2026-10-22T07:52:49.918Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~OhaYSFzF-uLTYSWTagZ3aA~1fLP-lr8cfd7_mL1s6yAMw: Starting download
+2026-10-22T07:52:50.078Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/OhaYSFzF-uLTYSWTagZ3aA/revisions/1fLP-lr8cfd7_mL1s6yAMw?PageSize=20&FromBlockIndex=1: 200 (160ms)
+2026-10-22T07:52:50.078Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~OhaYSFzF-uLTYSWTagZ3aA~1fLP-lr8cfd7_mL1s6yAMw: block 1: Download started
+2026-10-22T07:52:50.227Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (149ms)
+2026-10-22T07:52:50.228Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2253,"milliseconds":0.516286999998556}
+2026-10-22T07:52:50.228Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~OhaYSFzF-uLTYSWTagZ3aA~1fLP-lr8cfd7_mL1s6yAMw: block 1: Downloaded
+2026-10-22T07:52:50.252Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/OhaYSFzF-uLTYSWTagZ3aA/revisions/1fLP-lr8cfd7_mL1s6yAMw?PageSize=20&FromBlockIndex=2: 200 (174ms)
+2026-10-22T07:52:50.252Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~OhaYSFzF-uLTYSWTagZ3aA~1fLP-lr8cfd7_mL1s6yAMw: Flushing completed block 1
+2026-10-22T07:52:50.252Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~OhaYSFzF-uLTYSWTagZ3aA~1fLP-lr8cfd7_mL1s6yAMw: Skipping manifest check
+2026-10-22T07:52:50.252Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~OhaYSFzF-uLTYSWTagZ3aA~1fLP-lr8cfd7_mL1s6yAMw: Download succeeded
+2026-10-22T07:52:50.252Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2334,"claimedFileSize":2334}
+FILE ris/Оружие/Axe2h of demolisher-871-6кк.sql (2326 B)
+2026-10-22T07:52:50.252Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~cdR3OwrtRRcHFRpAEzI2kA
+2026-10-22T07:52:50.252Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cdR3OwrtRRcHFRpAEzI2kA~TnZgrbloLI58QLEoFi2GYg: Starting download
+2026-10-22T07:52:50.438Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/cdR3OwrtRRcHFRpAEzI2kA/revisions/TnZgrbloLI58QLEoFi2GYg?PageSize=20&FromBlockIndex=1: 200 (186ms)
+2026-10-22T07:52:50.438Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cdR3OwrtRRcHFRpAEzI2kA~TnZgrbloLI58QLEoFi2GYg: block 1: Download started
+2026-10-22T07:52:50.587Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (149ms)
+2026-10-22T07:52:50.589Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2326,"milliseconds":0.48872599999958766}
+2026-10-22T07:52:50.589Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cdR3OwrtRRcHFRpAEzI2kA~TnZgrbloLI58QLEoFi2GYg: block 1: Downloaded
+2026-10-22T07:52:50.621Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/cdR3OwrtRRcHFRpAEzI2kA/revisions/TnZgrbloLI58QLEoFi2GYg?PageSize=20&FromBlockIndex=2: 200 (182ms)
+2026-10-22T07:52:50.621Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cdR3OwrtRRcHFRpAEzI2kA~TnZgrbloLI58QLEoFi2GYg: Flushing completed block 1
+2026-10-22T07:52:50.622Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~cdR3OwrtRRcHFRpAEzI2kA~TnZgrbloLI58QLEoFi2GYg: Skipping manifest check
+2026-10-22T07:52:50.622Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cdR3OwrtRRcHFRpAEzI2kA~TnZgrbloLI58QLEoFi2GYg: Download succeeded
+2026-10-22T07:52:50.622Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2407,"claimedFileSize":2407}
+FILE ris/Оружие/Shield of demolisher-1169-6кк.sql (2313 B)
+2026-10-22T07:52:50.622Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~hsZYCQkL8X8ZxRUIBLq0tA
+2026-10-22T07:52:50.622Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hsZYCQkL8X8ZxRUIBLq0tA~CDNSscEbC7n4KEB-Cpu4vA: Starting download
+2026-10-22T07:52:50.810Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/hsZYCQkL8X8ZxRUIBLq0tA/revisions/CDNSscEbC7n4KEB-Cpu4vA?PageSize=20&FromBlockIndex=1: 200 (188ms)
+2026-10-22T07:52:50.810Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hsZYCQkL8X8ZxRUIBLq0tA~CDNSscEbC7n4KEB-Cpu4vA: block 1: Download started
+2026-10-22T07:52:50.950Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (140ms)
+2026-10-22T07:52:50.951Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2313,"milliseconds":0.5715900000031979}
+2026-10-22T07:52:50.951Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hsZYCQkL8X8ZxRUIBLq0tA~CDNSscEbC7n4KEB-Cpu4vA: block 1: Downloaded
+2026-10-22T07:52:51.021Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/hsZYCQkL8X8ZxRUIBLq0tA/revisions/CDNSscEbC7n4KEB-Cpu4vA?PageSize=20&FromBlockIndex=2: 200 (211ms)
+2026-10-22T07:52:51.021Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hsZYCQkL8X8ZxRUIBLq0tA~CDNSscEbC7n4KEB-Cpu4vA: Flushing completed block 1
+2026-10-22T07:52:51.021Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~hsZYCQkL8X8ZxRUIBLq0tA~CDNSscEbC7n4KEB-Cpu4vA: Skipping manifest check
+2026-10-22T07:52:51.021Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hsZYCQkL8X8ZxRUIBLq0tA~CDNSscEbC7n4KEB-Cpu4vA: Download succeeded
+2026-10-22T07:52:51.021Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2394,"claimedFileSize":2394}
+FILE ris/Оружие/Start Staff 2H-1000002.sql (2252 B)
+2026-10-22T07:52:51.021Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~kHsPkmdrvPnazH-m2k4o3A
+2026-10-22T07:52:51.022Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~kHsPkmdrvPnazH-m2k4o3A~3qjFuJSyRkqdh4q4L74bjA: Starting download
+2026-10-22T07:52:51.214Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/kHsPkmdrvPnazH-m2k4o3A/revisions/3qjFuJSyRkqdh4q4L74bjA?PageSize=20&FromBlockIndex=1: 200 (192ms)
+2026-10-22T07:52:51.214Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~kHsPkmdrvPnazH-m2k4o3A~3qjFuJSyRkqdh4q4L74bjA: block 1: Download started
+2026-10-22T07:52:51.353Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (139ms)
+2026-10-22T07:52:51.353Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2252,"milliseconds":0.5704880000012054}
+2026-10-22T07:52:51.353Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~kHsPkmdrvPnazH-m2k4o3A~3qjFuJSyRkqdh4q4L74bjA: block 1: Downloaded
+2026-10-22T07:52:51.375Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/kHsPkmdrvPnazH-m2k4o3A/revisions/3qjFuJSyRkqdh4q4L74bjA?PageSize=20&FromBlockIndex=2: 200 (161ms)
+2026-10-22T07:52:51.375Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~kHsPkmdrvPnazH-m2k4o3A~3qjFuJSyRkqdh4q4L74bjA: Flushing completed block 1
+2026-10-22T07:52:51.375Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~kHsPkmdrvPnazH-m2k4o3A~3qjFuJSyRkqdh4q4L74bjA: Skipping manifest check
+2026-10-22T07:52:51.375Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~kHsPkmdrvPnazH-m2k4o3A~3qjFuJSyRkqdh4q4L74bjA: Download succeeded
+2026-10-22T07:52:51.375Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2333,"claimedFileSize":2333}
+FILE ris/Оружие/Sword2h of demolisher-864-6кк.sql (2327 B)
+2026-10-22T07:52:51.375Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~edV06OIwbQgqNtTzF8__lQ
+2026-10-22T07:52:51.376Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~edV06OIwbQgqNtTzF8__lQ~QSkNqhVUOfcG1rRa09tFyA: Starting download
+2026-10-22T07:52:51.555Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/edV06OIwbQgqNtTzF8__lQ/revisions/QSkNqhVUOfcG1rRa09tFyA?PageSize=20&FromBlockIndex=1: 200 (179ms)
+2026-10-22T07:52:51.555Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~edV06OIwbQgqNtTzF8__lQ~QSkNqhVUOfcG1rRa09tFyA: block 1: Download started
+2026-10-22T07:52:51.709Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (154ms)
+2026-10-22T07:52:51.710Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2327,"milliseconds":0.5126909999999043}
+2026-10-22T07:52:51.710Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~edV06OIwbQgqNtTzF8__lQ~QSkNqhVUOfcG1rRa09tFyA: block 1: Downloaded
+2026-10-22T07:52:51.732Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/edV06OIwbQgqNtTzF8__lQ/revisions/QSkNqhVUOfcG1rRa09tFyA?PageSize=20&FromBlockIndex=2: 200 (177ms)
+2026-10-22T07:52:51.733Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~edV06OIwbQgqNtTzF8__lQ~QSkNqhVUOfcG1rRa09tFyA: Flushing completed block 1
+2026-10-22T07:52:51.733Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~edV06OIwbQgqNtTzF8__lQ~QSkNqhVUOfcG1rRa09tFyA: Skipping manifest check
+2026-10-22T07:52:51.733Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~edV06OIwbQgqNtTzF8__lQ~QSkNqhVUOfcG1rRa09tFyA: Download succeeded
+2026-10-22T07:52:51.733Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2408,"claimedFileSize":2408}
+2026-10-22T07:52:51.733Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~bFnGDKoBNuN3V_Q-4b80Xw
+2026-10-22T07:52:51.914Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/bFnGDKoBNuN3V_Q-4b80Xw/children?: 200 (181ms)
+2026-10-22T07:52:52.078Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (164ms)
+2026-10-22T07:52:52.082Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~sNXYxp54WlE02d9PhUVtAQ
+2026-10-22T07:52:52.276Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/sNXYxp54WlE02d9PhUVtAQ/children?: 200 (193ms)
+2026-10-22T07:52:52.459Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (182ms)
+FILE ris/Шмотьё/Арены Сет/Arena Set-564711.sql (2173 B)
+2026-10-22T07:52:52.485Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Oufgs6mF0R7YdYN5t49jgg
+2026-10-22T07:52:52.486Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Oufgs6mF0R7YdYN5t49jgg~O25XzJ0tnPfJQ6REgy2YPQ: Starting download
+2026-10-22T07:52:52.670Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Oufgs6mF0R7YdYN5t49jgg/revisions/O25XzJ0tnPfJQ6REgy2YPQ?PageSize=20&FromBlockIndex=1: 200 (184ms)
+2026-10-22T07:52:52.670Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Oufgs6mF0R7YdYN5t49jgg~O25XzJ0tnPfJQ6REgy2YPQ: block 1: Download started
+2026-10-22T07:52:52.815Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (145ms)
+2026-10-22T07:52:52.815Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2173,"milliseconds":0.4963769999994838}
+2026-10-22T07:52:52.816Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Oufgs6mF0R7YdYN5t49jgg~O25XzJ0tnPfJQ6REgy2YPQ: block 1: Downloaded
+2026-10-22T07:52:52.850Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Oufgs6mF0R7YdYN5t49jgg/revisions/O25XzJ0tnPfJQ6REgy2YPQ?PageSize=20&FromBlockIndex=2: 200 (180ms)
+2026-10-22T07:52:52.850Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Oufgs6mF0R7YdYN5t49jgg~O25XzJ0tnPfJQ6REgy2YPQ: Flushing completed block 1
+2026-10-22T07:52:52.850Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Oufgs6mF0R7YdYN5t49jgg~O25XzJ0tnPfJQ6REgy2YPQ: Skipping manifest check
+2026-10-22T07:52:52.850Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Oufgs6mF0R7YdYN5t49jgg~O25XzJ0tnPfJQ6REgy2YPQ: Download succeeded
+2026-10-22T07:52:52.850Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2254,"claimedFileSize":2254}
+FILE ris/Шмотьё/Арены Сет/Arena Set-564712.sql (2173 B)
+2026-10-22T07:52:52.850Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~fKNIVHuWRMuT8PHf1rvT5w
+2026-10-22T07:52:52.851Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fKNIVHuWRMuT8PHf1rvT5w~tPqDuXUhn5vUcX5Xz4_0FA: Starting download
+2026-10-22T07:52:53.017Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/fKNIVHuWRMuT8PHf1rvT5w/revisions/tPqDuXUhn5vUcX5Xz4_0FA?PageSize=20&FromBlockIndex=1: 200 (166ms)
+2026-10-22T07:52:53.017Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fKNIVHuWRMuT8PHf1rvT5w~tPqDuXUhn5vUcX5Xz4_0FA: block 1: Download started
+2026-10-22T07:52:53.168Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (151ms)
+2026-10-22T07:52:53.169Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2173,"milliseconds":0.5399620000025607}
+2026-10-22T07:52:53.169Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fKNIVHuWRMuT8PHf1rvT5w~tPqDuXUhn5vUcX5Xz4_0FA: block 1: Downloaded
+2026-10-22T07:52:53.195Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/fKNIVHuWRMuT8PHf1rvT5w/revisions/tPqDuXUhn5vUcX5Xz4_0FA?PageSize=20&FromBlockIndex=2: 200 (178ms)
+2026-10-22T07:52:53.195Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fKNIVHuWRMuT8PHf1rvT5w~tPqDuXUhn5vUcX5Xz4_0FA: Flushing completed block 1
+2026-10-22T07:52:53.195Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~fKNIVHuWRMuT8PHf1rvT5w~tPqDuXUhn5vUcX5Xz4_0FA: Skipping manifest check
+2026-10-22T07:52:53.195Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fKNIVHuWRMuT8PHf1rvT5w~tPqDuXUhn5vUcX5Xz4_0FA: Download succeeded
+2026-10-22T07:52:53.195Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2254,"claimedFileSize":2254}
+FILE ris/Шмотьё/Арены Сет/Arena Set-564714.sql (2174 B)
+2026-10-22T07:52:53.195Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~yOrqWh5iWfGfHRWdYg1U7g
+2026-10-22T07:52:53.195Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yOrqWh5iWfGfHRWdYg1U7g~duJgCcOZQi7HGLMimlZipQ: Starting download
+2026-10-22T07:52:53.369Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/yOrqWh5iWfGfHRWdYg1U7g/revisions/duJgCcOZQi7HGLMimlZipQ?PageSize=20&FromBlockIndex=1: 200 (174ms)
+2026-10-22T07:52:53.369Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yOrqWh5iWfGfHRWdYg1U7g~duJgCcOZQi7HGLMimlZipQ: block 1: Download started
+2026-10-22T07:52:53.515Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (145ms)
+2026-10-22T07:52:53.516Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2174,"milliseconds":0.9611360000017157}
+2026-10-22T07:52:53.516Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yOrqWh5iWfGfHRWdYg1U7g~duJgCcOZQi7HGLMimlZipQ: block 1: Downloaded
+2026-10-22T07:52:53.546Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/yOrqWh5iWfGfHRWdYg1U7g/revisions/duJgCcOZQi7HGLMimlZipQ?PageSize=20&FromBlockIndex=2: 200 (176ms)
+2026-10-22T07:52:53.546Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yOrqWh5iWfGfHRWdYg1U7g~duJgCcOZQi7HGLMimlZipQ: Flushing completed block 1
+2026-10-22T07:52:53.547Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~yOrqWh5iWfGfHRWdYg1U7g~duJgCcOZQi7HGLMimlZipQ: Skipping manifest check
+2026-10-22T07:52:53.547Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yOrqWh5iWfGfHRWdYg1U7g~duJgCcOZQi7HGLMimlZipQ: Download succeeded
+2026-10-22T07:52:53.547Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2255,"claimedFileSize":2255}
+FILE ris/Шмотьё/Арены Сет/Arena Set-564713.sql (2173 B)
+2026-10-22T07:52:53.547Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~4qFoOqOsPK8TB-7I75Va9A
+2026-10-22T07:52:53.547Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~4qFoOqOsPK8TB-7I75Va9A~FuwgdNCTqEopwZ_gDTw_HA: Starting download
+2026-10-22T07:52:53.730Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/4qFoOqOsPK8TB-7I75Va9A/revisions/FuwgdNCTqEopwZ_gDTw_HA?PageSize=20&FromBlockIndex=1: 200 (183ms)
+2026-10-22T07:52:53.731Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~4qFoOqOsPK8TB-7I75Va9A~FuwgdNCTqEopwZ_gDTw_HA: block 1: Download started
+2026-10-22T07:52:53.873Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (142ms)
+2026-10-22T07:52:53.874Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2173,"milliseconds":0.6442199999983131}
+2026-10-22T07:52:53.874Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~4qFoOqOsPK8TB-7I75Va9A~FuwgdNCTqEopwZ_gDTw_HA: block 1: Downloaded
+2026-10-22T07:52:53.926Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/4qFoOqOsPK8TB-7I75Va9A/revisions/FuwgdNCTqEopwZ_gDTw_HA?PageSize=20&FromBlockIndex=2: 200 (195ms)
+2026-10-22T07:52:53.926Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~4qFoOqOsPK8TB-7I75Va9A~FuwgdNCTqEopwZ_gDTw_HA: Flushing completed block 1
+2026-10-22T07:52:53.926Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~4qFoOqOsPK8TB-7I75Va9A~FuwgdNCTqEopwZ_gDTw_HA: Skipping manifest check
+2026-10-22T07:52:53.926Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~4qFoOqOsPK8TB-7I75Va9A~FuwgdNCTqEopwZ_gDTw_HA: Download succeeded
+2026-10-22T07:52:53.926Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2254,"claimedFileSize":2254}
+FILE ris/Шмотьё/Арены Сет/Arena Set-564710.sql (2179 B)
+2026-10-22T07:52:53.927Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~AocdI18LQ5r69kzXdLcSnQ
+2026-10-22T07:52:53.927Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~AocdI18LQ5r69kzXdLcSnQ~yUOm77dOMabxXsWIC5ZZ9g: Starting download
+2026-10-22T07:52:54.116Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/AocdI18LQ5r69kzXdLcSnQ/revisions/yUOm77dOMabxXsWIC5ZZ9g?PageSize=20&FromBlockIndex=1: 200 (189ms)
+2026-10-22T07:52:54.116Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~AocdI18LQ5r69kzXdLcSnQ~yUOm77dOMabxXsWIC5ZZ9g: block 1: Download started
+2026-10-22T07:52:54.276Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (160ms)
+2026-10-22T07:52:54.276Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2179,"milliseconds":0.6823780000013357}
+2026-10-22T07:52:54.277Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~AocdI18LQ5r69kzXdLcSnQ~yUOm77dOMabxXsWIC5ZZ9g: block 1: Downloaded
+2026-10-22T07:52:54.300Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/AocdI18LQ5r69kzXdLcSnQ/revisions/yUOm77dOMabxXsWIC5ZZ9g?PageSize=20&FromBlockIndex=2: 200 (184ms)
+2026-10-22T07:52:54.300Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~AocdI18LQ5r69kzXdLcSnQ~yUOm77dOMabxXsWIC5ZZ9g: Flushing completed block 1
+2026-10-22T07:52:54.300Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~AocdI18LQ5r69kzXdLcSnQ~yUOm77dOMabxXsWIC5ZZ9g: Skipping manifest check
+2026-10-22T07:52:54.300Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~AocdI18LQ5r69kzXdLcSnQ~yUOm77dOMabxXsWIC5ZZ9g: Download succeeded
+2026-10-22T07:52:54.300Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2260,"claimedFileSize":2260}
+2026-10-22T07:52:54.300Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~0LeAH4i_ZGMYCaI114TA3Q
+2026-10-22T07:52:54.484Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/0LeAH4i_ZGMYCaI114TA3Q/children?: 200 (184ms)
+2026-10-22T07:52:54.677Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (193ms)
+FILE ris/Шмотьё/6кк/Set of demolisher SPD-2622-6кк.sql (2308 B)
+2026-10-22T07:52:54.712Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~cJ1CCn21Q7g4VslFKYAuYA
+2026-10-22T07:52:54.712Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cJ1CCn21Q7g4VslFKYAuYA~FuqDStWQJ5n2Gc5n3lTNyA: Starting download
+2026-10-22T07:52:54.929Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/cJ1CCn21Q7g4VslFKYAuYA/revisions/FuqDStWQJ5n2Gc5n3lTNyA?PageSize=20&FromBlockIndex=1: 200 (217ms)
+2026-10-22T07:52:54.929Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cJ1CCn21Q7g4VslFKYAuYA~FuqDStWQJ5n2Gc5n3lTNyA: block 1: Download started
+2026-10-22T07:52:55.080Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (151ms)
+2026-10-22T07:52:55.081Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2308,"milliseconds":0.6627270000026328}
+2026-10-22T07:52:55.081Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cJ1CCn21Q7g4VslFKYAuYA~FuqDStWQJ5n2Gc5n3lTNyA: block 1: Downloaded
+2026-10-22T07:52:55.124Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/cJ1CCn21Q7g4VslFKYAuYA/revisions/FuqDStWQJ5n2Gc5n3lTNyA?PageSize=20&FromBlockIndex=2: 200 (195ms)
+2026-10-22T07:52:55.124Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cJ1CCn21Q7g4VslFKYAuYA~FuqDStWQJ5n2Gc5n3lTNyA: Flushing completed block 1
+2026-10-22T07:52:55.124Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~cJ1CCn21Q7g4VslFKYAuYA~FuqDStWQJ5n2Gc5n3lTNyA: Skipping manifest check
+2026-10-22T07:52:55.124Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cJ1CCn21Q7g4VslFKYAuYA~FuqDStWQJ5n2Gc5n3lTNyA: Download succeeded
+2026-10-22T07:52:55.124Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2389,"claimedFileSize":2389}
+FILE ris/Шмотьё/6кк/Set of demolisher DD-4075-6кк.sql (2309 B)
+2026-10-22T07:52:55.124Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~U2oWvfkg5wrL_7WmwlmfTQ
+2026-10-22T07:52:55.124Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~U2oWvfkg5wrL_7WmwlmfTQ~TxwGS4HllfHkQQy0-d_XJg: Starting download
+2026-10-22T07:52:55.293Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/U2oWvfkg5wrL_7WmwlmfTQ/revisions/TxwGS4HllfHkQQy0-d_XJg?PageSize=20&FromBlockIndex=1: 200 (169ms)
+2026-10-22T07:52:55.293Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~U2oWvfkg5wrL_7WmwlmfTQ~TxwGS4HllfHkQQy0-d_XJg: block 1: Download started
+2026-10-22T07:52:55.442Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (149ms)
+2026-10-22T07:52:55.443Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2309,"milliseconds":0.5073730000003707}
+2026-10-22T07:52:55.443Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~U2oWvfkg5wrL_7WmwlmfTQ~TxwGS4HllfHkQQy0-d_XJg: block 1: Downloaded
+2026-10-22T07:52:55.470Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/U2oWvfkg5wrL_7WmwlmfTQ/revisions/TxwGS4HllfHkQQy0-d_XJg?PageSize=20&FromBlockIndex=2: 200 (176ms)
+2026-10-22T07:52:55.470Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~U2oWvfkg5wrL_7WmwlmfTQ~TxwGS4HllfHkQQy0-d_XJg: Flushing completed block 1
+2026-10-22T07:52:55.470Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~U2oWvfkg5wrL_7WmwlmfTQ~TxwGS4HllfHkQQy0-d_XJg: Skipping manifest check
+2026-10-22T07:52:55.470Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~U2oWvfkg5wrL_7WmwlmfTQ~TxwGS4HllfHkQQy0-d_XJg: Download succeeded
+2026-10-22T07:52:55.470Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2390,"claimedFileSize":2390}
+FILE ris/Шмотьё/6кк/Set of demolisher SPD-203-6кк.sql (2307 B)
+2026-10-22T07:52:55.470Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~-7dBa2R29Niqx2zs0q764A
+2026-10-22T07:52:55.470Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~-7dBa2R29Niqx2zs0q764A~HVLMF9R4S3AQ2laLabgwzw: Starting download
+2026-10-22T07:52:55.659Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/-7dBa2R29Niqx2zs0q764A/revisions/HVLMF9R4S3AQ2laLabgwzw?PageSize=20&FromBlockIndex=1: 200 (189ms)
+2026-10-22T07:52:55.659Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~-7dBa2R29Niqx2zs0q764A~HVLMF9R4S3AQ2laLabgwzw: block 1: Download started
+2026-10-22T07:52:55.804Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (145ms)
+2026-10-22T07:52:55.805Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2307,"milliseconds":0.5095069999988482}
+2026-10-22T07:52:55.805Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~-7dBa2R29Niqx2zs0q764A~HVLMF9R4S3AQ2laLabgwzw: block 1: Downloaded
+2026-10-22T07:52:55.851Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/-7dBa2R29Niqx2zs0q764A/revisions/HVLMF9R4S3AQ2laLabgwzw?PageSize=20&FromBlockIndex=2: 200 (192ms)
+2026-10-22T07:52:55.851Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~-7dBa2R29Niqx2zs0q764A~HVLMF9R4S3AQ2laLabgwzw: Flushing completed block 1
+2026-10-22T07:52:55.851Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~-7dBa2R29Niqx2zs0q764A~HVLMF9R4S3AQ2laLabgwzw: Skipping manifest check
+2026-10-22T07:52:55.851Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~-7dBa2R29Niqx2zs0q764A~HVLMF9R4S3AQ2laLabgwzw: Download succeeded
+2026-10-22T07:52:55.851Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2388,"claimedFileSize":2388}
+FILE ris/Шмотьё/6кк/Set of demolisher DD-2906-6кк.sql (2307 B)
+2026-10-22T07:52:55.851Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Y7XbAJh_Nt5hw3BvEL1rnQ
+2026-10-22T07:52:55.851Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Y7XbAJh_Nt5hw3BvEL1rnQ~m-0H4X3t2R7g-BzAADAuRQ: Starting download
+2026-10-22T07:52:56.028Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Y7XbAJh_Nt5hw3BvEL1rnQ/revisions/m-0H4X3t2R7g-BzAADAuRQ?PageSize=20&FromBlockIndex=1: 200 (176ms)
+2026-10-22T07:52:56.028Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Y7XbAJh_Nt5hw3BvEL1rnQ~m-0H4X3t2R7g-BzAADAuRQ: block 1: Download started
+2026-10-22T07:52:56.179Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (151ms)
+2026-10-22T07:52:56.180Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2307,"milliseconds":0.47659700000076555}
+2026-10-22T07:52:56.180Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Y7XbAJh_Nt5hw3BvEL1rnQ~m-0H4X3t2R7g-BzAADAuRQ: block 1: Downloaded
+2026-10-22T07:52:56.203Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Y7XbAJh_Nt5hw3BvEL1rnQ/revisions/m-0H4X3t2R7g-BzAADAuRQ?PageSize=20&FromBlockIndex=2: 200 (175ms)
+2026-10-22T07:52:56.203Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Y7XbAJh_Nt5hw3BvEL1rnQ~m-0H4X3t2R7g-BzAADAuRQ: Flushing completed block 1
+2026-10-22T07:52:56.203Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Y7XbAJh_Nt5hw3BvEL1rnQ~m-0H4X3t2R7g-BzAADAuRQ: Skipping manifest check
+2026-10-22T07:52:56.203Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Y7XbAJh_Nt5hw3BvEL1rnQ~m-0H4X3t2R7g-BzAADAuRQ: Download succeeded
+2026-10-22T07:52:56.203Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2388,"claimedFileSize":2388}
+FILE ris/Шмотьё/6кк/Set of demolisher SPD-193-6кк.sql (2307 B)
+2026-10-22T07:52:56.203Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Q2ISdTjSz3X3Ee1Z5D6GAw
+2026-10-22T07:52:56.204Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Q2ISdTjSz3X3Ee1Z5D6GAw~3gHPCqCBNIKchH-WwEUkcg: Starting download
+2026-10-22T07:52:56.390Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Q2ISdTjSz3X3Ee1Z5D6GAw/revisions/3gHPCqCBNIKchH-WwEUkcg?PageSize=20&FromBlockIndex=1: 200 (186ms)
+2026-10-22T07:52:56.390Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Q2ISdTjSz3X3Ee1Z5D6GAw~3gHPCqCBNIKchH-WwEUkcg: block 1: Download started
+2026-10-22T07:52:56.536Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (146ms)
+2026-10-22T07:52:56.537Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2307,"milliseconds":1.5637730000016745}
+2026-10-22T07:52:56.538Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Q2ISdTjSz3X3Ee1Z5D6GAw~3gHPCqCBNIKchH-WwEUkcg: block 1: Downloaded
+2026-10-22T07:52:56.570Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Q2ISdTjSz3X3Ee1Z5D6GAw/revisions/3gHPCqCBNIKchH-WwEUkcg?PageSize=20&FromBlockIndex=2: 200 (180ms)
+2026-10-22T07:52:56.570Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Q2ISdTjSz3X3Ee1Z5D6GAw~3gHPCqCBNIKchH-WwEUkcg: Flushing completed block 1
+2026-10-22T07:52:56.570Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Q2ISdTjSz3X3Ee1Z5D6GAw~3gHPCqCBNIKchH-WwEUkcg: Skipping manifest check
+2026-10-22T07:52:56.570Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Q2ISdTjSz3X3Ee1Z5D6GAw~3gHPCqCBNIKchH-WwEUkcg: Download succeeded
+2026-10-22T07:52:56.570Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2388,"claimedFileSize":2388}
+FILE ris/Шмотьё/6кк/Set of demolisher SPD-194-6кк.sql (2307 B)
+2026-10-22T07:52:56.570Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~h5P1DzBlqDorHrY2rbkUjQ
+2026-10-22T07:52:56.571Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~h5P1DzBlqDorHrY2rbkUjQ~_zcp2Ri0HO6y8HlCa_U-rQ: Starting download
+2026-10-22T07:52:56.758Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/h5P1DzBlqDorHrY2rbkUjQ/revisions/_zcp2Ri0HO6y8HlCa_U-rQ?PageSize=20&FromBlockIndex=1: 200 (187ms)
+2026-10-22T07:52:56.759Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~h5P1DzBlqDorHrY2rbkUjQ~_zcp2Ri0HO6y8HlCa_U-rQ: block 1: Download started
+2026-10-22T07:52:56.917Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (158ms)
+2026-10-22T07:52:56.918Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2307,"milliseconds":0.6304290000007313}
+2026-10-22T07:52:56.918Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~h5P1DzBlqDorHrY2rbkUjQ~_zcp2Ri0HO6y8HlCa_U-rQ: block 1: Downloaded
+2026-10-22T07:52:56.948Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/h5P1DzBlqDorHrY2rbkUjQ/revisions/_zcp2Ri0HO6y8HlCa_U-rQ?PageSize=20&FromBlockIndex=2: 200 (189ms)
+2026-10-22T07:52:56.948Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~h5P1DzBlqDorHrY2rbkUjQ~_zcp2Ri0HO6y8HlCa_U-rQ: Flushing completed block 1
+2026-10-22T07:52:56.949Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~h5P1DzBlqDorHrY2rbkUjQ~_zcp2Ri0HO6y8HlCa_U-rQ: Skipping manifest check
+2026-10-22T07:52:56.949Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~h5P1DzBlqDorHrY2rbkUjQ~_zcp2Ri0HO6y8HlCa_U-rQ: Download succeeded
+2026-10-22T07:52:56.949Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2388,"claimedFileSize":2388}
+FILE ris/Шмотьё/6кк/Ofhand SPD of demolisher-12356-6кк.sql (2322 B)
+2026-10-22T07:52:56.949Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~zT-ATHAKJubzyOeGeXqiPw
+2026-10-22T07:52:56.949Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~zT-ATHAKJubzyOeGeXqiPw~HRtopJtsqvrh18-2v5mAHQ: Starting download
+2026-10-22T07:52:57.138Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/zT-ATHAKJubzyOeGeXqiPw/revisions/HRtopJtsqvrh18-2v5mAHQ?PageSize=20&FromBlockIndex=1: 200 (189ms)
+2026-10-22T07:52:57.139Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~zT-ATHAKJubzyOeGeXqiPw~HRtopJtsqvrh18-2v5mAHQ: block 1: Download started
+2026-10-22T07:52:57.283Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (144ms)
+2026-10-22T07:52:57.284Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2322,"milliseconds":0.5184899999985646}
+2026-10-22T07:52:57.284Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~zT-ATHAKJubzyOeGeXqiPw~HRtopJtsqvrh18-2v5mAHQ: block 1: Downloaded
+2026-10-22T07:52:57.326Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/zT-ATHAKJubzyOeGeXqiPw/revisions/HRtopJtsqvrh18-2v5mAHQ?PageSize=20&FromBlockIndex=2: 200 (187ms)
+2026-10-22T07:52:57.326Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~zT-ATHAKJubzyOeGeXqiPw~HRtopJtsqvrh18-2v5mAHQ: Flushing completed block 1
+2026-10-22T07:52:57.326Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~zT-ATHAKJubzyOeGeXqiPw~HRtopJtsqvrh18-2v5mAHQ: Skipping manifest check
+2026-10-22T07:52:57.326Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~zT-ATHAKJubzyOeGeXqiPw~HRtopJtsqvrh18-2v5mAHQ: Download succeeded
+2026-10-22T07:52:57.326Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2403,"claimedFileSize":2403}
+FILE ris/Шмотьё/6кк/Set of demolisher SPD-195-6кк.sql (2307 B)
+2026-10-22T07:52:57.326Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~yYiIpHGaK_Vd7ft7CbttRQ
+2026-10-22T07:52:57.326Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yYiIpHGaK_Vd7ft7CbttRQ~aQaQMlFTu9EOcAsKeAb3xw: Starting download
+2026-10-22T07:52:57.516Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/yYiIpHGaK_Vd7ft7CbttRQ/revisions/aQaQMlFTu9EOcAsKeAb3xw?PageSize=20&FromBlockIndex=1: 200 (190ms)
+2026-10-22T07:52:57.516Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yYiIpHGaK_Vd7ft7CbttRQ~aQaQMlFTu9EOcAsKeAb3xw: block 1: Download started
+2026-10-22T07:52:57.671Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (155ms)
+2026-10-22T07:52:57.672Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2307,"milliseconds":0.5160869999999704}
+2026-10-22T07:52:57.672Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yYiIpHGaK_Vd7ft7CbttRQ~aQaQMlFTu9EOcAsKeAb3xw: block 1: Downloaded
+2026-10-22T07:52:57.672Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/yYiIpHGaK_Vd7ft7CbttRQ/revisions/aQaQMlFTu9EOcAsKeAb3xw?PageSize=20&FromBlockIndex=2: 200 (156ms)
+2026-10-22T07:52:57.672Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yYiIpHGaK_Vd7ft7CbttRQ~aQaQMlFTu9EOcAsKeAb3xw: Flushing completed block 1
+2026-10-22T07:52:57.672Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~yYiIpHGaK_Vd7ft7CbttRQ~aQaQMlFTu9EOcAsKeAb3xw: Skipping manifest check
+2026-10-22T07:52:57.672Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yYiIpHGaK_Vd7ft7CbttRQ~aQaQMlFTu9EOcAsKeAb3xw: Download succeeded
+2026-10-22T07:52:57.672Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2388,"claimedFileSize":2388}
+FILE ris/Шмотьё/6кк/Set of demolisher DD- 285-6кк.sql (2307 B)
+2026-10-22T07:52:57.672Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~G5kGqPYdAL12252dAnfufw
+2026-10-22T07:52:57.672Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~G5kGqPYdAL12252dAnfufw~2Qm1OwKAuavELiurYMNG0w: Starting download
+2026-10-22T07:52:57.845Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/G5kGqPYdAL12252dAnfufw/revisions/2Qm1OwKAuavELiurYMNG0w?PageSize=20&FromBlockIndex=1: 200 (173ms)
+2026-10-22T07:52:57.845Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~G5kGqPYdAL12252dAnfufw~2Qm1OwKAuavELiurYMNG0w: block 1: Download started
+2026-10-22T07:52:57.998Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (153ms)
+2026-10-22T07:52:57.999Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2307,"milliseconds":0.5558970000020054}
+2026-10-22T07:52:57.999Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~G5kGqPYdAL12252dAnfufw~2Qm1OwKAuavELiurYMNG0w: block 1: Downloaded
+2026-10-22T07:52:58.024Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/G5kGqPYdAL12252dAnfufw/revisions/2Qm1OwKAuavELiurYMNG0w?PageSize=20&FromBlockIndex=2: 200 (178ms)
+2026-10-22T07:52:58.025Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~G5kGqPYdAL12252dAnfufw~2Qm1OwKAuavELiurYMNG0w: Flushing completed block 1
+2026-10-22T07:52:58.025Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~G5kGqPYdAL12252dAnfufw~2Qm1OwKAuavELiurYMNG0w: Skipping manifest check
+2026-10-22T07:52:58.025Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~G5kGqPYdAL12252dAnfufw~2Qm1OwKAuavELiurYMNG0w: Download succeeded
+2026-10-22T07:52:58.025Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2388,"claimedFileSize":2388}
+FILE ris/Шмотьё/6кк/Set of demolisher DD-4076-6кк.sql (2308 B)
+2026-10-22T07:52:58.025Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~yVviTmxkoDeaRh29IKb1eA
+2026-10-22T07:52:58.025Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yVviTmxkoDeaRh29IKb1eA~y28g3B4WXYUQ1vWwmvlqKQ: Starting download
+2026-10-22T07:52:58.227Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/yVviTmxkoDeaRh29IKb1eA/revisions/y28g3B4WXYUQ1vWwmvlqKQ?PageSize=20&FromBlockIndex=1: 200 (202ms)
+2026-10-22T07:52:58.227Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yVviTmxkoDeaRh29IKb1eA~y28g3B4WXYUQ1vWwmvlqKQ: block 1: Download started
+2026-10-22T07:52:58.374Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (147ms)
+2026-10-22T07:52:58.374Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2308,"milliseconds":0.5509899999997288}
+2026-10-22T07:52:58.374Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yVviTmxkoDeaRh29IKb1eA~y28g3B4WXYUQ1vWwmvlqKQ: block 1: Downloaded
+2026-10-22T07:52:58.408Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/yVviTmxkoDeaRh29IKb1eA/revisions/y28g3B4WXYUQ1vWwmvlqKQ?PageSize=20&FromBlockIndex=2: 200 (181ms)
+2026-10-22T07:52:58.408Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yVviTmxkoDeaRh29IKb1eA~y28g3B4WXYUQ1vWwmvlqKQ: Flushing completed block 1
+2026-10-22T07:52:58.409Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~yVviTmxkoDeaRh29IKb1eA~y28g3B4WXYUQ1vWwmvlqKQ: Skipping manifest check
+2026-10-22T07:52:58.409Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yVviTmxkoDeaRh29IKb1eA~y28g3B4WXYUQ1vWwmvlqKQ: Download succeeded
+2026-10-22T07:52:58.409Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2389,"claimedFileSize":2389}
+FILE ris/Шмотьё/6кк/Set of demolisher DD-4077-6кк.sql (2308 B)
+2026-10-22T07:52:58.409Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~ZvkNRe1mY7vMNXpmSXcrhQ
+2026-10-22T07:52:58.409Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~ZvkNRe1mY7vMNXpmSXcrhQ~_DLSPdwjsiXYXsmnX6YsZg: Starting download
+2026-10-22T07:52:58.588Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/ZvkNRe1mY7vMNXpmSXcrhQ/revisions/_DLSPdwjsiXYXsmnX6YsZg?PageSize=20&FromBlockIndex=1: 200 (179ms)
+2026-10-22T07:52:58.588Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~ZvkNRe1mY7vMNXpmSXcrhQ~_DLSPdwjsiXYXsmnX6YsZg: block 1: Download started
+2026-10-22T07:52:58.742Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (154ms)
+2026-10-22T07:52:58.743Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2308,"milliseconds":0.44888500000161}
+2026-10-22T07:52:58.743Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~ZvkNRe1mY7vMNXpmSXcrhQ~_DLSPdwjsiXYXsmnX6YsZg: block 1: Downloaded
+2026-10-22T07:52:58.749Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/ZvkNRe1mY7vMNXpmSXcrhQ/revisions/_DLSPdwjsiXYXsmnX6YsZg?PageSize=20&FromBlockIndex=2: 200 (160ms)
+2026-10-22T07:52:58.749Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~ZvkNRe1mY7vMNXpmSXcrhQ~_DLSPdwjsiXYXsmnX6YsZg: Flushing completed block 1
+2026-10-22T07:52:58.749Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~ZvkNRe1mY7vMNXpmSXcrhQ~_DLSPdwjsiXYXsmnX6YsZg: Skipping manifest check
+2026-10-22T07:52:58.749Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~ZvkNRe1mY7vMNXpmSXcrhQ~_DLSPdwjsiXYXsmnX6YsZg: Download succeeded
+2026-10-22T07:52:58.749Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2389,"claimedFileSize":2389}
+2026-10-22T07:52:58.749Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~iTr3t_NuXw_DRMMLQj5CWg
+2026-10-22T07:52:58.911Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/iTr3t_NuXw_DRMMLQj5CWg/children?: 200 (162ms)
+2026-10-22T07:52:59.124Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (212ms)
+FILE ris/Альтер Шоп/Altershop[NEW 623].sql (405309 B)
+2026-10-22T07:52:59.128Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~wAE_aD4wdglEVyh1247BIw
+2026-10-22T07:52:59.128Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wAE_aD4wdglEVyh1247BIw~XD_nEHV9WVWVHP0q3gSqHQ: Starting download
+2026-10-22T07:52:59.310Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/wAE_aD4wdglEVyh1247BIw/revisions/XD_nEHV9WVWVHP0q3gSqHQ?PageSize=20&FromBlockIndex=1: 200 (182ms)
+2026-10-22T07:52:59.310Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wAE_aD4wdglEVyh1247BIw~XD_nEHV9WVWVHP0q3gSqHQ: block 1: Download started
+2026-10-22T07:52:59.474Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/wAE_aD4wdglEVyh1247BIw/revisions/XD_nEHV9WVWVHP0q3gSqHQ?PageSize=20&FromBlockIndex=2: 200 (163ms)
+2026-10-22T07:52:59.493Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (183ms)
+2026-10-22T07:52:59.887Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":405309,"milliseconds":1.3670979999988049}
+2026-10-22T07:52:59.887Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wAE_aD4wdglEVyh1247BIw~XD_nEHV9WVWVHP0q3gSqHQ: block 1: Downloaded
+2026-10-22T07:52:59.887Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wAE_aD4wdglEVyh1247BIw~XD_nEHV9WVWVHP0q3gSqHQ: Flushing completed block 1
+2026-10-22T07:52:59.887Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~wAE_aD4wdglEVyh1247BIw~XD_nEHV9WVWVHP0q3gSqHQ: Skipping manifest check
+2026-10-22T07:52:59.887Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~wAE_aD4wdglEVyh1247BIw~XD_nEHV9WVWVHP0q3gSqHQ: Download succeeded
+2026-10-22T07:52:59.887Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":400000,"approximateClaimedFileSize":400000,"downloadedSize":405412,"claimedFileSize":405412}
+2026-10-22T07:52:59.887Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~MUa1SUL0ifk3rNOlsUIB_Q
+2026-10-22T07:53:00.091Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/MUa1SUL0ifk3rNOlsUIB_Q/children?: 200 (204ms)
+2026-10-22T07:53:00.283Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (192ms)
+FILE ris/Тринькет/Trinket-100127.sql (2183 B)
+2026-10-22T07:53:00.301Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~I6tY5oHgIMi-un_v0HrwhA
+2026-10-22T07:53:00.301Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~I6tY5oHgIMi-un_v0HrwhA~cvNx2zPWeRuGoBySOvShpQ: Starting download
+2026-10-22T07:53:00.487Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/I6tY5oHgIMi-un_v0HrwhA/revisions/cvNx2zPWeRuGoBySOvShpQ?PageSize=20&FromBlockIndex=1: 200 (186ms)
+2026-10-22T07:53:00.487Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~I6tY5oHgIMi-un_v0HrwhA~cvNx2zPWeRuGoBySOvShpQ: block 1: Download started
+2026-10-22T07:53:00.630Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (143ms)
+2026-10-22T07:53:00.631Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2183,"milliseconds":0.4611739999963902}
+2026-10-22T07:53:00.631Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~I6tY5oHgIMi-un_v0HrwhA~cvNx2zPWeRuGoBySOvShpQ: block 1: Downloaded
+2026-10-22T07:53:00.679Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/I6tY5oHgIMi-un_v0HrwhA/revisions/cvNx2zPWeRuGoBySOvShpQ?PageSize=20&FromBlockIndex=2: 200 (192ms)
+2026-10-22T07:53:00.680Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~I6tY5oHgIMi-un_v0HrwhA~cvNx2zPWeRuGoBySOvShpQ: Flushing completed block 1
+2026-10-22T07:53:00.680Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~I6tY5oHgIMi-un_v0HrwhA~cvNx2zPWeRuGoBySOvShpQ: Skipping manifest check
+2026-10-22T07:53:00.680Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~I6tY5oHgIMi-un_v0HrwhA~cvNx2zPWeRuGoBySOvShpQ: Download succeeded
+2026-10-22T07:53:00.680Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2264,"claimedFileSize":2264}
+FILE ris/Тринькет/Trinket-100128.sql (2184 B)
+2026-10-22T07:53:00.680Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~yBMlT60HXuP-eEwwWwetfw
+2026-10-22T07:53:00.680Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yBMlT60HXuP-eEwwWwetfw~SQRYVI-QniztJyq4sCkL1g: Starting download
+2026-10-22T07:53:00.880Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/yBMlT60HXuP-eEwwWwetfw/revisions/SQRYVI-QniztJyq4sCkL1g?PageSize=20&FromBlockIndex=1: 200 (200ms)
+2026-10-22T07:53:00.881Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yBMlT60HXuP-eEwwWwetfw~SQRYVI-QniztJyq4sCkL1g: block 1: Download started
+2026-10-22T07:53:01.037Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (156ms)
+2026-10-22T07:53:01.038Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2184,"milliseconds":0.637750000001688}
+2026-10-22T07:53:01.038Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yBMlT60HXuP-eEwwWwetfw~SQRYVI-QniztJyq4sCkL1g: block 1: Downloaded
+2026-10-22T07:53:01.075Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/yBMlT60HXuP-eEwwWwetfw/revisions/SQRYVI-QniztJyq4sCkL1g?PageSize=20&FromBlockIndex=2: 200 (194ms)
+2026-10-22T07:53:01.075Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yBMlT60HXuP-eEwwWwetfw~SQRYVI-QniztJyq4sCkL1g: Flushing completed block 1
+2026-10-22T07:53:01.075Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~yBMlT60HXuP-eEwwWwetfw~SQRYVI-QniztJyq4sCkL1g: Skipping manifest check
+2026-10-22T07:53:01.075Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~yBMlT60HXuP-eEwwWwetfw~SQRYVI-QniztJyq4sCkL1g: Download succeeded
+2026-10-22T07:53:01.075Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2265,"claimedFileSize":2265}
+FILE ris/Тринькет/Trinket-100317.sql (2198 B)
+2026-10-22T07:53:01.075Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Yn6pSl3LfbGs_mzalChBsQ
+2026-10-22T07:53:01.075Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Yn6pSl3LfbGs_mzalChBsQ~0227rlwPO6gYBIy9j38DwA: Starting download
+2026-10-22T07:53:01.256Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Yn6pSl3LfbGs_mzalChBsQ/revisions/0227rlwPO6gYBIy9j38DwA?PageSize=20&FromBlockIndex=1: 200 (181ms)
+2026-10-22T07:53:01.256Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Yn6pSl3LfbGs_mzalChBsQ~0227rlwPO6gYBIy9j38DwA: block 1: Download started
+2026-10-22T07:53:01.408Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (152ms)
+2026-10-22T07:53:01.409Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2198,"milliseconds":0.47922100000141654}
+2026-10-22T07:53:01.409Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Yn6pSl3LfbGs_mzalChBsQ~0227rlwPO6gYBIy9j38DwA: block 1: Downloaded
+2026-10-22T07:53:01.431Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Yn6pSl3LfbGs_mzalChBsQ/revisions/0227rlwPO6gYBIy9j38DwA?PageSize=20&FromBlockIndex=2: 200 (175ms)
+2026-10-22T07:53:01.431Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Yn6pSl3LfbGs_mzalChBsQ~0227rlwPO6gYBIy9j38DwA: Flushing completed block 1
+2026-10-22T07:53:01.431Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Yn6pSl3LfbGs_mzalChBsQ~0227rlwPO6gYBIy9j38DwA: Skipping manifest check
+2026-10-22T07:53:01.431Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Yn6pSl3LfbGs_mzalChBsQ~0227rlwPO6gYBIy9j38DwA: Download succeeded
+2026-10-22T07:53:01.431Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2279,"claimedFileSize":2279}
+FILE ris/Тринькет/Trinket-100318.sql (2197 B)
+2026-10-22T07:53:01.431Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~FTcV62GZ_gI5-sfBIdHieA
+2026-10-22T07:53:01.431Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~FTcV62GZ_gI5-sfBIdHieA~JIWQ7pcf_4BEM7iXcXP66w: Starting download
+2026-10-22T07:53:01.612Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/FTcV62GZ_gI5-sfBIdHieA/revisions/JIWQ7pcf_4BEM7iXcXP66w?PageSize=20&FromBlockIndex=1: 200 (181ms)
+2026-10-22T07:53:01.612Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~FTcV62GZ_gI5-sfBIdHieA~JIWQ7pcf_4BEM7iXcXP66w: block 1: Download started
+2026-10-22T07:53:01.762Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (150ms)
+2026-10-22T07:53:01.763Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2197,"milliseconds":0.5171180000033928}
+2026-10-22T07:53:01.763Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~FTcV62GZ_gI5-sfBIdHieA~JIWQ7pcf_4BEM7iXcXP66w: block 1: Downloaded
+2026-10-22T07:53:01.799Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/FTcV62GZ_gI5-sfBIdHieA/revisions/JIWQ7pcf_4BEM7iXcXP66w?PageSize=20&FromBlockIndex=2: 200 (187ms)
+2026-10-22T07:53:01.799Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~FTcV62GZ_gI5-sfBIdHieA~JIWQ7pcf_4BEM7iXcXP66w: Flushing completed block 1
+2026-10-22T07:53:01.799Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~FTcV62GZ_gI5-sfBIdHieA~JIWQ7pcf_4BEM7iXcXP66w: Skipping manifest check
+2026-10-22T07:53:01.799Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~FTcV62GZ_gI5-sfBIdHieA~JIWQ7pcf_4BEM7iXcXP66w: Download succeeded
+2026-10-22T07:53:01.799Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2278,"claimedFileSize":2278}
+FILE ris/Тринькет/Trinket-100126.sql (2184 B)
+2026-10-22T07:53:01.799Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Pto6l_BynHEBwfjMscbw_g
+2026-10-22T07:53:01.799Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Pto6l_BynHEBwfjMscbw_g~x6oYMEQtJGaERy1iQONLJQ: Starting download
+2026-10-22T07:53:02.019Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Pto6l_BynHEBwfjMscbw_g/revisions/x6oYMEQtJGaERy1iQONLJQ?PageSize=20&FromBlockIndex=1: 200 (220ms)
+2026-10-22T07:53:02.019Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Pto6l_BynHEBwfjMscbw_g~x6oYMEQtJGaERy1iQONLJQ: block 1: Download started
+2026-10-22T07:53:02.172Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (153ms)
+2026-10-22T07:53:02.173Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2184,"milliseconds":0.5285260000018752}
+2026-10-22T07:53:02.173Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Pto6l_BynHEBwfjMscbw_g~x6oYMEQtJGaERy1iQONLJQ: block 1: Downloaded
+2026-10-22T07:53:02.180Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Pto6l_BynHEBwfjMscbw_g/revisions/x6oYMEQtJGaERy1iQONLJQ?PageSize=20&FromBlockIndex=2: 200 (161ms)
+2026-10-22T07:53:02.180Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Pto6l_BynHEBwfjMscbw_g~x6oYMEQtJGaERy1iQONLJQ: Flushing completed block 1
+2026-10-22T07:53:02.180Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Pto6l_BynHEBwfjMscbw_g~x6oYMEQtJGaERy1iQONLJQ: Skipping manifest check
+2026-10-22T07:53:02.180Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Pto6l_BynHEBwfjMscbw_g~x6oYMEQtJGaERy1iQONLJQ: Download succeeded
+2026-10-22T07:53:02.180Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2265,"claimedFileSize":2265}
+FILE ris/Тринькет/Trinket-100319.sql (2198 B)
+2026-10-22T07:53:02.180Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~DFDQp79MlrNykCi115nJNw
+2026-10-22T07:53:02.181Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~DFDQp79MlrNykCi115nJNw~GYXreMcc7z6wh1q06Nj5-w: Starting download
+2026-10-22T07:53:02.384Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/DFDQp79MlrNykCi115nJNw/revisions/GYXreMcc7z6wh1q06Nj5-w?PageSize=20&FromBlockIndex=1: 200 (203ms)
+2026-10-22T07:53:02.384Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~DFDQp79MlrNykCi115nJNw~GYXreMcc7z6wh1q06Nj5-w: block 1: Download started
+2026-10-22T07:53:02.542Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (158ms)
+2026-10-22T07:53:02.543Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2198,"milliseconds":0.4920910000000731}
+2026-10-22T07:53:02.543Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~DFDQp79MlrNykCi115nJNw~GYXreMcc7z6wh1q06Nj5-w: block 1: Downloaded
+2026-10-22T07:53:02.571Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/DFDQp79MlrNykCi115nJNw/revisions/GYXreMcc7z6wh1q06Nj5-w?PageSize=20&FromBlockIndex=2: 200 (187ms)
+2026-10-22T07:53:02.571Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~DFDQp79MlrNykCi115nJNw~GYXreMcc7z6wh1q06Nj5-w: Flushing completed block 1
+2026-10-22T07:53:02.571Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~DFDQp79MlrNykCi115nJNw~GYXreMcc7z6wh1q06Nj5-w: Skipping manifest check
+2026-10-22T07:53:02.571Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~DFDQp79MlrNykCi115nJNw~GYXreMcc7z6wh1q06Nj5-w: Download succeeded
+2026-10-22T07:53:02.571Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2279,"claimedFileSize":2279}
+2026-10-22T07:53:02.572Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~-jKA1iaJmRio_Oe0oZl74g
+2026-10-22T07:53:02.725Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/-jKA1iaJmRio_Oe0oZl74g/children?: 200 (153ms)
+2026-10-22T07:53:02.928Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (202ms)
+FILE ris/Cервер/world_vipaccount.sql (3097 B)
+2026-10-22T07:53:02.995Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~31QJUHZZCfFwfR-RCKTmCg
+2026-10-22T07:53:02.996Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~31QJUHZZCfFwfR-RCKTmCg~HBlotfAZvtvUisMR4hATQA: Starting download
+2026-10-22T07:53:03.197Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/31QJUHZZCfFwfR-RCKTmCg/revisions/HBlotfAZvtvUisMR4hATQA?PageSize=20&FromBlockIndex=1: 200 (201ms)
+2026-10-22T07:53:03.197Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~31QJUHZZCfFwfR-RCKTmCg~HBlotfAZvtvUisMR4hATQA: block 1: Download started
+2026-10-22T07:53:03.350Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (153ms)
+2026-10-22T07:53:03.351Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":3097,"milliseconds":0.5525920000000042}
+2026-10-22T07:53:03.351Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~31QJUHZZCfFwfR-RCKTmCg~HBlotfAZvtvUisMR4hATQA: block 1: Downloaded
+2026-10-22T07:53:03.419Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/31QJUHZZCfFwfR-RCKTmCg/revisions/HBlotfAZvtvUisMR4hATQA?PageSize=20&FromBlockIndex=2: 200 (222ms)
+2026-10-22T07:53:03.420Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~31QJUHZZCfFwfR-RCKTmCg~HBlotfAZvtvUisMR4hATQA: Flushing completed block 1
+2026-10-22T07:53:03.420Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~31QJUHZZCfFwfR-RCKTmCg~HBlotfAZvtvUisMR4hATQA: Skipping manifest check
+2026-10-22T07:53:03.420Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~31QJUHZZCfFwfR-RCKTmCg~HBlotfAZvtvUisMR4hATQA: Download succeeded
+2026-10-22T07:53:03.420Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":3178,"claimedFileSize":3178}
+FILE ris/Cервер/world_npc_proff.sql (1712 B)
+2026-10-22T07:53:03.420Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~HcQD5IeRHWoYjpNB5ZBEmQ
+2026-10-22T07:53:03.420Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HcQD5IeRHWoYjpNB5ZBEmQ~UFtSL0h1cuR2Q4G4pDPb6g: Starting download
+2026-10-22T07:53:03.590Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/HcQD5IeRHWoYjpNB5ZBEmQ/revisions/UFtSL0h1cuR2Q4G4pDPb6g?PageSize=20&FromBlockIndex=1: 200 (170ms)
+2026-10-22T07:53:03.590Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HcQD5IeRHWoYjpNB5ZBEmQ~UFtSL0h1cuR2Q4G4pDPb6g: block 1: Download started
+2026-10-22T07:53:03.735Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (145ms)
+2026-10-22T07:53:03.736Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":1712,"milliseconds":0.4953349999996135}
+2026-10-22T07:53:03.736Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HcQD5IeRHWoYjpNB5ZBEmQ~UFtSL0h1cuR2Q4G4pDPb6g: block 1: Downloaded
+2026-10-22T07:53:03.769Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/HcQD5IeRHWoYjpNB5ZBEmQ/revisions/UFtSL0h1cuR2Q4G4pDPb6g?PageSize=20&FromBlockIndex=2: 200 (179ms)
+2026-10-22T07:53:03.769Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HcQD5IeRHWoYjpNB5ZBEmQ~UFtSL0h1cuR2Q4G4pDPb6g: Flushing completed block 1
+2026-10-22T07:53:03.770Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~HcQD5IeRHWoYjpNB5ZBEmQ~UFtSL0h1cuR2Q4G4pDPb6g: Skipping manifest check
+2026-10-22T07:53:03.770Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HcQD5IeRHWoYjpNB5ZBEmQ~UFtSL0h1cuR2Q4G4pDPb6g: Download succeeded
+2026-10-22T07:53:03.770Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":1793,"claimedFileSize":1793}
+FILE ris/Cервер/npc_teleport_bigdata_world.sql (23760 B)
+2026-10-22T07:53:03.770Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~fukmJA4W-arW-eVwChx-RA
+2026-10-22T07:53:03.770Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fukmJA4W-arW-eVwChx-RA~mcUpg2Jej6lgB5b-7tQP6w: Starting download
+2026-10-22T07:53:03.949Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/fukmJA4W-arW-eVwChx-RA/revisions/mcUpg2Jej6lgB5b-7tQP6w?PageSize=20&FromBlockIndex=1: 200 (179ms)
+2026-10-22T07:53:03.950Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fukmJA4W-arW-eVwChx-RA~mcUpg2Jej6lgB5b-7tQP6w: block 1: Download started
+2026-10-22T07:53:04.115Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (165ms)
+2026-10-22T07:53:04.117Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/fukmJA4W-arW-eVwChx-RA/revisions/mcUpg2Jej6lgB5b-7tQP6w?PageSize=20&FromBlockIndex=2: 200 (167ms)
+2026-10-22T07:53:04.121Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":23760,"milliseconds":0.5061520000017481}
+2026-10-22T07:53:04.121Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fukmJA4W-arW-eVwChx-RA~mcUpg2Jej6lgB5b-7tQP6w: block 1: Downloaded
+2026-10-22T07:53:04.121Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fukmJA4W-arW-eVwChx-RA~mcUpg2Jej6lgB5b-7tQP6w: Flushing completed block 1
+2026-10-22T07:53:04.121Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~fukmJA4W-arW-eVwChx-RA~mcUpg2Jej6lgB5b-7tQP6w: Skipping manifest check
+2026-10-22T07:53:04.121Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~fukmJA4W-arW-eVwChx-RA~mcUpg2Jej6lgB5b-7tQP6w: Download succeeded
+2026-10-22T07:53:04.121Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":23844,"claimedFileSize":23844}
+FILE ris/Cервер/world_npc_title.sql (1713 B)
+2026-10-22T07:53:04.121Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~se4LjTcykvBXUPS8MGBzrQ
+2026-10-22T07:53:04.121Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~se4LjTcykvBXUPS8MGBzrQ~7y0Q5xCR-N4E3rjtewNsww: Starting download
+2026-10-22T07:53:04.352Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/se4LjTcykvBXUPS8MGBzrQ/revisions/7y0Q5xCR-N4E3rjtewNsww?PageSize=20&FromBlockIndex=1: 200 (231ms)
+2026-10-22T07:53:04.352Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~se4LjTcykvBXUPS8MGBzrQ~7y0Q5xCR-N4E3rjtewNsww: block 1: Download started
+2026-10-22T07:53:04.495Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (143ms)
+2026-10-22T07:53:04.496Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":1713,"milliseconds":0.4988000000012107}
+2026-10-22T07:53:04.496Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~se4LjTcykvBXUPS8MGBzrQ~7y0Q5xCR-N4E3rjtewNsww: block 1: Downloaded
+2026-10-22T07:53:04.524Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/se4LjTcykvBXUPS8MGBzrQ/revisions/7y0Q5xCR-N4E3rjtewNsww?PageSize=20&FromBlockIndex=2: 200 (172ms)
+2026-10-22T07:53:04.524Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~se4LjTcykvBXUPS8MGBzrQ~7y0Q5xCR-N4E3rjtewNsww: Flushing completed block 1
+2026-10-22T07:53:04.525Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~se4LjTcykvBXUPS8MGBzrQ~7y0Q5xCR-N4E3rjtewNsww: Skipping manifest check
+2026-10-22T07:53:04.525Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~se4LjTcykvBXUPS8MGBzrQ~7y0Q5xCR-N4E3rjtewNsww: Download succeeded
+2026-10-22T07:53:04.525Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":1794,"claimedFileSize":1794}
+FILE ris/Cервер/world_npc_arena-honor.sql (1734 B)
+2026-10-22T07:53:04.525Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Vu3D1dTVyd_hgamty9hx_w
+2026-10-22T07:53:04.525Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Vu3D1dTVyd_hgamty9hx_w~2_rKEBv-z3HryOoh-IZ-Mw: Starting download
+2026-10-22T07:53:04.707Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Vu3D1dTVyd_hgamty9hx_w/revisions/2_rKEBv-z3HryOoh-IZ-Mw?PageSize=20&FromBlockIndex=1: 200 (182ms)
+2026-10-22T07:53:04.707Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Vu3D1dTVyd_hgamty9hx_w~2_rKEBv-z3HryOoh-IZ-Mw: block 1: Download started
+2026-10-22T07:53:04.851Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (144ms)
+2026-10-22T07:53:04.852Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":1734,"milliseconds":0.5424859999984619}
+2026-10-22T07:53:04.852Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Vu3D1dTVyd_hgamty9hx_w~2_rKEBv-z3HryOoh-IZ-Mw: block 1: Downloaded
+2026-10-22T07:53:04.865Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Vu3D1dTVyd_hgamty9hx_w/revisions/2_rKEBv-z3HryOoh-IZ-Mw?PageSize=20&FromBlockIndex=2: 200 (157ms)
+2026-10-22T07:53:04.865Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Vu3D1dTVyd_hgamty9hx_w~2_rKEBv-z3HryOoh-IZ-Mw: Flushing completed block 1
+2026-10-22T07:53:04.865Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Vu3D1dTVyd_hgamty9hx_w~2_rKEBv-z3HryOoh-IZ-Mw: Skipping manifest check
+2026-10-22T07:53:04.865Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Vu3D1dTVyd_hgamty9hx_w~2_rKEBv-z3HryOoh-IZ-Mw: Download succeeded
+2026-10-22T07:53:04.865Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":1815,"claimedFileSize":1815}
+FILE ris/Cервер/OutdoorPvPWG_world_bunners.sql (22641 B)
+2026-10-22T07:53:04.865Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~iRTZTI11-ORni_pb6pk_hQ
+2026-10-22T07:53:04.865Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~iRTZTI11-ORni_pb6pk_hQ~rQIoteGagp8eoJdVeCdyXA: Starting download
+2026-10-22T07:53:05.045Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/iRTZTI11-ORni_pb6pk_hQ/revisions/rQIoteGagp8eoJdVeCdyXA?PageSize=20&FromBlockIndex=1: 200 (180ms)
+2026-10-22T07:53:05.045Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~iRTZTI11-ORni_pb6pk_hQ~rQIoteGagp8eoJdVeCdyXA: block 1: Download started
+2026-10-22T07:53:05.225Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (180ms)
+2026-10-22T07:53:05.229Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":22641,"milliseconds":0.5208429999984219}
+2026-10-22T07:53:05.229Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~iRTZTI11-ORni_pb6pk_hQ~rQIoteGagp8eoJdVeCdyXA: block 1: Downloaded
+2026-10-22T07:53:05.247Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/iRTZTI11-ORni_pb6pk_hQ/revisions/rQIoteGagp8eoJdVeCdyXA?PageSize=20&FromBlockIndex=2: 200 (202ms)
+2026-10-22T07:53:05.247Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~iRTZTI11-ORni_pb6pk_hQ~rQIoteGagp8eoJdVeCdyXA: Flushing completed block 1
+2026-10-22T07:53:05.247Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~iRTZTI11-ORni_pb6pk_hQ~rQIoteGagp8eoJdVeCdyXA: Skipping manifest check
+2026-10-22T07:53:05.247Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~iRTZTI11-ORni_pb6pk_hQ~rQIoteGagp8eoJdVeCdyXA: Download succeeded
+2026-10-22T07:53:05.247Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":22725,"claimedFileSize":22725}
+FILE ris/Cервер/OutdoorPvPWG_world.sql (11492 B)
+2026-10-22T07:53:05.247Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~9sZjDUwtPx-4JDN_hYxSfw
+2026-10-22T07:53:05.247Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~9sZjDUwtPx-4JDN_hYxSfw~0wJPl1WCH02qBQLe9gR2xg: Starting download
+2026-10-22T07:53:05.413Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/9sZjDUwtPx-4JDN_hYxSfw/revisions/0wJPl1WCH02qBQLe9gR2xg?PageSize=20&FromBlockIndex=1: 200 (166ms)
+2026-10-22T07:53:05.414Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~9sZjDUwtPx-4JDN_hYxSfw~0wJPl1WCH02qBQLe9gR2xg: block 1: Download started
+2026-10-22T07:53:05.586Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (172ms)
+2026-10-22T07:53:05.588Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":11492,"milliseconds":0.5096469999989495}
+2026-10-22T07:53:05.588Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~9sZjDUwtPx-4JDN_hYxSfw~0wJPl1WCH02qBQLe9gR2xg: block 1: Downloaded
+2026-10-22T07:53:05.617Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/9sZjDUwtPx-4JDN_hYxSfw/revisions/0wJPl1WCH02qBQLe9gR2xg?PageSize=20&FromBlockIndex=2: 200 (203ms)
+2026-10-22T07:53:05.617Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~9sZjDUwtPx-4JDN_hYxSfw~0wJPl1WCH02qBQLe9gR2xg: Flushing completed block 1
+2026-10-22T07:53:05.617Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~9sZjDUwtPx-4JDN_hYxSfw~0wJPl1WCH02qBQLe9gR2xg: Skipping manifest check
+2026-10-22T07:53:05.617Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~9sZjDUwtPx-4JDN_hYxSfw~0wJPl1WCH02qBQLe9gR2xg: Download succeeded
+2026-10-22T07:53:05.617Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":11576,"claimedFileSize":11576}
+FILE ris/Cервер/world_npc_buff.sql (1711 B)
+2026-10-22T07:53:05.617Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~5Vs7pDRWBUGT3M3k4ysUQQ
+2026-10-22T07:53:05.618Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~5Vs7pDRWBUGT3M3k4ysUQQ~WLmhG00qQDzBXw91C0T6iw: Starting download
+2026-10-22T07:53:05.810Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/5Vs7pDRWBUGT3M3k4ysUQQ/revisions/WLmhG00qQDzBXw91C0T6iw?PageSize=20&FromBlockIndex=1: 200 (192ms)
+2026-10-22T07:53:05.810Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~5Vs7pDRWBUGT3M3k4ysUQQ~WLmhG00qQDzBXw91C0T6iw: block 1: Download started
+2026-10-22T07:53:05.964Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (154ms)
+2026-10-22T07:53:05.965Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":1711,"milliseconds":0.5549949999985984}
+2026-10-22T07:53:05.965Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~5Vs7pDRWBUGT3M3k4ysUQQ~WLmhG00qQDzBXw91C0T6iw: block 1: Downloaded
+2026-10-22T07:53:05.988Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/5Vs7pDRWBUGT3M3k4ysUQQ/revisions/WLmhG00qQDzBXw91C0T6iw?PageSize=20&FromBlockIndex=2: 200 (177ms)
+2026-10-22T07:53:05.989Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~5Vs7pDRWBUGT3M3k4ysUQQ~WLmhG00qQDzBXw91C0T6iw: Flushing completed block 1
+2026-10-22T07:53:05.989Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~5Vs7pDRWBUGT3M3k4ysUQQ~WLmhG00qQDzBXw91C0T6iw: Skipping manifest check
+2026-10-22T07:53:05.989Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~5Vs7pDRWBUGT3M3k4ysUQQ~WLmhG00qQDzBXw91C0T6iw: Download succeeded
+2026-10-22T07:53:05.989Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":1792,"claimedFileSize":1792}
+FILE ris/Cервер/hunterpet_vendor_world.sql (3891 B)
+2026-10-22T07:53:05.989Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~cA7RenvS_R8ybBPPGYy8Kw
+2026-10-22T07:53:05.989Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cA7RenvS_R8ybBPPGYy8Kw~LAjxcod3wj7UnmJUrhXeJw: Starting download
+2026-10-22T07:53:06.159Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/cA7RenvS_R8ybBPPGYy8Kw/revisions/LAjxcod3wj7UnmJUrhXeJw?PageSize=20&FromBlockIndex=1: 200 (170ms)
+2026-10-22T07:53:06.159Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cA7RenvS_R8ybBPPGYy8Kw~LAjxcod3wj7UnmJUrhXeJw: block 1: Download started
+2026-10-22T07:53:06.304Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (144ms)
+2026-10-22T07:53:06.305Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":3891,"milliseconds":0.48130400000081863}
+2026-10-22T07:53:06.305Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cA7RenvS_R8ybBPPGYy8Kw~LAjxcod3wj7UnmJUrhXeJw: block 1: Downloaded
+2026-10-22T07:53:06.309Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/cA7RenvS_R8ybBPPGYy8Kw/revisions/LAjxcod3wj7UnmJUrhXeJw?PageSize=20&FromBlockIndex=2: 200 (148ms)
+2026-10-22T07:53:06.309Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cA7RenvS_R8ybBPPGYy8Kw~LAjxcod3wj7UnmJUrhXeJw: Flushing completed block 1
+2026-10-22T07:53:06.309Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~cA7RenvS_R8ybBPPGYy8Kw~LAjxcod3wj7UnmJUrhXeJw: Skipping manifest check
+2026-10-22T07:53:06.309Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~cA7RenvS_R8ybBPPGYy8Kw~LAjxcod3wj7UnmJUrhXeJw: Download succeeded
+2026-10-22T07:53:06.309Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":3972,"claimedFileSize":3972}
+FILE ris/Cервер/vip_vendor.sql (1596 B)
+2026-10-22T07:53:06.309Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~LvzG06UnZOpGvtr8-LfuJA
+2026-10-22T07:53:06.309Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~LvzG06UnZOpGvtr8-LfuJA~SGyOolcKXKGFK4kwm-JG9Q: Starting download
+2026-10-22T07:53:06.485Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/LvzG06UnZOpGvtr8-LfuJA/revisions/SGyOolcKXKGFK4kwm-JG9Q?PageSize=20&FromBlockIndex=1: 200 (176ms)
+2026-10-22T07:53:06.485Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~LvzG06UnZOpGvtr8-LfuJA~SGyOolcKXKGFK4kwm-JG9Q: block 1: Download started
+2026-10-22T07:53:06.636Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (150ms)
+2026-10-22T07:53:06.637Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":1596,"milliseconds":0.4979800000000978}
+2026-10-22T07:53:06.637Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~LvzG06UnZOpGvtr8-LfuJA~SGyOolcKXKGFK4kwm-JG9Q: block 1: Downloaded
+2026-10-22T07:53:06.700Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/LvzG06UnZOpGvtr8-LfuJA/revisions/SGyOolcKXKGFK4kwm-JG9Q?PageSize=20&FromBlockIndex=2: 200 (214ms)
+2026-10-22T07:53:06.700Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~LvzG06UnZOpGvtr8-LfuJA~SGyOolcKXKGFK4kwm-JG9Q: Flushing completed block 1
+2026-10-22T07:53:06.700Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~LvzG06UnZOpGvtr8-LfuJA~SGyOolcKXKGFK4kwm-JG9Q: Skipping manifest check
+2026-10-22T07:53:06.700Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~LvzG06UnZOpGvtr8-LfuJA~SGyOolcKXKGFK4kwm-JG9Q: Download succeeded
+2026-10-22T07:53:06.700Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":1677,"claimedFileSize":1677}
+FILE ris/Cервер/world_npc_other.sql (1713 B)
+2026-10-22T07:53:06.700Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~BYKxsbcdS4xu0W8hlHgY9A
+2026-10-22T07:53:06.700Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BYKxsbcdS4xu0W8hlHgY9A~Bh8qf7FoOmCxdIL2s9l0vw: Starting download
+2026-10-22T07:53:06.889Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/BYKxsbcdS4xu0W8hlHgY9A/revisions/Bh8qf7FoOmCxdIL2s9l0vw?PageSize=20&FromBlockIndex=1: 200 (189ms)
+2026-10-22T07:53:06.890Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BYKxsbcdS4xu0W8hlHgY9A~Bh8qf7FoOmCxdIL2s9l0vw: block 1: Download started
+2026-10-22T07:53:07.030Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (140ms)
+2026-10-22T07:53:07.031Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":1713,"milliseconds":0.5398619999978109}
+2026-10-22T07:53:07.031Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BYKxsbcdS4xu0W8hlHgY9A~Bh8qf7FoOmCxdIL2s9l0vw: block 1: Downloaded
+2026-10-22T07:53:07.066Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/BYKxsbcdS4xu0W8hlHgY9A/revisions/Bh8qf7FoOmCxdIL2s9l0vw?PageSize=20&FromBlockIndex=2: 200 (176ms)
+2026-10-22T07:53:07.066Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BYKxsbcdS4xu0W8hlHgY9A~Bh8qf7FoOmCxdIL2s9l0vw: Flushing completed block 1
+2026-10-22T07:53:07.066Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~BYKxsbcdS4xu0W8hlHgY9A~Bh8qf7FoOmCxdIL2s9l0vw: Skipping manifest check
+2026-10-22T07:53:07.066Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BYKxsbcdS4xu0W8hlHgY9A~Bh8qf7FoOmCxdIL2s9l0vw: Download succeeded
+2026-10-22T07:53:07.066Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":1794,"claimedFileSize":1794}
+FILE ris/Cервер/NPC-from Azteco.sql (79322 B)
+2026-10-22T07:53:07.066Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~6UDyfHX1DUDqDx5dn0QuIw
+2026-10-22T07:53:07.067Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~6UDyfHX1DUDqDx5dn0QuIw~HbP81E7pjyzTk-z43OH8CQ: Starting download
+2026-10-22T07:53:07.245Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/6UDyfHX1DUDqDx5dn0QuIw/revisions/HbP81E7pjyzTk-z43OH8CQ?PageSize=20&FromBlockIndex=1: 200 (178ms)
+2026-10-22T07:53:07.245Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~6UDyfHX1DUDqDx5dn0QuIw~HbP81E7pjyzTk-z43OH8CQ: block 1: Download started
+2026-10-22T07:53:07.422Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/6UDyfHX1DUDqDx5dn0QuIw/revisions/HbP81E7pjyzTk-z43OH8CQ?PageSize=20&FromBlockIndex=2: 200 (177ms)
+2026-10-22T07:53:07.436Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (191ms)
+2026-10-22T07:53:07.453Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":79322,"milliseconds":0.6652309999990393}
+2026-10-22T07:53:07.453Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~6UDyfHX1DUDqDx5dn0QuIw~HbP81E7pjyzTk-z43OH8CQ: block 1: Downloaded
+2026-10-22T07:53:07.453Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~6UDyfHX1DUDqDx5dn0QuIw~HbP81E7pjyzTk-z43OH8CQ: Flushing completed block 1
+2026-10-22T07:53:07.453Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~6UDyfHX1DUDqDx5dn0QuIw~HbP81E7pjyzTk-z43OH8CQ: Skipping manifest check
+2026-10-22T07:53:07.453Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~6UDyfHX1DUDqDx5dn0QuIw~HbP81E7pjyzTk-z43OH8CQ: Download succeeded
+2026-10-22T07:53:07.454Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":79409,"claimedFileSize":79409}
+FILE ris/Cервер/world_npc_morph.sql (1709 B)
+2026-10-22T07:53:07.454Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~9gtIxhMEGE9_DRjtEjq8ag
+2026-10-22T07:53:07.454Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~9gtIxhMEGE9_DRjtEjq8ag~R_Beg2yvJ2sIbeVsZlYpkw: Starting download
+2026-10-22T07:53:07.653Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/9gtIxhMEGE9_DRjtEjq8ag/revisions/R_Beg2yvJ2sIbeVsZlYpkw?PageSize=20&FromBlockIndex=1: 200 (199ms)
+2026-10-22T07:53:07.653Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~9gtIxhMEGE9_DRjtEjq8ag~R_Beg2yvJ2sIbeVsZlYpkw: block 1: Download started
+2026-10-22T07:53:07.798Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (145ms)
+2026-10-22T07:53:07.799Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":1709,"milliseconds":0.48383800000010524}
+2026-10-22T07:53:07.799Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~9gtIxhMEGE9_DRjtEjq8ag~R_Beg2yvJ2sIbeVsZlYpkw: block 1: Downloaded
+2026-10-22T07:53:07.831Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/9gtIxhMEGE9_DRjtEjq8ag/revisions/R_Beg2yvJ2sIbeVsZlYpkw?PageSize=20&FromBlockIndex=2: 200 (178ms)
+2026-10-22T07:53:07.831Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~9gtIxhMEGE9_DRjtEjq8ag~R_Beg2yvJ2sIbeVsZlYpkw: Flushing completed block 1
+2026-10-22T07:53:07.831Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~9gtIxhMEGE9_DRjtEjq8ag~R_Beg2yvJ2sIbeVsZlYpkw: Skipping manifest check
+2026-10-22T07:53:07.831Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~9gtIxhMEGE9_DRjtEjq8ag~R_Beg2yvJ2sIbeVsZlYpkw: Download succeeded
+2026-10-22T07:53:07.831Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":1790,"claimedFileSize":1790}
+FILE ris/Cервер/fix_world.sql (1852 B)
+2026-10-22T07:53:07.832Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~5ed0Mjd4D-fYiIwc3cKfgg
+2026-10-22T07:53:07.832Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~5ed0Mjd4D-fYiIwc3cKfgg~OSvr9oWika3Vx-KDuebOmw: Starting download
+2026-10-22T07:53:08.030Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/5ed0Mjd4D-fYiIwc3cKfgg/revisions/OSvr9oWika3Vx-KDuebOmw?PageSize=20&FromBlockIndex=1: 200 (198ms)
+2026-10-22T07:53:08.030Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~5ed0Mjd4D-fYiIwc3cKfgg~OSvr9oWika3Vx-KDuebOmw: block 1: Download started
+2026-10-22T07:53:08.181Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (151ms)
+2026-10-22T07:53:08.182Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":1852,"milliseconds":0.46509900000091875}
+2026-10-22T07:53:08.182Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~5ed0Mjd4D-fYiIwc3cKfgg~OSvr9oWika3Vx-KDuebOmw: block 1: Downloaded
+2026-10-22T07:53:08.194Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/5ed0Mjd4D-fYiIwc3cKfgg/revisions/OSvr9oWika3Vx-KDuebOmw?PageSize=20&FromBlockIndex=2: 200 (164ms)
+2026-10-22T07:53:08.194Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~5ed0Mjd4D-fYiIwc3cKfgg~OSvr9oWika3Vx-KDuebOmw: Flushing completed block 1
+2026-10-22T07:53:08.194Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~5ed0Mjd4D-fYiIwc3cKfgg~OSvr9oWika3Vx-KDuebOmw: Skipping manifest check
+2026-10-22T07:53:08.194Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~5ed0Mjd4D-fYiIwc3cKfgg~OSvr9oWika3Vx-KDuebOmw: Download succeeded
+2026-10-22T07:53:08.194Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":1933,"claimedFileSize":1933}
+2026-10-22T07:53:08.194Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~yHQbd_hiUGqzC-3IITsxIA
+2026-10-22T07:53:08.350Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/yHQbd_hiUGqzC-3IITsxIA/children?: 200 (156ms)
+2026-10-22T07:53:08.507Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (157ms)
+FILE ris/Сет 12 кк/Фул Сет 12кк.sql (13870 B)
+2026-10-22T07:53:08.511Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Q0eoWHPdvn3fi_2daWSOvA
+2026-10-22T07:53:08.511Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Q0eoWHPdvn3fi_2daWSOvA~8SYxrpcXoLLOBdw-qk019g: Starting download
+2026-10-22T07:53:08.723Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Q0eoWHPdvn3fi_2daWSOvA/revisions/8SYxrpcXoLLOBdw-qk019g?PageSize=20&FromBlockIndex=1: 200 (212ms)
+2026-10-22T07:53:08.723Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Q0eoWHPdvn3fi_2daWSOvA~8SYxrpcXoLLOBdw-qk019g: block 1: Download started
+2026-10-22T07:53:08.900Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (177ms)
+2026-10-22T07:53:08.903Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":13870,"milliseconds":0.5485050000061165}
+2026-10-22T07:53:08.903Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Q0eoWHPdvn3fi_2daWSOvA~8SYxrpcXoLLOBdw-qk019g: block 1: Downloaded
+2026-10-22T07:53:08.940Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Q0eoWHPdvn3fi_2daWSOvA/revisions/8SYxrpcXoLLOBdw-qk019g?PageSize=20&FromBlockIndex=2: 200 (217ms)
+2026-10-22T07:53:08.941Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Q0eoWHPdvn3fi_2daWSOvA~8SYxrpcXoLLOBdw-qk019g: Flushing completed block 1
+2026-10-22T07:53:08.941Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Q0eoWHPdvn3fi_2daWSOvA~8SYxrpcXoLLOBdw-qk019g: Skipping manifest check
+2026-10-22T07:53:08.941Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Q0eoWHPdvn3fi_2daWSOvA~8SYxrpcXoLLOBdw-qk019g: Download succeeded
+2026-10-22T07:53:08.941Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":100000,"approximateClaimedFileSize":100000,"downloadedSize":13954,"claimedFileSize":13954}
+DONE files=84 errors=0
