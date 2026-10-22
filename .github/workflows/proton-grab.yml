@@ -26,18 +26,28 @@ jobs:
 
       - name: Setup node + tools
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq p7zip-full unrar bsdtar file > /dev/null
-          npm install -g pdown@1.0.5
-          python3 --version; 7z | head -2; unrar | head -2 || true
+          mkdir -p dumps/_inbox/_debug
+          set -x
+          sudo apt-get update -qq 2>&1 | tail -3 || true
+          sudo apt-get install -y -qq p7zip-full bsdtar file 2>&1 | tail -3 || true
+          sudo apt-get install -y -qq unrar p7zip-rar 2>&1 | tail -3 || true
+          npm install -g pdown@1.0.5 2>&1 | tail -5
+          { python3 --version; 7z | head -2; unrar 2>&1 | head -2; which pdown; } \
+            > dumps/_inbox/_debug/tools.txt 2>&1 || true
+          cat dumps/_inbox/_debug/tools.txt
 
       - name: Build YTDB baseline
         run: |
-          git clone -q --filter=blob:none --sparse https://github.com/NeatElves/wotlk-ytdbdb.git /tmp/ytdb
-          cd /tmp/ytdb && git sparse-checkout set Full_DB
+          set -x
+          git clone -q --filter=blob:none --sparse https://github.com/NeatElves/wotlk-ytdbdb.git /tmp/ytdb \
+            2>&1 | tee dumps/_inbox/_debug/baseline-clone.log
+          cd /tmp/ytdb && git sparse-checkout set Full_DB 2>&1 | tee -a "$GITHUB_WORKSPACE/dumps/_inbox/_debug/baseline-clone.log"
+          ls -la Full_DB/
           zcat Full_DB/*.sql.gz > /tmp/ytdb_full.sql
+          wc -c /tmp/ytdb_full.sql
           cd "$GITHUB_WORKSPACE"
-          python3 tools/build_baseline.py /tmp/ytdb_full.sql /tmp/ytdb_baseline.json
+          python3 tools/build_baseline.py /tmp/ytdb_full.sql /tmp/ytdb_baseline.json \
+            2>&1 | tee dumps/_inbox/_debug/baseline-build.log
 
       - name: Grab and scan shares
         run: |
@@ -106,3 +116,21 @@ jobs:
             commit_back "data(proton): скан папки $label"
           done < urls.txt
           echo "ALL DONE"
+
+      - name: Commit debug (always)
+        if: always()
+        run: |
+          git config user.name "proton-grab-bot"
+          git config user.email "proton-grab-bot@users.noreply.github.com"
+          mkdir -p dumps/_inbox/_debug
+          { echo "job status: ${{ job.status }}"; date -u; df -h / /tmp | tail -3; \
+            du -sh proton_dl dumps/_inbox 2>/dev/null; } > dumps/_inbox/_debug/job.txt 2>&1 || true
+          git add -A dumps/_inbox || true
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -q -m "data(proton): отладочные логи запуска" || exit 0
+          for i in 1 2 3; do
+            git pull -q --rebase origin "${GITHUB_REF_NAME}" || true
+            git push -q origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep 5
+          done
+          echo "push failed after retries"
