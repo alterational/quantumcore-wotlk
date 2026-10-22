@@ -63,13 +63,29 @@ const account = {
     getPublicKeys: async () => [],
 };
 
+/* SDK ждёт SRPModule вида getSrp(version, modulus, ephemeral, salt, password),
+   а @protontech/crypto экспортирует getSrp(AuthInfo, {password}) — нужен адаптер
+   (как Srp в incubating/account официального CLI), иначе модулюс «не проверяется». */
+const srpModule = {
+    getSrp: (version: number, modulus: string, serverEphemeral: string, salt: string, password: string) =>
+        (getSrp as any)(
+            { Version: version, Modulus: modulus, ServerEphemeral: serverEphemeral, Salt: salt },
+            { password },
+        ),
+    getSrpVerifier: async (): Promise<any> => {
+        throw new Error('anonymous context: getSrpVerifier unavailable');
+    },
+    computeKeyPassword,
+    generateKeySalt,
+};
+
 const client = new ProtonDriveClient({
     httpClient,
     entitiesCache: new MemoryCache(),
     cryptoCache: new MemoryCache(),
     account,
     openPGPCryptoModule,
-    srpModule: { getSrp, getSrpVerifier: getRandomSrpVerifier, computeKeyPassword, generateKeySalt },
+    srpModule,
     config: {},
 });
 
