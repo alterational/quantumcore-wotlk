@@ -1,7 +1,7 @@
-2026-10-22T06:57:08.345Z INFO [interface] Getting info for URL access token X2K7F5PFA4
-2026-10-22T06:57:08.712Z INFO [api] GET https://drive-api.proton.me/drive/urls/X2K7F5PFA4/info: 200 (366ms)
+2026-10-22T07:03:35.674Z INFO [interface] Getting info for URL access token X2K7F5PFA4
+2026-10-22T07:03:36.280Z INFO [api] GET https://drive-api.proton.me/drive/urls/X2K7F5PFA4/info: 200 (606ms)
 INFO {"isCustomPasswordProtected":false,"isLegacy":false,"vendorType":0}
-2026-10-22T06:57:08.712Z INFO [interface] Authenticating URL access token X2K7F5PFA4
+2026-10-22T07:03:36.280Z INFO [interface] Authenticating URL access token X2K7F5PFA4
 50 |             throw new Error();
 51 |         }
 52 | 
