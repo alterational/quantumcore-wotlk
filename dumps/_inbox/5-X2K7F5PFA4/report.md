@@ -4,9 +4,9 @@
 - text: 85
 - archives: 0
 - item_files: 64
-- item_rows: 5941
-- candidates: 5699
-- standard_skipped: 242
+- item_rows: 72
+- candidates: 70
+- standard_skipped: 2
 - vendor_rows: 2384
 - creature_rows: 0
 - keyword_hits: 0
@@ -14,7 +14,7 @@
 
 ## Файлы с совпадениями
 
-- `ris/Альтер Шоп/Altershop[NEW 623].sql` (405309 Б): item_template строк: 6084, кандидатов: 5632; npc_vendor строк: 2384
+- `ris/Альтер Шоп/Altershop[NEW 623].sql` (405309 Б): item_template строк: 5, кандидатов: 3; npc_vendor строк: 2384
 - `ris/Донат/аксик 550 WMR-999882.sql` (2242 Б): item_template строк: 1, кандидатов: 1
 - `ris/Донат/голова 200 WMR-999877.sql` (2246 Б): item_template строк: 1, кандидатов: 1
 - `ris/Донат/грудь 200 WMR-999879.sql` (2247 Б): item_template строк: 1, кандидатов: 1
