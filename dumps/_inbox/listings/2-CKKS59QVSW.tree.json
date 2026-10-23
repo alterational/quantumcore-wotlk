@@ -3,9 +3,44 @@
  "mode": "dl",
  "files": [
   {
+   "path": "Баланс Рисовки by Fatality(Lovexian)/ID/Рисованные нонсеты.txt",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~z4CXc703skPc6NXr6z_b5A",
+   "size": 3285,
+   "mediaType": "text/plain;charset=utf-8",
+   "downloaded": true
+  },
+  {
+   "path": "Баланс Рисовки by Fatality(Lovexian)/ID/Рисованные рубашки и сумки.txt",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~vDcW_YZZS9TG8hxpPNtVIg",
+   "size": 2212,
+   "mediaType": "text/plain;charset=utf-8",
+   "downloaded": true
+  },
+  {
    "path": "Баланс Рисовки by Fatality(Lovexian)/ID/ID Легендарок Arena-Tournament.txt",
    "uid": "SgfKCen9iQnXZv58ixOXxg~b6nH4TwbxbKV6Dqes5QUyQ",
    "size": 243,
+   "mediaType": "text/plain;charset=utf-8",
+   "downloaded": true
+  },
+  {
+   "path": "Баланс Рисовки by Fatality(Lovexian)/ID/Инфа.txt",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~tQiK2EJoTxIQ9EuOne8Kpw",
+   "size": 145,
+   "mediaType": "text/plain;charset=utf-8",
+   "downloaded": true
+  },
+  {
+   "path": "Баланс Рисовки by Fatality(Lovexian)/ID/Рисованные Пухи.txt",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~fKoE6DiMMeEA22-8uiUwqA",
+   "size": 4700,
+   "mediaType": "text/plain;charset=utf-8",
+   "downloaded": true
+  },
+  {
+   "path": "Баланс Рисовки by Fatality(Lovexian)/ID/Рисованный Оффсет.txt",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~Dd7ZfXdMcspfuCNV7JLArg",
+   "size": 2858,
    "mediaType": "text/plain;charset=utf-8",
    "downloaded": true
   },
@@ -20,41 +55,6 @@
    "path": "Баланс Рисовки by Fatality(Lovexian)/ID/Рисованные Сеты PvE.txt",
    "uid": "SgfKCen9iQnXZv58ixOXxg~WTZ10ASrGUQ5to01XaapYQ",
    "size": 4919,
-   "mediaType": "text/plain;charset=utf-8",
-   "downloaded": true
-  },
-  {
-   "path": "Баланс Рисовки by Fatality(Lovexian)/ID/Рисованные Пухи.txt",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~fKoE6DiMMeEA22-8uiUwqA",
-   "size": 4700,
-   "mediaType": "text/plain;charset=utf-8",
-   "downloaded": true
-  },
-  {
-   "path": "Баланс Рисовки by Fatality(Lovexian)/ID/Рисованные нонсеты.txt",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~z4CXc703skPc6NXr6z_b5A",
-   "size": 3285,
-   "mediaType": "text/plain;charset=utf-8",
-   "downloaded": true
-  },
-  {
-   "path": "Баланс Рисовки by Fatality(Lovexian)/ID/Рисованный Оффсет.txt",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~Dd7ZfXdMcspfuCNV7JLArg",
-   "size": 2858,
-   "mediaType": "text/plain;charset=utf-8",
-   "downloaded": true
-  },
-  {
-   "path": "Баланс Рисовки by Fatality(Lovexian)/ID/Рисованные рубашки и сумки.txt",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~vDcW_YZZS9TG8hxpPNtVIg",
-   "size": 2212,
-   "mediaType": "text/plain;charset=utf-8",
-   "downloaded": true
-  },
-  {
-   "path": "Баланс Рисовки by Fatality(Lovexian)/ID/Инфа.txt",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~tQiK2EJoTxIQ9EuOne8Kpw",
-   "size": 145,
    "mediaType": "text/plain;charset=utf-8",
    "downloaded": true
   },
@@ -80,9 +80,9 @@
    "downloaded": true
   },
   {
-   "path": "Баланс Рисовки by Fatality(Lovexian)/Скрипты баланс-рисовок/Сумка арены.txt",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~yK_vLmGvDLh6cNDqaztLUw",
-   "size": 2764,
+   "path": "Баланс Рисовки by Fatality(Lovexian)/Скрипты баланс-рисовок/Скрипт NPC.txt",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~3mb0qX-GJekH04nTvdqMEQ",
+   "size": 20666,
    "mediaType": "text/plain;charset=utf-8",
    "downloaded": true
   },
@@ -94,9 +94,9 @@
    "downloaded": true
   },
   {
-   "path": "Баланс Рисовки by Fatality(Lovexian)/Скрипты баланс-рисовок/Скрипт NPC.txt",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~3mb0qX-GJekH04nTvdqMEQ",
-   "size": 20666,
+   "path": "Баланс Рисовки by Fatality(Lovexian)/Скрипты баланс-рисовок/Сумка арены.txt",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~yK_vLmGvDLh6cNDqaztLUw",
+   "size": 2764,
    "mediaType": "text/plain;charset=utf-8",
    "downloaded": true
   }
