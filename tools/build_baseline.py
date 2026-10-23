@@ -60,13 +60,22 @@ def row_sig(row):
 
 def main():
     src, out = sys.argv[1], sys.argv[2]
-    rows = build_data.parse_item_sql(src)
-    base = {}
+    # parse_item_sql не различает таблицы: в полном дампе мира нужны только
+    # строки собственно item_template (у них есть ItemLevel и name)
+    rows = [r for r in build_data.parse_item_sql(src)
+            if 'ItemLevel' in r and 'name' in r]
+    best = {}
     for row in rows:
         try:
             entry = int(str(row.get('entry')))
         except (TypeError, ValueError):
             continue
+        # в полном дампе entry повторяются частичными апдейтами (пара колонок) —
+        # эталоном должна быть самая полная запись, а не последняя
+        if entry not in best or len(row) > len(best[entry]):
+            best[entry] = row
+    base = {}
+    for entry, row in best.items():
         base[entry] = {
             'name': row.get('name', ''),
             'ilvl': row.get('ItemLevel', 0),

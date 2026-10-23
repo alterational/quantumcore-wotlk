@@ -190,6 +190,9 @@ def main():
                 safe = safe_name(rel)
                 try:
                     rows = build_data.parse_item_sql(path)
+                    # в полных дампах мира парсер цепляет все таблицы подряд —
+                    # нужны только строки item_template
+                    rows = [r for r in rows if 'ItemLevel' in r and 'name' in r]
                     if not rows:
                         # дампы без списка колонок (mysqldump VALUES (...))
                         rows = parse_items_fallback(path, text)
