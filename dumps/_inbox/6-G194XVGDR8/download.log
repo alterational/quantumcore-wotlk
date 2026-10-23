@@ -1,0 +1,103 @@
+2026-10-23T07:13:15.472Z INFO [interface] Getting info for URL access token G194XVGDR8
+2026-10-23T07:13:16.022Z INFO [api] GET https://drive-api.proton.me/drive/urls/G194XVGDR8/info: 200 (549ms)
+INFO {"isCustomPasswordProtected":false,"isLegacy":false,"vendorType":0}
+2026-10-23T07:13:16.023Z INFO [interface] Authenticating URL access token G194XVGDR8
+2026-10-23T07:13:16.363Z INFO [api] POST https://drive-api.proton.me/drive/urls/G194XVGDR8/auth: 200 (223ms)
+2026-10-23T07:13:16.502Z INFO [publicLink-interface] Getting root node
+2026-10-23T07:13:16.722Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (218ms)
+ROOT folder Bag and shirt
+2026-10-23T07:13:16.735Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~nt7rkYe_4d12Q-r1jPyCrQ
+2026-10-23T07:13:16.956Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/nt7rkYe_4d12Q-r1jPyCrQ/children?: 200 (220ms)
+2026-10-23T07:13:17.176Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (219ms)
+FILE Bag and shirt/Netherweave Bag-945001.sql (2178 B)
+2026-10-23T07:13:17.272Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~QR-FTgJypjczb0eYX9cGkw
+2026-10-23T07:13:17.275Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QR-FTgJypjczb0eYX9cGkw~tkD3KogaoiLJF_L7K1JVjA: Starting download
+2026-10-23T07:13:17.484Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/QR-FTgJypjczb0eYX9cGkw/revisions/tkD3KogaoiLJF_L7K1JVjA?PageSize=20&FromBlockIndex=1: 200 (208ms)
+2026-10-23T07:13:17.484Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QR-FTgJypjczb0eYX9cGkw~tkD3KogaoiLJF_L7K1JVjA: block 1: Download started
+2026-10-23T07:13:17.711Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/QR-FTgJypjczb0eYX9cGkw/revisions/tkD3KogaoiLJF_L7K1JVjA?PageSize=20&FromBlockIndex=2: 200 (226ms)
+2026-10-23T07:13:18.073Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (588ms)
+2026-10-23T07:13:18.076Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2178,"milliseconds":1.8920109999999113}
+2026-10-23T07:13:18.076Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QR-FTgJypjczb0eYX9cGkw~tkD3KogaoiLJF_L7K1JVjA: block 1: Downloaded
+2026-10-23T07:13:18.076Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QR-FTgJypjczb0eYX9cGkw~tkD3KogaoiLJF_L7K1JVjA: Flushing completed block 1
+2026-10-23T07:13:18.076Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~QR-FTgJypjczb0eYX9cGkw~tkD3KogaoiLJF_L7K1JVjA: Skipping manifest check
+2026-10-23T07:13:18.077Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QR-FTgJypjczb0eYX9cGkw~tkD3KogaoiLJF_L7K1JVjA: Download succeeded
+2026-10-23T07:13:18.077Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2259,"claimedFileSize":2259}
+FILE Bag and shirt/Dragon Hide Bag-945000.sql (2173 B)
+2026-10-23T07:13:18.077Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~tLQtWHiTUQF0ixMNms3-HA
+2026-10-23T07:13:18.077Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~tLQtWHiTUQF0ixMNms3-HA~7yLjIZnAEq9gyVY3_3RqRg: Starting download
+2026-10-23T07:13:18.291Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/tLQtWHiTUQF0ixMNms3-HA/revisions/7yLjIZnAEq9gyVY3_3RqRg?PageSize=20&FromBlockIndex=1: 200 (214ms)
+2026-10-23T07:13:18.291Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~tLQtWHiTUQF0ixMNms3-HA~7yLjIZnAEq9gyVY3_3RqRg: block 1: Download started
+2026-10-23T07:13:18.509Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/tLQtWHiTUQF0ixMNms3-HA/revisions/7yLjIZnAEq9gyVY3_3RqRg?PageSize=20&FromBlockIndex=2: 200 (218ms)
+2026-10-23T07:13:18.567Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (276ms)
+2026-10-23T07:13:18.573Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2173,"milliseconds":0.7767200000002958}
+2026-10-23T07:13:18.573Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~tLQtWHiTUQF0ixMNms3-HA~7yLjIZnAEq9gyVY3_3RqRg: block 1: Downloaded
+2026-10-23T07:13:18.573Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~tLQtWHiTUQF0ixMNms3-HA~7yLjIZnAEq9gyVY3_3RqRg: Flushing completed block 1
+2026-10-23T07:13:18.573Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~tLQtWHiTUQF0ixMNms3-HA~7yLjIZnAEq9gyVY3_3RqRg: Skipping manifest check
+2026-10-23T07:13:18.573Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~tLQtWHiTUQF0ixMNms3-HA~7yLjIZnAEq9gyVY3_3RqRg: Download succeeded
+2026-10-23T07:13:18.573Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2254,"claimedFileSize":2254}
+FILE Bag and shirt/Pumpkin Bag-945002.sql (2174 B)
+2026-10-23T07:13:18.573Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~EXPjEK2jbK-AeVkrbJN5cA
+2026-10-23T07:13:18.573Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~EXPjEK2jbK-AeVkrbJN5cA~2gtG4RUOt3TIpDwnjLLEbA: Starting download
+2026-10-23T07:13:18.793Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/EXPjEK2jbK-AeVkrbJN5cA/revisions/2gtG4RUOt3TIpDwnjLLEbA?PageSize=20&FromBlockIndex=1: 200 (220ms)
+2026-10-23T07:13:18.793Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~EXPjEK2jbK-AeVkrbJN5cA~2gtG4RUOt3TIpDwnjLLEbA: block 1: Download started
+2026-10-23T07:13:19.012Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/EXPjEK2jbK-AeVkrbJN5cA/revisions/2gtG4RUOt3TIpDwnjLLEbA?PageSize=20&FromBlockIndex=2: 200 (218ms)
+2026-10-23T07:13:19.073Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (279ms)
+2026-10-23T07:13:19.079Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2174,"milliseconds":0.6577409999999873}
+2026-10-23T07:13:19.079Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~EXPjEK2jbK-AeVkrbJN5cA~2gtG4RUOt3TIpDwnjLLEbA: block 1: Downloaded
+2026-10-23T07:13:19.079Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~EXPjEK2jbK-AeVkrbJN5cA~2gtG4RUOt3TIpDwnjLLEbA: Flushing completed block 1
+2026-10-23T07:13:19.079Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~EXPjEK2jbK-AeVkrbJN5cA~2gtG4RUOt3TIpDwnjLLEbA: Skipping manifest check
+2026-10-23T07:13:19.079Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~EXPjEK2jbK-AeVkrbJN5cA~2gtG4RUOt3TIpDwnjLLEbA: Download succeeded
+2026-10-23T07:13:19.079Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2255,"claimedFileSize":2255}
+FILE Bag and shirt/Martin Fury-980101.sql (2172 B)
+2026-10-23T07:13:19.079Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~AjeWBMJwAS50KdjIaPTlLg
+2026-10-23T07:13:19.079Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~AjeWBMJwAS50KdjIaPTlLg~bqdxvCgB4TO9dAHEH800xA: Starting download
+2026-10-23T07:13:19.293Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/AjeWBMJwAS50KdjIaPTlLg/revisions/bqdxvCgB4TO9dAHEH800xA?PageSize=20&FromBlockIndex=1: 200 (214ms)
+2026-10-23T07:13:19.293Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~AjeWBMJwAS50KdjIaPTlLg~bqdxvCgB4TO9dAHEH800xA: block 1: Download started
+2026-10-23T07:13:19.515Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/AjeWBMJwAS50KdjIaPTlLg/revisions/bqdxvCgB4TO9dAHEH800xA?PageSize=20&FromBlockIndex=2: 200 (222ms)
+2026-10-23T07:13:19.530Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (237ms)
+2026-10-23T07:13:19.536Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2172,"milliseconds":0.6383420000001934}
+2026-10-23T07:13:19.536Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~AjeWBMJwAS50KdjIaPTlLg~bqdxvCgB4TO9dAHEH800xA: block 1: Downloaded
+2026-10-23T07:13:19.536Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~AjeWBMJwAS50KdjIaPTlLg~bqdxvCgB4TO9dAHEH800xA: Flushing completed block 1
+2026-10-23T07:13:19.536Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~AjeWBMJwAS50KdjIaPTlLg~bqdxvCgB4TO9dAHEH800xA: Skipping manifest check
+2026-10-23T07:13:19.536Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~AjeWBMJwAS50KdjIaPTlLg~bqdxvCgB4TO9dAHEH800xA: Download succeeded
+2026-10-23T07:13:19.536Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2253,"claimedFileSize":2253}
+FILE Bag and shirt/Martin Fury-980100.sql (2170 B)
+2026-10-23T07:13:19.536Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~-OqIkXQCCy2PkXK9aPK6LQ
+2026-10-23T07:13:19.537Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~-OqIkXQCCy2PkXK9aPK6LQ~L3yiW3gamLMZ0JiKnqI5gg: Starting download
+2026-10-23T07:13:19.762Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/-OqIkXQCCy2PkXK9aPK6LQ/revisions/L3yiW3gamLMZ0JiKnqI5gg?PageSize=20&FromBlockIndex=1: 200 (225ms)
+2026-10-23T07:13:19.762Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~-OqIkXQCCy2PkXK9aPK6LQ~L3yiW3gamLMZ0JiKnqI5gg: block 1: Download started
+2026-10-23T07:13:19.975Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/-OqIkXQCCy2PkXK9aPK6LQ/revisions/L3yiW3gamLMZ0JiKnqI5gg?PageSize=20&FromBlockIndex=2: 200 (213ms)
+2026-10-23T07:13:20.004Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (242ms)
+2026-10-23T07:13:20.005Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2170,"milliseconds":0.6849720000000161}
+2026-10-23T07:13:20.005Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~-OqIkXQCCy2PkXK9aPK6LQ~L3yiW3gamLMZ0JiKnqI5gg: block 1: Downloaded
+2026-10-23T07:13:20.005Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~-OqIkXQCCy2PkXK9aPK6LQ~L3yiW3gamLMZ0JiKnqI5gg: Flushing completed block 1
+2026-10-23T07:13:20.005Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~-OqIkXQCCy2PkXK9aPK6LQ~L3yiW3gamLMZ0JiKnqI5gg: Skipping manifest check
+2026-10-23T07:13:20.005Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~-OqIkXQCCy2PkXK9aPK6LQ~L3yiW3gamLMZ0JiKnqI5gg: Download succeeded
+2026-10-23T07:13:20.005Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2251,"claimedFileSize":2251}
+FILE Bag and shirt/Martin Fury-980103.sql (2173 B)
+2026-10-23T07:13:20.005Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~gxTXtagHeNC_Q_UWOpZgpw
+2026-10-23T07:13:20.005Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~gxTXtagHeNC_Q_UWOpZgpw~DeNSI-Ar01zGfSY8bYbyPA: Starting download
+2026-10-23T07:13:20.204Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/gxTXtagHeNC_Q_UWOpZgpw/revisions/DeNSI-Ar01zGfSY8bYbyPA?PageSize=20&FromBlockIndex=1: 200 (199ms)
+2026-10-23T07:13:20.204Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~gxTXtagHeNC_Q_UWOpZgpw~DeNSI-Ar01zGfSY8bYbyPA: block 1: Download started
+2026-10-23T07:13:20.410Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/gxTXtagHeNC_Q_UWOpZgpw/revisions/DeNSI-Ar01zGfSY8bYbyPA?PageSize=20&FromBlockIndex=2: 200 (206ms)
+2026-10-23T07:13:20.449Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (245ms)
+2026-10-23T07:13:20.455Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2173,"milliseconds":0.6679570000005697}
+2026-10-23T07:13:20.455Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~gxTXtagHeNC_Q_UWOpZgpw~DeNSI-Ar01zGfSY8bYbyPA: block 1: Downloaded
+2026-10-23T07:13:20.455Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~gxTXtagHeNC_Q_UWOpZgpw~DeNSI-Ar01zGfSY8bYbyPA: Flushing completed block 1
+2026-10-23T07:13:20.455Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~gxTXtagHeNC_Q_UWOpZgpw~DeNSI-Ar01zGfSY8bYbyPA: Skipping manifest check
+2026-10-23T07:13:20.455Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~gxTXtagHeNC_Q_UWOpZgpw~DeNSI-Ar01zGfSY8bYbyPA: Download succeeded
+2026-10-23T07:13:20.455Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2254,"claimedFileSize":2254}
+FILE Bag and shirt/Martin Fury-980102.sql (2172 B)
+2026-10-23T07:13:20.455Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~F1tNblg7w46OtUZ9WgkOZw
+2026-10-23T07:13:20.456Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~F1tNblg7w46OtUZ9WgkOZw~Ff1-xyHgth0QnGpWxEgCUg: Starting download
+2026-10-23T07:13:20.646Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/F1tNblg7w46OtUZ9WgkOZw/revisions/Ff1-xyHgth0QnGpWxEgCUg?PageSize=20&FromBlockIndex=1: 200 (190ms)
+2026-10-23T07:13:20.646Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~F1tNblg7w46OtUZ9WgkOZw~Ff1-xyHgth0QnGpWxEgCUg: block 1: Download started
+2026-10-23T07:13:20.878Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/F1tNblg7w46OtUZ9WgkOZw/revisions/Ff1-xyHgth0QnGpWxEgCUg?PageSize=20&FromBlockIndex=2: 200 (232ms)
+2026-10-23T07:13:20.903Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (257ms)
+2026-10-23T07:13:20.904Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2172,"milliseconds":0.7150510000001304}
+2026-10-23T07:13:20.904Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~F1tNblg7w46OtUZ9WgkOZw~Ff1-xyHgth0QnGpWxEgCUg: block 1: Downloaded
+2026-10-23T07:13:20.904Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~F1tNblg7w46OtUZ9WgkOZw~Ff1-xyHgth0QnGpWxEgCUg: Flushing completed block 1
+2026-10-23T07:13:20.904Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~F1tNblg7w46OtUZ9WgkOZw~Ff1-xyHgth0QnGpWxEgCUg: Skipping manifest check
+2026-10-23T07:13:20.904Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~F1tNblg7w46OtUZ9WgkOZw~Ff1-xyHgth0QnGpWxEgCUg: Download succeeded
+2026-10-23T07:13:20.904Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2253,"claimedFileSize":2253}
+DONE files=7 errors=0

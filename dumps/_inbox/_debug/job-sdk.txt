@@ -1,0 +1,6 @@
+job status: success
+Fri Oct 23 07:13:22 UTC 2026
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   60G   85G  42% /
+341M	proton_dl
+41M	dumps/_inbox

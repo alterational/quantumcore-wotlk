@@ -1,0 +1,80 @@
+# Скан: 5-X2K7F5PFA4
+
+- files: 85
+- text: 85
+- archives: 0
+- item_files: 64
+- item_rows: 72
+- candidates: 70
+- standard_skipped: 2
+- vendor_rows: 2384
+- creature_rows: 0
+- keyword_hits: 0
+- parse_errors: 0
+
+## Файлы с совпадениями
+
+- `ris/Альтер Шоп/Altershop[NEW 623].sql` (405309 Б): item_template строк: 5, кандидатов: 3; npc_vendor строк: 2384
+- `ris/Донат/аксик 550 WMR-999882.sql` (2242 Б): item_template строк: 1, кандидатов: 1
+- `ris/Донат/голова 200 WMR-999877.sql` (2246 Б): item_template строк: 1, кандидатов: 1
+- `ris/Донат/грудь 200 WMR-999879.sql` (2247 Б): item_template строк: 1, кандидатов: 1
+- `ris/Донат/ноги 200 WMR-999880.sql` (2247 Б): item_template строк: 1, кандидатов: 1
+- `ris/Донат/палец 350 WMR-999881.sql` (2239 Б): item_template строк: 1, кандидатов: 1
+- `ris/Донат/плечи 200 WMR-999876.sql` (2247 Б): item_template строк: 1, кандидатов: 1
+- `ris/Донат/руки 200 WMR-999878.sql` (2248 Б): item_template строк: 1, кандидатов: 1
+- `ris/Оружие/Axe of demolisher-2227-6кк.sql` (2325 Б): item_template строк: 1, кандидатов: 1
+- `ris/Оружие/Axe2h of demolisher-871-6кк.sql` (2326 Б): item_template строк: 1, кандидатов: 1
+- `ris/Оружие/Dagger SPD of demolisher-20836-6кк.sql` (2336 Б): item_template строк: 1, кандидатов: 1
+- `ris/Оружие/Dagger of demolisher-20982-6кк.sql` (2330 Б): item_template строк: 1, кандидатов: 1
+- `ris/Оружие/Shield of demolisher-1169-6кк.sql` (2313 Б): item_template строк: 1, кандидатов: 1
+- `ris/Оружие/Staff of demolisher943-6кк.sql` (2327 Б): item_template строк: 1, кандидатов: 1
+- `ris/Оружие/Start Axe 1H-1000003.sql` (2249 Б): item_template строк: 1, кандидатов: 1
+- `ris/Оружие/Start Dagger 1H-1000004.sql` (2253 Б): item_template строк: 1, кандидатов: 1
+- `ris/Оружие/Start Staff 2H-1000002.sql` (2252 Б): item_template строк: 1, кандидатов: 1
+- `ris/Оружие/Start Sword 1H-1000005.sql` (2252 Б): item_template строк: 1, кандидатов: 1
+- `ris/Оружие/Start Sword 2H-1000001.sql` (2252 Б): item_template строк: 1, кандидатов: 1
+- `ris/Оружие/Sword of demolisher3267-6кк.sql` (2328 Б): item_template строк: 1, кандидатов: 1
+- `ris/Оружие/Sword2h of demolisher-864-6кк.sql` (2327 Б): item_template строк: 1, кандидатов: 1
+- `ris/Плащь/Back DD-100323.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `ris/Плащь/Back-100320.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `ris/Рубаха/Shirt DD-101324.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `ris/Рубаха/Shirt-100321.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `ris/Сет 12 кк/Фул Сет 12кк.sql` (13870 Б): item_template строк: 5, кандидатов: 5
+- `ris/Стрелы/Стрелы рисованые(Аркан)-2512126.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `ris/Стрелы/Стрелы рисованые(Лёд)-251243.sql` (1849 Б): item_template строк: 0, кандидатов: 0
+- `ris/Стрелы/Стрелы рисованые(Огонь)-2512432.sql` (1855 Б): item_template строк: 0, кандидатов: 0
+- `ris/Стрелы/Стрелы рисованые(Свет)-251221.sql` (2219 Б): item_template строк: 1, кандидатов: 1
+- `ris/Стрелы/Стрелы рисованые(Тьма)-2512212.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `ris/Сумка/BaG CasToR-111234.sql` (2214 Б): item_template строк: 1, кандидатов: 1
+- `ris/Сумка/BaG DD-111235.sql` (2214 Б): item_template строк: 1, кандидатов: 1
+- `ris/Сумка/BaG HonoR-111237.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `ris/Сумка/BaG-111236.sql` (2227 Б): item_template строк: 1, кандидатов: 1
+- `ris/Сумка/BaG.sql` (6663 Б): item_template строк: 3, кандидатов: 3
+- `ris/Табард/Tabard DD-100147.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `ris/Табард/Tabard-100322.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `ris/Тотемы,Идолы Т.Д/Mega Igol-2000002.sql` (2227 Б): item_template строк: 1, кандидатов: 1
+- `ris/Тотемы,Идолы Т.Д/Mega Pechat-2000004.sql` (2238 Б): item_template строк: 1, кандидатов: 1
+- `ris/Тотемы,Идолы Т.Д/Mega Relic-2000001.sql` (2228 Б): item_template строк: 1, кандидатов: 1
+- `ris/Тотемы,Идолы Т.Д/Mega Totem-2000003.sql` (2228 Б): item_template строк: 1, кандидатов: 1
+- `ris/Тринькет/Trinket-100126.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `ris/Тринькет/Trinket-100127.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `ris/Тринькет/Trinket-100128.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `ris/Тринькет/Trinket-100317.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `ris/Тринькет/Trinket-100318.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `ris/Тринькет/Trinket-100319.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `ris/Шмотьё/6кк/Ofhand SPD of demolisher-12356-6кк.sql` (2322 Б): item_template строк: 1, кандидатов: 1
+- `ris/Шмотьё/6кк/Set of demolisher DD- 285-6кк.sql` (2307 Б): item_template строк: 1, кандидатов: 1
+- `ris/Шмотьё/6кк/Set of demolisher DD-2906-6кк.sql` (2307 Б): item_template строк: 1, кандидатов: 1
+- `ris/Шмотьё/6кк/Set of demolisher DD-4075-6кк.sql` (2309 Б): item_template строк: 1, кандидатов: 1
+- `ris/Шмотьё/6кк/Set of demolisher DD-4076-6кк.sql` (2308 Б): item_template строк: 1, кандидатов: 1
+- `ris/Шмотьё/6кк/Set of demolisher DD-4077-6кк.sql` (2308 Б): item_template строк: 1, кандидатов: 1
+- `ris/Шмотьё/6кк/Set of demolisher SPD-193-6кк.sql` (2307 Б): item_template строк: 1, кандидатов: 1
+- `ris/Шмотьё/6кк/Set of demolisher SPD-194-6кк.sql` (2307 Б): item_template строк: 1, кандидатов: 1
+- `ris/Шмотьё/6кк/Set of demolisher SPD-195-6кк.sql` (2307 Б): item_template строк: 1, кандидатов: 1
+- `ris/Шмотьё/6кк/Set of demolisher SPD-203-6кк.sql` (2307 Б): item_template строк: 1, кандидатов: 1
+- `ris/Шмотьё/6кк/Set of demolisher SPD-2622-6кк.sql` (2308 Б): item_template строк: 1, кандидатов: 1
+- `ris/Шмотьё/Арены Сет/Arena Set-564710.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `ris/Шмотьё/Арены Сет/Arena Set-564711.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `ris/Шмотьё/Арены Сет/Arena Set-564712.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `ris/Шмотьё/Арены Сет/Arena Set-564713.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `ris/Шмотьё/Арены Сет/Arena Set-564714.sql` (2174 Б): item_template строк: 1, кандидатов: 1

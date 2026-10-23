@@ -1,0 +1,60 @@
+# Скан: 2-CKKS59QVSW
+
+- files: 48
+- text: 47
+- archives: 1
+- item_files: 36
+- item_rows: 395
+- candidates: 395
+- standard_skipped: 0
+- vendor_rows: 675
+- creature_rows: 0
+- keyword_hits: 3
+- parse_errors: 0
+
+## Файлы с совпадениями
+
+- `Баланс Рисовки by Fatality(Lovexian)/NPC Legendaries.txt` (2940 Б): npc_vendor строк: 41
+- `Баланс Рисовки by Fatality(Lovexian)/Трансмогрифицированные легендарки.txt` (117138 Б): item_template строк: 43, кандидатов: 43
+- `Баланс Рисовки by Fatality(Lovexian)/ID/Рисованные Пухи.txt` (4700 Б): npc_vendor строк: 75
+- `Баланс Рисовки by Fatality(Lovexian)/ID/Рисованные Сеты PvE.txt` (4919 Б): npc_vendor строк: 80
+- `Баланс Рисовки by Fatality(Lovexian)/ID/Рисованные Сеты PvP.txt` (4919 Б): npc_vendor строк: 80
+- `Баланс Рисовки by Fatality(Lovexian)/ID/Рисованные нонсеты.txt` (3285 Б): npc_vendor строк: 40
+- `Баланс Рисовки by Fatality(Lovexian)/ID/Рисованные рубашки и сумки.txt` (2212 Б): npc_vendor строк: 13
+- `Баланс Рисовки by Fatality(Lovexian)/ID/Рисованный Оффсет.txt` (2858 Б): npc_vendor строк: 29
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Illidan правая рука(32837).sql` (2719 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Аззинот2(32838).sql` (2720 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Астральный посох(29981).sql` (2733 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Быстрый мститель(33734) .sql` (2720 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Длинный меч главнокомандующего(12584).sql` (2719 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Драконье возмедие(19354).sql` (2721 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Зин-рок(19854).sql` (2720 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Золотой лук(34196).sql` (2722 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Кинжал скв.колдун.(33389).sql` (2715 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Клеймор главнокомандующего(18876).sql` (2721 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Коготь неистовства(32946).sql` (2722 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Кулак раскал.неистовс.(32945) .sql` (2726 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Легионов(32253).sql` (2724 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Лезвие хаоса(19363).sql` (2717 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Меч верх.вождя(18877).sql` (2721 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Меч мстительного(33762).sql` (2718 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Мощь менетила(22798).sql` (2720 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Осколок звезды(45620).sql` (2737 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Пеплоносец(13262).sql` (2721 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Пистоль(29949).sql` (2722 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Пищаль дыхания дракона(19368).sql` (2722 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Потрошитель гутгора(17071).sql` (2714 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Предстоятель Аргуса(30908).sql` (2735 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Скипетр Ледяного пика(40488).sql` (2729 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Сокрушитель(30316).sql` (2721 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Сульфурас,рука Рагнароса(17182).sql` (2720 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Тори'дал Звездная ярость(34334).sql` (2722 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Факел проклятых(32332) .sql` (2720 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Хаккари(19865).sql` (2720 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Хрустальный кинжал(34604).sql` (2737 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/Ярость бурь (19019).sql` (2719 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/погибель хребтоскверна(34183).sql` (2720 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Weapons Arena-Tournament.rar.x/Weapons Arena-Tournament/посох распыления(30313).sql` (2720 Б): item_template строк: 1, кандидатов: 1
+- `Баланс Рисовки by Fatality(Lovexian)/Скрипты баланс-рисовок/Скрипт NPC.txt` (20666 Б): npc_vendor строк: 317
+- `Баланс Рисовки by Fatality(Lovexian)/Скрипты баланс-рисовок/Скрипт.txt` (867757 Б): ключевых слов: 3; item_template строк: 318, кандидатов: 318
+- `Баланс Рисовки by Fatality(Lovexian)/Скрипты баланс-рисовок/Сумка арены.txt` (2764 Б): item_template строк: 1, кандидатов: 1

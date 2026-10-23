@@ -1,0 +1,12 @@
++ python3 --version
+Python 3.12.3
++ 7z
++ head -2
+
+7-Zip 23.01 (x64) : Copyright (c) 1999-2023 Igor Pavlov : 2023-06-20
++ unrar
++ head -2
+
+UNRAR 7.00 freeware      Copyright (c) 1993-2024 Alexander Roshal
++ which pdown
+/usr/local/bin/pdown

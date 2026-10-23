@@ -1,0 +1,43 @@
+name: proton-debug
+
+on:
+  push:
+    paths:
+      - 'tools/proton-debug.trigger'
+
+permissions:
+  contents: write
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: '1.4.3'
+      - name: Install SDK deps
+        working-directory: tools/proton
+        run: npm install 2>&1 | tail -2
+      - name: Debug modulus verify
+        run: |
+          mkdir -p dumps/_inbox/_debug
+          bun tools/proton/debug_modulus.ts 8PCYG3JM28 \
+            > dumps/_inbox/_debug/modulus.txt 2>&1 || true
+          cat dumps/_inbox/_debug/modulus.txt
+          bun tools/proton/debug_auth.ts "https://drive.proton.me/urls/8PCYG3JM28#Y41FGLgoCjVJ" \
+            > dumps/_inbox/_debug/auth.txt 2>&1 || true
+          cat dumps/_inbox/_debug/auth.txt
+      - name: Commit debug
+        run: |
+          git config user.name "proton-grab-bot"
+          git config user.email "proton-grab-bot@users.noreply.github.com"
+          git add -A dumps/_inbox/_debug || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "data(proton): диагностика верификации модулюса" || exit 0
+          for i in 1 2 3; do
+            git pull -q --rebase origin "${GITHUB_REF_NAME}" || true
+            git push -q origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep 5
+          done

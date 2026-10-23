@@ -1,0 +1,2248 @@
+# Скан: 3-215P57RKJ8
+
+- files: 2521
+- text: 2397
+- archives: 18
+- item_files: 2222
+- item_rows: 2440
+- candidates: 2440
+- standard_skipped: 0
+- vendor_rows: 10703
+- creature_rows: 0
+- keyword_hits: 0
+- parse_errors: 0
+
+## Файлы с совпадениями
+
+- `рисовки/Arena 10 Chest-13575.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Attrition-380108.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Barricade of Eternity-380118.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Bleak Coldarra Carver-380110.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Bleak Coldarra Carver-380111.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Blood Fury-380101.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Constellus-380102.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Corpse-Impaling Spike-380118.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Cudgel of the Damned-380103.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Death's Head Crossbow-380115.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Dreamhunter's Carbine-380116.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Frozen Bonespike-380109.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Furious Gladiator's Crusher-380112.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Furious Gladiator's Crusher-380113.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Gluth's Fetching Knife-380117.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Hoperender-380107.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Icecrown Glacial Wall-380119.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Orgrim's Deflector-380104.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Prist.sql` (13400 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/Quest Cataclysm Mangos.sql` (67434 Б): item_template строк: 19, кандидатов: 19
+- `рисовки/Seethe-380106.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Soulbreaker-380105.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Staff of druid-100004.sql` (2233 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Staff of druid-100006.sql` (2233 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Staff-7777735.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/The Bad Way 87790 (Eng+Rus)(Mangos).txt` (5693 Б): item_template строк: 2, кандидатов: 2
+- `рисовки/The Bad Way 87790 (Eng+Rus)(Trinity).txt` (5687 Б): item_template строк: 2, кандидатов: 2
+- `рисовки/Tracker's Blade-380100.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Warglaive of Azzinoth.sql` (7993 Б): item_template строк: 3, кандидатов: 3
+- `рисовки/Warrior.sql` (13410 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/Zod's Repeating Longbow-380114.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Вендоры (Mangos).txt` (2468 Б): npc_vendor строк: 24
+- `рисовки/Вендоры (TrinityCore).txt` (2456 Б): npc_vendor строк: 24
+- `рисовки/Lord Tier/DK/Lord of Death Kingh Chest-88920.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/DK/Lord of Death Kingh Hands-88921.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/DK/Lord of Death Kingh Helm-88922.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/DK/Lord of Death Kingh Leg-88923.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/DK/Lord of Death Kingh Should-88924.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Druid/Lord Of Druid Chest-88930.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Druid/Lord Of Druid Hand-88931.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Druid/Lord Of Druid Head-88932.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Druid/Lord Of Druid Leg-88933.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Druid/Lord Of Druid Should-88934.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Hunter/Ranger Chest-88960.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Hunter/Ranger Hand-88961.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Hunter/Ranger Head-88962.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Hunter/Ranger Leg-88963.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Hunter/Ranger Should-88964.sql` (2693 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Paladin/Lord Of Paladin Chest-88900.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Paladin/Lord Of Paladin Cron-88904.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Paladin/Lord Of Paladin Hands-88901.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Paladin/Lord Of Paladin Legs-88902.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Paladin/Lord Of Paladin Should-88903.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Rogue/Lord Rogue Chest-88910.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Rogue/Lord Rogue Hand-88911.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Rogue/Lord Rogue Head-88912.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Rogue/Lord Rogue Legs-88913.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Rogue/Lord Rogue Should-88914.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Shaman/Lord of Shaman Hand-88951.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Shaman/Lord of Shaman Head-88952.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Shaman/Lord of Shaman Leg-88953.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Shaman/Lord of Shaman Robeguard-88950.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Shaman/Lord of Shaman Should-88954.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Warrior/Lord Of Warrior Chest-88941.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Warrior/Lord Of Warrior Hand-88942.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Warrior/Lord Of Warrior Head-88940.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Warrior/Lord Of Warrior Leg-88943.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Lord Tier/Warrior/Lord Of Warrior Should-88944.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Poison/Unlimited Anesthetic Poison-86695.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Poison/Unlimited Crippling Poison-86691.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Poison/Unlimited Deadly Poison-86690.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Poison/Unlimited Instant Poison-86694.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Poison/Unlimited Mind-numbing-86693.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Poison/Unlimited Wound Poison-86692.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Bow of Supreme-77716.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Dagger-77722.sql` (2148 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Inventory-99999.sql` (400 Б): npc_vendor строк: 16
+- `рисовки/Weapons/Naruchi-900011.sql` (2217 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Ownage Bow-10000054.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Ownage One Hands Dagger-10000048.sql` (2213 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Ownage One Hands Mace-10000047.sql` (2214 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Ownage One Hands Staff-10000049.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Ownage One Hands Sword-10000046.sql` (2215 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Ownage Shield-10000055.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Ownage Two Handed Mace-10000051.sql` (2216 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Ownage Two Handed Staff-10000052.sql` (2217 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Ownage Two Handed Sword-10000050.sql` (2217 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Ownage Wand-10000053.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Ruki geroya-900003.sql` (2222 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Serezka-900014.sql` (2212 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Shtani geroya-900004.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Shtani geroya-900005.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Silivanna_staff-9.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Spina-900007.sql` (2215 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Sword in Lava-77715.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Sword of Aliance-77717.sql` (2165 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Sword of Casmer-777132.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Sword of Orda-77714.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Sword of Orda-77721.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Sword-77713.sql` (2163 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/The Bad Way 87790 (Eng+Rus)(Mangos).txt` (5693 Б): item_template строк: 2, кандидатов: 2
+- `рисовки/Weapons/The Bad Way 87790 (Eng+Rus)(Trinity).txt` (5687 Б): item_template строк: 2, кандидатов: 2
+- `рисовки/Weapons/Tridal Of superme-77719.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Правильная Илиданка-800002.sql` (2220 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Правильная Илиданка=)-800001.sql` (2222 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Темная Скорбь (3.3.0).txt` (2706 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Фростморн.txt` (2737 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/рого-1000028.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/рого-1000029.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/рого-1000030.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/рого-1000031.sql` (2224 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/рого-1000032.sql` (2224 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/рого-1000033.sql` (2224 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/рого-1000034.sql` (2224 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/рого-1000035.sql` (2224 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Weapons Arena/Ownage Bow-10000061.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Weapons Arena/Ownage Dagger-10000058.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Weapons Arena/Ownage One Handed Mace-10000059.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Weapons Arena/Ownage One Handed Sword-10000060.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Weapons Arena/Ownage Staff-10000062.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Weapons Arena/Ownage Two Handed Mace-10000057.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Weapons Arena/Ownage Two Handed Sword-10000056.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/weapon/High Gladiator 2h Mace-60025.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/weapon/High Gladiator 2h Sword-60020.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/weapon/High Gladiator Axe-60023.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/weapon/High Gladiator Bow-60029.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/weapon/High Gladiator Dagger-60021.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/weapon/High Gladiator Dagger-60022.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/weapon/High Gladiator Gun-60030.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/weapon/High Gladiator Mace-60024.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/weapon/High Gladiator Polearm-60026.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/weapon/High Gladiator Shield-60016.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/weapon/High Gladiator Shield-60017.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/weapon/High Gladiator Staff-60027.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/weapon/High Gladiator Staff-60028.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/weapon/High Gladiator Sword-60018.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/weapon/High Gladiator Sword-60019.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/weapon/High Gladiator Wand-60031.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Арати item/Ownage BgBag-1000009.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Арати item/Ownage BgTabard-1000007.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Арати item/Ownage bgBack-1000008.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Гм оружка/Range of Sun-3433412.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Гм оружка/Staff of Sindoray-3433712.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Гм оружка/t9 2HSword-4551634.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Гм оружка/t9 Dagger-436587.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Гм оружка/t9 Sword-4594776.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружее/Cupa-Cups-110001.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружее/Cupa-Cups-110002.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружее/Cupa-Cups-110003.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружее/Cupa-Cups-110004.sql` (2212 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружее/Cupa-Cups-110005.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружее/Cupa-Cups-110006.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружее/Electus_Pauci-11.sql` (2241 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружее/Fun_dagger-4.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружее/The_Frostmoure-51.sql` (2218 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружее/bllack_claws_of_death.-52.sql` (2252 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружка/Ownage Bow-10000054.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружка/Ownage One Hands Dagger-10000048.sql` (2213 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружка/Ownage One Hands Mace-10000047.sql` (2214 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружка/Ownage One Hands Staff-10000049.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружка/Ownage One Hands Sword-10000046.sql` (2215 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружка/Ownage Shield-10000055.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружка/Ownage Two Handed Mace-10000051.sql` (2216 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружка/Ownage Two Handed Staff-10000052.sql` (2217 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружка/Ownage Two Handed Sword-10000050.sql` (2217 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Оружка/Ownage Wand-10000053.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Разное/Botinki-900010.sql` (2217 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Разное/Cepochka-900015.sql` (2211 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Разное/Cool meele rubaha-980002.sql` (2230 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Разное/Cumka-900012.sql` (2216 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Разное/Kolechko-900013.sql` (2215 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Разное/Meele rubaha-980003.sql` (2236 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Разное/Nakidka-900008.sql` (2218 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Разное/Remen-900009.sql` (2215 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Разное/Spina-900006.sql` (2216 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Старое/Caster shirt-980004.sql` (2224 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Старое/Chup!-230001.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Старое/Cool caster shirt-980005.sql` (2239 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Старое/Cool staff-230003.sql` (2215 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Старое/Kortick-230005.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Старое/Lezvie-230002.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/Старое/Primochka-230004.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/арати итем/Ownage BgBag-1000009.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/арати итем/Ownage BgTabard-1000007.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/арати итем/Ownage bgBack-1000008.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/аружее за ап/Ownage Bow-10000061.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/аружее за ап/Ownage Dagger-10000058.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/аружее за ап/Ownage One Handed Mace-10000059.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/аружее за ап/Ownage One Handed Sword-10000060.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/аружее за ап/Ownage Staff-10000062.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/аружее за ап/Ownage Two Handed Mace-10000057.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Weapons/аружее за ап/Ownage Two Handed Sword-10000056.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Ammo of supreme-100002.sql` (2149 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Axe of Supreme-100006.sql` (2229 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Axe of Supreme-100007.sql` (2228 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Axe of Supreme-100008.sql` (2228 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Bow of Honor-77780.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Bow of tendy-100000.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Cast-777123.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Cast-777124.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Cast-777125.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Cast-777126.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Cast-777127.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Cast-777128.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Cast-777129.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Cast-777130.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Gun of wow-100001.sql` (2228 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Idol of supreme-777781.sql` (2164 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Kira of Sword-3333900.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Kira of Sword-3333901.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Power off-hand-77741.sql` (2153 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Quest Cataclysm Mangos.sql` (67434 Б): item_template строк: 19, кандидатов: 19
+- `рисовки/_)/Shdow of Supreme-100009.sql` (2233 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Sheld-7777780.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Staff drul-7777799.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Staff of druid-100004.sql` (2233 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Staff of druid-100006.sql` (2233 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Supeme-7777792.sql` (2155 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Supeme-7777793.sql` (2155 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Supeme-7777794.sql` (2153 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Sword of Kharkov-444400.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/Sword of supreme-100010.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/bow of wow-100001.sql` (2228 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/bow of wow-100003.sql` (2228 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/dagger_of_rog-77740.sql` (2166 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/_)/sword opas-100000.sql` (2233 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Вендоры/оружие на продажу у вендоров/Dr.web(left)-60003.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Вендоры/оружие на продажу у вендоров/Dr.web(right)-60002.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Вендоры/оружие на продажу у вендоров/Frostmourne-60000.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Вендоры/оружие на продажу у вендоров/Kaspersky-60005.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Вендоры/оружие на продажу у вендоров/Mr.pizdec-60008.sql` (2156 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Вендоры/оружие на продажу у вендоров/Mr.pizdec-60009.sql` (2156 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Вендоры/оружие на продажу у вендоров/Navicat-60010.sql` (2162 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Вендоры/оружие на продажу у вендоров/Pcix-60001.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Вендоры/оружие на продажу у вендоров/Street magic dagger-60004.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Вендоры/оружие на продажу у вендоров/Valnir axe-60007.sql` (2160 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Вендоры/оружие на продажу у вендоров/Valnir mace-60006.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Кольчуга/Shaman Restr.sql` (13413 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/Кольчуга/Shaman+Hunter.sql` (13477 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/Кольчуга/Spd Sham.sql` (13466 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/Латы/Conqueror's Aegis Battleplate (8889022).SQL` (2296 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Латы/Conqueror's Aegis Gauntlets (8889024).SQL` (2293 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Латы/Conqueror's Aegis Helm (8889021).SQL` (2289 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Латы/Conqueror's Aegis Legplates (8889023).SQL` (2294 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Латы/Conqueror's Aegis Shoulderplates(8889020).SQL` (2298 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Латы/Dd.sql` (13541 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/Латы/Holy.sql` (13503 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/Латы/Proto.sql` (13475 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/Новенькое/BlessedMace of Apocalypse-200500.sql` (2214 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Event off hend-100511.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Event off hend-100512.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Event tabard scout-100503.sql` (2215 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Event tabard speller-100504.sql` (2213 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free 1-h axe-300129.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free back(mele)-300123.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free back(spell)-300122.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free bag(all)-300116.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free dagger(mele)-300127.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free dagger(spell)-300136.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free fist-300130.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free fist-300132.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free mace(mele)-300130.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free mace(spell)-300133.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free neck(Spell)-300110.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free of hend-100510.sql` (2164 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free offhand-300126.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free ring(Spell)-300111.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free set(all)-300100.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free set(all)-300101.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free set(all)-300102.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free set(all)-300103.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free set(all)-300104.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free set(all)-300105.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free set(all)-300106.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free set(all)-300107.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free shield(mele)-300124.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free shield(spell)-300125.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free shirt(spell)-300117.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free shirt(spell)-300118.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free staff-300139.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free sword 2-h-300137.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free sword 2-h-300138.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free sword(mele)-300128.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free sword(spell)-300134(2).sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free sword(spell)-300134.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free tabard(mele)-300120.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free tabard(spell)-300121.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free thrown-300141.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free trinket(Spell)-300112.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free trinket(mele)-300113.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Free wand-300142.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Freebow-300140.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Freein neck(mele)-300114.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Freein ring(mele)-300115.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Fun relic(DK)-400187.sql` (2163 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Fun relic(druid)-400185.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Fun relic(pally)-400184.sql` (2167 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Fun relic(shamy)-400186.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/God white shirt-100501(2).sql` (2211 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/God white shirt-100501.sql` (2219 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor DK set-400140.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor DK set-400141.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor DK set-400142.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor DK set-400143.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor DK set-400144.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor bag(mele)-400180(2).sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor bag(mele)-400180.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor bag(spell)-400182.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor cloth set(feet)-400155.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor cloth set(waist)-400156.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor cloth set(wrist)-400157.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor dagger(mele)-300050.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor dagger(mele)-300300.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor dagger(spell)-300051.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor druid set-400125.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor druid set-400126.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor druid set-400127.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor druid set-400128.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor druid set-400129.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor hunter set-400135.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor hunter set-400136(2).sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor hunter set-400136.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor hunter set-400138.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor hunter set-400139.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor leather set(feet)-400161.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor leather set(feet)-400162.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor leather set(feet)-400163.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor leather set(waist)-400160.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor leather set(wrist)-400158(2).sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor leather set(wrist)-400158(3).sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor leather set(wrist)-400158.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor leather set(wrist)-400159(2).sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor leather set(wrist)-400159.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor mace(spell)-300052.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor mage set-400100.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor mage set-400101.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor mage set-400102.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor mage set-400103(2).sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor mage set-400103.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor mage set-400104(2).sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor mage set-400104.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor mail set(feet)-400164.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor mail set(waist)-400165.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor mail set(wrist)-400166.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor off hend-100511.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor paladin set-400150.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor paladin set-400151.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor paladin set-400152.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor paladin set-400153.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor paladin set-400154.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor plate set(feet)-400167.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor plate set(waist)-400168.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor plate set(wrist)-400169.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor priest set-400105.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor priest set-400106.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor priest set-400107.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor priest set-400108.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor priest set-400109.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor rogue set-400116.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor rogue set-400117.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor rogue set-400119.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor rogue set-400120.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor rogue set-400121.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor rogue set-400122.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor shaman set-400130.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor shaman set-400131.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor shaman set-400132.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor shaman set-400133.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor shaman set-400134.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor shirt (mele)-400170(2).sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor shirt (mele)-400170.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor shirt (spell)-400172(2).sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor shirt (spell)-400172.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor sword(spell)-300053.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor warlock set-400110.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor warlock set-400111.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor warlock set-400112.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor warlock set-400114.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor warlock set-400115.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor warrior set-400145.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor warrior set-400146.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor warrior set-400147.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor warrior set-400148.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Honor warrior set-400149.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Mele back event-100533.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Mele back free-100535.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Mele back honor-100534.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Ownage white shirt-100500.sql` (2209 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Owned tabard scout-100502.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Owned tabard-100501.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Regular bag-100500.sql` (2162 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Spell back event-100532.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Spell back free-100530.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/Spell back honor-100531.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/fun arrow-300300.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/fun arrow-300301.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/fun bullet-300302.sql` (2162 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Новенькое/worker bag-100501.sql` (2162 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Bags/High Gladiator Bag-60014.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Bags/High Gladiator Bag-60015.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Kolca/Melee Neck-850122.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Kolca/Melee Ring-850120.sql` (2166 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Kolca/Melee Trinket-850121.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Neck/High Gladiator Neck-60004.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Neck/High Gladiator Neck-60005.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Neck/High Gladiator Neck-60006.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Neck/High Gladiator Neck-60007.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ring/High Gladiator Ring-60000.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ring/High Gladiator Ring-60001.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ring/High Gladiator Ring-60002.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ring/High Gladiator Ring-60003.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Shirts/Ownage Black Shirt-10000021.sql` (2204 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Shirts/Ownage Blue Shirt-10000020.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Shirts/Ownage Green Shirt-10000017.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Shirts/Ownage Ranged Shirt-10000019.sql` (2212 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Shirts/Ownage Red Shirt-10000018.sql` (2210 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Tabard shirt back/High Gladiator Back-60012.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Tabard shirt back/High Gladiator Back-60013.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Tabard shirt back/High Gladiator Shirt-60010.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Tabard shirt back/High Gladiator Shirt-60011.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Tabard shirt back/High Gladiator Tabard-60008.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Tabard shirt back/High Gladiator Tabard-60009.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/tabard/Melee BG tabard-850123.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Аксесуар/Medallion-380131.sql` (2674 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Аксесуар/Medallion-380132.sql` (2674 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Аксесуар/Medallion-380133.sql` (2676 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Аксесуар/Trinket_for_David_Blane-10.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/LEGENDARY BAG XXL-700006.sql` (2213 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary AXE-700001.sql` (2248 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary BACK-700013.sql` (2216 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary Dagger-700002.sql` (2252 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary FISTWEAPON 1-700004.sql` (2259 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary FISTWEAPON 2-700005.sql` (2259 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary IDOL-700018.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary LIBRAM-700017.sql` (2204 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary NECK-700007.sql` (2213 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary OFFHAND-700014.sql` (2219 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary RING 1-700008.sql` (2216 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary RING 2-700009.sql` (2216 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary SHIELD 1-700015.sql` (2225 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary SHIELD 2-700016.sql` (2225 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary SHIRT-700011.sql` (2210 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary STAFF-700003.sql` (2252 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary Sigil-700020.sql` (2212 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary TABARD-700012.sql` (2221 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary TRINKET 1-700010.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary TRINKET 2-700011.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Ещё/Legendary Totem-700019.sql` (2214 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Кольцо/Ashen Band of Endless Destruction-380125.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Кольцо/Ashen Band of Endless Vengeance-380126.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Кольцо/Memory of Malygos-380127.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Кольцо/Might of Blight-380128.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Кольцо/Sindragosa's Cruel Claw-380129.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Спина/Frostbinder's Shredded Cape-830140.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Спина/Frostbinder's Shredded Cape-830141.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Спина/Royal Crimson Cloak-830142.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Спина/Shadowvault Slayer's Cloak-830143.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Спина/Winding Sheet-830144.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Табард/Maiden's Adoration-830148.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Табард/Recovered Scarlet Onslaught Cape-830145.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Табард/Royal Crimson Cloak-830146.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Табард/Saronite Gargoyle Cloak-830147.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Табард/Shawl of the Refreshing Winds-830149.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Шея/Ahn'kahar Onyx Neckguard-380120.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Шея/Amulet of the Silent Eulogy-380121.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Шея/Ashen Band of Endless Courage-380124.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Шея/Bile-Encrusted Medallion-380122.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/Шея/Bone Sentinel's Amulet-380123.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/еликсиры/Mego Ukraine Vodkas-850119.sql` (2159 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/еликсиры/Megos Ukraine Vodkas-850119.sql` (2160 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/еликсиры/Ukraine Vodkas-850119.sql` (2154 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Bg Kaster Back-850234.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Bg Kaster FeeT-850231.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Bg Kaster Tabard-850233.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Bg Kaster Waist-850236.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Bg Kaster Wrist-850235.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Bg Melee Back-850238.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Bg Melee Waist-850240.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Bg Melee-850239.sql` (2167 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Bg melee FeeT-850230.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Chest 2 Druid-444011.sql` (2165 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Chest Druid-444004.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Chest RoG-444012.sql` (2159 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Hands 2 Druid-444006.sql` (2165 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Hands Druid-444003.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Hands RoG-444014.sql` (2158 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Head 2 Druid-444009.sql` (2163 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Head Druid-444005.sql` (2160 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Head RoG-444016.sql` (2156 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Kaster Necklece-850128.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Kaster Ring-850126.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Kaster Trinket-850127.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Legs 2 Druid-444007.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Legs Druid-444002.sql` (2160 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Legs RoG-444015.sql` (2156 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Melee BG tabard-850123.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Melee Neck-850122.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Melee Ring-850120.sql` (2166 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Melee Trinket-850121.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Shoulders 2 Druid-444008.sql` (2166 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Shoulders Druid-444001.sql` (2164 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/Shoulders RoG-444013.sql` (2160 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/iШам 1/Chest Shaman-450114.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/iШам 1/Hands Shaman-450111.sql` (2159 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/iШам 1/Head Shaman-450113.sql` (2159 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/iШам 1/Legs Shaman-450110.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/iШам 1/Shoulders Shaman-450112.sql` (2165 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/прист/Chest Prist-450108.sql` (2676 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/прист/Hands Prist-450107.sql` (2677 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/прист/Legs Prist-450106.sql` (2676 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/прист/Prist-450109.sql` (2676 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/прист/Shoulders Prist-450105.sql` (2683 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/сет, лок/Locked Chest-670005.sql` (2163 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/сет, лок/Locked Hands-670002.sql` (2164 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/сет, лок/Locked Head-670001.sql` (2162 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/сет, лок/Locked Legs-670003.sql` (2163 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/сет, лок/Locked Shoulders-670004.sql` (2166 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/сет,шам/Shaman Melee Chest-670007.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/сет,шам/Shaman Melee Hands-670008.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/сет,шам/Shaman Melee Head-670006.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/сет,шам/Shaman Melee Legs-670009.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/сет,шам/Shaman Melee Shoulders-670010.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/хант/Chest Hant-450104.sql` (2166 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/хант/Hands Hant-450100.sql` (2163 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/хант/Head Hant-450103.sql` (2162 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/хант/Legs Hant-450101.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рисовки/хант/Shoulders Hant-450102.sql` (2164 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рубашки/dk/DK tank shirt-850117.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рубашки/dk/Death Knight DD shirt-850118.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рубашки/dru/Druid Caster shirt-850110.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рубашки/dru/Druid feral shirt-850116.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рубашки/lok/Warlock shirt-850105.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рубашки/priest/Priest shirt-850106.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рубашки/rogue/Rogue shirt-850111.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рубашки/wama/Shaman Caster shirt-850114.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рубашки/wama/Shaman melle shirt-850112.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рубашки/xant/Hunter shirt-850109.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рубашки/вар/Warior DD shirt-850100.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рубашки/вар/Warior tank shirt-850101.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рубашки/маг/Mage shirt-850102.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рубашки/пал/Paladin DD shirt-850103.sql` (2697 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рубашки/пал/Paladin holy shirt-850108.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Остальное/рубашки/пал/Paladin tank shirt-850104.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Conqueror's Aegis Battleplate (8889022).SQL` (2296 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Conqueror's Aegis Gauntlets (8889024).SQL` (2293 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Conqueror's Aegis Helm (8889021).SQL` (2289 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Conqueror's Aegis Legplates (8889023).SQL` (2294 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Conqueror's Aegis Shoulderplates(8889020).SQL` (2298 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Race For Cataclysm Mangos.sql` (69947 Б): item_template строк: 25, кандидатов: 25
+- `рисовки/Разное/Items.rar.x/Bags/High Gladiator Bag-60014.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/Bags/High Gladiator Bag-60015.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/Neck/High Gladiator Neck-60004.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/Neck/High Gladiator Neck-60005.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/Neck/High Gladiator Neck-60006.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/Neck/High Gladiator Neck-60007.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/Ring/High Gladiator Ring-60000.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/Ring/High Gladiator Ring-60001.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/Ring/High Gladiator Ring-60002.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/Ring/High Gladiator Ring-60003.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/Tabard shirt back/High Gladiator Back-60012.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/Tabard shirt back/High Gladiator Back-60013.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/Tabard shirt back/High Gladiator Shirt-60010.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/Tabard shirt back/High Gladiator Shirt-60011.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/Tabard shirt back/High Gladiator Tabard-60008.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/Tabard shirt back/High Gladiator Tabard-60009.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/weapon/High Gladiator 2h Mace-60025.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/weapon/High Gladiator 2h Sword-60020.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/weapon/High Gladiator Axe-60023.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/weapon/High Gladiator Bow-60029.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/weapon/High Gladiator Dagger-60021.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/weapon/High Gladiator Dagger-60022.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/weapon/High Gladiator Gun-60030.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/weapon/High Gladiator Mace-60024.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/weapon/High Gladiator Polearm-60026.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/weapon/High Gladiator Shield-60016.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/weapon/High Gladiator Shield-60017.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/weapon/High Gladiator Staff-60027.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/weapon/High Gladiator Staff-60028.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/weapon/High Gladiator Sword-60018.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/weapon/High Gladiator Sword-60019.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Разное/Items.rar.x/weapon/High Gladiator Wand-60031.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Свитки (рус)/Свиток Дикой Природы 100001.sql` (2678 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Свитки (рус)/Свиток Дикой Природы II 100002.sql` (2682 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Свитки (рус)/Свиток Дикой Природы III 100003.sql` (2683 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Свитки (рус)/Свиток Дикой Природы IV 100004.sql` (2680 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Свитки (рус)/Свиток Дикой Природы V 100005.sql` (2681 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Свитки (рус)/Свиток Дикой Природы VI 100006.sql` (2682 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Свитки (рус)/Свиток Дикой Природы VII 100007.sql` (2684 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Свитки (рус)/Свиток Дикой Природы VIII 100008.sql` (2685 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Свитки (рус)/Свиток Защиты VIII 100000.sql` (2677 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Dk/Dk set-289566.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Dk/Dk set-289567.sql` (2204 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Dk/Dk set-289568.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Dk/Dk set-289569.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Dk/Dk set-289570.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Dk/Dk set-289571.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Dk/Dk set-289572.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Dk/Dk set-289573.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Lok/Lok set-289574.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Lok/Lok set-289575.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Lok/Lok set-289576.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Lok/Lok set-289577.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Lok/Lok set-289578.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Lok/Lok set-289579.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Lok/Lok set-289580.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Lok/Lok set-289581.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Mage/Mag set-289534.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Mage/Mag set-289535.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Mage/Mag set-289536.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Mage/Mag set-289537.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Mage/Mag set-289538.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Mage/Mag set-289539.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Mage/Mag set-289540.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Mage/Mag set-289541.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Pal/Pal set-289550.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Pal/Pal set-289551.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Pal/Pal set-289552.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Pal/Pal set-289553.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Pal/Pal set-289554.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Pal/Pal set-289555.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Pal/Pal set-289556.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Pal/Pal set-289557.sql` (2204 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Prist/Prist set-289526.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Prist/Prist set-289527.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Prist/Prist set-289528.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Prist/Prist set-289529.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Prist/Prist set-289530.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Prist/Prist set-289531.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Prist/Prist set-289532.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Prist/Prist set-289533.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Rogue/Rogue set-289558.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Rogue/Rogue set-289559.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Rogue/Rogue set-289560.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Rogue/Rogue set-289561.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Rogue/Rogue set-289562.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Rogue/Rogue set-289563.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Rogue/Rogue set-289564.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Rogue/Rogue set-289565.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Sham/Sham set-289582.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Sham/Sham set-289583.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Sham/Sham set-289584.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Sham/Sham set-289585.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Sham/Sham set-289586.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Sham/Sham set-289587.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Sham/Sham set-289588.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Sham/Sham set-289589.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Вары/War set-289510.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Вары/War set-289511.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Вары/War set-289512.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Вары/War set-289513.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Вары/War set-289514.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Вары/War set-289515.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Вары/War set-289516.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Вары/War set-289517.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Друид/Dru set-289518.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Друид/Dru set-289519.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Друид/Dru set-289520.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Друид/Dru set-289521.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Друид/Dru set-289522.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Друид/Dru set-289523.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Друид/Dru set-289524.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Друид/Dru set-289525.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Хантер/Haunt set-289542.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Хантер/Haunt set-289543.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Хантер/Haunt set-289544.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Хантер/Haunt set-289545.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Хантер/Haunt set-289546.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Хантер/Haunt set-289547.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Хантер/Haunt set-289548.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1.5к статы/Хантер/Haunt set-289549.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Don svord-326872.sql` (2242 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Don svordik-326871.sql` (2244 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Вары/warior don-11000.sql` (2236 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Вары/warior don-11001.sql` (2237 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Вары/warior don-11002.sql` (2238 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Вары/warior don-11003.sql` (2237 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Вары/warior don-11004.sql` (2236 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Вары/warior don-11005.sql` (2237 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Вары/warior don-11006.sql` (2236 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Вары/warior don-11007.sql` (2236 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/ДК/Dk don-280440.sql` (2233 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/ДК/Dk don-280441.sql` (2234 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/ДК/Dk don-280442.sql` (2234 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/ДК/Dk don-280443.sql` (2233 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/ДК/Dk don-280444.sql` (2233 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/ДК/Dk don-280445.sql` (2233 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/ДК/Dk don-280446.sql` (2234 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/ДК/Dk don-280447.sql` (2234 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Друиды/Druid don-280448.sql` (2237 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Друиды/Druid don-280449.sql` (2237 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Друиды/Druid don-280450.sql` (2237 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Друиды/Druid don-280451.sql` (2237 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Друиды/Druid don-280452.sql` (2239 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Друиды/Druid don-280453.sql` (2237 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Друиды/Druid don-280454.sql` (2237 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Друиды/Druid don-280455.sql` (2237 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Кастеры/caster don-280408.sql` (2239 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Кастеры/caster don-280409.sql` (2238 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Кастеры/caster don-280410.sql` (2238 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Кастеры/caster don-280411.sql` (2239 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Кастеры/caster don-280412.sql` (2238 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Кастеры/caster don-280413.sql` (2238 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Кастеры/caster don-280414.sql` (2238 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Кастеры/caster don-280415.sql` (2238 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Милишники/Melle don-280416.sql` (2236 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Милишники/Melle don-280417.sql` (2237 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Милишники/Melle don-280418.sql` (2236 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Милишники/Melle don-280419.sql` (2236 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Милишники/Melle don-280420.sql` (2236 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Милишники/Melle don-280421.sql` (2236 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Милишники/Melle don-280422.sql` (2236 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Милишники/Melle don-280423.sql` (2236 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Палладины/Palladin don-280432.sql` (2237 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Палладины/Palladin don-280433.sql` (2238 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Палладины/Palladin don-280434.sql` (2237 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Палладины/Palladin don-280435.sql` (2237 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Палладины/Palladin don-280436.sql` (2237 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Палладины/Palladin don-280437.sql` (2237 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Палладины/Palladin don-280438.sql` (2237 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Палладины/Palladin don-280439.sql` (2238 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Роги/Rogue don-280424.sql` (2235 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Роги/Rogue don-280425.sql` (2236 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Роги/Rogue don-280426.sql` (2235 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Роги/Rogue don-280427.sql` (2235 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Роги/Rogue don-280428.sql` (2235 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Роги/Rogue don-280429.sql` (2235 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Роги/Rogue don-280430.sql` (2235 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/10к к статам/Роги/Rogue don-280431.sql` (2235 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/T8 shirt-555032.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/T8 shirt-555033.sql` (2204 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/T8 shirt-555034.sql` (2204 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Dk/T8 Dk-555008.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Dk/T8 Dk-555009.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Dk/T8 Dk-555010.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Dk/T8 Dk-555011.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Dk/T8 Dk-555012.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Dk/T8 Dk-555013.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Dk/T8 Dk-555014.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Dk/T8 Dk-555015.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Palla/T8 Pal-555024.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Palla/T8 Pal-555025.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Palla/T8 Pal-555026.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Palla/T8 Pal-555027.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Palla/T8 Pal-555028.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Palla/T8 Pal-555029.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Palla/T8 Pal-555030.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Palla/T8 Pal-555031.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/warrior/T8 warrior-555016.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/warrior/T8 warrior-555017.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/warrior/T8 warrior-555018.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/warrior/T8 warrior-555019.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/warrior/T8 warrior-555020.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/warrior/T8 warrior-555021.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/warrior/T8 warrior-555022.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/warrior/T8 warrior-555023.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Всякое/T8 (Bags)-666014.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Всякое/T8(ring)-777010.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Всякое/T8(ring)-777011.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Всякое/T8(ring)-777012.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Кастеры/T8 caster-555000.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Кастеры/T8 caster-555001.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Кастеры/T8 caster-555002.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Кастеры/T8 caster-555003.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Кастеры/T8 caster-555004.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Кастеры/T8 caster-555005.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Кастеры/T8 caster-555006.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Кастеры/T8 caster-555007.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Роги/T8 (roga)-666000.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Роги/T8 (roga)-666001.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Роги/T8 (roga)-666002.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Роги/T8 (roga)-666003.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Роги/T8 (roga)-666004.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Роги/T8 (roga)-666005.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Роги/T8 (roga)-666006.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Роги/T8 (roga)-666007.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Хант/T8 (Hunter)-666008.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Хант/T8 (Hunter)-666009.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Хант/T8 (Hunter)-666010.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Хант/T8 (Hunter)-666011.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Хант/T8 (Hunter)-666012.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Хант/T8 (Hunter)-666013.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Хант/T8 (Hunter)-666014.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/1к статы/Хант/T8 (Hunter)-666015.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/DK/Niko DeathKinght Chest-457760.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/DK/Niko DeathKinght Hands-457761.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/DK/Niko DeathKinght Head-457762.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/DK/Niko DeathKinght Legs-457763.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/DK/Niko DeathKinght Shoulders-457764.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/druid/Niko Druid Chest-457737.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/druid/Niko Druid Hand-457735.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/druid/Niko Druid Head-457739.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/druid/Niko Druid Legs-457736.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/druid/Niko Druid Sholders-457738.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/hunter/Niko Hunter Chest-457749.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/hunter/Niko Hunter Hands-457748.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/hunter/Niko Hunter Head-457747.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/hunter/Niko Hunter Legs-457746.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/hunter/Niko Hunter Shoulders-457745.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/mage/Niko Mage Chest-457743.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/mage/Niko Mage Hand-457740.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/mage/Niko Mage Head-457741.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/mage/Niko Mage Legs-457742.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/mage/Niko Mage Shoulders-457744.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/paladin/Niko Paladin Chest-457750.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/paladin/Niko Paladin Hands-457751.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/paladin/Niko Paladin Head-457752.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/paladin/Niko Paladin Legs-457753.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/paladin/Niko Paladin Shoulders-457754.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/priest/Niko Prist Chest-457741.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/priest/Niko Prist Hands-457744.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/priest/Niko Prist Head-457743.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/priest/Niko Prist Legs-457742.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/priest/Niko Prist Shoulders-457740.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/rogue/Niko Rogue Chest-457755.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/rogue/Niko Rogue Hands-457756.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/rogue/Niko Rogue Head-457757.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/rogue/Niko Rogue Legs-457758.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/rogue/Niko Rogue Shoulders-457759.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/shaman/Niko Shaman Chest-457773.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/shaman/Niko Shaman Hands-457772.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/shaman/Niko Shaman Head-457771.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/shaman/Niko Shaman Legs-457770.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/shaman/Niko Shaman Shoulders-457769.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/warlok/Niko Warlok Chest-457766.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/warlok/Niko Warlok Hands-457768.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/warlok/Niko Warlok Head-457768.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/warlok/Niko Warlok Legs-457767.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/warlok/Niko Warlok Shoulders-457765.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/warrior/Niko Warrior Chest-457730.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/warrior/Niko Warrior Hands-457731.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/warrior/Niko Warrior Head-457732.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/warrior/Niko Warrior Legs-457733.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/300 статы/warrior/Niko Warrior Shoulders-457734.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Dk Set/DK Set-120050.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Dk Set/DK Set-120051.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Dk Set/DK Set-120052.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Dk Set/DK Set-120053.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Dk Set/DK Set-120054.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Dru Set/Dru Set-120055.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Dru Set/Dru Set-120056.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Dru Set/Dru Set-120057.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Dru Set/Dru Set-120058.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Dru Set/Dru Set-120059.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Dru Set/Dru Set-120060.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Dru Set/Dru Set-120061.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Dru Set/Dru Set-120062.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Dru Set/Dru Set-120063.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Dru Set/Dru Set-120064.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Feet,Waist,Wrist!/Caster Feet-120110.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Feet,Waist,Wrist!/Caster Waist-120119.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Feet,Waist,Wrist!/Caster Wrist-120120.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Feet,Waist,Wrist!/Lether Feet-120111.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Feet,Waist,Wrist!/Lether Waist-120117.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Feet,Waist,Wrist!/Lether Waist-120118.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Feet,Waist,Wrist!/Mail Feet-120112.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Feet,Waist,Wrist!/Mail Waist-120115.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Feet,Waist,Wrist!/Mail Wrist-120116.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Feet,Waist,Wrist!/Mail Wrist-120122.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Feet,Waist,Wrist!/Plate Feet-120112.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Feet,Waist,Wrist!/Plate Waist-120113.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Feet,Waist,Wrist!/Plate Wrist-120114.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Hunter Set/Hunter Set-120065.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Hunter Set/Hunter Set-120066.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Hunter Set/Hunter Set-120067.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Hunter Set/Hunter Set-120068.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Hunter Set/Hunter Set-120069.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Mage Set/Mage Set-120070.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Mage Set/Mage Set-120071.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Mage Set/Mage Set-120072.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Mage Set/Mage Set-120073.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Mage Set/Mage Set-120074.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Paladin Set/Paladin Set-120100.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Paladin Set/Paladin Set-120101.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Paladin Set/Paladin Set-120102.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Paladin Set/Paladin Set-120103.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Paladin Set/Paladin Set-120104.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Paladin Set/Paladin Set-120105.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Paladin Set/Paladin Set-120106.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Paladin Set/Paladin Set-120107.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Paladin Set/Paladin Set-120108.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Paladin Set/Paladin Set-120109.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Priest set/Priest Set-120075.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Priest set/Priest Set-120076.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Priest set/Priest Set-120077.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Priest set/Priest Set-120078.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Priest set/Priest Set-120079.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Rogue Set/Rogue Set-120080.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Rogue Set/Rogue Set-120081.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Rogue Set/Rogue Set-120082.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Rogue Set/Rogue Set-120083.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Rogue Set/Rogue Set-120084.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Shaman Set/Shaman Set-120095.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Shaman Set/Shaman Set-120096.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Shaman Set/Shaman Set-120097.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Shaman Set/Shaman Set-120098.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Shaman Set/Shaman Set-120099.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Warlock Set/Warlock Set-120085.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Warlock Set/Warlock Set-120086.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Warlock Set/Warlock Set-120087.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Warlock Set/Warlock Set-120088.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Warlock Set/Warlock Set-120089.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Warrior Set/Warrior Set-120090.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Warrior Set/Warrior Set-120091.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Warrior Set/Warrior Set-120092.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Warrior Set/Warrior Set-120093.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/600-800/Warrior Set/Warrior Set-120094.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/T8 Hunter, By Leverage.SQL` (10909 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/Сеты/Arena 5k/Dk/Arena Dk-99533.sql` (2209 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Dk/Arena Dk-99534.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Dk/Arena Dk-99535.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Dk/Arena Dk-99536.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Dk/Arena Dk-99537.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Dk/Arena Dk-99538.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Dk/Arena Dk-99539.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Druid/Arena Druid-99540.sql` (2216 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Druid/Arena Druid-99541.sql` (2217 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Druid/Arena Druid-99542.sql` (2216 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Druid/Arena Druid-99543.sql` (2216 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Druid/Arena Druid-99544.sql` (2216 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Druid/Arena Druid-99545.sql` (2216 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Druid/Arena Druid-99546.sql` (2216 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Druid/Arena Druid-99547.sql` (2216 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Meelli/Arena caster-99524.sql` (2212 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Meelli/Arena caster-99525.sql` (2212 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Meelli/Arena caster-99526.sql` (2213 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Meelli/Arena caster-99527.sql` (2212 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Meelli/Arena caster-99528.sql` (2212 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Meelli/Arena caster-99529.sql` (2212 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Meelli/Arena caster-99530.sql` (2212 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Meelli/Arena caster-99531.sql` (2212 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Palladin/Arena Druid-99548.sql` (2217 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Palladin/Arena Druid-99549.sql` (2217 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Palladin/Arena Druid-99550.sql` (2217 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Palladin/Arena Druid-99551.sql` (2217 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Palladin/Arena Druid-99552.sql` (2218 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Palladin/Arena Druid-99553.sql` (2217 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Palladin/Arena Druid-99554.sql` (2217 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Palladin/Arena Druid-99555.sql` (2217 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Rogue/Arena Rogue-99556.sql` (2210 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Rogue/Arena Rogue-99557.sql` (2211 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Rogue/Arena Rogue-99558.sql` (2211 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Rogue/Arena Rogue-99559.sql` (2210 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Rogue/Arena Rogue-99560.sql` (2210 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Rogue/Arena Rogue-99561.sql` (2211 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Rogue/Arena Rogue-99562.sql` (2210 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/Rogue/Arena Rogue-99563.sql` (2210 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/caster/Arena cast-99516.sql` (2213 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/caster/Arena caster-99517.sql` (2213 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/caster/Arena caster-99518.sql` (2214 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/caster/Arena caster-99519.sql` (2213 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/caster/Arena caster-99520.sql` (2213 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/caster/Arena caster-99521.sql` (2213 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/caster/Arena caster-99522.sql` (2213 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/caster/Arena caster-99523.sql` (2213 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/warlock/Arena warlock-99508.sql` (2215 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/warlock/Arena warlock-99509.sql` (2214 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/warlock/Arena warlock-99510.sql` (2214 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/warlock/Arena warlock-99511.sql` (2214 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/warlock/Arena warlock-99512.sql` (2214 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/warlock/Arena warlock-99513.sql` (2214 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/warlock/Arena warlock-99514.sql` (2214 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/warlock/Arena warlock-99515.sql` (2214 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/warrior/Arena war-99500.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/warrior/Arena war-99501.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/warrior/Arena war-99502.sql` (2210 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/warrior/Arena war-99503.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/warrior/Arena war-99504.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/warrior/Arena war-99505.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/warrior/Arena war-99506.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Arena 5k/warrior/Arena war-99507.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Armor of Power(Warrior)/Chest of power.sql` (2152 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Armor of Power(Warrior)/Feet of power.sql` (2150 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Armor of Power(Warrior)/Hands of power.sql` (2150 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Armor of Power(Warrior)/Helmet of power.sql` (2152 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Armor of Power(Warrior)/Legs of power.sql` (2151 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Armor of Power(Warrior)/Shoulders of power.sql` (2153 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Armor of Power(Warrior)/Wais of power.sql` (2149 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Armor of Power(Warrior)/Wrist of power.sql` (2148 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/KpecT сет/Armor of KpecT-3.sql` (2134 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/KpecT сет/Belt of KpecT-4.sql` (2134 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/KpecT сет/Boots of KpecT-5.sql` (2134 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/KpecT сет/Cold Shoulders of KpecT-2.sql` (2144 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/KpecT сет/Glamour Hat of KpecT-1.sql` (2141 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/KpecT сет/Gloves of KpecT-6.sql` (2136 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/KpecT сет/Pants of KpecT-5.sql` (2135 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Druid/Magik Druid Hand-88840.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Druid/Magik Druid Head-88841.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Druid/Magik Druid Leg-88842.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Druid/Magik Druid Should-88843.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Druid/Magik Druid Tunik-88844.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Mage/Magik Mage Hand-88801.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Mage/Magik Mage Hood-88800.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Mage/Magik Mage Leg-88802.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Mage/Magik Mage Robe-88804.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Mage/Magik Mage Should-88803.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Priest/Magik Priest Hand-88820.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Priest/Magik Priest Hood-88821.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Priest/Magik Priest Leg-88822.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Priest/Magik Priest Robe-88824.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Priest/Magik Priest Should-88823.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Shaman/Magik Shaman Chest-88830.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Shaman/Magik Shaman Hand-88831.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Shaman/Magik Shaman Head-88832.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Shaman/Magik Shaman Leg-88833.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Shaman/Magik Shaman Should-88834.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Warlock/Magik Warlock Hand-88810.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Warlock/Magik Warlock Hood-88811.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Warlock/Magik Warlock Leg-88812.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Warlock/Magik Warlock Robe-88814.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Magik Tier/Warlock/Magik Warlock Should-88813.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Retro set/Retro Chest.sql` (2151 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Retro set/Retro Gloves.sql` (2149 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Retro set/Retro Helm.sql` (2150 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Retro set/Retro Legs.sql` (2150 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Retro set/Retro Shoulders.sql` (2152 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Roga Pirates Set/Roga Pirates Boots.sql` (2156 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Roga Pirates Set/Roga Pirates Chest.sql` (2158 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Roga Pirates Set/Roga Pirates Gloves.sql` (2155 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Roga Pirates Set/Roga Pirates Head.sql` (2157 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Roga Pirates Set/Roga Pirates Legs.sql` (2156 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Roga Pirates Set/Roga Pirates Waist.sql` (2155 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для ДК/DK T8 Item-222001.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для ДК/DK T8 Item-222002.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для ДК/DK T8 Item-222003.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для ДК/DK T8 Item-222004.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для ДК/DK T8 Item-222005.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для война/Warrior T8 Item-333001.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для война/Warrior T8 Item-333002.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для война/Warrior T8 Item-333003.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для война/Warrior T8 Item-333004.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для война/Warrior T8 Item-333005.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для война/Warrior T8 Item-333006.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для война/Warrior T8 Item-333007.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для война/Warrior T8 Item-333008.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для паладина!!!!/T8 Paladin-111040.sql` (2219 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для паладина!!!!/T8 Paladin-111041.sql` (2219 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для паладина!!!!/T8 Paladin-111042.sql` (2219 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для паладина!!!!/T8 Paladin-111043.sql` (2219 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для паладина!!!!/T8 Paladin-111044.sql` (2220 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для паладина!!!!/T8 Paladin-111045.sql` (2219 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для паладина!!!!/T8 Paladin-111046.sql` (2219 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/T8 для паладина!!!!/T8 Paladin-111047.sql` (2219 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Weapon T8/T8 Dagger-111032.sql` (2218 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Weapon T8/T8 Staff-111035.sql` (2220 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Weapon T8/T8 Two Handed Sword-111033.sql` (2227 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Weapon T8/T8 Two Handed Sword-111034.sql` (2229 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для кастеров/T8 Casters set-111015.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для кастеров/T8 Casters set-111016.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для кастеров/T8 Casters set-111017.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для кастеров/T8 Casters set-111018.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для кастеров/T8 Casters set-111020.sql` (2233 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для кастеров/T8 Casters set-111022.sql` (2231 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для кастеров/T8 Casters set-111023.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для роги/T8 Rogue -232001.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для роги/T8 Rogue -232002.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для роги/T8 Rogue -232003.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для роги/T8 Rogue -232004.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для роги/T8 Rogue -232005.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для роги/T8 Rogue -232006.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для роги/T8 Rogue -232007.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для роги/T8 Rogue -232008.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для ханта/T8 Hunter-111048.sql` (2227 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для ханта/T8 Hunter-111049.sql` (2226 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для ханта/T8 Hunter-111050.sql` (2226 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для ханта/T8 Hunter-111051.sql` (2219 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для ханта/T8 Hunter-111052.sql` (2219 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для ханта/T8 Hunter-111053.sql` (2218 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/t8/Т8 для ханта/T8 Hunter-111054.sql` (2219 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Вар/Golova-120001.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Вар/Grud-120003.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Вар/Plechi-120002.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Вар/Ruki-120005.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Вар/Shtani-120004.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Друля/Druid Hands-800049.sql` (2162 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/Друля/Druid Hands-800050.sql` (2163 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/Друля/Druid Head-800047.sql` (2161 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/Друля/Druid Head-800048.sql` (2160 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/Друля/Druid Legs-800045.sql` (2160 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/Друля/Druid Legs-800046.sql` (2162 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Друля/Druid Shoulders-800043.sql` (2167 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Друля/Druid Shoulders-800044.sql` (2166 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Друля/Druid chest-800041.sql` (2161 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/Друля/Druid chest-800042.sql` (2163 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/Ещё/Argent-998401.sql` (2212 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Dk Itemm-353301.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Dk Itemm-353302.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Dk Itemm-353303.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Dk Itemm-353304.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Dk Itemm-353305.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Dk Itemm-353306.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Dk Itemm-353307.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Dk Itemm-353308.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Dru sett-351101.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Dru sett-351102.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Dru sett-351103.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Dru sett-351104.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Dru sett-351105.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Dru sett-351106.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Dru sett-351107.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Dru sett-351108.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Hant set-12381.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Hant set-12382.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Hant set-12383.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Hant set-12384.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Hant set-12385.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Hant set-12386.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Hant set-12387.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Hant set-12388.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Honor Item-787801.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Honor Item-787802.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Honor Item-787803.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Honor Item-787804.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Honor Item-787805.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Honor Item-787806.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Honor Item-787807.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Honor Item-787808.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Lok Shmot-3213101.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Lok Shmot-3213102.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Lok Shmot-3213103.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Lok Shmot-3213104.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Lok Shmot-3213105.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Lok Shmot-3213106.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Lok Shmot-3213107.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Lok Shmot-3213108.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Rog Honor-352201.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Rog Honor-352202.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Rog Honor-352203.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Rog Honor-352204.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Rog Honor-352205.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Rog Honor-352206.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Rog Honor-352207.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Rog Honor-352208.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Shamik set-321101.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Shamik set-321102.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Shamik set-321103.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Shamik set-321104.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Shamik set-321105.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Shamik set-321106.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Shamik set-321107.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/Shamik set-321108.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/War Set-878801.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/War Set-878802.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/War Set-878803.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/War Set-878804.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/War Set-878805.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/War Set-878806.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/War Set-878807.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/War Set-878808.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/War Set-979801.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/War Set-979802.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/War Set-979803.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/War Set-979804.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/War Set-979805.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/War Set-979806.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/War Set-979807.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/War Set-979808.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/_xex_-7663401.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/_xex_-7663402.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/_xex_-7663403.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/_xex_-7663404.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/_xex_-7663405.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/_xex_-7663406.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/_xex_-7663407.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё/_xex_-7663408.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/вар/Ownage Warrior Chest-10000030.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/вар/Ownage Warrior Feet-10000036.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/вар/Ownage Warrior Hands-10000032.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/вар/Ownage Warrior Head-10000037.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/вар/Ownage Warrior Legs-10000033.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/вар/Ownage Warrior Shoulders-10000034.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/вар/Ownage Warrior Waist-10000035.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/вар/Ownage Warrior Wrist-10000031.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/дк/Ownage Deth Knight Chest-10000038.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/дк/Ownage Deth Knight Feet-10000045.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/дк/Ownage Deth Knight Hands-10000041.sql` (2204 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/дк/Ownage Deth Knight Head-10000039.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/дк/Ownage Deth Knight Legs-10000042.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/дк/Ownage Deth Knight Shoulders-10000043.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/дк/Ownage Deth Knight Waist-10000044.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/дк/Ownage Deth Knight Wrist-10000040.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/дру/Ownage Chest-10000069.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/дру/Ownage Feet-10000063.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/дру/Ownage Hands-10000065.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/дру/Ownage Head-10000066.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/дру/Ownage Legs-10000067.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/дру/Ownage Shoulders-10000068.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/дру/Ownage Waist-10000064.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/дру/Ownage Wrist-10000070.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/лок/Ownage Chest-10000093.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/лок/Ownage Feet-10000094.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/лок/Ownage Hands-10000091.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/лок/Ownage Head-10000090.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/лок/Ownage Legs-10000092.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/лок/Ownage Sgoulders-10000095.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/лок/Ownage Waist-10000088.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/лок/Ownage Wrist-10000089.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/маг/Ownage Chest-10000087.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/маг/Ownage Feet-10000083.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/маг/Ownage Hands-10000084.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/маг/Ownage Head-10000082.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/маг/Ownage Legs-10000085.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/маг/Ownage Shoulders-10000086.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/маг/Ownage Waist-10000080.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/маг/Ownage Wrist-10000081.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/пал/Ownage Paladin Chest-10000023.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/пал/Ownage Paladin Feet-10000026.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/пал/Ownage Paladin Hands-10000025.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/пал/Ownage Paladin Head-10000022.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/пал/Ownage Paladin Legs-10000027.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/пал/Ownage Paladin Shoulders-10000028.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/пал/Ownage Paladin Waist-10000029.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/пал/Ownage Paladin Wrist-10000024.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/прист/Ownage Chest-10000075.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/прист/Ownage Feet-10000076.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/прист/Ownage Hands-10000073.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/прист/Ownage Head-10000072.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/прист/Ownage Legs-10000071.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/прист/Ownage Shoulders-10000074.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/прист/Ownage Waist-10000077.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/прист/Ownage Wrist-10000079.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/рог/Ownage Chest-10000097.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/рог/Ownage Chest-2000009.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/рог/Ownage Feet-100000103.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/рог/Ownage Feet-2000014.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/рог/Ownage Hands-10000099.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/рог/Ownage Hands-2000010.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/рог/Ownage Head-100000100.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/рог/Ownage Head-2000011.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/рог/Ownage Legs-100000101.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/рог/Ownage Legs-2000012.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/рог/Ownage Shoulders-100000102.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/рог/Ownage Shoulders-2000013.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/рог/Ownage Waist-100000104.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/рог/Ownage Waist-2000015.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/рог/Ownage Wrist-10000096.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/рог/Ownage Wrist-2000008.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/хант/Ownage Chest-100000120.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/хант/Ownage Chest-2000006.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/хант/Ownage Feet-100000105.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/хант/Ownage Feet-200000.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/хант/Ownage Hands-100000107.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/хант/Ownage Hands-2000002.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/хант/Ownage Head-100000108.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/хант/Ownage Head-2000003.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/хант/Ownage Legs-100000109.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/хант/Ownage Legs-2000004.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/хант/Ownage Shoulders-100000110.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/хант/Ownage Shoulders-2000005.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/хант/Ownage Waist-100000106.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/хант/Ownage Waist-2000001.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/хант/Ownage Wrist-100000111.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/хант/Ownage Wrist-2000007.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/шам/Ownage Chest-100000112.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/шам/Ownage Chest-2000016.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/шам/Ownage Feet-100000117.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/шам/Ownage Feet-2000021.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/шам/Ownage Hands-100000113.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/шам/Ownage Hands-2000017.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/шам/Ownage Head-100000114.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/шам/Ownage Head-2000018.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/шам/Ownage Legs-100000115.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/шам/Ownage Legs-2000019.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/шам/Ownage Shoulders-100000116.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/шам/Ownage Shoulders-2000020.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/шам/Ownage Waist-100000119.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/шам/Ownage Waist-2000023.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/шам/Ownage Wrist-100000118.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё нарисованные сеты!/шам/Ownage Wrist-2000022.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Back Apocalipsis-80009.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Boots Apocalipsis-80011.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Bracers Apocalipsis-80012.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Holly Shield by Apocalipsis-81050.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Necklace Apocalipsis-80006.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Ring Apocalipsis-80008.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Shield Apocalipsis-80013.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Trinket Apocalipsis-80007.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Waist Apocalipsis-80010.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/DK set/DK Killer Chest-86003.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/DK set/DK Killer Hands-86005.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/DK set/DK Killer Head-86001.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/DK set/DK Killer Legs-86004.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/DK set/DK Killer Shoulders-86002.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/SPD сет/SPD Killer Chest-83001.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/SPD сет/SPD Killer Chest-83002.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/SPD сет/SPD Killer Hands-83004.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/SPD сет/SPD Killer Head-83006.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/SPD сет/SPD Killer Legs-83005.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/SPD сет/SPD Killer Shoulders-83003.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/a10/a10 by Damag SET-900001.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/a10/a10 by Damag SET-900002.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/a10/a10 by Damag SET-900003.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/a10/a10 by Damag SET-900004.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/a10/a10 by Damag SET-900005.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/a10/a10 by Damag SET-900006.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/a10/a10 by SPD SET-900007.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/a10/a10 by SPD SET-900008.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/a10/a10 by SPD SET-900009.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/a10/a10 by SPD SET-900010.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/a10/a10 by SPD SET-900011.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Баджы/Badj By Damag Boots-808232.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Баджы/Badj By Damag Bracers-808230.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Баджы/Badj By Damag Necklece-808224.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Баджы/Badj By Damag Ring-808223.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Баджы/Badj By Damag Trinket-808225.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Баджы/Badj By Damag Waist-808231.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Баджы/Badj By SPD Back-808226.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Баджы/Badj By SPD Boots-808228.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Баджы/Badj By SPD Bracers-808229.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Баджы/Badj By SPD Necklace-808221.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Баджы/Badj By SPD Ring-808222.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Баджы/Badj By SPD Trinket-808220.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Баджы/Badj By SPD Waist-808227.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Дру/Druid Set by Boss-800520.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Дру/Druid Set by Boss-800521.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Дру/Druid Set by Boss-800522.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Дру/Druid Set by Boss-800523.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Дру/Druid Set by Boss-800524.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Дру ферал/Druid Set by Boss-800535.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Дру ферал/Druid Set by Boss-800536.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Дру ферал/Druid Set by Boss-800537.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Дру ферал/Druid Set by Boss-800538.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Дру ферал/Druid Set by Boss-800539.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Маил/Mail Set by Boss-800540.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Маил/Mail Set by Boss-800541.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Маил/Mail Set by Boss-800542.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Маил/Mail Set by Boss-800543.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Маил/Mail Set by Boss-800544.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Рог/Rogue Set by Boss-800530.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Рог/Rogue Set by Boss-800531.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Рог/Rogue Set by Boss-800532.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Рог/Rogue Set by Boss-800533.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/Рог/Rogue Set by Boss-800534.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/СПД/SPD Set by Boss-800525.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/СПД/SPD Set by Boss-800526.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/СПД/SPD Set by Boss-800527.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/СПД/SPD Set by Boss-800528.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/СПД/SPD Set by Boss-800529.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/вар,дк,пал/Plate Set by Boss-800515.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/вар,дк,пал/Plate Set by Boss-800516.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/вар,дк,пал/Plate Set by Boss-800517.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/вар,дк,пал/Plate Set by Boss-800518.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Босс сет/вар,дк,пал/Plate Set by Boss-800519.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Вар сет/Warior Killer Chest-82003.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Вар сет/Warior Killer Hands-82002.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Вар сет/Warior Killer Head-82001.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Вар сет/Warior Killer Legs-82004.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Вар сет/Warior Killer Shoulders-82004.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Вар сет/Warior Killer Shoulders-82006.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Дон/Donate Set Chest-89003.sql` (2224 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Дон/Donate Set Hands-89005.sql` (2225 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Дон/Donate Set Head-89001.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Дон/Donate Set Legs-89004.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Дон/Donate Set Shoulders-89002.sql` (2228 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Дру спд сет/Druid SPD Killer Chest-88004.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Дру спд сет/Druid SPD Killer Hands-88001.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Дру спд сет/Druid SPD Killer Head-88002.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Дру спд сет/Druid SPD Killer Legs-88005.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Дру спд сет/Druid SPD Killer Shoulders-88003.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Дру фирал сет/Druid Feral Killer Chest-87003.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Дру фирал сет/Druid Feral Killer Hands-87005.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Дру фирал сет/Druid Feral Killer Head-87001.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Дру фирал сет/Druid Feral Killer Legs-87004.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Дру фирал сет/Druid Feral Killer Shoulders-87002.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Оружия/2H Sword Apocalipsis-810103.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Оружия/Bow Apocalipsis-810104.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Оружия/Dager Apocalipsis-810101.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Оружия/Staff Apocalipsis-810104.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Оружия/Sword Apocalipsis-810100.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Оружия/Tanck Sword Apocalipsis-810102.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Пал сет/Paladin Killer Chest-84005.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Пал сет/Paladin Killer Hands-84004.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Пал сет/Paladin Killer Head-84001.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Пал сет/Paladin Killer Legs-84002.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Пал сет/Paladin Killer Shoulders-84003.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Рога сет/Rogue Killer Chest-81001.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Рога сет/Rogue Killer Hands-81004.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Рога сет/Rogue Killer Head-81000.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Рога сет/Rogue Killer Legs-81003.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Рога сет/Rogue Killer Shoulders-81002.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/СПД ПАл сет/Holly Paladin Killer Chest-81012.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/СПД ПАл сет/Holly Paladin Killer Hands-81014.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/СПД ПАл сет/Holly Paladin Killer Head-81010.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/СПД ПАл сет/Holly Paladin Killer Legs-81013.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/СПД ПАл сет/Holly Paladin Killer Shoulders-81011.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Шам и хант сет/Mail Killer Chest-85001.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Шам и хант сет/Mail Killer Hands-85003.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Шам и хант сет/Mail Killer Head-85004.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Шам и хант сет/Mail Killer Legs-85002.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Шам и хант сет/Mail Killer Shoulders-85005.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Шам спд/R.Shaman Killer Chest-81017.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Шам спд/R.Shaman Killer Hands-81019.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Шам спд/R.Shaman Killer Head-81015.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Шам спд/R.Shaman Killer Legs-81018.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/Шам спд/R.Shaman Killer Shoulders-81016.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/аксессуары/Damag Back by Apocalipsis-850051.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/аксессуары/Damag Boots by Apocalipsis-850052.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/аксессуары/Damag Necklace by Apocalipsis-850046.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/аксессуары/Damag Ring by Apocalipsis-850045.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/аксессуары/Damag Tinket by Apocalipsis-850044.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/аксессуары/Damag Waist by Apocalipsis-850053.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/аксессуары/Damag Wrist by Apocalipsis-850054.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/аксессуары/SPD Back by Apocalipsis-850050.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/аксессуары/SPD Boots by Apocalipsis-850047.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/аксессуары/SPD Necklace by Apocalipsis-850042.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/аксессуары/SPD Ring by Apocalipsis-850041.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/аксессуары/SPD Tinket by Apocalipsis-850043.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/аксессуары/SPD Waist by Apocalipsis-850048.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/аксессуары/SPD Wrist by Apocalipsis-850049.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/CGL/Vengeful Gladiator Armor-850021.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/CGL/Vengeful Gladiator Armor-850022.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/CGL/Vengeful Gladiator Armor-850023.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/CGL/Vengeful Gladiator Armor-850024.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/CGL/Vengeful Gladiator Armor-850025.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Дру ферал сет/Thunderhert Armor-850011.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Дру ферал сет/Thunderhert Armor-850012.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Дру ферал сет/Thunderhert Armor-850013.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Дру ферал сет/Thunderhert Armor-850014.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Дру ферал сет/Thunderhert Armor-850015.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Пал,вар,дк/Onslaught Armor-850016.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Пал,вар,дк/Onslaught Armor-850017.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Пал,вар,дк/Onslaught Armor-850018.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Пал,вар,дк/Onslaught Armor-850019.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Пал,вар,дк/Onslaught Armor-850020.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Паладин спд сет/Lightbringer Armor-850036.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Паладин спд сет/Lightbringer Armor-850037.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Паладин спд сет/Lightbringer Armor-850038.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Паладин спд сет/Lightbringer Armor-850039.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Паладин спд сет/Lightbringer Armor-850040.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Рог/Slayer Armor-850001.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Рог/Slayer Armor-850002.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Рог/Slayer Armor-850003.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Рог/Slayer Armor-850004.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Рог/Slayer Armor-850005.sql` (2162 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Шам спд/Skyshatter Armor-850031.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Шам спд/Skyshatter Armor-850032.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Шам спд/Skyshatter Armor-850033.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Шам спд/Skyshatter Armor-850034.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Шам спд/Skyshatter Armor-850035.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Шам,хант/Gronnstalker Armor-850006.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Шам,хант/Gronnstalker Armor-850007.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Шам,хант/Gronnstalker Armor-850008.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Шам,хант/Gronnstalker Armor-850009.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/Шам,хант/Gronnstalker Armor-850010.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/дРу спд сет/Regalia Armor-850026.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/дРу спд сет/Regalia Armor-850027.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/дРу спд сет/Regalia Armor-850028.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/дРу спд сет/Regalia Armor-850029.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Ещё сеты/безплатный шмот/дРу спд сет/Regalia Armor-850030.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Back Apocalipsis-80009.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Boots Apocalipsis-80011.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Bracers Apocalipsis-80012.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Holly Shield by Apocalipsis-81050.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Necklace Apocalipsis-80006.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Ring Apocalipsis-80008.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Shield Apocalipsis-80013.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Trinket Apocalipsis-80007.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Waist Apocalipsis-80010.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/DK set/DK Killer Chest-86003.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/DK set/DK Killer Hands-86005.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/DK set/DK Killer Head-86001.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/DK set/DK Killer Legs-86004.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/DK set/DK Killer Shoulders-86002.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/SPD сет/SPD Killer Chest-83001.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/SPD сет/SPD Killer Chest-83002.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/SPD сет/SPD Killer Hands-83004.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/SPD сет/SPD Killer Head-83006.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/SPD сет/SPD Killer Legs-83005.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/SPD сет/SPD Killer Shoulders-83003.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/a10/a10 by Damag SET-900001.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/a10/a10 by Damag SET-900002.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/a10/a10 by Damag SET-900003.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/a10/a10 by Damag SET-900004.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/a10/a10 by Damag SET-900005.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/a10/a10 by Damag SET-900006.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/a10/a10 by SPD SET-900007.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/a10/a10 by SPD SET-900008.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/a10/a10 by SPD SET-900009.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/a10/a10 by SPD SET-900010.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/a10/a10 by SPD SET-900011.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Баджы/Badj By Damag Boots-808232.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Баджы/Badj By Damag Bracers-808230.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Баджы/Badj By Damag Necklece-808224.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Баджы/Badj By Damag Ring-808223.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Баджы/Badj By Damag Trinket-808225.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Баджы/Badj By Damag Waist-808231.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Баджы/Badj By SPD Back-808226.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Баджы/Badj By SPD Boots-808228.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Баджы/Badj By SPD Bracers-808229.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Баджы/Badj By SPD Necklace-808221.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Баджы/Badj By SPD Ring-808222.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Баджы/Badj By SPD Trinket-808220.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Баджы/Badj By SPD Waist-808227.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Дру/Druid Set by Boss-800520.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Дру/Druid Set by Boss-800521.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Дру/Druid Set by Boss-800522.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Дру/Druid Set by Boss-800523.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Дру/Druid Set by Boss-800524.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Дру ферал/Druid Set by Boss-800535.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Дру ферал/Druid Set by Boss-800536.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Дру ферал/Druid Set by Boss-800537.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Дру ферал/Druid Set by Boss-800538.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Дру ферал/Druid Set by Boss-800539.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Маил/Mail Set by Boss-800540.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Маил/Mail Set by Boss-800541.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Маил/Mail Set by Boss-800542.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Маил/Mail Set by Boss-800543.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Маил/Mail Set by Boss-800544.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Рог/Rogue Set by Boss-800530.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Рог/Rogue Set by Boss-800531.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Рог/Rogue Set by Boss-800532.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Рог/Rogue Set by Boss-800533.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/Рог/Rogue Set by Boss-800534.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/СПД/SPD Set by Boss-800525.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/СПД/SPD Set by Boss-800526.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/СПД/SPD Set by Boss-800527.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/СПД/SPD Set by Boss-800528.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/СПД/SPD Set by Boss-800529.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/вар,дк,пал/Plate Set by Boss-800515.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/вар,дк,пал/Plate Set by Boss-800516.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/вар,дк,пал/Plate Set by Boss-800517.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/вар,дк,пал/Plate Set by Boss-800518.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Босс сет/вар,дк,пал/Plate Set by Boss-800519.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Вар сет/Warior Killer Chest-82003.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Вар сет/Warior Killer Hands-82002.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Вар сет/Warior Killer Head-82001.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Вар сет/Warior Killer Legs-82004.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Вар сет/Warior Killer Shoulders-82004.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Вар сет/Warior Killer Shoulders-82006.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Дон/Donate Set Chest-89003.sql` (2224 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Дон/Donate Set Hands-89005.sql` (2225 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Дон/Donate Set Head-89001.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Дон/Donate Set Legs-89004.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Дон/Donate Set Shoulders-89002.sql` (2228 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Дру спд сет/Druid SPD Killer Chest-88004.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Дру спд сет/Druid SPD Killer Hands-88001.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Дру спд сет/Druid SPD Killer Head-88002.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Дру спд сет/Druid SPD Killer Legs-88005.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Дру спд сет/Druid SPD Killer Shoulders-88003.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Дру фирал сет/Druid Feral Killer Chest-87003.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Дру фирал сет/Druid Feral Killer Hands-87005.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Дру фирал сет/Druid Feral Killer Head-87001.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Дру фирал сет/Druid Feral Killer Legs-87004.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Дру фирал сет/Druid Feral Killer Shoulders-87002.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Оружия/2H Sword Apocalipsis-810103.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Оружия/Bow Apocalipsis-810104.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Оружия/Dager Apocalipsis-810101.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Оружия/Staff Apocalipsis-810104.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Оружия/Sword Apocalipsis-810100.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Оружия/Tanck Sword Apocalipsis-810102.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Пал сет/Paladin Killer Chest-84005.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Пал сет/Paladin Killer Hands-84004.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Пал сет/Paladin Killer Head-84001.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Пал сет/Paladin Killer Legs-84002.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Пал сет/Paladin Killer Shoulders-84003.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Рога сет/Rogue Killer Chest-81001.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Рога сет/Rogue Killer Hands-81004.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Рога сет/Rogue Killer Head-81000.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Рога сет/Rogue Killer Legs-81003.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Рога сет/Rogue Killer Shoulders-81002.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/СПД ПАл сет/Holly Paladin Killer Chest-81012.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/СПД ПАл сет/Holly Paladin Killer Hands-81014.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/СПД ПАл сет/Holly Paladin Killer Head-81010.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/СПД ПАл сет/Holly Paladin Killer Legs-81013.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/СПД ПАл сет/Holly Paladin Killer Shoulders-81011.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Шам и хант сет/Mail Killer Chest-85001.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Шам и хант сет/Mail Killer Hands-85003.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Шам и хант сет/Mail Killer Head-85004.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Шам и хант сет/Mail Killer Legs-85002.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Шам и хант сет/Mail Killer Shoulders-85005.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Шам спд/R.Shaman Killer Chest-81017.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Шам спд/R.Shaman Killer Hands-81019.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Шам спд/R.Shaman Killer Head-81015.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Шам спд/R.Shaman Killer Legs-81018.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/Шам спд/R.Shaman Killer Shoulders-81016.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/аксессуары/Damag Back by Apocalipsis-850051.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/аксессуары/Damag Boots by Apocalipsis-850052.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/аксессуары/Damag Necklace by Apocalipsis-850046.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/аксессуары/Damag Ring by Apocalipsis-850045.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/аксессуары/Damag Tinket by Apocalipsis-850044.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/аксессуары/Damag Waist by Apocalipsis-850053.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/аксессуары/Damag Wrist by Apocalipsis-850054.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/аксессуары/SPD Back by Apocalipsis-850050.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/аксессуары/SPD Boots by Apocalipsis-850047.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/аксессуары/SPD Necklace by Apocalipsis-850042.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/аксессуары/SPD Ring by Apocalipsis-850041.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/аксессуары/SPD Tinket by Apocalipsis-850043.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/аксессуары/SPD Waist by Apocalipsis-850048.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/аксессуары/SPD Wrist by Apocalipsis-850049.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/CGL/Vengeful Gladiator Armor-850021.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/CGL/Vengeful Gladiator Armor-850022.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/CGL/Vengeful Gladiator Armor-850023.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/CGL/Vengeful Gladiator Armor-850024.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/CGL/Vengeful Gladiator Armor-850025.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Дру ферал сет/Thunderhert Armor-850011.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Дру ферал сет/Thunderhert Armor-850012.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Дру ферал сет/Thunderhert Armor-850013.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Дру ферал сет/Thunderhert Armor-850014.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Дру ферал сет/Thunderhert Armor-850015.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Пал,вар,дк/Onslaught Armor-850016.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Пал,вар,дк/Onslaught Armor-850017.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Пал,вар,дк/Onslaught Armor-850018.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Пал,вар,дк/Onslaught Armor-850019.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Пал,вар,дк/Onslaught Armor-850020.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Паладин спд сет/Lightbringer Armor-850036.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Паладин спд сет/Lightbringer Armor-850037.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Паладин спд сет/Lightbringer Armor-850038.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Паладин спд сет/Lightbringer Armor-850039.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Паладин спд сет/Lightbringer Armor-850040.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Рог/Slayer Armor-850001.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Рог/Slayer Armor-850002.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Рог/Slayer Armor-850003.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Рог/Slayer Armor-850004.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Рог/Slayer Armor-850005.sql` (2162 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Шам спд/Skyshatter Armor-850031.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Шам спд/Skyshatter Armor-850032.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Шам спд/Skyshatter Armor-850033.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Шам спд/Skyshatter Armor-850034.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Шам спд/Skyshatter Armor-850035.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Шам,хант/Gronnstalker Armor-850006.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Шам,хант/Gronnstalker Armor-850007.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Шам,хант/Gronnstalker Armor-850008.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Шам,хант/Gronnstalker Armor-850009.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/Шам,хант/Gronnstalker Armor-850010.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/дРу спд сет/Regalia Armor-850026.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/дРу спд сет/Regalia Armor-850027.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/дРу спд сет/Regalia Armor-850028.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/дРу спд сет/Regalia Armor-850029.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Круть/безплатный шмот/дРу спд сет/Regalia Armor-850030.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Лок/Lok chest-800021.sql` (2162 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Лок/Lok chest-800022.sql` (2163 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Лок/Lok head-800023.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Лок/Lok shoulders-800024.sql` (2166 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Лок/Lok shoulders-800025.sql` (2167 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Маг/MAGE set(CHEST)-999983(2).sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Маг/MAGE set(HEAD)-999984.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Маг/MAGE set(LEGS)-999982.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Маг/MAGE set(SHOULDERS)-999980.sql` (2182 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (2)/set Dk-110016.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (2)/set Dk-110017.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (2)/set Dk-110018.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (2)/set Dk-110019.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (2)/set Dk-110020.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (2)/set roga-110011.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (2)/set roga-110012.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (2)/set roga-110013.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (2)/set roga-110014.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (2)/set roga-110015.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (3)/Cympak-9718.sql` (2258 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (3)/Mego_vibrator-750001.sql` (2326 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (3)/Ботинки Кастера-34561.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (3)/Кастер Сэт-30982.sql` (2216 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (3)/Мечта Кастера-30990.sql` (2218 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (3)/Наплечник Кастера-30997.sql` (2225 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (3)/Оденияние Кастера-30993.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (3)/Подарок Богов-34431.sql` (2221 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (3)/Пояс Кастера-34431.sql` (2217 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (3)/Шлем Великого Кастера-30997.sql` (2229 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (4)/Adrenalin Bags-730001.sql` (2226 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (4)/Adrenalin Ring-730002.sql` (2234 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (4)/Ancient Staff-730003.sql` (2222 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (4)/Ancietn Chest-730004.sql` (2215 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (4)/Ancietn Hands-730005.sql` (2204 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (4)/Ancietn Head-730008.sql` (2215 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (4)/Ancietn Legs-730006.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (4)/Ancietn Legs-730007.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (4)/Ancietn Shoulders-730009.sql` (2219 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (4)/Ancietn Waist-730010.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (4)/Ancietn Wrist-730011.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Новая папка (4)/God of Protection-730012.sql` (2227 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Пал/Golova-120007.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Пал/Grud-120009.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Пал/Plechi-120008.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Пал/Ruki-120010.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Пал/Shtani-120010.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Пал дд/Pal chest-800013.sql` (2159 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Пал дд/Pal feet-800006.sql` (2156 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Пал дд/Pal hands-800010.sql` (2156 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Пал дд/Pal head-800012.sql` (2155 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Пал дд/Pal shoulders-800015.sql` (2159 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Паладин Хилка/Pal chest-800013.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Паладин Хилка/Pal feet-800007.sql` (2155 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Паладин Хилка/Pal hands-800009.sql` (2159 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Паладин Хилка/Pal head-800011.sql` (2157 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Паладин Хилка/Pal shoulders-800005.sql` (2165 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Прист/PRIEST set(CHEST)-999988.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Прист/PRIEST set(HANDS)-999985.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Прист/PRIEST set(HEAD)-999989.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Прист/PRIEST set(LEGS)-999987.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Прист/PRIEST set(SHOULDERS)-999986.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Рог/Golova-120013.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Рог/Ruki-120012.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Free shmot-333048.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Free shmot-333049.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Free shmot-333050.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Free shmot-333054.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Free weapon-333055.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Free weapon-333056.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Free weapon-333057.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Free weapon-333058.sql` (2204 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Free weapon-333059.sql` (2204 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Free weapon-333060.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Freee shmot-333040.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Freee shmot-333041.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Freee shmot-333042.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Freee shmot-333043.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Freee shmot-333044.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Freee shmot-333045.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Freee shmot-333046.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Freee shmot-333047.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Freee shmot-333051.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Freee shmot-333052.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Freee shmot-333053.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Старт 400 статы/Freee shmot-333061.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Хантер/HUNTER set(CHEST)-999979.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Хантер/HUNTER set(HANDS)-999978.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Хантер/HUNTER set(HEAD)-999977.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Хантер/HUNTER set(LEGS)-999977.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Хантер/HUNTER set(SHOULDERS)-999975.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Вары/Don war-66601.sql` (2231 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Вары/Don war-66602.sql` (2231 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Вары/Don war-66603.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Вары/Don war-66604.sql` (2228 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Вары/Don war-66605.sql` (2228 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Вары/Don war-66606.sql` (2228 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Вары/Don war-66607.sql` (2231 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Вары/Don war-66608.sql` (2231 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Дк/Don Dk-425601.sql` (2230 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Дк/Don Dk-425602.sql` (2231 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Дк/Don Dk-425603.sql` (2230 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Дк/Don Dk-425604.sql` (2230 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Дк/Don Dk-425605.sql` (2230 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Дк/Don Dk-425606.sql` (2230 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Дк/Don Dk-425607.sql` (2230 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Дк/Don Dk-425608.sql` (2230 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Друиды/Don Dru-395201.sql` (2233 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Друиды/Don Dru-395202.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Друиды/Don Dru-395203.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Друиды/Don Dru-395204.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Друиды/Don Dru-395205.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Друиды/Don Dru-395206.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Друиды/Don Dru-395207.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Друиды/Don Dru-395208.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Милишники/Don hant sham-88801.sql` (2235 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Милишники/Don hant sham-88802.sql` (2236 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Милишники/Don hant sham-88803.sql` (2235 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Милишники/Don hant sham-88804.sql` (2235 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Милишники/Don hant sham-88805.sql` (2235 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Милишники/Don hant sham-88806.sql` (2235 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Милишники/Don hant sham-88807.sql` (2235 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Милишники/Don hant sham-88808.sql` (2235 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Палладины/Don pal-756201.sql` (2231 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Палладины/Don pal-756202.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Палладины/Don pal-756203.sql` (2231 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Палладины/Don pal-756204.sql` (2231 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Палладины/Don pal-756205.sql` (2231 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Палладины/Don pal-756206.sql` (2231 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/Палладины/Don pal-756208.sql` (2231 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/кастеры/Don warlok-77701.sql` (2224 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/кастеры/Don warlok-77702.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/кастеры/Don warlok-77703.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/кастеры/Don warlok-77704.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/кастеры/Don warlok-77705.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/кастеры/Don warlok-77706.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/кастеры/Don warlok-77707.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/кастеры/Don warlok-77708.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/роги/Don rog-864501.sql` (2233 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/роги/Don rog-864502.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/роги/Don rog-864503.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/роги/Don rog-864504.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/роги/Don rog-864505.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/роги/Don rog-864506.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/роги/Don rog-864507.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/Шмот 15к/роги/Don rog-864508.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/вар,пал,дк (дд)/T9 Plate-408981.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/вар,пал,дк (дд)/T9 Plate-4093021.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/вар,пал,дк (дд)/T9 Plate-4093023.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/вар,пал,дк (дд)/T9 Plate-409899.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/вар,пал,дк (дд)/T9 Plate-4563445.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/от 1 до 8 разное/Arxys-2.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/от 1 до 8 разное/Arxys_dagger-6.sql` (2173 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/от 1 до 8 разное/Band_for_David_Bline-3.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/от 1 до 8 разное/Cape_of_the_brave_gladiator-4.sql` (2221 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/от 1 до 8 разное/Sword_for_David_Bline-5.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Друля/Druid Hands-800049.sql` (2162 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/рисовки/Друля/Druid Hands-800050.sql` (2163 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/рисовки/Друля/Druid Head-800047.sql` (2161 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/рисовки/Друля/Druid Head-800048.sql` (2160 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/рисовки/Друля/Druid Legs-800045.sql` (2160 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/рисовки/Друля/Druid Legs-800046.sql` (2162 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Друля/Druid Shoulders-800043.sql` (2167 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Друля/Druid Shoulders-800044.sql` (2166 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Друля/Druid chest-800041.sql` (2161 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/рисовки/Друля/Druid chest-800042.sql` (2163 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/рисовки/Лок/Lok chest-800021.sql` (2162 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Лок/Lok chest-800022.sql` (2163 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Лок/Lok head-800023.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Лок/Lok shoulders-800024.sql` (2166 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Лок/Lok shoulders-800025.sql` (2167 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Пал дд/Pal chest-800013.sql` (2159 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Пал дд/Pal feet-800006.sql` (2156 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Пал дд/Pal hands-800010.sql` (2156 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Пал дд/Pal head-800012.sql` (2155 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Пал дд/Pal shoulders-800015.sql` (2159 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Паладин Хилка/Pal chest-800013.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Паладин Хилка/Pal feet-800007.sql` (2155 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Паладин Хилка/Pal hands-800009.sql` (2159 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Паладин Хилка/Pal head-800011.sql` (2157 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Паладин Хилка/Pal shoulders-800005.sql` (2165 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Прист/Prist Shoulders-800016.sql` (2164 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Прист/Prist chest-800018.sql` (2163 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Прист/Prist chest-800019.sql` (2163 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Прист/Prist chest-800020.sql` (2163 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Прист/Prist head-800017.sql` (2162 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Хант/Hunter Hands-800030.sql` (2165 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Хант/Hunter Shoulders-800026.sql` (2167 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Хант/Hunter chest-800028.sql` (2164 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Хант/Hunter chest-800029.sql` (2164 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Хант/Hunter head-800027.sql` (2163 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Шама дд/Shaman Hands-800038.sql` (2165 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/рисовки/Шама дд/Shaman Shoulders-800031.sql` (2168 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/рисовки/Шама дд/Shaman chest-800040.sql` (2686 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Шама дд/Shaman head-800035.sql` (2163 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/рисовки/Шама дд/Shaman legs-800034.sql` (2163 Б): item_template строк: 0, кандидатов: 0
+- `рисовки/Сеты/рисовки/Шаман/Shaman Hands-800037.sql` (2163 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Шаман/Shaman Shoulders-800032.sql` (2166 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Шаман/Shaman chest-800039.sql` (2162 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Шаман/Shaman head-800036.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/Шаман/Shaman legs-800033.sql` (2161 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/рог/Rogue hands-800004.sql` (2164 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/рог/Rogue head-800001.sql` (2160 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/рог/Rogue legs-800003.sql` (2160 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/рог/Rogue shoulders-800002.sql` (2167 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рисовки/рог/Rogye Chest-800000.sql` (2166 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рога/gladiator's leather rogue chest-7900016.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рога/gladiator's leather rogue hands-7900019.sql` (2196 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рога/gladiator's leather rogue head-7900014.sql` (2204 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рога/gladiator's leather rogue leg-7900018.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/рога/gladiator's leather rogue shuolders-7900017.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Dk Itemm-353301.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Dk Itemm-353302.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Dk Itemm-353303.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Dk Itemm-353304.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Dk Itemm-353305.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Dk Itemm-353306.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Dk Itemm-353307.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Dk Itemm-353308.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Dru sett-351101.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Dru sett-351102.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Dru sett-351103.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Dru sett-351104.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Dru sett-351105.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Dru sett-351106.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Dru sett-351107.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Dru sett-351108.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Event Neck-7771602.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Event Trinket-7771603.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Hant set-12381.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Hant set-12382.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Hant set-12383.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Hant set-12384.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Hant set-12385.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Hant set-12386.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Hant set-12387.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Hant set-12388.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Honor Item-787801.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Honor Item-787802.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Honor Item-787803.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Honor Item-787804.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Honor Item-787805.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Honor Item-787806.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Honor Item-787807.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Honor Item-787808.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Lok Shmot-3213101.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Lok Shmot-3213102.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Lok Shmot-3213103.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Lok Shmot-3213104.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Lok Shmot-3213105.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Lok Shmot-3213106.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Lok Shmot-3213107.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Lok Shmot-3213108.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Nek  honor-2362303.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Prist-35761.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Prist-35762.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Prist-35763.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Prist-35764.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Prist-35765.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Prist-35766.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Prist-35767.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Prist-35768.sql` (2193 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Ring honor-2362301.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Rog Honor-352201.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Rog Honor-352202.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Rog Honor-352203.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Rog Honor-352204.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Rog Honor-352205.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Rog Honor-352206.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Rog Honor-352207.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Rog Honor-352208.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Shamik set-321101.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Shamik set-321102.sql` (2191 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Shamik set-321103.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Shamik set-321104.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Shamik set-321105.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Shamik set-321106.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Shamik set-321107.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Shamik set-321108.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Trinka honor-2362302.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/Wand dd-125135.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/War Set-878801.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/War Set-878802.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/War Set-878803.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/War Set-878804.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/War Set-878805.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/War Set-878806.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/War Set-878807.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/War Set-878808.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/War Set-979801.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/War Set-979802.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/War Set-979803.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/War Set-979804.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/War Set-979805.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/War Set-979806.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/War Set-979807.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/War Set-979808.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/War golova-123851.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Сеты/статы 499/event ring-7771601.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Шмот/+)/set rog-77742.sql` (2157 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Шмот/+)/set rog-77743.sql` (2157 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Шмот/+)/set rog-77744.sql` (2157 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Шмот/+)/set rog-77745.sql` (2158 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Шмот/+)/set rog-77746.sql` (2157 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Шмот/+)/set rog-77747.sql` (2157 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Шмот/+)/set rog-77748.sql` (2157 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/Шмот/+)/set rog-77749.sql` (2157 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Casket-777779.sql` (2190 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Dagger of honour-2000006.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/GM_set.sql` (17590 Б): item_template строк: 8, кандидатов: 8
+- `рисовки/ещё сборка/GigaByte_Bag-400289.sql` (2261 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/MeG@ SWORD-555000.sql` (2211 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/My-2000011.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Riddle of ancient-2000009.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Staff of absolute power-2000008.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sword of Truth-2000005.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sword_Lich_565698.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/TaBaGaRd-888882.sql` (2163 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/TaBaGaRd-888883.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/The_Lich_King_frost_540001.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/dagger of pain-2000007.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/AlterShopWotLK_1.0.1_mangos.rar.x/AlterShopWotLK.sql` (345568 Б): npc_vendor строк: 10429
+- `рисовки/ещё сборка/Bag and shirt/Bag and shirt/Dragon Hide Bag-945000.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Bag and shirt/Bag and shirt/Martin Fury-980100.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Bag and shirt/Bag and shirt/Martin Fury-980101.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Bag and shirt/Bag and shirt/Martin Fury-980102.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Bag and shirt/Bag and shirt/Martin Fury-980103.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Bag and shirt/Bag and shirt/Netherweave Bag-945001.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Bag and shirt/Bag and shirt/Pumpkin Bag-945002.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Bag and shirt.rar.x/Bag and shirt/Dragon Hide Bag-945000.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Bag and shirt.rar.x/Bag and shirt/Martin Fury-980100.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Bag and shirt.rar.x/Bag and shirt/Martin Fury-980101.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Bag and shirt.rar.x/Bag and shirt/Martin Fury-980102.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Bag and shirt.rar.x/Bag and shirt/Martin Fury-980103.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Bag and shirt.rar.x/Bag and shirt/Netherweave Bag-945001.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Bag and shirt.rar.x/Bag and shirt/Pumpkin Bag-945002.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Blizz/Killer_SeT-90900.sql` (2175 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Blizz/Killer_SeT-90901.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Blizz/Killer_SeT-90902.sql` (2181 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Blizz/Killer_SeT-90903.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Boss s fun shmotom/Босс и дроп для него/Заливаем дроп для босса -2/Dark Power-232435.sql` (2219 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Boss s fun shmotom/Босс и дроп для него/Заливаем дроп для босса -2/Fire And Ice-232438.sql` (2215 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Boss s fun shmotom/Босс и дроп для него/Заливаем дроп для босса -2/Heroic Warglaive of Azzinoth-232439.sql` (2231 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Boss s fun shmotom/Босс и дроп для него/Заливаем дроп для босса -2/Heroic Warglaive of Azzinoth-234877.sql` (2231 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Boss s fun shmotom/Босс и дроп для него/Заливаем дроп для босса -2/Illidan's Vision-232432.sql` (2231 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Boss s fun shmotom/Босс и дроп для него/Заливаем дроп для босса -2/Lifebringer, Will of the Righteous-232437.sql` (2252 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Boss s fun shmotom/Босс и дроп для него/Заливаем дроп для босса -2/Planeten Zerstoerer-232433.sql` (2267 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Boss s fun shmotom/Босс и дроп для него/Заливаем дроп для босса -2/Shield of Juggernaut-232434.sql` (2178 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Boss s fun shmotom/Босс и дроп для него/Заливаем дроп для босса -2/Telum Effrego, Warrior's Bane-232436.sql` (2189 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Boss_Loot_and_Frostmourn/Frostmourn-300033.sql` (2222 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Buffs/Buffs/Elixir of Berserk-3.sql` (2150 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Buffs/Buffs/Elixir of Bone Shield-1.sql` (2154 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Buffs/Buffs/Elixir of Fel Armor-6.sql` (2152 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Buffs/Buffs/Elixir of Magic-9.sql` (2148 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Buffs/Buffs/Elixir of Melee-8.sql` (2148 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Buffs/Buffs/Elixir of Speed-5.sql` (2148 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Buffs/Buffs/Elixir of Stats-2.sql` (2148 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Buffs/Buffs/Elixir of Warchief-7.sql` (2151 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Buffs/Buffs/Elixir of Wickerman-4.sql` (2152 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Buffs.rar.x/Buffs/Elixir of Berserk-3.sql` (2150 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Buffs.rar.x/Buffs/Elixir of Bone Shield-1.sql` (2154 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Buffs.rar.x/Buffs/Elixir of Fel Armor-6.sql` (2152 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Buffs.rar.x/Buffs/Elixir of Magic-9.sql` (2148 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Buffs.rar.x/Buffs/Elixir of Melee-8.sql` (2148 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Buffs.rar.x/Buffs/Elixir of Speed-5.sql` (2148 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Buffs.rar.x/Buffs/Elixir of Stats-2.sql` (2148 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Buffs.rar.x/Buffs/Elixir of Warchief-7.sql` (2151 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Buffs.rar.x/Buffs/Elixir of Wickerman-4.sql` (2152 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Cataclysm_Set(Gm_Donator)3.2.x-3.3.x/Cataclysm Set/Anti-Cataclysm Back-900009.sql` (2240 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Cataclysm_Set(Gm_Donator)3.2.x-3.3.x/Cataclysm Set/Anti-Cataclysm Chest-900003.sql` (2241 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Cataclysm_Set(Gm_Donator)3.2.x-3.3.x/Cataclysm Set/Anti-Cataclysm Foot-900006.sql` (2240 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Cataclysm_Set(Gm_Donator)3.2.x-3.3.x/Cataclysm Set/Anti-Cataclysm Gloves-900008.sql` (2243 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Cataclysm_Set(Gm_Donator)3.2.x-3.3.x/Cataclysm Set/Anti-Cataclysm Helm-900001.sql` (2241 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Cataclysm_Set(Gm_Donator)3.2.x-3.3.x/Cataclysm Set/Anti-Cataclysm Legs-900005.sql` (2240 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Cataclysm_Set(Gm_Donator)3.2.x-3.3.x/Cataclysm Set/Anti-Cataclysm Should-900002.sql` (2242 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Cataclysm_Set(Gm_Donator)3.2.x-3.3.x/Cataclysm Set/Anti-Cataclysm Tabard-900010.sql` (2242 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Cataclysm_Set(Gm_Donator)3.2.x-3.3.x/Cataclysm Set/Anti-Cataclysm Waist-900004.sql` (2241 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Cataclysm_Set(Gm_Donator)3.2.x-3.3.x/Cataclysm Set/Anti-Cataclysm Wrist-900007.sql` (2241 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Cataclysm_Set(Gm_Donator)3.2.x-3.3.x/Cataclysm Set/Cataclysm Crossbow-900012.sql` (2266 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Cataclysm_Set(Gm_Donator)3.2.x-3.3.x/Cataclysm Set/Cataclysm Sword For Rouge-900011.sql` (2270 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST-321100.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST-321101.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST-321102.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST-321103.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST-321104.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST-321200.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST-321201.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST-321202.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST-321203.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST-321204.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST-321205.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST-321300.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST-321900.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST/FROST-321100.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST/FROST-321101.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST/FROST-321102.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST/FROST-321103.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST/FROST-321104.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST/FROST-321200.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST/FROST-321201.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST/FROST-321202.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST/FROST-321203.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST/FROST-321204.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST/FROST-321205.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST/FROST-321300.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/FROST/FROST-321900.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/weapon/FROSTMORN-123771.sql` (2229 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/weapon/FROSTMORN-123772.sql` (2233 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/weapon/FROSTMORN-123773.sql` (2230 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/weapon/FROSTMORN-123774.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/weapon/FROSTMORN-123775.sql` (2232 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/zakaz/Inventory-434399.sql` (163 Б): npc_vendor строк: 5
+- `рисовки/ещё сборка/FROST/zakaz/dager-123402.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/zakaz/dubina-123400.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/zakaz/mega luk-123403.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/zakaz/sword-123401.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/zakaz.rar.x/zakaz/dager-123402.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/zakaz.rar.x/zakaz/dubina-123400.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/zakaz.rar.x/zakaz/mega luk-123403.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/zakaz.rar.x/zakaz/sword-123401.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех/FROST-321400.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех/FROST-321401.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех/FROST-321402.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех/FROST-321403.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех/FROST-321404.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех/FROST-321405.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех/FROST-321406.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех/FROST-321407.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех/FROST-321408.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех/FROST-321409.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех/FROST-321410.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех.rar.x/сет для всех/FROST-321400.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех.rar.x/сет для всех/FROST-321401.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех.rar.x/сет для всех/FROST-321402.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех.rar.x/сет для всех/FROST-321403.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех.rar.x/сет для всех/FROST-321404.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех.rar.x/сет для всех/FROST-321405.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех.rar.x/сет для всех/FROST-321406.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех.rar.x/сет для всех/FROST-321407.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех.rar.x/сет для всех/FROST-321408.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех.rar.x/сет для всех/FROST-321409.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST/сет для всех.rar.x/сет для всех/FROST-321410.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST.rar.x/FROST/FROST-321100.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST.rar.x/FROST/FROST-321101.sql` (2176 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST.rar.x/FROST/FROST-321102.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST.rar.x/FROST/FROST-321103.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST.rar.x/FROST/FROST-321104.sql` (2187 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST.rar.x/FROST/FROST-321200.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST.rar.x/FROST/FROST-321201.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST.rar.x/FROST/FROST-321202.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST.rar.x/FROST/FROST-321203.sql` (2198 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST.rar.x/FROST/FROST-321204.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST.rar.x/FROST/FROST-321205.sql` (2201 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST.rar.x/FROST/FROST-321300.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FROST.rar.x/FROST/FROST-321900.sql` (2186 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUN/Bone of the Dragon-300003.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUN/Eclipse-300001.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUN/Fury of the Storm-300004.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUN/Sword of Monnoroh-300005.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUN/The murderer of all live-300007.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUN/WoWHeaD GuN-300000.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUN/Wolfhound-300002.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUNNEW/Alliance-300015.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUNNEW/Bone of the Dragon-300003.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUNNEW/Damnation-300015.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUNNEW/Dragon of a horde-300013.sql` (2218 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUNNEW/Eclipse-300001.sql` (2185 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUNNEW/Fury of the Storm-300004.sql` (2188 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUNNEW/Gold of Gods-300012.sql` (2228 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUNNEW/Horde-300010.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUNNEW/Justice of a horde-300014.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUNNEW/Saw-300016.sql` (2192 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUNNEW/Shattrath-300017.sql` (2180 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUNNEW/Sword of Monnoroh-300005.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUNNEW/The crystal World-300011.sql` (2238 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUNNEW/The murderer of all live-300007.sql` (2199 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUNNEW/The son of the Hell-300009.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUNNEW/WoWHeaD GuN-300000.sql` (2177 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/FUNNEW/Wolfhound-300002.sql` (2184 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Froost/Caster Shirt-950800.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Froost/DD shirt-950801.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Froost.rar.x/Caster Shirt-950800.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Froost.rar.x/DD shirt-950801.sql` (2202 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Bone Crusher Helm-927164.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Bone Crusher Helm-927166.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Bracers of Cataclysm-999555.sql` (2206 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Bugslayer Belt-927171.sql` (2164 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Bugslayer Helmet-927161.sql` (2163 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Bugslayer Leggings-927170.sql` (2166 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Bugslayer Shoulderpads-927174.sql` (2171 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Cord of Cataclysm-999556.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Darkness Defender-927162.sql` (2209 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Dikiy-987987.sql` (2164 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Evony Armwraps-789025.sql` (2785 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Evony Boots -789027.sql` (2785 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Evony Breastplate-789022.sql` (2792 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Evony Gauntlets-789026.sql` (2789 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Evony Helmet -789020.sql` (2787 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Evony Legplates -789024.sql` (2790 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Evony Pauldrons-789021.sql` (2786 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Evony Tortured -789023.sql` (2788 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/FuN Weapon-999999.sql` (2224 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Futy Dagger-789015.sql` (2793 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Greatstaff of the ZoneGame-987499.sql` (2212 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Handguards of Cataclysm-999550.sql` (2210 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Head of the Beast-927165.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Headguard of Holy Guidance-927163.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Heartseeker -789091.sql` (2799 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Heartseeker'S-789092.sql` (2801 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Honor Helm-927167.sql` (2159 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Hood of Cataclysm-999551.sql` (2203 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Legendary Dagger-789016.sql` (2799 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Leggings of Cataclysm-999552.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Mego Back-927158.sql` (2220 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Mego Belt-927155.sql` (2220 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Mego Bow-927160.sql` (2197 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Mego Bracers-927156.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Mego Chest-927151.sql` (2221 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Mego Gauntlets-927152.sql` (2226 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Mego Greaves-927153.sql` (2223 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Mego Head-927150.sql` (2220 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Mego Puxa-927159.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Mego Shoulderblades-927154.sql` (2230 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Mego Treads-927157.sql` (2222 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Pimp's hat-927172.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/ReXaL Staff-700077.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Shadow Master-987784.sql` (2211 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Shoulderpads of Cataclysm-999553.sql` (2211 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Shroud of Cataclysm-999554.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Staff of Cataclysm-999558.sql` (2231 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/TX1001 Goggles-927169.sql` (2227 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Titanlord Breastplate-927168.sql` (2200 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Treads of Cataclysm-999557.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Fun2/Fun/Админко-978797.sql` (2218 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Goblin/Гоблины.sql` (8202 Б): item_template строк: 2, кандидатов: 2
+- `рисовки/ещё сборка/Plate and Mail/Кольчуга/Shaman Restr.sql` (13413 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/ещё сборка/Plate and Mail/Кольчуга/Shaman+Hunter.sql` (13477 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/ещё сборка/Plate and Mail/Кольчуга/Spd Sham.sql` (13466 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/ещё сборка/Plate and Mail/Латы/Dd.sql` (13541 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/ещё сборка/Plate and Mail/Латы/Holy.sql` (13503 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/ещё сборка/Plate and Mail/Латы/Proto.sql` (13475 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/ещё сборка/Plate and Mail.rar.x/Кольчуга/Shaman Restr.sql` (13413 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/ещё сборка/Plate and Mail.rar.x/Кольчуга/Shaman+Hunter.sql` (13477 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/ещё сборка/Plate and Mail.rar.x/Кольчуга/Spd Sham.sql` (13466 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/ещё сборка/Plate and Mail.rar.x/Латы/Dd.sql` (13541 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/ещё сборка/Plate and Mail.rar.x/Латы/Holy.sql` (13503 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/ещё сборка/Plate and Mail.rar.x/Латы/Proto.sql` (13475 Б): item_template строк: 5, кандидатов: 5
+- `рисовки/ещё сборка/S8 venders.rar.x/S8 venders/Wrathful gear & npc.sql` (2375 Б): npc_vendor строк: 80
+- `рисовки/ещё сборка/S8 venders.rar.x/S8 venders/Wrathful offset & npc.sql` (1940 Б): npc_vendor строк: 59
+- `рисовки/ещё сборка/S8 venders.rar.x/S8 venders/Wrathfull weapon & npc.sql` (2043 Б): npc_vendor строк: 64
+- `рисовки/ещё сборка/SeT/Killer_SeT-90050.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/SeT/Killer_SeT-90051.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/SeT/Killer_SeT-90052.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/SeT/Killer_SeT-90053.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/SeT/Killer_SeT-90054.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/SeT/Killer_SeT-90055.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/SeT/Killer_SeT-90056.sql` (2194 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/SeT/Killer_SeT-90057.sql` (2195 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sechka/Sword_illidana-90000.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sechka/Sword_illidana-90001.sql` (2183 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Set_Bapa/SeT_T6-90010.sql` (2167 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Set_Bapa/SeT_T6-90011.sql` (2167 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Set_Bapa/SeT_T6-90012.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Set_Bapa/SeT_T6-90013.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Set_Bapa/SeT_T6-90014.sql` (2170 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Set_Bapa/SeT_T6-90015.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Set_Bapa/SeT_T6-90016.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Set_Bapa/SeT_T6-90017.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sets/оружия/Axe Gladiator's-588889.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sets/оружия/Axe Gladiator's-588896.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sets/оружия/Bow Gladiator's-588899.sql` (2209 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sets/оружия/Crossbow Gladiator's-588815.sql` (2214 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sets/оружия/Dagger Gladiator's-588887.sql` (2204 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sets/оружия/Dagger Spell Gladiator's-588892.sql` (2216 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sets/оружия/Fist Gladiator's-588888.sql` (2205 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sets/оружия/Gun Gladiator's-588816.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sets/оружия/Mace Gladiator's-588890.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sets/оружия/Mace Gladiator's-588897.sql` (2208 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sets/оружия/Polearm Gladiator's-588893.sql` (2210 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sets/оружия/Staff DD Gladiator's-588894.sql` (2211 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sets/оружия/Staff Gladiator's-588895.sql` (2209 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sets/оружия/Sword Gladiator's-588891.sql` (2207 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sets/оружия/Sword Gladiator's-588898.sql` (2209 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sets/оружия/Throwing Gladiator's-588817.sql` (2214 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Sets/оружия/Wand Gladiator's-588818.sql` (2210 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/Shield_90002/Shield-90002.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/arena.rar.x/8arena.sql` (226102 Б): разбор без списка колонок; item_template строк: 80, кандидатов: 80
+- `рисовки/ещё сборка/bliz_SeT/blizz_set-90600.sql` (2174 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/bliz_SeT/blizz_set-90601.sql` (2166 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/bliz_SeT/blizz_set-90602.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/bliz_SeT/blizz_set-90603.sql` (2169 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/bliz_SeT/blizz_set-90604.sql` (2173 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/bliz_SeT/blizz_set-90605.sql` (2168 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/bliz_SeT/blizz_set-90606.sql` (2172 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/bliz_SeT/blizz_set-90607.sql` (2179 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/killer_set/Killer_SeT-99200.sql` (2227 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/killer_set/Killer_SeT-99201.sql` (2227 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/killer_set/Killer_SeT-99202.sql` (2227 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/killer_set/Killer_SeT-99203.sql` (2227 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/killer_set/Killer_SeT-99204.sql` (2227 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/killer_set/Killer_SeT-99205.sql` (2227 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/killer_set/Killer_SeT-99206.sql` (2227 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/killer_set/Killer_SeT-99207.sql` (2228 Б): item_template строк: 1, кандидатов: 1
+- `рисовки/ещё сборка/patch/патч.sql` (192373 Б): npc_vendor строк: 1
+- `рисовки/ещё сборка/patch.rar.x/патч.sql` (192373 Б): npc_vendor строк: 1
