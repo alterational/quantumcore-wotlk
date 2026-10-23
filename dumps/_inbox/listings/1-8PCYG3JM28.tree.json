@@ -10,44 +10,23 @@
    "downloaded": true
   },
   {
-   "path": "Darksorrow/Darksorrow.txt",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~YiJ4iCpmY0bx8jJdMMcZNQ",
-   "size": 138,
-   "mediaType": "text/plain;charset=utf-8",
-   "downloaded": true
-  },
-  {
-   "path": "Darksorrow/characters.zip",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~aqOLloWRgQXb-v0RBep6Cg",
-   "size": 13694,
+   "path": "Darksorrow/world2.zip",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~3V_h5Sy9pu23UE6kwwzUog",
+   "size": 10345118,
    "mediaType": "application/zip",
    "downloaded": true
   },
   {
-   "path": "Darksorrow/Pediq2.sql",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~AWmp5sTZOp3OXcR2eVQyqw",
-   "size": 18966,
-   "mediaType": "application/x-sql",
+   "path": "Darksorrow/auth.zip",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~QBiH79WhN1X6NSsG-_mV5A",
+   "size": 1489,
+   "mediaType": "application/zip",
    "downloaded": true
   },
   {
    "path": "Darksorrow/Фиксы для бд/Расстановка вендоров.txt",
    "uid": "SgfKCen9iQnXZv58ixOXxg~0DLB0Pxqk6RdqjmPvAfEmg",
    "size": 21957,
-   "mediaType": "text/plain;charset=utf-8",
-   "downloaded": true
-  },
-  {
-   "path": "Darksorrow/Фиксы для бд/Тотемы при старте.sql",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~CIggLFpEpjOMzavqfYyovg",
-   "size": 416,
-   "mediaType": "application/x-sql",
-   "downloaded": true
-  },
-  {
-   "path": "Darksorrow/Фиксы для бд/Tier 10 не гер.txt",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~BZ75dHAsQE29XHnDZPBL_w",
-   "size": 2638,
    "mediaType": "text/plain;charset=utf-8",
    "downloaded": true
   },
@@ -59,10 +38,24 @@
    "downloaded": true
   },
   {
-   "path": "Darksorrow/Фиксы для бд/Кольца ЦЛК без репы.txt",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~kvUwAqdvqwsFMp-wviB1zg",
-   "size": 13590,
+   "path": "Darksorrow/Фиксы для бд/Цены buyprice sellprice.txt",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~alqNYouBklKcgMwas5TYqA",
+   "size": 102,
    "mediaType": "text/plain;charset=utf-8",
+   "downloaded": true
+  },
+  {
+   "path": "Darksorrow/Фиксы для бд/Tier 10 не гер.txt",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~BZ75dHAsQE29XHnDZPBL_w",
+   "size": 2638,
+   "mediaType": "text/plain;charset=utf-8",
+   "downloaded": true
+  },
+  {
+   "path": "Darksorrow/Фиксы для бд/Телепортер тринити!.sql",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~iZ-iSFrOa5WFK1vXW6IhWg",
+   "size": 54627,
+   "mediaType": "application/x-sql",
    "downloaded": true
   },
   {
@@ -73,6 +66,13 @@
    "downloaded": true
   },
   {
+   "path": "Darksorrow/Фиксы для бд/Кольца ЦЛК без репы.txt",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~kvUwAqdvqwsFMp-wviB1zg",
+   "size": 13590,
+   "mediaType": "text/plain;charset=utf-8",
+   "downloaded": true
+  },
+  {
    "path": "Darksorrow/Фиксы для бд/Старт в столицах.sql",
    "uid": "SgfKCen9iQnXZv58ixOXxg~LjsdAbtgB4CyCfcAZFP05Q",
    "size": 1474,
@@ -80,10 +80,10 @@
    "downloaded": true
   },
   {
-   "path": "Darksorrow/Фиксы для бд/Цены buyprice sellprice.txt",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~alqNYouBklKcgMwas5TYqA",
-   "size": 102,
-   "mediaType": "text/plain;charset=utf-8",
+   "path": "Darksorrow/Фиксы для бд/Тотемы при старте.sql",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~CIggLFpEpjOMzavqfYyovg",
+   "size": 416,
+   "mediaType": "application/x-sql",
    "downloaded": true
   },
   {
@@ -101,10 +101,24 @@
    "downloaded": true
   },
   {
-   "path": "Darksorrow/Фиксы для бд/Телепортер тринити!.sql",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~iZ-iSFrOa5WFK1vXW6IhWg",
-   "size": 54627,
+   "path": "Darksorrow/Pediq2.sql",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~AWmp5sTZOp3OXcR2eVQyqw",
+   "size": 18966,
    "mediaType": "application/x-sql",
+   "downloaded": true
+  },
+  {
+   "path": "Darksorrow/Зов стихий etc у шаманов.txt",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~6V3A70k49lmZ4z3gY4ZOzQ",
+   "size": 103,
+   "mediaType": "text/plain;charset=utf-8",
+   "downloaded": true
+  },
+  {
+   "path": "Darksorrow/Darksorrow.txt",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~YiJ4iCpmY0bx8jJdMMcZNQ",
+   "size": 138,
+   "mediaType": "text/plain;charset=utf-8",
    "downloaded": true
   },
   {
@@ -115,16 +129,16 @@
    "downloaded": true
   },
   {
-   "path": "Darksorrow/world2.zip",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~3V_h5Sy9pu23UE6kwwzUog",
-   "size": 10345118,
+   "path": "Darksorrow/characters.zip",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~aqOLloWRgQXb-v0RBep6Cg",
+   "size": 13694,
    "mediaType": "application/zip",
    "downloaded": true
   },
   {
-   "path": "Darksorrow/auth.zip",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~QBiH79WhN1X6NSsG-_mV5A",
-   "size": 1489,
+   "path": "Darksorrow/world4.zip",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~527bzgPfiVwu3f18ozCgTw",
+   "size": 12030580,
    "mediaType": "application/zip",
    "downloaded": true
   },
@@ -133,6 +147,13 @@
    "uid": "SgfKCen9iQnXZv58ixOXxg~X0DAIrS2B978xX6bK9Paaw",
    "size": 159,
    "mediaType": "text/plain;charset=utf-8",
+   "downloaded": true
+  },
+  {
+   "path": "Darksorrow/Служитель солнца Грегор.sql",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~bIIwrYBwamVINnZA8igq1Q",
+   "size": 3890,
+   "mediaType": "application/x-sql",
    "downloaded": true
   },
   {
@@ -146,13 +167,6 @@
    "path": "Darksorrow/locales_creature.sql",
    "uid": "SgfKCen9iQnXZv58ixOXxg~l_LoEcdIbql9H40g8Fte9A",
    "size": 5117861,
-   "mediaType": "application/x-sql",
-   "downloaded": true
-  },
-  {
-   "path": "Darksorrow/Служитель солнца Грегор.sql",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~bIIwrYBwamVINnZA8igq1Q",
-   "size": 3890,
    "mediaType": "application/x-sql",
    "downloaded": true
   },
@@ -206,13 +220,6 @@
    "downloaded": true
   },
   {
-   "path": "Darksorrow/smart_scripts.sql",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~m_XUvKfA0FoLIGAHrsCwjQ",
-   "size": 1068074,
-   "mediaType": "application/x-sql",
-   "downloaded": true
-  },
-  {
    "path": "Darksorrow/Альтершоп.txt",
    "uid": "SgfKCen9iQnXZv58ixOXxg~mxYciG1zEaZz_LRkzsuADg",
    "size": 426825,
@@ -220,24 +227,17 @@
    "downloaded": true
   },
   {
+   "path": "Darksorrow/smart_scripts.sql",
+   "uid": "SgfKCen9iQnXZv58ixOXxg~m_XUvKfA0FoLIGAHrsCwjQ",
+   "size": 1068074,
+   "mediaType": "application/x-sql",
+   "downloaded": true
+  },
+  {
    "path": "Darksorrow/ДОП НПС.txt",
    "uid": "SgfKCen9iQnXZv58ixOXxg~gk2tw5QSg0TL7O4qtxcTzQ",
    "size": 77,
    "mediaType": "text/plain;charset=utf-8",
-   "downloaded": true
-  },
-  {
-   "path": "Darksorrow/Зов стихий etc у шаманов.txt",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~6V3A70k49lmZ4z3gY4ZOzQ",
-   "size": 103,
-   "mediaType": "text/plain;charset=utf-8",
-   "downloaded": true
-  },
-  {
-   "path": "Darksorrow/world4.zip",
-   "uid": "SgfKCen9iQnXZv58ixOXxg~527bzgPfiVwu3f18ozCgTw",
-   "size": 12030580,
-   "mediaType": "application/zip",
    "downloaded": true
   }
  ],
