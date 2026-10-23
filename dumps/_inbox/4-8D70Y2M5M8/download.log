@@ -1,250 +1,250 @@
-2026-10-22T09:20:52.996Z INFO [interface] Getting info for URL access token 8D70Y2M5M8
-2026-10-22T09:20:53.810Z INFO [api] GET https://drive-api.proton.me/drive/urls/8D70Y2M5M8/info: 200 (813ms)
+2026-10-23T07:12:02.240Z INFO [interface] Getting info for URL access token 8D70Y2M5M8
+2026-10-23T07:12:02.884Z INFO [api] GET https://drive-api.proton.me/drive/urls/8D70Y2M5M8/info: 200 (643ms)
 INFO {"isCustomPasswordProtected":false,"isLegacy":false,"vendorType":0}
-2026-10-22T09:20:53.811Z INFO [interface] Authenticating URL access token 8D70Y2M5M8
-2026-10-22T09:20:54.966Z INFO [api] POST https://drive-api.proton.me/drive/urls/8D70Y2M5M8/auth: 200 (1020ms)
-2026-10-22T09:20:55.129Z INFO [publicLink-interface] Getting root node
-2026-10-22T09:20:55.490Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (360ms)
+2026-10-23T07:12:02.885Z INFO [interface] Authenticating URL access token 8D70Y2M5M8
+2026-10-23T07:12:03.230Z INFO [api] POST https://drive-api.proton.me/drive/urls/8D70Y2M5M8/auth: 200 (228ms)
+2026-10-23T07:12:03.368Z INFO [publicLink-interface] Getting root node
+2026-10-23T07:12:03.598Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (229ms)
 ROOT folder Рисованные рубашки.txt
-2026-10-22T09:20:55.508Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~l_NvxxEi_kEF5S1jz95aoA
-2026-10-22T09:20:55.763Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/l_NvxxEi_kEF5S1jz95aoA/children?: 200 (254ms)
-2026-10-22T09:20:56.131Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (366ms)
-2026-10-22T09:20:56.192Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~SamfjHVYJtUqGtfxO1CNTg
-2026-10-22T09:20:56.449Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/SamfjHVYJtUqGtfxO1CNTg/children?: 200 (256ms)
-2026-10-22T09:20:56.772Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (323ms)
-FILE Рисованные рубашки.txt/rogue/Rogue shirt-850111.sql (2175 B)
-2026-10-22T09:20:56.785Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~l5Cwjq7Te1NzMF-G2PsaXw
-2026-10-22T09:20:56.789Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~l5Cwjq7Te1NzMF-G2PsaXw~soRZohwVtXMRC2whrJANpw: Starting download
-2026-10-22T09:20:57.123Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/l5Cwjq7Te1NzMF-G2PsaXw/revisions/soRZohwVtXMRC2whrJANpw?PageSize=20&FromBlockIndex=1: 200 (334ms)
-2026-10-22T09:20:57.124Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~l5Cwjq7Te1NzMF-G2PsaXw~soRZohwVtXMRC2whrJANpw: block 1: Download started
-2026-10-22T09:20:57.474Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/l5Cwjq7Te1NzMF-G2PsaXw/revisions/soRZohwVtXMRC2whrJANpw?PageSize=20&FromBlockIndex=2: 200 (350ms)
-2026-10-22T09:20:57.750Z INFO [api] GET https://zrh-storage.proton.me/storage/blocks: 200 (626ms)
-2026-10-22T09:20:57.753Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2175,"milliseconds":2.1669529999999213}
-2026-10-22T09:20:57.753Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~l5Cwjq7Te1NzMF-G2PsaXw~soRZohwVtXMRC2whrJANpw: block 1: Downloaded
-2026-10-22T09:20:57.754Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~l5Cwjq7Te1NzMF-G2PsaXw~soRZohwVtXMRC2whrJANpw: Flushing completed block 1
-2026-10-22T09:20:57.754Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~l5Cwjq7Te1NzMF-G2PsaXw~soRZohwVtXMRC2whrJANpw: Skipping manifest check
-2026-10-22T09:20:57.754Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~l5Cwjq7Te1NzMF-G2PsaXw~soRZohwVtXMRC2whrJANpw: Download succeeded
-2026-10-22T09:20:57.754Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2256,"claimedFileSize":2256}
-2026-10-22T09:20:57.754Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~QpWRqF-pC8HJzSdIt_yAWQ
-2026-10-22T09:20:58.008Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/QpWRqF-pC8HJzSdIt_yAWQ/children?: 200 (253ms)
-2026-10-22T09:20:58.324Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (316ms)
-FILE Рисованные рубашки.txt/xant/Hunter shirt-850109.sql (2178 B)
-2026-10-22T09:20:58.331Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Hm7fTxuhMn3qy4C68BwcUA
-2026-10-22T09:20:58.331Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Hm7fTxuhMn3qy4C68BwcUA~KmnyAXVUuiO8-oZ7083gig: Starting download
-2026-10-22T09:20:58.630Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Hm7fTxuhMn3qy4C68BwcUA/revisions/KmnyAXVUuiO8-oZ7083gig?PageSize=20&FromBlockIndex=1: 200 (299ms)
-2026-10-22T09:20:58.630Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Hm7fTxuhMn3qy4C68BwcUA~KmnyAXVUuiO8-oZ7083gig: block 1: Download started
-2026-10-22T09:20:58.809Z INFO [api] GET https://zrh-storage.proton.me/storage/blocks: 200 (179ms)
-2026-10-22T09:20:58.810Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2178,"milliseconds":0.700553000000582}
-2026-10-22T09:20:58.810Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Hm7fTxuhMn3qy4C68BwcUA~KmnyAXVUuiO8-oZ7083gig: block 1: Downloaded
-2026-10-22T09:20:58.946Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Hm7fTxuhMn3qy4C68BwcUA/revisions/KmnyAXVUuiO8-oZ7083gig?PageSize=20&FromBlockIndex=2: 200 (316ms)
-2026-10-22T09:20:58.946Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Hm7fTxuhMn3qy4C68BwcUA~KmnyAXVUuiO8-oZ7083gig: Flushing completed block 1
-2026-10-22T09:20:58.946Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Hm7fTxuhMn3qy4C68BwcUA~KmnyAXVUuiO8-oZ7083gig: Skipping manifest check
-2026-10-22T09:20:58.947Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Hm7fTxuhMn3qy4C68BwcUA~KmnyAXVUuiO8-oZ7083gig: Download succeeded
-2026-10-22T09:20:58.947Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2259,"claimedFileSize":2259}
-2026-10-22T09:20:58.947Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~GXIckW7LVdzq3BUgz4XRxQ
-2026-10-22T09:20:59.237Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/GXIckW7LVdzq3BUgz4XRxQ/children?: 200 (290ms)
-2026-10-22T09:20:59.554Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (316ms)
-FILE Рисованные рубашки.txt/lok/Warlock shirt-850105.sql (2184 B)
-2026-10-22T09:20:59.561Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~hOESevBSOo4KhRlLtq0Lhw
-2026-10-22T09:20:59.561Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hOESevBSOo4KhRlLtq0Lhw~dwLrKDTmUCTOCR7hu-Oc4A: Starting download
-2026-10-22T09:20:59.919Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/hOESevBSOo4KhRlLtq0Lhw/revisions/dwLrKDTmUCTOCR7hu-Oc4A?PageSize=20&FromBlockIndex=1: 200 (358ms)
-2026-10-22T09:20:59.919Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hOESevBSOo4KhRlLtq0Lhw~dwLrKDTmUCTOCR7hu-Oc4A: block 1: Download started
-2026-10-22T09:21:00.087Z INFO [api] GET https://zrh-storage.proton.me/storage/blocks: 200 (168ms)
-2026-10-22T09:21:00.090Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2184,"milliseconds":0.6106339999996635}
-2026-10-22T09:21:00.090Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hOESevBSOo4KhRlLtq0Lhw~dwLrKDTmUCTOCR7hu-Oc4A: block 1: Downloaded
-2026-10-22T09:21:00.268Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/hOESevBSOo4KhRlLtq0Lhw/revisions/dwLrKDTmUCTOCR7hu-Oc4A?PageSize=20&FromBlockIndex=2: 200 (349ms)
-2026-10-22T09:21:00.268Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hOESevBSOo4KhRlLtq0Lhw~dwLrKDTmUCTOCR7hu-Oc4A: Flushing completed block 1
-2026-10-22T09:21:00.268Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~hOESevBSOo4KhRlLtq0Lhw~dwLrKDTmUCTOCR7hu-Oc4A: Skipping manifest check
-2026-10-22T09:21:00.268Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hOESevBSOo4KhRlLtq0Lhw~dwLrKDTmUCTOCR7hu-Oc4A: Download succeeded
-2026-10-22T09:21:00.268Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2265,"claimedFileSize":2265}
-2026-10-22T09:21:00.268Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~Yzu3yhT_ued_3za2F22tSw
-2026-10-22T09:21:00.520Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/Yzu3yhT_ued_3za2F22tSw/children?: 200 (252ms)
-2026-10-22T09:21:00.839Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (319ms)
-FILE Рисованные рубашки.txt/wama/Shaman Caster shirt-850114.sql (2180 B)
-2026-10-22T09:21:00.858Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~7fb-gJKTpYXOYwoLsjbX4Q
-2026-10-22T09:21:00.858Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~7fb-gJKTpYXOYwoLsjbX4Q~ijdwogmIcPhD07d16uD-XA: Starting download
-2026-10-22T09:21:01.200Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/7fb-gJKTpYXOYwoLsjbX4Q/revisions/ijdwogmIcPhD07d16uD-XA?PageSize=20&FromBlockIndex=1: 200 (342ms)
-2026-10-22T09:21:01.200Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~7fb-gJKTpYXOYwoLsjbX4Q~ijdwogmIcPhD07d16uD-XA: block 1: Download started
-2026-10-22T09:21:01.379Z INFO [api] GET https://zrh-storage.proton.me/storage/blocks: 200 (179ms)
-2026-10-22T09:21:01.381Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2180,"milliseconds":0.796820999999909}
-2026-10-22T09:21:01.381Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~7fb-gJKTpYXOYwoLsjbX4Q~ijdwogmIcPhD07d16uD-XA: block 1: Downloaded
-2026-10-22T09:21:01.551Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/7fb-gJKTpYXOYwoLsjbX4Q/revisions/ijdwogmIcPhD07d16uD-XA?PageSize=20&FromBlockIndex=2: 200 (351ms)
-2026-10-22T09:21:01.551Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~7fb-gJKTpYXOYwoLsjbX4Q~ijdwogmIcPhD07d16uD-XA: Flushing completed block 1
-2026-10-22T09:21:01.551Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~7fb-gJKTpYXOYwoLsjbX4Q~ijdwogmIcPhD07d16uD-XA: Skipping manifest check
-2026-10-22T09:21:01.551Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~7fb-gJKTpYXOYwoLsjbX4Q~ijdwogmIcPhD07d16uD-XA: Download succeeded
-2026-10-22T09:21:01.551Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2261,"claimedFileSize":2261}
+2026-10-23T07:12:03.611Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~l_NvxxEi_kEF5S1jz95aoA
+2026-10-23T07:12:03.813Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/l_NvxxEi_kEF5S1jz95aoA/children?: 200 (201ms)
+2026-10-23T07:12:04.025Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (211ms)
+2026-10-23T07:12:04.122Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~Yzu3yhT_ued_3za2F22tSw
+2026-10-23T07:12:04.330Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/Yzu3yhT_ued_3za2F22tSw/children?: 200 (208ms)
+2026-10-23T07:12:04.563Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (232ms)
 FILE Рисованные рубашки.txt/wama/Shaman melle shirt-850112.sql (2183 B)
-2026-10-22T09:21:01.552Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~D5AyyuE-rsY5wSH-aWxmSw
-2026-10-22T09:21:01.552Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~D5AyyuE-rsY5wSH-aWxmSw~FOjWsBy_V4cbxH7z4bTTkQ: Starting download
-2026-10-22T09:21:01.906Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/D5AyyuE-rsY5wSH-aWxmSw/revisions/FOjWsBy_V4cbxH7z4bTTkQ?PageSize=20&FromBlockIndex=1: 200 (354ms)
-2026-10-22T09:21:01.906Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~D5AyyuE-rsY5wSH-aWxmSw~FOjWsBy_V4cbxH7z4bTTkQ: block 1: Download started
-2026-10-22T09:21:02.103Z INFO [api] GET https://zrh-storage.proton.me/storage/blocks: 200 (197ms)
-2026-10-22T09:21:02.104Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2183,"milliseconds":0.5847880000001169}
-2026-10-22T09:21:02.104Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~D5AyyuE-rsY5wSH-aWxmSw~FOjWsBy_V4cbxH7z4bTTkQ: block 1: Downloaded
-2026-10-22T09:21:02.254Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/D5AyyuE-rsY5wSH-aWxmSw/revisions/FOjWsBy_V4cbxH7z4bTTkQ?PageSize=20&FromBlockIndex=2: 200 (348ms)
-2026-10-22T09:21:02.254Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~D5AyyuE-rsY5wSH-aWxmSw~FOjWsBy_V4cbxH7z4bTTkQ: Flushing completed block 1
-2026-10-22T09:21:02.255Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~D5AyyuE-rsY5wSH-aWxmSw~FOjWsBy_V4cbxH7z4bTTkQ: Skipping manifest check
-2026-10-22T09:21:02.255Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~D5AyyuE-rsY5wSH-aWxmSw~FOjWsBy_V4cbxH7z4bTTkQ: Download succeeded
-2026-10-22T09:21:02.255Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2264,"claimedFileSize":2264}
-2026-10-22T09:21:02.255Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~N2lMBn6P0Pw-vedHIIu-yw
-2026-10-22T09:21:02.511Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/N2lMBn6P0Pw-vedHIIu-yw/children?: 200 (256ms)
-2026-10-22T09:21:02.816Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (305ms)
+2026-10-23T07:12:04.584Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~D5AyyuE-rsY5wSH-aWxmSw
+2026-10-23T07:12:04.587Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~D5AyyuE-rsY5wSH-aWxmSw~FOjWsBy_V4cbxH7z4bTTkQ: Starting download
+2026-10-23T07:12:04.789Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/D5AyyuE-rsY5wSH-aWxmSw/revisions/FOjWsBy_V4cbxH7z4bTTkQ?PageSize=20&FromBlockIndex=1: 200 (201ms)
+2026-10-23T07:12:04.789Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~D5AyyuE-rsY5wSH-aWxmSw~FOjWsBy_V4cbxH7z4bTTkQ: block 1: Download started
+2026-10-23T07:12:04.986Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/D5AyyuE-rsY5wSH-aWxmSw/revisions/FOjWsBy_V4cbxH7z4bTTkQ?PageSize=20&FromBlockIndex=2: 200 (196ms)
+2026-10-23T07:12:05.941Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (1151ms)
+2026-10-23T07:12:05.944Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2183,"milliseconds":1.7376030000000355}
+2026-10-23T07:12:05.944Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~D5AyyuE-rsY5wSH-aWxmSw~FOjWsBy_V4cbxH7z4bTTkQ: block 1: Downloaded
+2026-10-23T07:12:05.944Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~D5AyyuE-rsY5wSH-aWxmSw~FOjWsBy_V4cbxH7z4bTTkQ: Flushing completed block 1
+2026-10-23T07:12:05.944Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~D5AyyuE-rsY5wSH-aWxmSw~FOjWsBy_V4cbxH7z4bTTkQ: Skipping manifest check
+2026-10-23T07:12:05.944Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~D5AyyuE-rsY5wSH-aWxmSw~FOjWsBy_V4cbxH7z4bTTkQ: Download succeeded
+2026-10-23T07:12:05.944Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2264,"claimedFileSize":2264}
+FILE Рисованные рубашки.txt/wama/Shaman Caster shirt-850114.sql (2180 B)
+2026-10-23T07:12:05.945Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~7fb-gJKTpYXOYwoLsjbX4Q
+2026-10-23T07:12:05.945Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~7fb-gJKTpYXOYwoLsjbX4Q~ijdwogmIcPhD07d16uD-XA: Starting download
+2026-10-23T07:12:06.164Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/7fb-gJKTpYXOYwoLsjbX4Q/revisions/ijdwogmIcPhD07d16uD-XA?PageSize=20&FromBlockIndex=1: 200 (219ms)
+2026-10-23T07:12:06.164Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~7fb-gJKTpYXOYwoLsjbX4Q~ijdwogmIcPhD07d16uD-XA: block 1: Download started
+2026-10-23T07:12:06.392Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/7fb-gJKTpYXOYwoLsjbX4Q/revisions/ijdwogmIcPhD07d16uD-XA?PageSize=20&FromBlockIndex=2: 200 (228ms)
+2026-10-23T07:12:06.415Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (251ms)
+2026-10-23T07:12:06.416Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2180,"milliseconds":0.7521400000005087}
+2026-10-23T07:12:06.416Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~7fb-gJKTpYXOYwoLsjbX4Q~ijdwogmIcPhD07d16uD-XA: block 1: Downloaded
+2026-10-23T07:12:06.416Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~7fb-gJKTpYXOYwoLsjbX4Q~ijdwogmIcPhD07d16uD-XA: Flushing completed block 1
+2026-10-23T07:12:06.417Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~7fb-gJKTpYXOYwoLsjbX4Q~ijdwogmIcPhD07d16uD-XA: Skipping manifest check
+2026-10-23T07:12:06.417Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~7fb-gJKTpYXOYwoLsjbX4Q~ijdwogmIcPhD07d16uD-XA: Download succeeded
+2026-10-23T07:12:06.417Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2261,"claimedFileSize":2261}
+2026-10-23T07:12:06.417Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~N2lMBn6P0Pw-vedHIIu-yw
+2026-10-23T07:12:06.637Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/N2lMBn6P0Pw-vedHIIu-yw/children?: 200 (220ms)
+2026-10-23T07:12:06.855Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (217ms)
 FILE Рисованные рубашки.txt/dru/Druid feral shirt-850116.sql (2184 B)
-2026-10-22T09:21:02.836Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~k_DulIKS68aiHzPInyMpGA
-2026-10-22T09:21:02.836Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~k_DulIKS68aiHzPInyMpGA~PhGYQapZUkKfyQp9hUj76Q: Starting download
-2026-10-22T09:21:03.191Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/k_DulIKS68aiHzPInyMpGA/revisions/PhGYQapZUkKfyQp9hUj76Q?PageSize=20&FromBlockIndex=1: 200 (355ms)
-2026-10-22T09:21:03.191Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~k_DulIKS68aiHzPInyMpGA~PhGYQapZUkKfyQp9hUj76Q: block 1: Download started
-2026-10-22T09:21:03.371Z INFO [api] GET https://zrh-storage.proton.me/storage/blocks: 200 (180ms)
-2026-10-22T09:21:03.372Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2184,"milliseconds":0.8539490000002843}
-2026-10-22T09:21:03.372Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~k_DulIKS68aiHzPInyMpGA~PhGYQapZUkKfyQp9hUj76Q: block 1: Downloaded
-2026-10-22T09:21:03.578Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/k_DulIKS68aiHzPInyMpGA/revisions/PhGYQapZUkKfyQp9hUj76Q?PageSize=20&FromBlockIndex=2: 200 (387ms)
-2026-10-22T09:21:03.578Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~k_DulIKS68aiHzPInyMpGA~PhGYQapZUkKfyQp9hUj76Q: Flushing completed block 1
-2026-10-22T09:21:03.578Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~k_DulIKS68aiHzPInyMpGA~PhGYQapZUkKfyQp9hUj76Q: Skipping manifest check
-2026-10-22T09:21:03.578Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~k_DulIKS68aiHzPInyMpGA~PhGYQapZUkKfyQp9hUj76Q: Download succeeded
-2026-10-22T09:21:03.578Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2265,"claimedFileSize":2265}
+2026-10-23T07:12:06.872Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~k_DulIKS68aiHzPInyMpGA
+2026-10-23T07:12:06.873Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~k_DulIKS68aiHzPInyMpGA~PhGYQapZUkKfyQp9hUj76Q: Starting download
+2026-10-23T07:12:07.096Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/k_DulIKS68aiHzPInyMpGA/revisions/PhGYQapZUkKfyQp9hUj76Q?PageSize=20&FromBlockIndex=1: 200 (223ms)
+2026-10-23T07:12:07.096Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~k_DulIKS68aiHzPInyMpGA~PhGYQapZUkKfyQp9hUj76Q: block 1: Download started
+2026-10-23T07:12:07.319Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/k_DulIKS68aiHzPInyMpGA/revisions/PhGYQapZUkKfyQp9hUj76Q?PageSize=20&FromBlockIndex=2: 200 (223ms)
+2026-10-23T07:12:07.355Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (259ms)
+2026-10-23T07:12:07.356Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2184,"milliseconds":0.6518679999999222}
+2026-10-23T07:12:07.356Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~k_DulIKS68aiHzPInyMpGA~PhGYQapZUkKfyQp9hUj76Q: block 1: Downloaded
+2026-10-23T07:12:07.356Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~k_DulIKS68aiHzPInyMpGA~PhGYQapZUkKfyQp9hUj76Q: Flushing completed block 1
+2026-10-23T07:12:07.356Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~k_DulIKS68aiHzPInyMpGA~PhGYQapZUkKfyQp9hUj76Q: Skipping manifest check
+2026-10-23T07:12:07.356Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~k_DulIKS68aiHzPInyMpGA~PhGYQapZUkKfyQp9hUj76Q: Download succeeded
+2026-10-23T07:12:07.356Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2265,"claimedFileSize":2265}
 FILE Рисованные рубашки.txt/dru/Druid Caster shirt-850110.sql (2186 B)
-2026-10-22T09:21:03.578Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~BPqe8uobQgsAa5sB8brd0Q
-2026-10-22T09:21:03.578Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BPqe8uobQgsAa5sB8brd0Q~BVXs32dguWZpva7VEsD_ow: Starting download
-2026-10-22T09:21:03.919Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/BPqe8uobQgsAa5sB8brd0Q/revisions/BVXs32dguWZpva7VEsD_ow?PageSize=20&FromBlockIndex=1: 200 (340ms)
-2026-10-22T09:21:03.919Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BPqe8uobQgsAa5sB8brd0Q~BVXs32dguWZpva7VEsD_ow: block 1: Download started
-2026-10-22T09:21:04.101Z INFO [api] GET https://zrh-storage.proton.me/storage/blocks: 200 (182ms)
-2026-10-22T09:21:04.103Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2186,"milliseconds":0.889895999998771}
-2026-10-22T09:21:04.103Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BPqe8uobQgsAa5sB8brd0Q~BVXs32dguWZpva7VEsD_ow: block 1: Downloaded
-2026-10-22T09:21:04.211Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/BPqe8uobQgsAa5sB8brd0Q/revisions/BVXs32dguWZpva7VEsD_ow?PageSize=20&FromBlockIndex=2: 200 (292ms)
-2026-10-22T09:21:04.211Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BPqe8uobQgsAa5sB8brd0Q~BVXs32dguWZpva7VEsD_ow: Flushing completed block 1
-2026-10-22T09:21:04.212Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~BPqe8uobQgsAa5sB8brd0Q~BVXs32dguWZpva7VEsD_ow: Skipping manifest check
-2026-10-22T09:21:04.212Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BPqe8uobQgsAa5sB8brd0Q~BVXs32dguWZpva7VEsD_ow: Download succeeded
-2026-10-22T09:21:04.212Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2267,"claimedFileSize":2267}
-2026-10-22T09:21:04.212Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~7xkiNLZMLSsiELXU8yU_pQ
-2026-10-22T09:21:04.468Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/7xkiNLZMLSsiELXU8yU_pQ/children?: 200 (256ms)
-2026-10-22T09:21:04.811Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (342ms)
-FILE Рисованные рубашки.txt/dk/DK tank shirt-850117.sql (2172 B)
-2026-10-22T09:21:04.829Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~PLJLH_ozzUrCNPv2PNXGtA
-2026-10-22T09:21:04.829Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PLJLH_ozzUrCNPv2PNXGtA~cBPCNSZn51yyFeWAq1FPMw: Starting download
-2026-10-22T09:21:05.148Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/PLJLH_ozzUrCNPv2PNXGtA/revisions/cBPCNSZn51yyFeWAq1FPMw?PageSize=20&FromBlockIndex=1: 200 (319ms)
-2026-10-22T09:21:05.148Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PLJLH_ozzUrCNPv2PNXGtA~cBPCNSZn51yyFeWAq1FPMw: block 1: Download started
-2026-10-22T09:21:05.336Z INFO [api] GET https://zrh-storage.proton.me/storage/blocks: 200 (188ms)
-2026-10-22T09:21:05.337Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2172,"milliseconds":0.7431429999996908}
-2026-10-22T09:21:05.337Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PLJLH_ozzUrCNPv2PNXGtA~cBPCNSZn51yyFeWAq1FPMw: block 1: Downloaded
-2026-10-22T09:21:05.479Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/PLJLH_ozzUrCNPv2PNXGtA/revisions/cBPCNSZn51yyFeWAq1FPMw?PageSize=20&FromBlockIndex=2: 200 (331ms)
-2026-10-22T09:21:05.479Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PLJLH_ozzUrCNPv2PNXGtA~cBPCNSZn51yyFeWAq1FPMw: Flushing completed block 1
-2026-10-22T09:21:05.479Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~PLJLH_ozzUrCNPv2PNXGtA~cBPCNSZn51yyFeWAq1FPMw: Skipping manifest check
-2026-10-22T09:21:05.479Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PLJLH_ozzUrCNPv2PNXGtA~cBPCNSZn51yyFeWAq1FPMw: Download succeeded
-2026-10-22T09:21:05.479Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2253,"claimedFileSize":2253}
-FILE Рисованные рубашки.txt/dk/Death Knight DD shirt-850118.sql (2183 B)
-2026-10-22T09:21:05.479Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~HVKSyYpnDHWFawiv8tr0zA
-2026-10-22T09:21:05.479Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HVKSyYpnDHWFawiv8tr0zA~5TCHNuGC-HBQM1B7AB8OeQ: Starting download
-2026-10-22T09:21:05.908Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/HVKSyYpnDHWFawiv8tr0zA/revisions/5TCHNuGC-HBQM1B7AB8OeQ?PageSize=20&FromBlockIndex=1: 200 (428ms)
-2026-10-22T09:21:05.909Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HVKSyYpnDHWFawiv8tr0zA~5TCHNuGC-HBQM1B7AB8OeQ: block 1: Download started
-2026-10-22T09:21:06.087Z INFO [api] GET https://zrh-storage.proton.me/storage/blocks: 200 (178ms)
-2026-10-22T09:21:06.088Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2183,"milliseconds":0.7036090000001423}
-2026-10-22T09:21:06.088Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HVKSyYpnDHWFawiv8tr0zA~5TCHNuGC-HBQM1B7AB8OeQ: block 1: Downloaded
-2026-10-22T09:21:06.240Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/HVKSyYpnDHWFawiv8tr0zA/revisions/5TCHNuGC-HBQM1B7AB8OeQ?PageSize=20&FromBlockIndex=2: 200 (331ms)
-2026-10-22T09:21:06.240Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HVKSyYpnDHWFawiv8tr0zA~5TCHNuGC-HBQM1B7AB8OeQ: Flushing completed block 1
-2026-10-22T09:21:06.240Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~HVKSyYpnDHWFawiv8tr0zA~5TCHNuGC-HBQM1B7AB8OeQ: Skipping manifest check
-2026-10-22T09:21:06.240Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HVKSyYpnDHWFawiv8tr0zA~5TCHNuGC-HBQM1B7AB8OeQ: Download succeeded
-2026-10-22T09:21:06.240Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2264,"claimedFileSize":2264}
-2026-10-22T09:21:06.241Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~HpSVl528uWnQjBDwc-Cr-Q
-2026-10-22T09:21:06.511Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/HpSVl528uWnQjBDwc-Cr-Q/children?: 200 (270ms)
-2026-10-22T09:21:06.876Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (364ms)
-FILE Рисованные рубашки.txt/пал/Paladin tank shirt-850104.sql (2184 B)
-2026-10-22T09:21:06.891Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~qOUzV-MDaMCSx6xzOF4qgQ
-2026-10-22T09:21:06.891Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qOUzV-MDaMCSx6xzOF4qgQ~4303WQvIsEoQHmFIBW7muw: Starting download
-2026-10-22T09:21:07.250Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/qOUzV-MDaMCSx6xzOF4qgQ/revisions/4303WQvIsEoQHmFIBW7muw?PageSize=20&FromBlockIndex=1: 200 (359ms)
-2026-10-22T09:21:07.250Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qOUzV-MDaMCSx6xzOF4qgQ~4303WQvIsEoQHmFIBW7muw: block 1: Download started
-2026-10-22T09:21:07.424Z INFO [api] GET https://zrh-storage.proton.me/storage/blocks: 200 (174ms)
-2026-10-22T09:21:07.425Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2184,"milliseconds":0.6584039999997913}
-2026-10-22T09:21:07.425Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qOUzV-MDaMCSx6xzOF4qgQ~4303WQvIsEoQHmFIBW7muw: block 1: Downloaded
-2026-10-22T09:21:07.599Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/qOUzV-MDaMCSx6xzOF4qgQ/revisions/4303WQvIsEoQHmFIBW7muw?PageSize=20&FromBlockIndex=2: 200 (349ms)
-2026-10-22T09:21:07.599Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qOUzV-MDaMCSx6xzOF4qgQ~4303WQvIsEoQHmFIBW7muw: Flushing completed block 1
-2026-10-22T09:21:07.599Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~qOUzV-MDaMCSx6xzOF4qgQ~4303WQvIsEoQHmFIBW7muw: Skipping manifest check
-2026-10-22T09:21:07.600Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qOUzV-MDaMCSx6xzOF4qgQ~4303WQvIsEoQHmFIBW7muw: Download succeeded
-2026-10-22T09:21:07.600Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2265,"claimedFileSize":2265}
-FILE Рисованные рубашки.txt/пал/Paladin holy shirt-850108.sql (2176 B)
-2026-10-22T09:21:07.600Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~HZQBl9876AuqelFCVPPI_Q
-2026-10-22T09:21:07.600Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HZQBl9876AuqelFCVPPI_Q~8uKJZ0RTBreFI8JU44CvRA: Starting download
-2026-10-22T09:21:07.971Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/HZQBl9876AuqelFCVPPI_Q/revisions/8uKJZ0RTBreFI8JU44CvRA?PageSize=20&FromBlockIndex=1: 200 (371ms)
-2026-10-22T09:21:07.971Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HZQBl9876AuqelFCVPPI_Q~8uKJZ0RTBreFI8JU44CvRA: block 1: Download started
-2026-10-22T09:21:08.149Z INFO [api] GET https://zrh-storage.proton.me/storage/blocks: 200 (178ms)
-2026-10-22T09:21:08.150Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2176,"milliseconds":0.6329559999994672}
-2026-10-22T09:21:08.150Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HZQBl9876AuqelFCVPPI_Q~8uKJZ0RTBreFI8JU44CvRA: block 1: Downloaded
-2026-10-22T09:21:08.308Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/HZQBl9876AuqelFCVPPI_Q/revisions/8uKJZ0RTBreFI8JU44CvRA?PageSize=20&FromBlockIndex=2: 200 (337ms)
-2026-10-22T09:21:08.308Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HZQBl9876AuqelFCVPPI_Q~8uKJZ0RTBreFI8JU44CvRA: Flushing completed block 1
-2026-10-22T09:21:08.308Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~HZQBl9876AuqelFCVPPI_Q~8uKJZ0RTBreFI8JU44CvRA: Skipping manifest check
-2026-10-22T09:21:08.308Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HZQBl9876AuqelFCVPPI_Q~8uKJZ0RTBreFI8JU44CvRA: Download succeeded
-2026-10-22T09:21:08.308Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2257,"claimedFileSize":2257}
-FILE Рисованные рубашки.txt/пал/Paladin DD shirt-850103.sql (2697 B)
-2026-10-22T09:21:08.308Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~r3wv-wtTqwHNslBXP0my_A
-2026-10-22T09:21:08.308Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~r3wv-wtTqwHNslBXP0my_A~TjobY6zzwK387ZtytmuuYQ: Starting download
-2026-10-22T09:21:08.653Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/r3wv-wtTqwHNslBXP0my_A/revisions/TjobY6zzwK387ZtytmuuYQ?PageSize=20&FromBlockIndex=1: 200 (345ms)
-2026-10-22T09:21:08.653Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~r3wv-wtTqwHNslBXP0my_A~TjobY6zzwK387ZtytmuuYQ: block 1: Download started
-2026-10-22T09:21:08.834Z INFO [api] GET https://zrh-storage.proton.me/storage/blocks: 200 (181ms)
-2026-10-22T09:21:08.835Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2697,"milliseconds":0.6033910000005562}
-2026-10-22T09:21:08.835Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~r3wv-wtTqwHNslBXP0my_A~TjobY6zzwK387ZtytmuuYQ: block 1: Downloaded
-2026-10-22T09:21:08.952Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/r3wv-wtTqwHNslBXP0my_A/revisions/TjobY6zzwK387ZtytmuuYQ?PageSize=20&FromBlockIndex=2: 200 (299ms)
-2026-10-22T09:21:08.952Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~r3wv-wtTqwHNslBXP0my_A~TjobY6zzwK387ZtytmuuYQ: Flushing completed block 1
-2026-10-22T09:21:08.952Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~r3wv-wtTqwHNslBXP0my_A~TjobY6zzwK387ZtytmuuYQ: Skipping manifest check
-2026-10-22T09:21:08.952Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~r3wv-wtTqwHNslBXP0my_A~TjobY6zzwK387ZtytmuuYQ: Download succeeded
-2026-10-22T09:21:08.952Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2778,"claimedFileSize":2778}
-2026-10-22T09:21:08.952Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~kLXaYGY4mDL2RyNEO3Qr9w
-2026-10-22T09:21:09.220Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/kLXaYGY4mDL2RyNEO3Qr9w/children?: 200 (268ms)
-2026-10-22T09:21:09.502Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (282ms)
+2026-10-23T07:12:07.356Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~BPqe8uobQgsAa5sB8brd0Q
+2026-10-23T07:12:07.357Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BPqe8uobQgsAa5sB8brd0Q~BVXs32dguWZpva7VEsD_ow: Starting download
+2026-10-23T07:12:07.553Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/BPqe8uobQgsAa5sB8brd0Q/revisions/BVXs32dguWZpva7VEsD_ow?PageSize=20&FromBlockIndex=1: 200 (196ms)
+2026-10-23T07:12:07.553Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BPqe8uobQgsAa5sB8brd0Q~BVXs32dguWZpva7VEsD_ow: block 1: Download started
+2026-10-23T07:12:07.772Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/BPqe8uobQgsAa5sB8brd0Q/revisions/BVXs32dguWZpva7VEsD_ow?PageSize=20&FromBlockIndex=2: 200 (219ms)
+2026-10-23T07:12:07.808Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (255ms)
+2026-10-23T07:12:07.809Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2186,"milliseconds":0.524956000000202}
+2026-10-23T07:12:07.809Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BPqe8uobQgsAa5sB8brd0Q~BVXs32dguWZpva7VEsD_ow: block 1: Downloaded
+2026-10-23T07:12:07.809Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BPqe8uobQgsAa5sB8brd0Q~BVXs32dguWZpva7VEsD_ow: Flushing completed block 1
+2026-10-23T07:12:07.809Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~BPqe8uobQgsAa5sB8brd0Q~BVXs32dguWZpva7VEsD_ow: Skipping manifest check
+2026-10-23T07:12:07.809Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~BPqe8uobQgsAa5sB8brd0Q~BVXs32dguWZpva7VEsD_ow: Download succeeded
+2026-10-23T07:12:07.809Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2267,"claimedFileSize":2267}
+2026-10-23T07:12:07.809Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~kLXaYGY4mDL2RyNEO3Qr9w
+2026-10-23T07:12:08.004Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/kLXaYGY4mDL2RyNEO3Qr9w/children?: 200 (195ms)
+2026-10-23T07:12:08.252Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (248ms)
 FILE Рисованные рубашки.txt/маг/Mage shirt-850102.sql (2176 B)
-2026-10-22T09:21:09.508Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~NMkIkYa3vWsLixd7Kfy7xg
-2026-10-22T09:21:09.508Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~NMkIkYa3vWsLixd7Kfy7xg~jIOplUK3Ki6pum9k096Tww: Starting download
-2026-10-22T09:21:09.805Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/NMkIkYa3vWsLixd7Kfy7xg/revisions/jIOplUK3Ki6pum9k096Tww?PageSize=20&FromBlockIndex=1: 200 (297ms)
-2026-10-22T09:21:09.805Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~NMkIkYa3vWsLixd7Kfy7xg~jIOplUK3Ki6pum9k096Tww: block 1: Download started
-2026-10-22T09:21:10.008Z INFO [api] GET https://zrh-storage.proton.me/storage/blocks: 200 (203ms)
-2026-10-22T09:21:10.009Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2176,"milliseconds":0.5285619999995106}
-2026-10-22T09:21:10.009Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~NMkIkYa3vWsLixd7Kfy7xg~jIOplUK3Ki6pum9k096Tww: block 1: Downloaded
-2026-10-22T09:21:10.132Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/NMkIkYa3vWsLixd7Kfy7xg/revisions/jIOplUK3Ki6pum9k096Tww?PageSize=20&FromBlockIndex=2: 200 (327ms)
-2026-10-22T09:21:10.132Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~NMkIkYa3vWsLixd7Kfy7xg~jIOplUK3Ki6pum9k096Tww: Flushing completed block 1
-2026-10-22T09:21:10.132Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~NMkIkYa3vWsLixd7Kfy7xg~jIOplUK3Ki6pum9k096Tww: Skipping manifest check
-2026-10-22T09:21:10.132Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~NMkIkYa3vWsLixd7Kfy7xg~jIOplUK3Ki6pum9k096Tww: Download succeeded
-2026-10-22T09:21:10.132Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2257,"claimedFileSize":2257}
-2026-10-22T09:21:10.132Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~2rGOif5UiZMo1CavnURFtg
-2026-10-22T09:21:10.385Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/2rGOif5UiZMo1CavnURFtg/children?: 200 (253ms)
-2026-10-22T09:21:10.674Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (289ms)
+2026-10-23T07:12:08.267Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~NMkIkYa3vWsLixd7Kfy7xg
+2026-10-23T07:12:08.267Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~NMkIkYa3vWsLixd7Kfy7xg~jIOplUK3Ki6pum9k096Tww: Starting download
+2026-10-23T07:12:08.478Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/NMkIkYa3vWsLixd7Kfy7xg/revisions/jIOplUK3Ki6pum9k096Tww?PageSize=20&FromBlockIndex=1: 200 (211ms)
+2026-10-23T07:12:08.478Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~NMkIkYa3vWsLixd7Kfy7xg~jIOplUK3Ki6pum9k096Tww: block 1: Download started
+2026-10-23T07:12:08.686Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/NMkIkYa3vWsLixd7Kfy7xg/revisions/jIOplUK3Ki6pum9k096Tww?PageSize=20&FromBlockIndex=2: 200 (208ms)
+2026-10-23T07:12:08.731Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (253ms)
+2026-10-23T07:12:08.732Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2176,"milliseconds":0.5458269999999175}
+2026-10-23T07:12:08.732Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~NMkIkYa3vWsLixd7Kfy7xg~jIOplUK3Ki6pum9k096Tww: block 1: Downloaded
+2026-10-23T07:12:08.732Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~NMkIkYa3vWsLixd7Kfy7xg~jIOplUK3Ki6pum9k096Tww: Flushing completed block 1
+2026-10-23T07:12:08.732Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~NMkIkYa3vWsLixd7Kfy7xg~jIOplUK3Ki6pum9k096Tww: Skipping manifest check
+2026-10-23T07:12:08.732Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~NMkIkYa3vWsLixd7Kfy7xg~jIOplUK3Ki6pum9k096Tww: Download succeeded
+2026-10-23T07:12:08.732Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2257,"claimedFileSize":2257}
+2026-10-23T07:12:08.732Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~SamfjHVYJtUqGtfxO1CNTg
+2026-10-23T07:12:08.934Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/SamfjHVYJtUqGtfxO1CNTg/children?: 200 (201ms)
+2026-10-23T07:12:09.145Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (211ms)
+FILE Рисованные рубашки.txt/rogue/Rogue shirt-850111.sql (2175 B)
+2026-10-23T07:12:09.149Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~l5Cwjq7Te1NzMF-G2PsaXw
+2026-10-23T07:12:09.150Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~l5Cwjq7Te1NzMF-G2PsaXw~soRZohwVtXMRC2whrJANpw: Starting download
+2026-10-23T07:12:09.355Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/l5Cwjq7Te1NzMF-G2PsaXw/revisions/soRZohwVtXMRC2whrJANpw?PageSize=20&FromBlockIndex=1: 200 (205ms)
+2026-10-23T07:12:09.355Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~l5Cwjq7Te1NzMF-G2PsaXw~soRZohwVtXMRC2whrJANpw: block 1: Download started
+2026-10-23T07:12:09.554Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/l5Cwjq7Te1NzMF-G2PsaXw/revisions/soRZohwVtXMRC2whrJANpw?PageSize=20&FromBlockIndex=2: 200 (199ms)
+2026-10-23T07:12:09.614Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (259ms)
+2026-10-23T07:12:09.615Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2175,"milliseconds":0.6718179999998029}
+2026-10-23T07:12:09.615Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~l5Cwjq7Te1NzMF-G2PsaXw~soRZohwVtXMRC2whrJANpw: block 1: Downloaded
+2026-10-23T07:12:09.615Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~l5Cwjq7Te1NzMF-G2PsaXw~soRZohwVtXMRC2whrJANpw: Flushing completed block 1
+2026-10-23T07:12:09.615Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~l5Cwjq7Te1NzMF-G2PsaXw~soRZohwVtXMRC2whrJANpw: Skipping manifest check
+2026-10-23T07:12:09.615Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~l5Cwjq7Te1NzMF-G2PsaXw~soRZohwVtXMRC2whrJANpw: Download succeeded
+2026-10-23T07:12:09.615Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2256,"claimedFileSize":2256}
+2026-10-23T07:12:09.615Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~7xkiNLZMLSsiELXU8yU_pQ
+2026-10-23T07:12:09.829Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/7xkiNLZMLSsiELXU8yU_pQ/children?: 200 (214ms)
+2026-10-23T07:12:10.058Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (229ms)
+FILE Рисованные рубашки.txt/dk/DK tank shirt-850117.sql (2172 B)
+2026-10-23T07:12:10.066Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~PLJLH_ozzUrCNPv2PNXGtA
+2026-10-23T07:12:10.066Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PLJLH_ozzUrCNPv2PNXGtA~cBPCNSZn51yyFeWAq1FPMw: Starting download
+2026-10-23T07:12:10.262Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/PLJLH_ozzUrCNPv2PNXGtA/revisions/cBPCNSZn51yyFeWAq1FPMw?PageSize=20&FromBlockIndex=1: 200 (196ms)
+2026-10-23T07:12:10.262Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PLJLH_ozzUrCNPv2PNXGtA~cBPCNSZn51yyFeWAq1FPMw: block 1: Download started
+2026-10-23T07:12:10.526Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/PLJLH_ozzUrCNPv2PNXGtA/revisions/cBPCNSZn51yyFeWAq1FPMw?PageSize=20&FromBlockIndex=2: 200 (264ms)
+2026-10-23T07:12:10.538Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (276ms)
+2026-10-23T07:12:10.539Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2172,"milliseconds":0.6526389999999083}
+2026-10-23T07:12:10.539Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PLJLH_ozzUrCNPv2PNXGtA~cBPCNSZn51yyFeWAq1FPMw: block 1: Downloaded
+2026-10-23T07:12:10.539Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PLJLH_ozzUrCNPv2PNXGtA~cBPCNSZn51yyFeWAq1FPMw: Flushing completed block 1
+2026-10-23T07:12:10.539Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~PLJLH_ozzUrCNPv2PNXGtA~cBPCNSZn51yyFeWAq1FPMw: Skipping manifest check
+2026-10-23T07:12:10.539Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~PLJLH_ozzUrCNPv2PNXGtA~cBPCNSZn51yyFeWAq1FPMw: Download succeeded
+2026-10-23T07:12:10.539Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2253,"claimedFileSize":2253}
+FILE Рисованные рубашки.txt/dk/Death Knight DD shirt-850118.sql (2183 B)
+2026-10-23T07:12:10.539Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~HVKSyYpnDHWFawiv8tr0zA
+2026-10-23T07:12:10.539Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HVKSyYpnDHWFawiv8tr0zA~5TCHNuGC-HBQM1B7AB8OeQ: Starting download
+2026-10-23T07:12:10.755Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/HVKSyYpnDHWFawiv8tr0zA/revisions/5TCHNuGC-HBQM1B7AB8OeQ?PageSize=20&FromBlockIndex=1: 200 (216ms)
+2026-10-23T07:12:10.755Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HVKSyYpnDHWFawiv8tr0zA~5TCHNuGC-HBQM1B7AB8OeQ: block 1: Download started
+2026-10-23T07:12:10.931Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/HVKSyYpnDHWFawiv8tr0zA/revisions/5TCHNuGC-HBQM1B7AB8OeQ?PageSize=20&FromBlockIndex=2: 200 (176ms)
+2026-10-23T07:12:11.006Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (251ms)
+2026-10-23T07:12:11.012Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2183,"milliseconds":0.6219920000003185}
+2026-10-23T07:12:11.012Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HVKSyYpnDHWFawiv8tr0zA~5TCHNuGC-HBQM1B7AB8OeQ: block 1: Downloaded
+2026-10-23T07:12:11.012Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HVKSyYpnDHWFawiv8tr0zA~5TCHNuGC-HBQM1B7AB8OeQ: Flushing completed block 1
+2026-10-23T07:12:11.012Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~HVKSyYpnDHWFawiv8tr0zA~5TCHNuGC-HBQM1B7AB8OeQ: Skipping manifest check
+2026-10-23T07:12:11.012Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HVKSyYpnDHWFawiv8tr0zA~5TCHNuGC-HBQM1B7AB8OeQ: Download succeeded
+2026-10-23T07:12:11.012Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2264,"claimedFileSize":2264}
+2026-10-23T07:12:11.012Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~2rGOif5UiZMo1CavnURFtg
+2026-10-23T07:12:11.193Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/2rGOif5UiZMo1CavnURFtg/children?: 200 (181ms)
+2026-10-23T07:12:11.392Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (199ms)
 FILE Рисованные рубашки.txt/вар/Warior tank shirt-850101.sql (2182 B)
-2026-10-22T09:21:10.683Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~QUDOcEPSOGxu5DBytFaQOA
-2026-10-22T09:21:10.683Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QUDOcEPSOGxu5DBytFaQOA~v4xT-PnhuzkF3U-BJAOCeA: Starting download
-2026-10-22T09:21:11.003Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/QUDOcEPSOGxu5DBytFaQOA/revisions/v4xT-PnhuzkF3U-BJAOCeA?PageSize=20&FromBlockIndex=1: 200 (320ms)
-2026-10-22T09:21:11.003Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QUDOcEPSOGxu5DBytFaQOA~v4xT-PnhuzkF3U-BJAOCeA: block 1: Download started
-2026-10-22T09:21:11.191Z INFO [api] GET https://zrh-storage.proton.me/storage/blocks: 200 (188ms)
-2026-10-22T09:21:11.192Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2182,"milliseconds":0.6644340000020748}
-2026-10-22T09:21:11.192Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QUDOcEPSOGxu5DBytFaQOA~v4xT-PnhuzkF3U-BJAOCeA: block 1: Downloaded
-2026-10-22T09:21:11.297Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/QUDOcEPSOGxu5DBytFaQOA/revisions/v4xT-PnhuzkF3U-BJAOCeA?PageSize=20&FromBlockIndex=2: 200 (294ms)
-2026-10-22T09:21:11.297Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QUDOcEPSOGxu5DBytFaQOA~v4xT-PnhuzkF3U-BJAOCeA: Flushing completed block 1
-2026-10-22T09:21:11.297Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~QUDOcEPSOGxu5DBytFaQOA~v4xT-PnhuzkF3U-BJAOCeA: Skipping manifest check
-2026-10-22T09:21:11.297Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QUDOcEPSOGxu5DBytFaQOA~v4xT-PnhuzkF3U-BJAOCeA: Download succeeded
-2026-10-22T09:21:11.297Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2263,"claimedFileSize":2263}
+2026-10-23T07:12:11.399Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~QUDOcEPSOGxu5DBytFaQOA
+2026-10-23T07:12:11.400Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QUDOcEPSOGxu5DBytFaQOA~v4xT-PnhuzkF3U-BJAOCeA: Starting download
+2026-10-23T07:12:11.640Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/QUDOcEPSOGxu5DBytFaQOA/revisions/v4xT-PnhuzkF3U-BJAOCeA?PageSize=20&FromBlockIndex=1: 200 (240ms)
+2026-10-23T07:12:11.641Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QUDOcEPSOGxu5DBytFaQOA~v4xT-PnhuzkF3U-BJAOCeA: block 1: Download started
+2026-10-23T07:12:11.834Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/QUDOcEPSOGxu5DBytFaQOA/revisions/v4xT-PnhuzkF3U-BJAOCeA?PageSize=20&FromBlockIndex=2: 200 (193ms)
+2026-10-23T07:12:12.043Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (402ms)
+2026-10-23T07:12:12.049Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2182,"milliseconds":0.565705999999409}
+2026-10-23T07:12:12.049Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QUDOcEPSOGxu5DBytFaQOA~v4xT-PnhuzkF3U-BJAOCeA: block 1: Downloaded
+2026-10-23T07:12:12.049Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QUDOcEPSOGxu5DBytFaQOA~v4xT-PnhuzkF3U-BJAOCeA: Flushing completed block 1
+2026-10-23T07:12:12.049Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~QUDOcEPSOGxu5DBytFaQOA~v4xT-PnhuzkF3U-BJAOCeA: Skipping manifest check
+2026-10-23T07:12:12.049Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QUDOcEPSOGxu5DBytFaQOA~v4xT-PnhuzkF3U-BJAOCeA: Download succeeded
+2026-10-23T07:12:12.049Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2263,"claimedFileSize":2263}
 FILE Рисованные рубашки.txt/вар/Warior DD shirt-850100.sql (2180 B)
-2026-10-22T09:21:11.297Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~QIuTaF-bwbjmGjZJygAwDQ
-2026-10-22T09:21:11.298Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QIuTaF-bwbjmGjZJygAwDQ~UGz_ILrqU_WvAJrGruvnTQ: Starting download
-2026-10-22T09:21:11.646Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/QIuTaF-bwbjmGjZJygAwDQ/revisions/UGz_ILrqU_WvAJrGruvnTQ?PageSize=20&FromBlockIndex=1: 200 (348ms)
-2026-10-22T09:21:11.646Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QIuTaF-bwbjmGjZJygAwDQ~UGz_ILrqU_WvAJrGruvnTQ: block 1: Download started
-2026-10-22T09:21:11.832Z INFO [api] GET https://zrh-storage.proton.me/storage/blocks: 200 (186ms)
-2026-10-22T09:21:11.833Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2180,"milliseconds":0.5197670000015933}
-2026-10-22T09:21:11.833Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QIuTaF-bwbjmGjZJygAwDQ~UGz_ILrqU_WvAJrGruvnTQ: block 1: Downloaded
-2026-10-22T09:21:11.940Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/QIuTaF-bwbjmGjZJygAwDQ/revisions/UGz_ILrqU_WvAJrGruvnTQ?PageSize=20&FromBlockIndex=2: 200 (294ms)
-2026-10-22T09:21:11.940Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QIuTaF-bwbjmGjZJygAwDQ~UGz_ILrqU_WvAJrGruvnTQ: Flushing completed block 1
-2026-10-22T09:21:11.940Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~QIuTaF-bwbjmGjZJygAwDQ~UGz_ILrqU_WvAJrGruvnTQ: Skipping manifest check
-2026-10-22T09:21:11.940Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QIuTaF-bwbjmGjZJygAwDQ~UGz_ILrqU_WvAJrGruvnTQ: Download succeeded
-2026-10-22T09:21:11.940Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2261,"claimedFileSize":2261}
-2026-10-22T09:21:11.940Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~xAsY_hEqm-TEmPYqqYkUTA
-2026-10-22T09:21:12.212Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/xAsY_hEqm-TEmPYqqYkUTA/children?: 200 (272ms)
-2026-10-22T09:21:12.548Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (336ms)
+2026-10-23T07:12:12.049Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~QIuTaF-bwbjmGjZJygAwDQ
+2026-10-23T07:12:12.049Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QIuTaF-bwbjmGjZJygAwDQ~UGz_ILrqU_WvAJrGruvnTQ: Starting download
+2026-10-23T07:12:12.254Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/QIuTaF-bwbjmGjZJygAwDQ/revisions/UGz_ILrqU_WvAJrGruvnTQ?PageSize=20&FromBlockIndex=1: 200 (205ms)
+2026-10-23T07:12:12.254Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QIuTaF-bwbjmGjZJygAwDQ~UGz_ILrqU_WvAJrGruvnTQ: block 1: Download started
+2026-10-23T07:12:12.482Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/QIuTaF-bwbjmGjZJygAwDQ/revisions/UGz_ILrqU_WvAJrGruvnTQ?PageSize=20&FromBlockIndex=2: 200 (228ms)
+2026-10-23T07:12:12.513Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (259ms)
+2026-10-23T07:12:12.514Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2180,"milliseconds":0.5936579999997775}
+2026-10-23T07:12:12.514Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QIuTaF-bwbjmGjZJygAwDQ~UGz_ILrqU_WvAJrGruvnTQ: block 1: Downloaded
+2026-10-23T07:12:12.514Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QIuTaF-bwbjmGjZJygAwDQ~UGz_ILrqU_WvAJrGruvnTQ: Flushing completed block 1
+2026-10-23T07:12:12.514Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~QIuTaF-bwbjmGjZJygAwDQ~UGz_ILrqU_WvAJrGruvnTQ: Skipping manifest check
+2026-10-23T07:12:12.514Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~QIuTaF-bwbjmGjZJygAwDQ~UGz_ILrqU_WvAJrGruvnTQ: Download succeeded
+2026-10-23T07:12:12.514Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2261,"claimedFileSize":2261}
+2026-10-23T07:12:12.514Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~xAsY_hEqm-TEmPYqqYkUTA
+2026-10-23T07:12:12.687Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/xAsY_hEqm-TEmPYqqYkUTA/children?: 200 (172ms)
+2026-10-23T07:12:12.904Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (216ms)
 FILE Рисованные рубашки.txt/priest/Priest shirt-850106.sql (2181 B)
-2026-10-22T09:21:12.563Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Otkm86BluOqL30Ue5Ua6gg
-2026-10-22T09:21:12.564Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Otkm86BluOqL30Ue5Ua6gg~u1XnQa9ppp-QrM0wM5FUQg: Starting download
-2026-10-22T09:21:12.898Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Otkm86BluOqL30Ue5Ua6gg/revisions/u1XnQa9ppp-QrM0wM5FUQg?PageSize=20&FromBlockIndex=1: 200 (334ms)
-2026-10-22T09:21:12.898Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Otkm86BluOqL30Ue5Ua6gg~u1XnQa9ppp-QrM0wM5FUQg: block 1: Download started
-2026-10-22T09:21:13.074Z INFO [api] GET https://zrh-storage.proton.me/storage/blocks: 200 (175ms)
-2026-10-22T09:21:13.075Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2181,"milliseconds":0.6095949999980803}
-2026-10-22T09:21:13.075Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Otkm86BluOqL30Ue5Ua6gg~u1XnQa9ppp-QrM0wM5FUQg: block 1: Downloaded
-2026-10-22T09:21:13.268Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Otkm86BluOqL30Ue5Ua6gg/revisions/u1XnQa9ppp-QrM0wM5FUQg?PageSize=20&FromBlockIndex=2: 200 (369ms)
-2026-10-22T09:21:13.268Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Otkm86BluOqL30Ue5Ua6gg~u1XnQa9ppp-QrM0wM5FUQg: Flushing completed block 1
-2026-10-22T09:21:13.268Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Otkm86BluOqL30Ue5Ua6gg~u1XnQa9ppp-QrM0wM5FUQg: Skipping manifest check
-2026-10-22T09:21:13.268Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Otkm86BluOqL30Ue5Ua6gg~u1XnQa9ppp-QrM0wM5FUQg: Download succeeded
-2026-10-22T09:21:13.268Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2262,"claimedFileSize":2262}
+2026-10-23T07:12:12.909Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Otkm86BluOqL30Ue5Ua6gg
+2026-10-23T07:12:12.909Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Otkm86BluOqL30Ue5Ua6gg~u1XnQa9ppp-QrM0wM5FUQg: Starting download
+2026-10-23T07:12:13.140Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Otkm86BluOqL30Ue5Ua6gg/revisions/u1XnQa9ppp-QrM0wM5FUQg?PageSize=20&FromBlockIndex=1: 200 (231ms)
+2026-10-23T07:12:13.140Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Otkm86BluOqL30Ue5Ua6gg~u1XnQa9ppp-QrM0wM5FUQg: block 1: Download started
+2026-10-23T07:12:13.382Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Otkm86BluOqL30Ue5Ua6gg/revisions/u1XnQa9ppp-QrM0wM5FUQg?PageSize=20&FromBlockIndex=2: 200 (242ms)
+2026-10-23T07:12:13.402Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (262ms)
+2026-10-23T07:12:13.402Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2181,"milliseconds":0.5906429999995453}
+2026-10-23T07:12:13.402Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Otkm86BluOqL30Ue5Ua6gg~u1XnQa9ppp-QrM0wM5FUQg: block 1: Downloaded
+2026-10-23T07:12:13.402Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Otkm86BluOqL30Ue5Ua6gg~u1XnQa9ppp-QrM0wM5FUQg: Flushing completed block 1
+2026-10-23T07:12:13.403Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Otkm86BluOqL30Ue5Ua6gg~u1XnQa9ppp-QrM0wM5FUQg: Skipping manifest check
+2026-10-23T07:12:13.403Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Otkm86BluOqL30Ue5Ua6gg~u1XnQa9ppp-QrM0wM5FUQg: Download succeeded
+2026-10-23T07:12:13.403Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2262,"claimedFileSize":2262}
+2026-10-23T07:12:13.403Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~QpWRqF-pC8HJzSdIt_yAWQ
+2026-10-23T07:12:13.593Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/QpWRqF-pC8HJzSdIt_yAWQ/children?: 200 (190ms)
+2026-10-23T07:12:13.819Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (226ms)
+FILE Рисованные рубашки.txt/xant/Hunter shirt-850109.sql (2178 B)
+2026-10-23T07:12:13.825Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~Hm7fTxuhMn3qy4C68BwcUA
+2026-10-23T07:12:13.825Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Hm7fTxuhMn3qy4C68BwcUA~KmnyAXVUuiO8-oZ7083gig: Starting download
+2026-10-23T07:12:14.044Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Hm7fTxuhMn3qy4C68BwcUA/revisions/KmnyAXVUuiO8-oZ7083gig?PageSize=20&FromBlockIndex=1: 200 (219ms)
+2026-10-23T07:12:14.045Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Hm7fTxuhMn3qy4C68BwcUA~KmnyAXVUuiO8-oZ7083gig: block 1: Download started
+2026-10-23T07:12:14.271Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/Hm7fTxuhMn3qy4C68BwcUA/revisions/KmnyAXVUuiO8-oZ7083gig?PageSize=20&FromBlockIndex=2: 200 (226ms)
+2026-10-23T07:12:14.294Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (249ms)
+2026-10-23T07:12:14.295Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2178,"milliseconds":0.586116000000402}
+2026-10-23T07:12:14.295Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Hm7fTxuhMn3qy4C68BwcUA~KmnyAXVUuiO8-oZ7083gig: block 1: Downloaded
+2026-10-23T07:12:14.295Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Hm7fTxuhMn3qy4C68BwcUA~KmnyAXVUuiO8-oZ7083gig: Flushing completed block 1
+2026-10-23T07:12:14.295Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~Hm7fTxuhMn3qy4C68BwcUA~KmnyAXVUuiO8-oZ7083gig: Skipping manifest check
+2026-10-23T07:12:14.295Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~Hm7fTxuhMn3qy4C68BwcUA~KmnyAXVUuiO8-oZ7083gig: Download succeeded
+2026-10-23T07:12:14.295Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2259,"claimedFileSize":2259}
+2026-10-23T07:12:14.295Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~HpSVl528uWnQjBDwc-Cr-Q
+2026-10-23T07:12:14.498Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/HpSVl528uWnQjBDwc-Cr-Q/children?: 200 (203ms)
+2026-10-23T07:12:14.677Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (179ms)
+FILE Рисованные рубашки.txt/пал/Paladin holy shirt-850108.sql (2176 B)
+2026-10-23T07:12:14.705Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~HZQBl9876AuqelFCVPPI_Q
+2026-10-23T07:12:14.705Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HZQBl9876AuqelFCVPPI_Q~8uKJZ0RTBreFI8JU44CvRA: Starting download
+2026-10-23T07:12:14.932Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/HZQBl9876AuqelFCVPPI_Q/revisions/8uKJZ0RTBreFI8JU44CvRA?PageSize=20&FromBlockIndex=1: 200 (227ms)
+2026-10-23T07:12:14.932Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HZQBl9876AuqelFCVPPI_Q~8uKJZ0RTBreFI8JU44CvRA: block 1: Download started
+2026-10-23T07:12:15.131Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/HZQBl9876AuqelFCVPPI_Q/revisions/8uKJZ0RTBreFI8JU44CvRA?PageSize=20&FromBlockIndex=2: 200 (199ms)
+2026-10-23T07:12:15.181Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (249ms)
+2026-10-23T07:12:15.182Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2176,"milliseconds":0.50883900000008}
+2026-10-23T07:12:15.182Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HZQBl9876AuqelFCVPPI_Q~8uKJZ0RTBreFI8JU44CvRA: block 1: Downloaded
+2026-10-23T07:12:15.182Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HZQBl9876AuqelFCVPPI_Q~8uKJZ0RTBreFI8JU44CvRA: Flushing completed block 1
+2026-10-23T07:12:15.182Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~HZQBl9876AuqelFCVPPI_Q~8uKJZ0RTBreFI8JU44CvRA: Skipping manifest check
+2026-10-23T07:12:15.182Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~HZQBl9876AuqelFCVPPI_Q~8uKJZ0RTBreFI8JU44CvRA: Download succeeded
+2026-10-23T07:12:15.182Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2257,"claimedFileSize":2257}
+FILE Рисованные рубашки.txt/пал/Paladin tank shirt-850104.sql (2184 B)
+2026-10-23T07:12:15.182Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~qOUzV-MDaMCSx6xzOF4qgQ
+2026-10-23T07:12:15.182Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qOUzV-MDaMCSx6xzOF4qgQ~4303WQvIsEoQHmFIBW7muw: Starting download
+2026-10-23T07:12:15.439Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/qOUzV-MDaMCSx6xzOF4qgQ/revisions/4303WQvIsEoQHmFIBW7muw?PageSize=20&FromBlockIndex=1: 200 (257ms)
+2026-10-23T07:12:15.439Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qOUzV-MDaMCSx6xzOF4qgQ~4303WQvIsEoQHmFIBW7muw: block 1: Download started
+2026-10-23T07:12:15.641Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/qOUzV-MDaMCSx6xzOF4qgQ/revisions/4303WQvIsEoQHmFIBW7muw?PageSize=20&FromBlockIndex=2: 200 (202ms)
+2026-10-23T07:12:15.690Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (251ms)
+2026-10-23T07:12:15.691Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2184,"milliseconds":0.6414499999991676}
+2026-10-23T07:12:15.691Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qOUzV-MDaMCSx6xzOF4qgQ~4303WQvIsEoQHmFIBW7muw: block 1: Downloaded
+2026-10-23T07:12:15.691Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qOUzV-MDaMCSx6xzOF4qgQ~4303WQvIsEoQHmFIBW7muw: Flushing completed block 1
+2026-10-23T07:12:15.691Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~qOUzV-MDaMCSx6xzOF4qgQ~4303WQvIsEoQHmFIBW7muw: Skipping manifest check
+2026-10-23T07:12:15.691Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~qOUzV-MDaMCSx6xzOF4qgQ~4303WQvIsEoQHmFIBW7muw: Download succeeded
+2026-10-23T07:12:15.691Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2265,"claimedFileSize":2265}
+FILE Рисованные рубашки.txt/пал/Paladin DD shirt-850103.sql (2697 B)
+2026-10-23T07:12:15.692Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~r3wv-wtTqwHNslBXP0my_A
+2026-10-23T07:12:15.692Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~r3wv-wtTqwHNslBXP0my_A~TjobY6zzwK387ZtytmuuYQ: Starting download
+2026-10-23T07:12:15.909Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/r3wv-wtTqwHNslBXP0my_A/revisions/TjobY6zzwK387ZtytmuuYQ?PageSize=20&FromBlockIndex=1: 200 (217ms)
+2026-10-23T07:12:15.909Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~r3wv-wtTqwHNslBXP0my_A~TjobY6zzwK387ZtytmuuYQ: block 1: Download started
+2026-10-23T07:12:16.095Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/r3wv-wtTqwHNslBXP0my_A/revisions/TjobY6zzwK387ZtytmuuYQ?PageSize=20&FromBlockIndex=2: 200 (186ms)
+2026-10-23T07:12:16.165Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (256ms)
+2026-10-23T07:12:16.166Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2697,"milliseconds":0.48886899999888556}
+2026-10-23T07:12:16.166Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~r3wv-wtTqwHNslBXP0my_A~TjobY6zzwK387ZtytmuuYQ: block 1: Downloaded
+2026-10-23T07:12:16.166Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~r3wv-wtTqwHNslBXP0my_A~TjobY6zzwK387ZtytmuuYQ: Flushing completed block 1
+2026-10-23T07:12:16.166Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~r3wv-wtTqwHNslBXP0my_A~TjobY6zzwK387ZtytmuuYQ: Skipping manifest check
+2026-10-23T07:12:16.166Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~r3wv-wtTqwHNslBXP0my_A~TjobY6zzwK387ZtytmuuYQ: Download succeeded
+2026-10-23T07:12:16.166Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2778,"claimedFileSize":2778}
+2026-10-23T07:12:16.166Z INFO [publicLink-interface] Iterating children of SgfKCen9iQnXZv58ixOXxg~GXIckW7LVdzq3BUgz4XRxQ
+2026-10-23T07:12:16.365Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/folders/GXIckW7LVdzq3BUgz4XRxQ/children?: 200 (199ms)
+2026-10-23T07:12:16.623Z INFO [api] POST https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/links: 200 (258ms)
+FILE Рисованные рубашки.txt/lok/Warlock shirt-850105.sql (2184 B)
+2026-10-23T07:12:16.627Z INFO [publicLink-interface] Getting file downloader for SgfKCen9iQnXZv58ixOXxg~hOESevBSOo4KhRlLtq0Lhw
+2026-10-23T07:12:16.628Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hOESevBSOo4KhRlLtq0Lhw~dwLrKDTmUCTOCR7hu-Oc4A: Starting download
+2026-10-23T07:12:16.834Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/hOESevBSOo4KhRlLtq0Lhw/revisions/dwLrKDTmUCTOCR7hu-Oc4A?PageSize=20&FromBlockIndex=1: 200 (206ms)
+2026-10-23T07:12:16.834Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hOESevBSOo4KhRlLtq0Lhw~dwLrKDTmUCTOCR7hu-Oc4A: block 1: Download started
+2026-10-23T07:12:17.054Z INFO [api] GET https://drive-api.proton.me/drive/unauth/v2/volumes/SgfKCen9iQnXZv58ixOXxg/files/hOESevBSOo4KhRlLtq0Lhw/revisions/dwLrKDTmUCTOCR7hu-Oc4A?PageSize=20&FromBlockIndex=2: 200 (220ms)
+2026-10-23T07:12:17.089Z INFO [api] GET https://fra-storage.proton.me/storage/blocks: 200 (255ms)
+2026-10-23T07:12:17.089Z INFO [metric] performance {"eventName":"performance","type":"content_decryption","cryptoModel":"v1.5","bytesProcessed":2184,"milliseconds":0.5313639999985753}
+2026-10-23T07:12:17.089Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hOESevBSOo4KhRlLtq0Lhw~dwLrKDTmUCTOCR7hu-Oc4A: block 1: Downloaded
+2026-10-23T07:12:17.089Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hOESevBSOo4KhRlLtq0Lhw~dwLrKDTmUCTOCR7hu-Oc4A: Flushing completed block 1
+2026-10-23T07:12:17.090Z WARNING [download] revision SgfKCen9iQnXZv58ixOXxg~hOESevBSOo4KhRlLtq0Lhw~dwLrKDTmUCTOCR7hu-Oc4A: Skipping manifest check
+2026-10-23T07:12:17.090Z INFO [download] revision SgfKCen9iQnXZv58ixOXxg~hOESevBSOo4KhRlLtq0Lhw~dwLrKDTmUCTOCR7hu-Oc4A: Download succeeded
+2026-10-23T07:12:17.090Z INFO [metric] download {"eventName":"download","volumeType":"shared_public","approximateDownloadedSize":4095,"approximateClaimedFileSize":4095,"downloadedSize":2265,"claimedFileSize":2265}
 DONE files=16 errors=0
