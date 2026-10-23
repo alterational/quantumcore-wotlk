@@ -584,3 +584,6 @@ footer.site-footer a { color: var(--link); }
 .lock-msg { min-height: 18px; margin-top: 10px; font-size: 12px; color: #e8c67a; }
 
 .badge.pub { color: #b6e2a1; border-color: #3f6b39; background: rgba(28, 52, 26, .55); }
+
+/* раздел Dump: бейдж предметов из внешних папок и архивов */
+.badge.dump { color: #e8c07a; border-color: #7a5f24; background: rgba(60, 44, 14, .55); }

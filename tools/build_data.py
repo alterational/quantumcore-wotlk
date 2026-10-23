@@ -55,7 +55,7 @@ def tokenize_tuple(t):
             while i < n:
                 ch = t[i]
                 if ch == '\\':
-                    nx = t[i + 1]
+                    nx = t[i + 1] if i + 1 < n else ''
                     buf.append({'n': '\n', 'r': '\r', 't': '\t', '0': '\0',
                                 '\\': '\\', "'": "'", '"': '"'}.get(nx, nx))
                     i += 2
@@ -74,6 +74,11 @@ def tokenize_tuple(t):
         j = i
         while j < n and t[j] not in ',)':
             j += 1
+        if j == i:
+            # символ вроде ')' внутри кортежа: иначе указатель не двигается и
+            # цикл становится бесконечным (ловилось зависание на Spell.sql)
+            i += 1
+            continue
         raw = t[i:j].strip()
         if raw == 'NULL':
             out.append(None)

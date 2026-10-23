@@ -61,6 +61,21 @@ def map_aliases(row):
     return out
 
 
+def to_num(v):
+    """Позиционные строки кривых дампов могут уложить текст в числовые поля."""
+    if isinstance(v, bool):
+        return 1 if v else 0
+    if isinstance(v, (int, float)):
+        return v
+    if v is None or v == '':
+        return 0
+    try:
+        f = float(str(v).strip())
+    except (TypeError, ValueError):
+        return 0
+    return int(f) if f == int(f) else f
+
+
 def sql_value(v):
     if v is None:
         return '0'
@@ -119,6 +134,10 @@ def main():
     for (label, root, cont), sub in sorted(subs.items(), key=lambda kv: (kv[0][1], kv[0][2])):
         rows = [sub['rows'][e] for e in sorted(sub['rows'])]
         rows = [r for r in rows if 'ItemLevel' in r or 'itemlevel' in {k.lower() for k in r}]
+        for r in rows:
+            for c in canon:
+                if c not in text_cols and c in r:
+                    r[c] = to_num(r[c])
         if not rows:
             continue
         share_num = label.split('-')[0]
@@ -147,6 +166,21 @@ def main():
                 fh.write(';\n\n')
 
         # --- датасет сайта
+        out_path = os.path.join(OUT_DATA_DIR, slug + '.json')
+        if os.environ.get('RESUME') and os.path.exists(out_path):
+            with open(out_path, encoding='utf-8') as fh:
+                existing = json.load(fh)
+            ilvl300_r = sum(1 for r in rows if str(r.get('ItemLevel')) in ('300', '300.0'))
+            index.append({
+                'slug': slug, 'title': title, 'share': label, 'root': root,
+                'container': cont, 'count': len(existing.get('items') or []),
+                'ilvl300': ilvl300_r, 'files': len(sub['files']),
+                'file': out_path.replace(os.sep, '/'),
+                'sql': sql_path.replace(os.sep, '/'),
+            })
+            total += len(existing.get('items') or [])
+            print('%-28s %-60s %5d предм. (пропуск, уже собран)' % (slug, title, len(existing.get('items') or [])))
+            continue
         norm = build_data.normalize_items([dict(r) for r in rows])
         ds = build_data.build_dataset(sql_path, strict_names=True, items=norm, locales={},
                                       extra_source={

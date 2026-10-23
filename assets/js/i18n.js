@@ -60,6 +60,23 @@
         'отдельным набором со своими ключами и не затронут основную базу, QC 13.1 и Public.',
       sec_empty_short: 'Данных пока нет',
       wowdm_locked_title: 'Раздел WoWDM защищён паролем',
+      nav_dump: 'Dump',
+      dump_title: 'Dump — находки из внешних папок',
+      dump_note: 'Предметы из отдельно переданных папок и архивов: каждая запись сверена с эталонной ' +
+        'базой YTDB, и в раздел попали те, которых в стандартной базе нет, а также те, чьё имя, уровень ' +
+        'предмета или характеристики отличаются от стандартных. Каждый подраздел — папка или архив, ' +
+        'откуда предметы взяты. Наборы хранятся отдельно и не перезаписывают основную базу, QC 13.1, ' +
+        'Public и WoWDM.',
+      dump_badge: 'Dump',
+      dump_badge_hint: 'Предмет из раздела Dump',
+      dump_about: 'Раздел Dump собран из папок и архивов с дампами item_template от разных серверов. ' +
+        'Каждая запись сверена с эталонной базой YTDB: стандартные записи без отличий в раздел не попали. ' +
+        'Подразделы повторяют структуру исходных папок и архивов, у предметов свои ключи, поэтому ' +
+        'совпадающие номера entry остаются независимыми версиями.',
+      dump_back: 'Все подразделы',
+      dump_sub_note: 'Подраздел «{title}». Файлов с предметами: {files}.',
+      dump_col_sub: 'Подраздел',
+      dump_col_files: 'Файлов с предметами',
       lock_text: 'Введите пароль в бокс ниже, чтобы открыть раздел.',
       lock_placeholder: 'Пароль',
       lock_submit: 'Открыть',
@@ -271,6 +288,23 @@
         'separate set with its own keys and will not affect the main database, QC 13.1 or Public.',
       sec_empty_short: 'No data yet',
       wowdm_locked_title: 'The WoWDM section is password protected',
+      nav_dump: 'Dump',
+      dump_title: 'Dump — finds from external folders',
+      dump_note: 'Items from separately shared folders and archives: every record was compared against ' +
+        'the reference YTDB database, and the section holds the ones missing from the stock database ' +
+        'plus the ones whose name, item level or stats differ from stock. Each subsection is the folder ' +
+        'or archive the items came from. The sets are stored separately and overwrite nothing in the ' +
+        'main database, QC 13.1, Public or WoWDM.',
+      dump_badge: 'Dump',
+      dump_badge_hint: 'Item from the Dump section',
+      dump_about: 'The Dump section is built from folders and archives with item_template dumps from ' +
+        'various servers. Every record was compared against the reference YTDB database: stock records ' +
+        'without differences were left out. Subsections mirror the original folders and archives, and ' +
+        'items have their own keys, so matching entry numbers stay independent versions.',
+      dump_back: 'All subsections',
+      dump_sub_note: 'Subsection “{title}”. Files with items: {files}.',
+      dump_col_sub: 'Subsection',
+      dump_col_files: 'Files with items',
       lock_text: 'Type the password in the box below to open the section.',
       lock_placeholder: 'Password',
       lock_submit: 'Open',

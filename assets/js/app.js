@@ -29,6 +29,12 @@
   };
   var SECTION_KEYS = ['public', 'wowdm'];
   var SECTIONS = { public: null, wowdm: null };
+  /* Раздел Dump: индекс подразделов (data/dump/index.json) и сами подразделы
+     грузятся лениво при входе в раздел; у каждого подраздела свой файл данных
+     и свои ключи предметов вида <slug>-<entry>. */
+  var DUMP = null;
+  var DUMP_SUBS = {};
+  var DUMP_LOADING = {};
   var ITEMS_BY_KEY = {};       /* ключ основной базы — id, отдельной — qc + id */
   var SPELLS = {};
   var SETS = {};
@@ -480,6 +486,8 @@
     if (item.qc) h.push('<div class="tt-line gray small">' + esc(t('qc_badge')) + '</div>');
     if (item.sectionKey) h.push('<div class="tt-line gray small">' +
       esc(t(SECTION_DEFS[item.sectionKey].badgeKey)) + '</div>');
+    if (item.dumpSub) h.push('<div class="tt-line gray small">' +
+      esc(t('dump_badge')) + ': ' + esc(dumpSubTitle(item.dumpSub)) + '</div>');
     h.push('</div>');
     return h.join('');
   }
@@ -491,6 +499,7 @@
     var parts = hash.split('/');
     if (parts[0] === 'item' && parts[1]) return { view: 'item', id: String(parts[1]) };
     if (parts[0] === 'qc') return { view: 'qc' };
+    if (parts[0] === 'dump') return { view: 'dump', sub: parts[1] ? String(parts[1]) : null };
     if (SECTION_DEFS[parts[0]]) return { view: parts[0] };   /* запароленные разделы */
     if (parts[0] === 'doll') return { view: 'doll' };
     if (parts[0] === 'compare') return { view: 'compare' };
@@ -501,6 +510,7 @@
   function navigate(route) {
     var hash = '#/catalog';
     if (route.view === 'item') hash = '#/item/' + route.id;
+    else if (route.view === 'dump') hash = '#/dump' + (route.sub ? '/' + route.sub : '');
     else if (route.view !== 'catalog') hash = '#/' + route.view;
     if (location.hash === hash) render();
     else location.hash = hash;
@@ -522,6 +532,10 @@
       if (!sectionUnlocked(route.view)) main.innerHTML = viewLockPanel(route.view);
       else if (SECTIONS[route.view]) main.innerHTML = viewCatalog(route.view);
       else main.innerHTML = viewSectionEmpty(route.view);
+    }
+    else if (route.view === 'dump') {
+      state.dumpSub = route.sub || null;
+      main.innerHTML = viewDump();
     }
     else if (route.view === 'doll') main.innerHTML = viewDoll();
     else if (route.view === 'compare') main.innerHTML = viewCompare();
@@ -547,8 +561,96 @@
   /* предметы текущего каталога: основная база, отдельный дамп QC или Public */
   function catalogItems() {
     if (state.view === 'qc') return QC ? QC.items : [];
+    if (state.view === 'dump') {
+      var sub = state.dumpSub && DUMP_SUBS[state.dumpSub];
+      return sub ? sub.items : [];
+    }
     if (SECTION_DEFS[state.view]) return SECTIONS[state.view] ? SECTIONS[state.view].items : [];
     return DB ? DB.items : [];
+  }
+
+  /* ------------------------------ раздел Dump ------------------------------ */
+
+  function dumpSubInfo(slug) {
+    if (!DUMP || !slug) return null;
+    for (var i = 0; i < DUMP.subsections.length; i++) {
+      if (DUMP.subsections[i].slug === slug) return DUMP.subsections[i];
+    }
+    return null;
+  }
+
+  function dumpSubTitle(slug) {
+    var info = dumpSubInfo(slug);
+    return info ? info.title : slug;
+  }
+
+  function loadDumpIndex() {
+    if (DUMP || DUMP_LOADING.index) return;
+    DUMP_LOADING.index = true;
+    fetchJson('data/dump/index.json').then(function (db) {
+      DUMP = db;
+      DUMP_LOADING.index = false;
+      if (state.view === 'dump' || state.view === 'item' || state.view === 'about') render();
+    }).catch(function () {
+      DUMP_LOADING.index = false;
+      DUMP = { subsections: [], total: 0 };
+      if (state.view === 'dump' || state.view === 'item' || state.view === 'about') render();
+    });
+  }
+
+  function loadDumpSub(slug) {
+    var info = dumpSubInfo(slug);
+    if (!info || DUMP_SUBS[slug] || DUMP_LOADING[slug]) return;
+    DUMP_LOADING[slug] = true;
+    fetchJson(info.file).then(function (db) {
+      DUMP_SUBS[slug] = db;
+      DUMP_LOADING[slug] = false;
+      indexItems();
+      if (state.view === 'item' || (state.view === 'dump' && state.dumpSub === slug)) render();
+    }).catch(function () {
+      DUMP_LOADING[slug] = false;
+      if (state.view === 'dump') render();
+    });
+  }
+
+  function viewDump() {
+    if (!DUMP) {
+      loadDumpIndex();
+      return '<div class="panel"><div class="panel-head"><h2>' + t('dump_title') + '</h2></div>' +
+        '<div class="panel-body muted">' + t('loading') + '</div></div>';
+    }
+    if (state.dumpSub) {
+      var info = dumpSubInfo(state.dumpSub);
+      if (!info) {
+        return '<div class="panel"><div class="panel-head"><h2>' + t('dump_title') + '</h2></div>' +
+          '<div class="panel-body muted">' + t('nothing_found') + '</div></div>';
+      }
+      if (!DUMP_SUBS[state.dumpSub]) {
+        loadDumpSub(state.dumpSub);
+        return '<div class="panel"><div class="panel-head"><h2>' + esc(info.title) + '</h2></div>' +
+          '<div class="panel-body muted">' + t('loading') + '</div></div>';
+      }
+      return viewCatalog('dump');
+    }
+    var h = [];
+    h.push('<div class="panel">');
+    h.push('<div class="panel-head"><h2>' + t('dump_title') + '</h2>' +
+      '<span class="muted small">' + num(DUMP.total) + '</span></div>');
+    h.push('<div class="panel-body qc-note dump-note">' + t('dump_note') + '</div>');
+    h.push('<table class="items-table"><thead><tr>');
+    h.push('<th>' + t('dump_col_sub') + '</th><th class="num">' + t('items_total') + '</th>');
+    h.push('<th class="num">ItemLevel 300</th><th class="num">' + t('dump_col_files') + '</th>');
+    h.push('<th>SQL</th></tr></thead><tbody>');
+    DUMP.subsections.forEach(function (sub) {
+      h.push('<tr><td><a href="#/dump/' + esc(sub.slug) + '">' + esc(sub.title) + '</a></td>');
+      h.push('<td class="num">' + num(sub.count) + '</td>');
+      h.push('<td class="num">' + (sub.ilvl300 ? num(sub.ilvl300) : '—') + '</td>');
+      h.push('<td class="num">' + num(sub.files) + '</td>');
+      h.push('<td class="small"><a href="' + esc(sub.sql) + '">' + t('sec_dump_link') + '</a></td></tr>');
+    });
+    h.push('</tbody></table>');
+    h.push('</div>');
+    return h.join('');
   }
 
   function filteredItems() {
@@ -624,6 +726,7 @@
 
   function viewCatalog(mode) {
     var source = mode === 'qc' ? (QC ? QC.items : [])
+      : mode === 'dump' ? (state.dumpSub && DUMP_SUBS[state.dumpSub] ? DUMP_SUBS[state.dumpSub].items : [])
       : SECTION_DEFS[mode] ? (SECTIONS[mode] ? SECTIONS[mode].items : [])
       : (DB ? DB.items : []);
     var items = filteredItems();
@@ -696,15 +799,33 @@
     h.push('</div>');
 
     if (mode) {
-      var def = mode === 'qc' ? null : SECTION_DEFS[mode];
-      var extra = def
-        ? { title: t(def.titleKey), note: t(def.noteKey), cls: 'qc-note pub-note' }
-        : { title: t('qc_title'), note: t('qc_note'), cls: 'qc-note' };
+      var def = mode === 'qc' || mode === 'dump' ? null : SECTION_DEFS[mode];
+      var extra;
+      if (mode === 'dump') {
+        var subInfo = dumpSubInfo(state.dumpSub);
+        extra = {
+          title: subInfo ? subInfo.title : t('dump_title'),
+          note: subInfo
+            ? t('dump_sub_note').replace('{title}', subInfo.title).replace('{files}', num(subInfo.files))
+            : t('dump_note'),
+          cls: 'qc-note dump-note', dump: subInfo
+        };
+      } else if (def) {
+        extra = { title: t(def.titleKey), note: t(def.noteKey), cls: 'qc-note pub-note' };
+      } else {
+        extra = { title: t('qc_title'), note: t('qc_note'), cls: 'qc-note' };
+      }
       h.push('<div class="panel-head" style="border-top:1px solid var(--line-soft);border-radius:0;">');
-      h.push('<h2>' + extra.title + '</h2><span class="muted small">' + t('found') + ' ' +
+      h.push('<h2>' + esc(extra.title) + '</h2><span class="muted small">' + t('found') + ' ' +
         num(items.length) + ' ' + t('of') + ' ' + num(source.length) + '</span>');
       h.push('</div>');
-      h.push('<div class="panel-body ' + extra.cls + '">' + extra.note + '</div>');
+      h.push('<div class="panel-body ' + extra.cls + '">' + esc(extra.note) + '</div>');
+      if (extra.dump) {
+        h.push('<div class="panel-body" style="border-top:1px solid var(--line-soft)">' +
+          '<a href="#/dump">' + t('dump_back') + '</a> · ' +
+          '<a href="' + esc(extra.dump.sql) + '">' + t('sec_dump_link') + '</a>' +
+          ' <span class="muted small">(' + esc(extra.dump.sql) + ')</span></div>');
+      }
       if (def) {
         h.push('<div class="panel-body" style="border-top:1px solid var(--line-soft);text-align:right">' +
           '<button class="btn tiny ghost" id="sec-lock-out" data-mode="' + esc(mode) + '">' +
@@ -729,7 +850,9 @@
         h.push('<tr data-id="' + it.key + '">');
         h.push('<td><div class="item-cell" data-open="' + it.key + '">' + iconFrame(it) +
           '<div><div class="item-name ' + qClass(it.quality) + '">' + esc(displayName(it)) + '</div>' +
-          '<div class="item-sub">' + esc(displaySub(it)) + '</div></div></div></td>');
+          '<div class="item-sub">' + esc(displaySub(it)) + '</div>' +
+          (it.dumpSub ? ' <span class="badge dump" title="' + esc(t('dump_badge_hint')) + '">' + t('dump_badge') + '</span>' : '') +
+          '</div></div></td>');
         h.push('<td class="num">' + num(it.ilvl) + '</td>');
         h.push('<td class="small">' + esc(slotName(it)) + '</td>');
         h.push('<td class="small">' + esc(subclassName(it)) + '</td>');
@@ -789,7 +912,24 @@
 
   function viewItem(id) {
     var item = itemById(id);
-    if (!item) return '<div class="panel panel-body">' + t('nothing_found') + '</div>';
+    if (!item) {
+      /* прямая ссылка на предмет Dump: ключ вида dump1-абв123-49724 — подраздел
+         может быть ещё не загружен, тогда тянем его и перерисовываемся */
+      var m = /^(dump\d+-[0-9a-f]+)-(\d+)$/.exec(String(id));
+      if (m) {
+        if (!DUMP) {
+          loadDumpIndex();
+          return '<div class="panel"><div class="panel-head"><h2>' + t('dump_title') + '</h2></div>' +
+            '<div class="panel-body muted">' + t('loading') + '</div></div>';
+        }
+        if (dumpSubInfo(m[1]) && !DUMP_SUBS[m[1]]) {
+          loadDumpSub(m[1]);
+          return '<div class="panel"><div class="panel-head"><h2>' + esc(m[1]) + '</h2></div>' +
+            '<div class="panel-body muted">' + t('loading') + '</div></div>';
+        }
+      }
+      return '<div class="panel panel-body">' + t('nothing_found') + '</div>';
+    }
     var lang = state.lang;
     var h = [];
     h.push('<div class="item-layout">');
@@ -807,6 +947,10 @@
       h.push('<span class="badge qc pub" title="' + esc(t(sdef.badgeHintKey)) + '">' +
         t(sdef.badgeKey) + '</span>');
     }
+    if (item.dumpSub) {
+      h.push('<span class="badge dump" title="' + esc(t('dump_badge_hint')) + '">' +
+        t('dump_badge') + '</span>');
+    }
     h.push('<span class="badge">#' + item.id + '</span>');
     h.push('<span class="badge">' + esc(qualityName(item.quality)) + '</span>');
     h.push('<span class="badge">' + esc(slotName(item)) + '</span>');
@@ -814,6 +958,10 @@
     if (item.set) h.push('<span class="badge set">' + esc((setById(item.set) || { name: {} }).name[lang] || t('tab_set')) + '</span>');
     if (!compatible(item)) h.push('<span class="badge warn">' + t('incompatible') + '</span>');
     h.push('</div>');
+    if (item.dumpSub) {
+      h.push('<div class="muted small">' + t('dump_badge') + ': ' +
+        '<a href="#/dump/' + esc(item.dumpSub) + '">' + esc(dumpSubTitle(item.dumpSub)) + '</a></div>');
+    }
     h.push('<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">');
     if (equippable(item)) h.push('<button class="btn primary" data-equip="' + item.key + '">' + t('action_equip') + '</button>');
     h.push('<button class="btn" data-cmp="' + item.key + '">' + t('action_compare') + '</button>');
@@ -1295,6 +1443,7 @@
   /* ------------------------------- «О базе» ------------------------------- */
 
   function viewAbout() {
+    if (!DUMP) loadDumpIndex();
     var lang = state.lang;
     var h = [];
     h.push('<div class="panel"><div class="panel-head"><h2>' + t('about_title') + '</h2></div><div class="panel-body">');
@@ -1328,6 +1477,7 @@
     SECTION_KEYS.forEach(function (k) {
       if (SECTIONS[k]) h.push(cell(t(SECTION_DEFS[k].titleKey), num(SECTIONS[k].items.length)));
     });
+    if (DUMP) h.push(cell(t('dump_title'), num(DUMP.total)));
     h.push('</div>');
     if (QC) {
       h.push('<h4 style="margin-top:18px">' + t('qc_title') + '</h4>');
@@ -1356,6 +1506,14 @@
           t('lock_title_short') + '</a></p>');
       }
     });
+    h.push('<h4 style="margin-top:18px">' + t('dump_title') + '</h4>');
+    h.push('<p class="small">' + t('dump_about') + '</p>');
+    if (DUMP) {
+      h.push('<p class="small">' + t('sec_total') + ': ' + num(DUMP.total) + ' · ' +
+        '<a href="#/dump">' + t('sec_open') + '</a></p>');
+    } else {
+      h.push('<p class="small"><a href="#/dump">' + t('sec_open') + '</a></p>');
+    }
     h.push('<h4 style="margin-top:18px">' + t('sources') + '</h4>');
     h.push('<ul class="small">');
     if (lang === 'ru') {
@@ -1883,6 +2041,19 @@
       Object.keys(src.spells || {}).forEach(function (id) { SPELLS[id] = src.spells[id]; });
       Object.keys(src.sets || {}).forEach(function (id) { SETS[id] = src.sets[id]; });
     });
+    /* подразделы Dump: ключ <slug>-<entry>, чтобы одинаковые entry из разных
+       папок и архивов оставались независимыми предметами */
+    Object.keys(DUMP_SUBS).forEach(function (slug) {
+      var src = DUMP_SUBS[slug];
+      if (!src) return;
+      src.items.forEach(function (it) {
+        it.key = slug + '-' + it.id;
+        it.dumpSub = slug;
+        ITEMS_BY_KEY[it.key] = it;
+      });
+      Object.keys(src.spells || {}).forEach(function (id) { SPELLS[id] = src.spells[id]; });
+      Object.keys(src.sets || {}).forEach(function (id) { SETS[id] = src.sets[id]; });
+    });
     if (DB) {
       Object.keys(DB.spells || {}).forEach(function (id) { SPELLS[id] = DB.spells[id]; });
       Object.keys(DB.sets || {}).forEach(function (id) { SETS[id] = DB.sets[id]; });
@@ -1972,6 +2143,7 @@
       '#nav-qc': t('nav_qc'),
       '#nav-public': t('nav_public'),
       '#nav-wowdm': t('nav_wowdm'),
+      '#nav-dump': t('nav_dump'),
       '#nav-about': t('nav_about')
     };
     Object.keys(map).forEach(function (sel) {
