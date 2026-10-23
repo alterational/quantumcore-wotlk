@@ -4,8 +4,8 @@
 - text: 2397
 - archives: 18
 - item_files: 2222
-- item_rows: 2442
-- candidates: 2442
+- item_rows: 2440
+- candidates: 2440
 - standard_skipped: 0
 - vendor_rows: 10703
 - creature_rows: 0
@@ -2175,7 +2175,7 @@
 - `рисовки/ещё сборка/Fun2/Fun/Titanlord Breastplate-927168.sql` (2200 Б): item_template строк: 1, кандидатов: 1
 - `рисовки/ещё сборка/Fun2/Fun/Treads of Cataclysm-999557.sql` (2205 Б): item_template строк: 1, кандидатов: 1
 - `рисовки/ещё сборка/Fun2/Fun/Админко-978797.sql` (2218 Б): item_template строк: 1, кандидатов: 1
-- `рисовки/ещё сборка/Goblin/Гоблины.sql` (8202 Б): item_template строк: 4, кандидатов: 4
+- `рисовки/ещё сборка/Goblin/Гоблины.sql` (8202 Б): item_template строк: 2, кандидатов: 2
 - `рисовки/ещё сборка/Plate and Mail/Кольчуга/Shaman Restr.sql` (13413 Б): item_template строк: 5, кандидатов: 5
 - `рисовки/ещё сборка/Plate and Mail/Кольчуга/Shaman+Hunter.sql` (13477 Б): item_template строк: 5, кандидатов: 5
 - `рисовки/ещё сборка/Plate and Mail/Кольчуга/Spd Sham.sql` (13466 Б): item_template строк: 5, кандидатов: 5
